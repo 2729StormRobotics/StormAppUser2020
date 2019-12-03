@@ -2,4 +2,11 @@
     <string name="app_name">StormUserRadar2020</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+    <string name="start">START</string>
+    <string name="generate_qr">GENERATE QR</string>
+    <string name="red">RED</string>
+    <string name="blue">BLUE</string>
+    <string name="delete">DELETE</string>
+    <string name="team_number">Team Number</string>
+    <string name="match_number">Match Number</string>
 </resources>
