@@ -7,6 +7,34 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.PlaceholderFragment">
 
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="142dp"
+        android:layout_height="68dp"
+        android:background="#8BC34A"
+        android:text="+"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="459dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="138dp"
+        android:layout_height="56dp"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="222dp"
+        tools:layout_editor_absoluteY="553dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="142dp"
+        android:layout_height="68dp"
+        android:background="#8BC34A"
+        android:text="+"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="222dp"
+        tools:layout_editor_absoluteY="459dp" />
+
     <TextView
         android:id="@+id/section_label"
         android:layout_width="wrap_content"
@@ -20,89 +48,94 @@
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintTop_creator="1" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="300dp"
-        android:layout_height="80dp"
-        android:background="@drawable/mybutton"
-        android:text="@string/start"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="406dp" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="233dp"
+        android:layout_height="38dp"
+        android:text="Starting Position"
+        android:textAlignment="textEnd"
+        android:textColor="#045206"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="53dp" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="170dp"
+        android:layout_height="193dp"
+        android:background="#3F51B5"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="ToggleButton"
+        android:textOff="LVL 1"
+        android:textOn="LVL 1"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="125dp" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton2"
+        android:layout_width="170dp"
+        android:layout_height="190dp"
+        android:background="#F44336"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="ToggleButton"
+        android:textOff="LVL 2"
+        android:textOn="LVL 2"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="222dp"
+        tools:layout_editor_absoluteY="127dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="277dp"
+        android:layout_height="57dp"
+        android:text="Pass Auto Line"
+        android:textColor="#066F7E"
+        android:textSize="36sp"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="333dp"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="86dp"
+        android:layout_height="38dp"
+        android:text="Hatch"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="77dp"
+        tools:layout_editor_absoluteY="401dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="90dp"
+        android:layout_height="39dp"
+        android:text="Cargo"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="255dp"
+        tools:layout_editor_absoluteY="401dp" />
 
     <Button
-        android:id="@+id/button5"
-        android:layout_width="140dp"
-        android:layout_height="80dp"
-        android:background="@drawable/mybuttonblue"
-        android:text="@string/blue"
-        tools:layout_editor_absoluteX="215dp"
-        tools:layout_editor_absoluteY="311dp" />
+        android:id="@+id/button3"
+        android:layout_width="142dp"
+        android:layout_height="68dp"
+        android:background="#8BC34A"
+        android:text="+"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="647dp" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="140dp"
-        android:layout_height="80dp"
-        android:background="@drawable/mybuttonred"
-        android:text="@string/delete"
-        tools:layout_editor_absoluteX="215dp"
-        tools:layout_editor_absoluteY="502dp" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="140dp"
-        android:layout_height="80"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="311dp"
-        android:layout_marginEnd="216dp"
-        android:layout_marginBottom="340dp"
-        android:background="@drawable/mybuttonred"
-        android:ellipsize="none"
-        android:text="@string/red"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="140dp"
-        android:layout_height="80"
-        android:background="@drawable/mybuttonorange"
-        android:text="@string/generate_qr"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="502dp" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="400dp"
-        android:layout_height="50dp"
-        android:autofillHints=""
-        android:cursorVisible="true"
-        android:ems="10"
-        android:hint="@string/team_number"
-        android:inputType="number"
-        android:textColor="#000000"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="65dp" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="400dp"
-        android:layout_height="50dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="@string/match_number"
-        android:inputType="number"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="169dp" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="125"
-        android:layout_height="125"
-        android:src="@color/colorAccent"
-        app:srcCompat="@drawable/test"
-        tools:layout_editor_absoluteX="143dp"
-        tools:layout_editor_absoluteY="590dp" />
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="138dp"
+        android:layout_height="56dp"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="553dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
