@@ -21,7 +21,7 @@
         tools:layout_constraintTop_creator="1" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonStart"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="55dp"
@@ -38,14 +38,14 @@
         app:layout_constraintVertical_bias="0.6" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/radioGroup"
+        android:id="@+id/allianceGroup"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="55dp"
         android:layout_marginTop="250dp"
         android:layout_marginEnd="55dp"
         android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/buttonStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -89,31 +89,31 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/buttonDelete"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/mybuttonred"
         android:text="@string/delete"
-        app:layout_constraintBottom_toBottomOf="@+id/button2"
-        app:layout_constraintEnd_toEndOf="@+id/button"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintBottom_toBottomOf="@+id/buttonQR"
+        app:layout_constraintEnd_toEndOf="@+id/buttonStart"
+        app:layout_constraintStart_toEndOf="@+id/buttonQR"
+        app:layout_constraintTop_toBottomOf="@+id/buttonStart" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonQR"
         android:layout_width="0dp"
         android:layout_height="80dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/mybuttonorange"
         android:text="@string/generate_qr"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintStart_toStartOf="@+id/buttonStart"
+        app:layout_constraintTop_toBottomOf="@+id/buttonStart" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/teamNum"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="250dp"
@@ -124,13 +124,13 @@
         android:inputType="number"
         android:textAlignment="center"
         android:textColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/buttonStart"
+        app:layout_constraintEnd_toEndOf="@+id/buttonStart"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/button" />
+        app:layout_constraintStart_toStartOf="@+id/buttonStart" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/matchNum"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
@@ -139,10 +139,10 @@
         android:hint="@string/match_number"
         android:inputType="number"
         android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="@+id/teamNum"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editText"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintStart_toStartOf="@+id/teamNum"
+        app:layout_constraintTop_toBottomOf="@+id/teamNum" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -152,7 +152,7 @@
         android:layout_marginTop="16dp"
         android:src="@color/colorAccent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonQR"
         app:srcCompat="@drawable/test" />
 
     <androidx.constraintlayout.widget.Guideline
