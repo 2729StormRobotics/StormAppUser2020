@@ -22,87 +22,144 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="300dp"
-        android:layout_height="80dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="300dp"
         android:background="@drawable/mybutton"
         android:text="@string/start"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="406dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6" />
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="140dp"
-        android:layout_height="80dp"
-        android:background="@drawable/mybuttonblue"
-        android:text="@string/blue"
-        tools:layout_editor_absoluteX="215dp"
-        tools:layout_editor_absoluteY="311dp" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/button6"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="160dp"
+            android:background="@drawable/custom_radio_red"
+            android:button="@null"
+            android:checked="false"
+            android:ellipsize="none"
+            android:text="@string/red"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioButton
+            android:id="@+id/button5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/mybuttonblue"
+            android:button="@null"
+            android:text="@string/blue"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/button6"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_conversion_absoluteHeight="0dp"
+            tools:layout_conversion_absoluteWidth="0dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="140dp"
-        android:layout_height="80dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/mybuttonred"
         android:text="@string/delete"
-        tools:layout_editor_absoluteX="215dp"
-        tools:layout_editor_absoluteY="502dp" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="140dp"
-        android:layout_height="80"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="311dp"
-        android:layout_marginEnd="216dp"
-        android:layout_marginBottom="340dp"
-        android:background="@drawable/mybuttonred"
-        android:ellipsize="none"
-        android:text="@string/red"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="140dp"
-        android:layout_height="80"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/mybuttonorange"
         android:text="@string/generate_qr"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="502dp" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="400dp"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="250dp"
         android:autofillHints=""
         android:cursorVisible="true"
         android:ems="10"
         android:hint="@string/team_number"
         android:inputType="number"
+        android:textAlignment="center"
         android:textColor="#000000"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="65dp" />
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/button" />
 
     <EditText
         android:id="@+id/editText2"
-        android:layout_width="400dp"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/match_number"
         android:inputType="number"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="169dp" />
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/editText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="125"
         android:layout_height="125"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="16dp"
         android:src="@color/colorAccent"
-        app:srcCompat="@drawable/test"
-        tools:layout_editor_absoluteX="143dp"
-        tools:layout_editor_absoluteY="590dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:srcCompat="@drawable/test" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="197dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
