@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".ReboundActivity">
 
+    <Button
+        android:id="@+id/btn3up"
+        android:layout_width="124dp"
+        android:layout_height="56dp"
+        android:background="#2BB932"
+        android:text="+"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="72dp" />
+
     <ToggleButton
         android:id="@+id/toggleButton4"
         android:layout_width="168dp"
@@ -31,15 +42,15 @@
         tools:layout_editor_absoluteY="16dp" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/txtv3"
         android:layout_width="63dp"
         android:layout_height="36dp"
-        android:text=" "
+        android:text="0"
         tools:layout_editor_absoluteX="168dp"
         tools:layout_editor_absoluteY="87dp" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/btn3down"
         android:layout_width="124dp"
         android:layout_height="56dp"
         android:background="#FCE24040"
@@ -50,10 +61,10 @@
         tools:layout_editor_absoluteY="72dp" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/txtv2"
         android:layout_width="68dp"
         android:layout_height="31dp"
-        android:text=" "
+        android:text="0"
         tools:layout_editor_absoluteX="169dp"
         tools:layout_editor_absoluteY="239dp" />
 
@@ -71,7 +82,7 @@
         tools:layout_editor_absoluteY="323dp" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/btn2down"
         android:layout_width="124dp"
         android:layout_height="56dp"
         android:background="#FCE24040"
@@ -82,7 +93,7 @@
         tools:layout_editor_absoluteY="227dp" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/btn1down"
         android:layout_width="124dp"
         android:layout_height="56dp"
         android:background="#FCE24040"
@@ -93,10 +104,10 @@
         tools:layout_editor_absoluteY="382dp" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/txtv1"
         android:layout_width="61dp"
         android:layout_height="34dp"
-        android:text=" "
+        android:text="0"
         tools:layout_editor_absoluteX="176dp"
         tools:layout_editor_absoluteY="394dp" />
 
@@ -114,31 +125,24 @@
         tools:layout_editor_absoluteY="168dp" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/btn2up"
         android:layout_width="124dp"
         android:layout_height="56dp"
         android:background="#2BB932"
         android:text="+"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="29dp"
         tools:layout_editor_absoluteY="227dp" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/btn1up"
         android:layout_width="124dp"
         android:layout_height="56dp"
         android:background="#2BB932"
         android:text="+"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="29dp"
         tools:layout_editor_absoluteY="382dp" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="124dp"
-        android:layout_height="56dp"
-        android:background="#2BB932"
-        android:text="+"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="72dp" />
 
     <ToggleButton
         android:id="@+id/toggleButton3"
