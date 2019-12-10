@@ -15,7 +15,7 @@
         android:layout_height="100dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="50dp"
-        android:background="@drawable/mybuttonorange"
+        android:background="@drawable/my_button_orange"
         android:fontFamily="sans-serif"
         android:text="+"
         android:textSize="36sp"
@@ -29,7 +29,7 @@
         android:layout_height="100dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="100dp"
-        android:background="@drawable/mybuttonred"
+        android:background="@drawable/my_button_red"
         android:fontFamily="sans-serif"
         android:text="-"
         android:textSize="36sp"
@@ -38,128 +38,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/numScored"
+        android:id="@+id/txtNumScored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="@+id/btnMore"
         app:layout_constraintEnd_toStartOf="@+id/btnMore"
-        app:layout_constraintStart_toEndOf="@+id/btnLess"
-        app:layout_constraintTop_toTopOf="@+id/btnLess" />
-
-    <Button
-        android:id="@+id/btnLess2"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="75dp"
-        android:background="@drawable/mybuttonred"
-        android:fontFamily="sans-serif"
-        android:text="-"
-        android:textSize="36sp"
-        android:typeface="serif"
-        app:layout_constraintStart_toStartOf="@+id/btnLess"
-        app:layout_constraintTop_toBottomOf="@+id/btnLess" />
-
-    <Button
-        android:id="@+id/btnMore2"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="75dp"
-        android:background="@drawable/mybuttonorange"
-        android:fontFamily="sans-serif"
-        android:text="+"
-        android:textSize="36sp"
-        android:typeface="serif"
-        app:layout_constraintEnd_toEndOf="@+id/btnMore"
-        app:layout_constraintTop_toBottomOf="@+id/btnMore" />
-
-    <TextView
-        android:id="@+id/numScored2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="@+id/btnMore2"
-        app:layout_constraintEnd_toStartOf="@+id/btnMore2"
-        app:layout_constraintHorizontal_bias="0.506"
-        app:layout_constraintStart_toEndOf="@+id/btnLess"
-        app:layout_constraintTop_toTopOf="@+id/btnLess2"
-        app:layout_constraintVertical_bias="0.53" />
-
-    <Button
-        android:id="@+id/btnLess3"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="75dp"
-        android:background="@drawable/mybuttonred"
-        android:fontFamily="sans-serif"
-        android:text="-"
-        android:textSize="36sp"
-        android:typeface="serif"
-        app:layout_constraintStart_toStartOf="@+id/btnLess2"
-        app:layout_constraintTop_toBottomOf="@+id/btnLess2" />
-
-    <Button
-        android:id="@+id/btnMore3"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@drawable/mybuttonorange"
-        android:fontFamily="sans-serif"
-        android:text="+"
-        android:textSize="36sp"
-        android:typeface="serif"
-        tools:layout_editor_absoluteX="263dp"
-        tools:layout_editor_absoluteY="348dp" />
-
-    <TextView
-        android:id="@+id/numScored3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="496dp"
-        android:text="0"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toStartOf="@+id/btnMore"
-        app:layout_constraintHorizontal_bias="0.506"
-        app:layout_constraintStart_toEndOf="@+id/btnLess"
-        app:layout_constraintTop_toTopOf="@+id/btnLess" />
-
-    <Button
-        android:id="@+id/btnMore4"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="364dp"
-        android:background="@drawable/mybuttonorange"
-        android:fontFamily="sans-serif"
-        android:text="+"
-        android:textSize="36sp"
-        android:typeface="serif"
-        app:layout_constraintEnd_toEndOf="@+id/btnMore"
-        app:layout_constraintTop_toBottomOf="@+id/btnMore" />
-
-    <Button
-        android:id="@+id/btnLess4"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="516dp"
-        android:layout_marginEnd="92dp"
-        android:background="@drawable/mybuttonred"
-        android:fontFamily="sans-serif"
-        android:text="-"
-        android:textSize="36sp"
-        android:typeface="serif"
-        app:layout_constraintEnd_toStartOf="@+id/btnMore"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/numScored4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="336dp"
-        android:text="0"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toStartOf="@+id/btnMore"
-        app:layout_constraintHorizontal_bias="0.626"
         app:layout_constraintStart_toEndOf="@+id/btnLess"
         app:layout_constraintTop_toTopOf="@+id/btnLess" />
 
