@@ -12,6 +12,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RadioGroup;
 
 import com.example.stormuserradar2020.ui.main.SectionsPagerAdapter;
 
@@ -35,5 +38,17 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        EditText editTeam = findViewById(R.id.teamNum);
+        EditText editMatch = findViewById(R.id.matchNum);
+        RadioGroup groupAlliance = findViewById(R.id.allianceGroup);
+
+       /* Button buttonStart = findViewById(R.id.buttonStart);
+        buttonStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        }); */
     }
 }
