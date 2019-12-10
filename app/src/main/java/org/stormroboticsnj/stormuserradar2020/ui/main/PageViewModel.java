@@ -1,4 +1,4 @@
-package com.example.stormuserradar2020.ui.main;
+package org.stormroboticsnj.stormuserradar2020.ui.main;
 
 import androidx.arch.core.util.Function;
 import androidx.lifecycle.LiveData;

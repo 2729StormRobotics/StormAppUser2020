@@ -1,4 +1,4 @@
-package com.example.stormuserradar2020.ui.main;
+package org.stormroboticsnj.stormuserradar2020.ui.main;
 
 import android.content.Context;
 
