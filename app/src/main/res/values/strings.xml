@@ -9,4 +9,5 @@
     <string name="delete">DELETE</string>
     <string name="team_number">Team Number</string>
     <string name="match_number">Match Number</string>
+    <string name="storm_logo">Storm Logo</string>
 </resources>

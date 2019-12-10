@@ -42,12 +42,13 @@ public class MainActivity extends AppCompatActivity {
         EditText editTeam = findViewById(R.id.teamNum);
         EditText editMatch = findViewById(R.id.matchNum);
         RadioGroup groupAlliance = findViewById(R.id.allianceGroup);
-        Button buttonStart = findViewById(R.id.buttonStart);
+
+       /* Button buttonStart = findViewById(R.id.buttonStart);
         buttonStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
             }
-        });
+        }); */
     }
 }
