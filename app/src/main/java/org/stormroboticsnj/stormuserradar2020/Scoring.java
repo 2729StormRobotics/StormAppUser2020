@@ -1,4 +1,4 @@
-package com.example.stormuserradar2020;
+package org.stormroboticsnj.stormuserradar2020;
 
 import android.content.Context;
 import android.net.Uri;
@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.stormuserradar2020.R;
 
 
 /**

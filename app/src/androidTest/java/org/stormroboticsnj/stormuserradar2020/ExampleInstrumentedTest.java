@@ -1,4 +1,4 @@
-package com.example.stormuserradar2020;
+package org.stormroboticsnj.stormuserradar2020;
 
 import android.content.Context;
 

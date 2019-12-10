@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">StormUserRadar2020</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_1">Scoring</string>
+    <string name="tab_text_2">Two</string>
     <string name="start">START</string>
     <string name="generate_qr">GENERATE QR</string>
     <string name="red">RED</string>
