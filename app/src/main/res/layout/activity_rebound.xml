@@ -7,7 +7,7 @@
     tools:context=".ReboundActivity">
 
     <Button
-        android:id="@+id/button16"
+        android:id="@+id/button3up"
         android:layout_width="116dp"
         android:layout_height="65dp"
         android:background="#FF5722"
@@ -16,7 +16,7 @@
         tools:layout_editor_absoluteY="385dp" />
 
     <Button
-        android:id="@+id/button15"
+        android:id="@+id/button1up"
         android:layout_width="123dp"
         android:layout_height="62dp"
         android:background="#FF5722"
@@ -55,7 +55,7 @@
         tools:layout_editor_absoluteY="177dp" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/button2up"
         android:layout_width="120dp"
         android:layout_height="60dp"
         android:background="#E91E87"
@@ -64,7 +64,7 @@
         tools:layout_editor_absoluteY="248dp" />
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/button1down"
         android:layout_width="109dp"
         android:layout_height="60dp"
         android:background="#FF5722"
@@ -73,7 +73,7 @@
         tools:layout_editor_absoluteY="102dp" />
 
     <Button
-        android:id="@+id/button17"
+        android:id="@+id/button2down"
         android:layout_width="109dp"
         android:layout_height="66dp"
         android:background="#E91E87"
@@ -82,7 +82,7 @@
         tools:layout_editor_absoluteY="248dp" />
 
     <Button
-        android:id="@+id/button18"
+        android:id="@+id/button3down"
         android:layout_width="104dp"
         android:layout_height="66dp"
         android:background="#FF5722"
@@ -91,7 +91,7 @@
         tools:layout_editor_absoluteY="385dp" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/text1"
         android:layout_width="210dp"
         android:layout_height="44dp"
         android:text="1 Point Basket "
@@ -107,7 +107,7 @@
         tools:layout_editor_absoluteY="583dp" />
 
     <RadioButton
-        android:id="@+id/radioButton"
+        android:id="@+id/balanceButton1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1 Robot "
@@ -115,7 +115,7 @@
         tools:layout_editor_absoluteY="564dp" />
 
     <RadioButton
-        android:id="@+id/radioButton3"
+        android:id="@+id/balanceButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="2 Robots"
@@ -129,11 +129,35 @@
         tools:layout_editor_absoluteY="675dp" />
 
     <RadioButton
-        android:id="@+id/radioButton4"
+        android:id="@+id/balanceButton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="3 Robots"
         tools:layout_editor_absoluteX="67dp"
         tools:layout_editor_absoluteY="656dp" />
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        tools:layout_editor_absoluteX="310dp"
+        tools:layout_editor_absoluteY="47dp" />
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        tools:layout_editor_absoluteX="304dp"
+        tools:layout_editor_absoluteY="195dp" />
+
+    <TextView
+        android:id="@+id/text5"
+        android:layout_width="69dp"
+        android:layout_height="18dp"
+        android:text="0"
+        tools:layout_editor_absoluteX="310dp"
+        tools:layout_editor_absoluteY="345dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
