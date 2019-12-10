@@ -10,7 +10,7 @@
         android:id="@+id/btn3up"
         android:layout_width="124dp"
         android:layout_height="56dp"
-        android:background="#2BB932"
+        android:background="#B2C8D9"
         android:text="+"
         android:textSize="14sp"
         android:textStyle="bold"
