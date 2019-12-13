@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.example.stormuserradar2020.R;
+import org.stormroboticsnj.stormuserradar2020.R;
 
 /**
  * A placeholder fragment containing a simple view.

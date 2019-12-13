@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.stormuserradar2020.R;
+import org.stormroboticsnj.stormuserradar2020.R;
 
 
 /**

@@ -8,7 +8,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.example.stormuserradar2020.R;
+import org.stormroboticsnj.stormuserradar2020.R;
+
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
