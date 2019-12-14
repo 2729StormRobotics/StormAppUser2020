@@ -2,11 +2,14 @@ package org.stormroboticsnj.stormuserradar2020;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class StartActivity extends AppCompatActivity {
     /* data to be collected and transferred to next activity */
@@ -18,6 +21,7 @@ public class StartActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
+
         /* on creation of activity, find inputs */
         final Button buttonStart = findViewById(R.id.buttonStart);
         final EditText teamText = findViewById(R.id.teamNum);
@@ -30,14 +34,66 @@ public class StartActivity extends AppCompatActivity {
         buttonStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /* check that all fields are completed and build error message*/
+                /* check that all fields are completed and show errors*/
                 String strTeamNum = teamText.getText().toString();
                 String strMatchNum = matchText.getText().toString();
+                int checkedButton = groupAlliance.getCheckedRadioButtonId();
+                boolean error = false;
 
-                if (strTeamNum.equals("")) teamText.setError("Enter a Team Number");
+                if (strMatchNum.equals("")) { //no match number entered
+                    matchText.setError("Enter a Match Number");
+                    error = true;
+                    matchText.requestFocus();
+                } else {
+                    team = Integer.parseInt(strMatchNum);
+                }
 
+                if (strTeamNum.equals("")) { //no team number entered
+                    teamText.setError("Enter a Team Number");
+                    error = true;
+                    teamText.requestFocus();
+                } else {
+                    match = Integer.parseInt(strTeamNum);
+                }
+
+                if (checkedButton == -1) { //no alliance selected
+                    Context context = getApplicationContext();
+                    CharSequence text = "You must pick an Alliance Color";
+                    int duration = Toast.LENGTH_SHORT;
+                    Toast toast = Toast.makeText(context, text, duration);
+                    toast.show();
+                    error = true;
+                } else {
+                    alliance = checkedButton == R.id.red;
+                }
+
+                if (!error) { //no errors
+                    Intent intent = new Intent(StartActivity.this, MainActivity.class);
+                    intent.putExtra("team", team);
+                    intent.putExtra("match", match);
+                    intent.putExtra("alliance", alliance);
+
+                    startActivity(intent);
+                }
 
             }
         });
+
+        /* delete button */
+        buttonDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        /* qr button */
+        buttonQR.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
     }
 }

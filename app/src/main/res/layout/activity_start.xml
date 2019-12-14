@@ -5,7 +5,7 @@
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="org.stormroboticsnj.stormuserradar2020.ui.main.PlaceholderFragment">
+    tools:context="org.stormroboticsnj.stormuserradar2020.StartActivity">
 
     <TextView
         android:id="@+id/section_label"
@@ -19,37 +19,31 @@
         app:layout_constraintTop_toTopOf="@+id/constraintLayout"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintTop_creator="1" />
+
     <Button
         android:id="@+id/buttonStart"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="125dp"
         android:layout_marginStart="55dp"
-        android:layout_marginTop="350dp"
         android:layout_marginEnd="55dp"
-        android:layout_marginBottom="300dp"
+        android:layout_marginBottom="350dp"
         android:background="@drawable/mybuttonorange"
         android:text="@string/start"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <RadioGroup
         android:id="@+id/allianceGroup"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="250dp"
+        android:layout_height="100dp"
         android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/buttonStart"
         app:layout_constraintEnd_toEndOf="@+id/buttonStart"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/buttonStart"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        android:orientation="horizontal"
-        >
+        app:layout_constraintStart_toStartOf="@+id/buttonStart">
 
         <RadioButton
             android:id="@+id/red"
@@ -88,20 +82,20 @@
         android:id="@+id/buttonDelete"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
         android:background="@drawable/mybuttonred"
         android:text="@string/delete"
         app:layout_constraintBottom_toBottomOf="@+id/buttonQR"
         app:layout_constraintEnd_toEndOf="@+id/buttonStart"
         app:layout_constraintStart_toEndOf="@+id/buttonQR"
-        app:layout_constraintTop_toBottomOf="@+id/buttonStart" />
+        app:layout_constraintTop_toTopOf="@+id/buttonQR" />
 
     <Button
         android:id="@+id/buttonQR"
         android:layout_width="0dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="16dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="8dp"
         android:background="@drawable/mybuttonred"
         android:text="@string/generate_qr"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
@@ -112,7 +106,7 @@
         android:id="@+id/teamNum"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="250dp"
+        android:layout_marginBottom="16dp"
         android:autofillHints=""
         android:cursorVisible="true"
         android:ems="10"
@@ -120,7 +114,7 @@
         android:inputType="number"
         android:textAlignment="center"
         android:textColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/buttonStart"
+        app:layout_constraintBottom_toTopOf="@+id/matchNum"
         app:layout_constraintEnd_toEndOf="@+id/buttonStart"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/buttonStart" />
@@ -129,22 +123,22 @@
         android:id="@+id/matchNum"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginBottom="75dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/match_number"
         android:inputType="number"
         android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/allianceGroup"
         app:layout_constraintEnd_toEndOf="@+id/teamNum"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/teamNum"
-        app:layout_constraintTop_toBottomOf="@+id/teamNum" />
+        app:layout_constraintStart_toStartOf="@+id/teamNum" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="125dp"
         android:layout_height="125dp"
-        android:layout_marginStart="140dp"
+        android:layout_marginStart="248dp"
         android:layout_marginTop="16dp"
         android:contentDescription="@string/storm_logo"
         android:src="@color/colorAccent"
@@ -157,6 +151,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="214dp" />
+        app:layout_constraintGuide_percent="0.49916804" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
