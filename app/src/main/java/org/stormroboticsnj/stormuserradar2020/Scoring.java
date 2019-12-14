@@ -1,6 +1,5 @@
 package org.stormroboticsnj.stormuserradar2020;
 
-import android.app.Activity;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -12,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import org.stormroboticsnj.stormuserradar2020.R;
 
 
 /**
@@ -28,8 +26,6 @@ public class Scoring extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    private TextView t;
-    private static int num = 0;
 
     // TODO: Rename and change types of parameters
     private String mParam1;

@@ -68,7 +68,7 @@ public class Endgame extends Fragment {
                              Bundle savedInstanceState) {
 
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_endgame, container, false);
+        View view =  inflater.inflate(R.layout.fragment_endgame, container, false);
 
         /* find elements */
         final Button buttonSubmit = view.findViewById(R.id.buttonSubmit);
@@ -83,12 +83,7 @@ public class Endgame extends Fragment {
         return view;
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
-    }
+
 
     @Override
     public void onAttach(Context context) {

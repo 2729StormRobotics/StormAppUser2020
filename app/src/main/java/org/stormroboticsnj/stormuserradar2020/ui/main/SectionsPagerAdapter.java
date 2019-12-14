@@ -32,9 +32,10 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         // getItem is called to instantiate the fragment for the given page.
-
-        if (position == 1) return Endgame.newInstance("", "");
-        return Scoring.newInstance("", "");
+        if (position == 0) { // Fragment # 0 - This will show Scoring
+            return Scoring.newInstance("", "Page # 1");
+        }
+        return Endgame.newInstance("", "");
     }
 
     @Nullable

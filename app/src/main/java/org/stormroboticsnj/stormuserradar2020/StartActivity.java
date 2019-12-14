@@ -1,8 +1,11 @@
 package org.stormroboticsnj.stormuserradar2020;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -17,10 +20,21 @@ public class StartActivity extends AppCompatActivity {
     private int match;
     private boolean alliance; //red = true
 
+    private AppDatabase db;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
+
+        db = Room.databaseBuilder(getApplicationContext(),
+                AppDatabase.class, "stormdb").allowMainThreadQueries().build(); //build database
+
+        /* get data from Intent, from QR */
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            deleteData();
+        }
 
         /* on creation of activity, find inputs */
         final Button buttonStart = findViewById(R.id.buttonStart);
@@ -83,7 +97,7 @@ public class StartActivity extends AppCompatActivity {
         buttonDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                deleteData();
             }
         });
 
@@ -91,9 +105,32 @@ public class StartActivity extends AppCompatActivity {
         buttonQR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(StartActivity.this, QrActivity.class);
+                startActivity(intent);
             }
         });
 
+    }
+
+    private void deleteData() {
+        new AlertDialog.Builder(this) //confirm with user
+                .setTitle("Clear Data")
+                .setMessage("If the data has been scanned, click yes to delete it. Otherwise, keep the data until it is scanned.")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //clear database table
+                        db.clearAllTables();
+                        Toast.makeText(getApplicationContext(), "Database cleared", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //do nothing
+                    }
+                })
+                .setIcon(R.mipmap.ic_launcher)
+                .show();
     }
 }
