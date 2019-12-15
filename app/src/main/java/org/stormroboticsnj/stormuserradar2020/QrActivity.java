@@ -54,6 +54,9 @@ public class QrActivity extends AppCompatActivity {
             output.append(whooshList.get(i).toString());
         }
 
+        /* make and display QR code */
+        /* this is the code that should never change */
+
         Display disp = getWindowManager().getDefaultDisplay();
         Point size = new Point();
         disp.getSize(size);

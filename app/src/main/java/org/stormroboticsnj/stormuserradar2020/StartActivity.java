@@ -14,13 +14,19 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+/**
+ * This is the default activity for the User App. This Activity collects the Team Number, Match Number,
+ * and Alliance that the team is on, before starting the Main Activity. All of these fields are
+ * required. This screen also acts as a main menu and can launch the QR activity as well as clear
+ * the database.
+ */
 public class StartActivity extends AppCompatActivity {
     /* data to be collected and transferred to next activity */
     private int team;
     private int match;
     private boolean alliance; //red = true
 
-    private AppDatabase db;
+    private AppDatabase db; //built on creation of Activity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +39,11 @@ public class StartActivity extends AppCompatActivity {
         /* get data from Intent, from QR */
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
+            /* if any data exists, this activity was launched by QR.
+               Ask User if database should be wiped. Database should be cleared after each scan
+               to make future QR codes smaller and not redundant. */
             deleteData();
+
         }
 
         /* on creation of activity, find inputs */
@@ -81,7 +91,7 @@ public class StartActivity extends AppCompatActivity {
                     alliance = checkedButton == R.id.red;
                 }
 
-                if (!error) { //no errors
+                if (!error) { //no errors, launch MainActivity, pass on collected data
                     Intent intent = new Intent(StartActivity.this, MainActivity.class);
                     intent.putExtra("team", team);
                     intent.putExtra("match", match);
@@ -112,6 +122,9 @@ public class StartActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * This method creates a Yes/No Dialog Box and clears the database upon confirmation
+     */
     private void deleteData() {
         new AlertDialog.Builder(this) //confirm with user
                 .setTitle("Clear Data")
