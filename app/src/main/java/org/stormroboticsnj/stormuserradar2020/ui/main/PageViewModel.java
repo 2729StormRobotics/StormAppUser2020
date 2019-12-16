@@ -6,6 +6,10 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Transformations;
 import androidx.lifecycle.ViewModel;
 
+/**
+ * This class was created by Android Studio and is a powerful tool for holding data between instances
+ * of Activities. We do not currently use it.
+ */
 public class PageViewModel extends ViewModel {
 
     private MutableLiveData<Integer> mIndex = new MutableLiveData<>();
