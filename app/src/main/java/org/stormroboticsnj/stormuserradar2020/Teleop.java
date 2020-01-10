@@ -16,12 +16,12 @@ import android.widget.TextView;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link Scoring.OnFragmentInteractionListener} interface
+ * {@link Teleop.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link Scoring#newInstance} factory method to
+ * Use the {@link Teleop#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Scoring extends Fragment {
+public class Teleop extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -33,7 +33,7 @@ public class Scoring extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public Scoring() {
+    public Teleop() {
         // Required empty public constructor
     }
 
@@ -43,11 +43,11 @@ public class Scoring extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment scoring.
+     * @return A new instance of fragment teleop.
      */
     // TODO: Rename and change types and number of parameters
-    public static Scoring newInstance(String param1, String param2) {
-        Scoring fragment = new Scoring();
+    public static Teleop newInstance(String param1, String param2) {
+        Teleop fragment = new Teleop();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -67,23 +67,28 @@ public class Scoring extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // View object that stores instance data, surrounds smaller elements
+
+
         View view = inflater.inflate(R.layout.fragment_scoring, container, false);
 
         /* Find layout elements */
-        final TextView numScored = view.findViewById(R.id.txtNumScored);
-        final TextView numScored2 = view.findViewById(R.id.txtNumScored2);
-        final Button scoreMore = view.findViewById(R.id.btnMore);
-        final Button scoreLess = view.findViewById(R.id.btnLess);
-        final Button scoreMore2 = view.findViewById(R.id.btnMore2);
-        final Button scoreLess2 = view.findViewById(R.id.btnLess2);
+        final TextView numScoredLVL1 = view.findViewById(R.id.txtNumScoredLVL1);
+        final TextView numScoredLVL2 = view.findViewById(R.id.txtNumScoredLVL2);
+        final TextView numScoredLVL3 = view.findViewById(R.id.txtNumScoredLVL3);
+        final Button scoreMoreLVL1 = view.findViewById(R.id.btnMoreLVL1);
+        final Button scoreMoreLVL2 = view.findViewById(R.id.btnMoreLVL2);
+        final Button scoreMoreLVL3 = view.findViewById(R.id.btnMoreLVL3);
+        final Button scoreLessLVl1 = view.findViewById(R.id.btnLessLVL1);
+        final Button scoreLessLVL2 = view.findViewById(R.id.btnLessLVL2);
+        final Button scoreLessLVL3 = view.findViewById(R.id.btnLessLVL3);
+
         final MainActivity act = (MainActivity) getActivity();
         // Button for adding
-        scoreMore.setOnClickListener(new View.OnClickListener() {
+        /*scoreMoreLVL1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 act.incScore();
-                numScored.setText(String.valueOf(act.getScore()));
+                numScoredLVL1.setText(String.valueOf(act.getScore()));
             }
         });
 
@@ -96,7 +101,7 @@ public class Scoring extends Fragment {
             }
         });
 
-        scoreMore2.setOnClickListener(new View.OnClickListener() {
+        scoreMoreLVL2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 act.incScoreTwo();
@@ -110,9 +115,17 @@ public class Scoring extends Fragment {
                 act.decScoreTwo();
                 numScored2.setText(String.valueOf(act.getScoreTwo()));
             }
-        });
+        });*/
+
         // Inflate the layout for this fragment
-        return view;
+        return inflater.inflate(R.layout.fragment_teleop, container, false);
+    }
+
+    // TODO: Rename method, update argument and hook method into UI event
+    public void onButtonPressed(Uri uri) {
+        if (mListener != null) {
+            mListener.onFragmentInteraction(uri);
+        }
     }
 
     @Override
@@ -132,6 +145,16 @@ public class Scoring extends Fragment {
         mListener = null;
     }
 
+    /**
+     * This interface must be implemented by activities that contain this
+     * fragment to allow an interaction in this fragment to be communicated
+     * to the activity and potentially other fragments contained in that
+     * activity.
+     * <p>
+     * See the Android Training lesson <a href=
+     * "http://developer.android.com/training/basics/fragments/communicating.html"
+     * >Communicating with Other Fragments</a> for more information.
+     */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);

@@ -27,28 +27,38 @@ public class MainActivity extends AppCompatActivity implements Scoring.OnFragmen
     private boolean alliance; //true = red
 
     /* recorded in this activity */
-    private int score = 0;
-    private int scoreTwo = 0;
+    private int scoreLVL1 = 0;
+    private int scoreLVL2 = 0;
+    private int scoreLVL3 = 0;
 
-    public void incScore () {
-        score++;
+    public void incScoreLVL1 () {
+        scoreLVL1++;
     }
-    public void decScore () {
-        score--;
-    }
-    public int getScore () {
-        return score;
+    public void decScoreLVL1 () {scoreLVL1--; }
+    public int getScoreLVL1 () {
+        return scoreLVL1;
     }
 
-    public void incScoreTwo () {
-        scoreTwo++;
+    public void incScoreLVL2 () {
+        scoreLVL2++;
     }
-    public void decScoreTwo () {
-        scoreTwo--;
+    public void decScoreLVL2 () {
+        scoreLVL2--;
     }
-    public int getScoreTwo () {
-        return scoreTwo;
+    public int getScoreLVL2 () {
+        return scoreLVL2;
     }
+
+    public void incScoreLVL3 () {
+        scoreLVL3++;
+    }
+    public void decScoreLVL3 () {
+        scoreLVL3--;
+    }
+    public int getScoreLVL3 () {
+        return scoreLVL3;
+    }
+
     private AppDatabase db; //built on creation of Activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,8 +100,8 @@ public class MainActivity extends AppCompatActivity implements Scoring.OnFragmen
 
         whoosh.setAlliance(alliance);
 
-        whoosh.setScore(score);
-        whoosh.setScoreTwo(scoreTwo);
+        whoosh.setScore(scoreLVL1);
+        whoosh.setScoreTwo(scoreLVL2);
 
         stormDao.insertWhooshes(whoosh);
 
