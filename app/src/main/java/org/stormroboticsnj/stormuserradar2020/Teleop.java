@@ -91,7 +91,7 @@ public class Teleop extends Fragment {
         scoreMoreLVL1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                act.incScoreLVL1(); // Increment bottom port score
+                act.inctPowerCell1(); // Increment bottom port score
                 numScoredLVL1.setText(String.valueOf(act.getScoreLVL1())); // Display updated bottom port number output
             }
         });
@@ -139,18 +139,18 @@ public class Teleop extends Fragment {
             }
         });
 
-        boolean checked = ((CheckBox) view).isChecked();
+       // boolean checked = ((CheckBox) view).isChecked();
 
-        switch(view.getId()) {
-            case R.id.cboRC:
-            case R.id.cboPC:
-                if (checked){
-                    // Rotation/Position control stage is complete
-                } else {
-                    // Rotation/Position control stage is not complete
-                }
-                break;
-        }
+//        switch(view.getId()) {
+//            case R.id.cboRC:
+//            case R.id.cboPC:
+//                if (checked){
+//                    // Rotation/Position control stage is complete
+//                } else {
+//                    // Rotation/Position control stage is not complete
+//                }
+//                break;
+//        }
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_teleop, container, false);
