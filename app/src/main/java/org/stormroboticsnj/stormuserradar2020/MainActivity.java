@@ -32,6 +32,47 @@ public class MainActivity extends AppCompatActivity implements Scoring.OnFragmen
     private int ePowerCell1 = 0;
     private int ePowerCell2 = 0;
     private int ePowerCell3 = 0;
+    private int aPowerCell1 = 0;
+    private int aPowerCell2;
+    private int aPowerCell3;
+    private int aPowerCellPickup;
+
+    public void incaPowerCell1 () {
+        aPowerCell1++;
+    }
+    public void decaPowerCell1 () {
+        aPowerCell1--;
+    }
+    public int getaPowerCell1 () {
+        return aPowerCell1;
+    }
+    public void incaPowerCell2 () {
+        aPowerCell2++;
+    }
+    public void decaPowerCell2 () {
+        aPowerCell2--;
+    }
+    public int getaPowerCell2 () {
+        return aPowerCell2;
+    }
+    public void incaPowerCell3 () {
+        aPowerCell3++;
+    }
+    public void decaPowerCell3 () {
+        aPowerCell3--;
+    }
+    public int getaPowerCell3 () {
+        return aPowerCell3;
+    }
+    public void incaPowerCellPickup () {
+        aPowerCellPickup++;
+    }
+    public void decaPowerCellPickup () {
+        aPowerCellPickup--;
+    }
+    public int getaPowerCellPickup () {
+        return aPowerCellPickup;
+    }
 
     public void incePowerCell1(){
         ePowerCell1++;
@@ -116,8 +157,8 @@ public class MainActivity extends AppCompatActivity implements Scoring.OnFragmen
 
         whoosh.setAlliance(alliance);
 
-        whoosh.setScore(score);
-        whoosh.setScoreTwo(scoreTwo);
+        //whoosh.setScore(score);
+        //whoosh.setScoreTwo(scoreTwo);
 
         stormDao.insertWhooshes(whoosh);
 

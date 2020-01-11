@@ -21,10 +21,34 @@ public class Whoosh {
     private int match;
     @ColumnInfo(name = "alliance")
     private boolean alliance;
-    @ColumnInfo(name = "score")
-    private int score;
-    @ColumnInfo(name="score_two")
-    private int scoreTwo;
+    @ColumnInfo(name ="level_one_auto")
+    private int aPowerCell1;
+    @ColumnInfo(name ="outer_port_auto")
+    private int aPowerCell2;
+    @ColumnInfo(name ="inner_port_auto")
+    private int aPowerCell3;
+    @ColumnInfo(name = "power_cells_picked_up_auto")
+    private int aPowerCellPickup;
+    @ColumnInfo(name ="level_one_teleop")
+    private int tPowerCell1;
+    @ColumnInfo(name ="outer_port_teleop")
+    private int tPowerCell2;
+    @ColumnInfo(name ="inner_port_teleop")
+    private int tPowerCell3;
+    @ColumnInfo(name ="rotation_control")
+    private boolean rotationControl;
+    @ColumnInfo(name ="position_control")
+    private boolean positionControl;
+    @ColumnInfo(name ="level_ones_endgame")
+    private int ePowerCell1;
+    @ColumnInfo(name ="outer_port_endgame")
+    private int ePowerCell2;
+    @ColumnInfo(name ="inner_port_endgame")
+    private int ePowerCell3;
+    @ColumnInfo(name ="hang")
+    private int hang;
+
+
 
     public Whoosh(int t, int m) {
         team = t;
@@ -41,16 +65,60 @@ public class Whoosh {
         return match;
     }
 
-    public int getScore() {
-        return score;
-    }
-
-    public int getScoreTwo() {
-        return scoreTwo;
-    }
-
     public boolean isAlliance() {
         return alliance;
+    }
+
+    public int getaPowerCell1() {
+        return aPowerCell1;
+    }
+
+    public int getaPOwerCell2() {
+        return aPowerCell2;
+    }
+
+    public int getaPowerCell3() {
+        return aPowerCell3;
+    }
+
+    public int getaPowerCellPickup() {
+        return aPowerCellPickup;
+    }
+
+    public int gettPowerCell1() {
+        return tPowerCell1;
+    }
+
+    public int gettPowerCell2() {
+        return tPowerCell2;
+    }
+
+    public int gettPowerCell3() {
+        return tPowerCell3;
+    }
+
+    public boolean isPositionControl() {
+        return positionControl;
+    }
+
+    public boolean isRotationControl() {
+        return rotationControl;
+    }
+
+    public int getePowerCell1() {
+        return ePowerCell1;
+    }
+
+    public int getePowerCell2() {
+        return ePowerCell2;
+    }
+
+    public int getePowerCell3() {
+        return ePowerCell3;
+    }
+
+    public int getHang() {
+        return hang;
     }
 
     public void setTeam(int team) {
@@ -65,13 +133,34 @@ public class Whoosh {
         this.alliance = alliance;
     }
 
-    public void setScore(int score) {
-        this.score = score;
+    public void setaPowerCell1(int aPowerCell1) {this.aPowerCell1 = aPowerCell1; }
+
+    public void setaPOwerCell2(int aPOwerCell2) {this.aPowerCell2 = aPOwerCell2; }
+
+    public void setaPowerCell3(int aPowerCell3) {this.aPowerCell3 = aPowerCell3; }
+
+    public void setaPowerCellPickup(int aPowerCellPickup) {this.aPowerCellPickup = aPowerCellPickup;
     }
 
-    public void setScoreTwo(int scoreTwo) {
-        this.scoreTwo = scoreTwo;
+    public void settPowerCell1(int tPowerCell1) { this.tPowerCell1 = tPowerCell1; }
+
+    public void settPowerCell3(int tPowerCell3) { this.tPowerCell3 = tPowerCell3; }
+
+    public void settPowerCell2(int tPowerCell2) {this.tPowerCell2 = tPowerCell2; }
+
+    public void setPositionControl(boolean positionControl) {this.positionControl = positionControl;
     }
+
+    public void setRotationControl(boolean rotationControl) {this.rotationControl = rotationControl;
+    }
+
+    public void setePowerCell1(int ePowerCell1) { this.ePowerCell1 = ePowerCell1; }
+
+    public void setePowerCell2(int ePowerCell2) { this.ePowerCell2 = ePowerCell2; }
+
+    public void setePowerCell3(int ePowerCell3) { this.ePowerCell3 = ePowerCell3; }
+
+    public void setHang(int hang) { this.hang = hang; }
 
     @NonNull
     @Override
@@ -79,8 +168,19 @@ public class Whoosh {
         return          team
                 + "," + match
                 + "," + (alliance ? "r" : "b")
-                + "," + score
-                + "," + scoreTwo
+                + "," + aPowerCell1
+                + "," + aPowerCell2
+                + "," + aPowerCell3
+                + "," + aPowerCellPickup
+                + "," + tPowerCell1
+                + "," + tPowerCell2
+                + "," + tPowerCell3
+                + "," + (rotationControl ? "y" : "n")
+                + "," + (positionControl ? "y" : "n")
+                + "," + ePowerCell1
+                + "," + ePowerCell2
+                + "," + ePowerCell3
+                + "," + hang
                 + "|";
     }
 }
