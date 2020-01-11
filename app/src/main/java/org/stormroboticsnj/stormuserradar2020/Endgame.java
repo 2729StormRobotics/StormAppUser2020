@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 
 /**
@@ -68,10 +69,23 @@ public class Endgame extends Fragment {
                              Bundle savedInstanceState) {
 
         // Inflate the layout for this fragment
-        View view =  inflater.inflate(R.layout.fragment_endgame, container, false);
+        View view = inflater.inflate(R.layout.fragment_endgame, container, false);
 
         /* find elements */
-        final Button buttonSubmit = view.findViewById(R.id.buttonSubmit);
+        final Button buttonSubmit = view.findViewById(R.id.btnSubmit);
+        final Button btnELessLVL1 = view.findViewById(R.id.btnELessLVL1);
+        final Button btnELessLVL2 = view.findViewById(R.id.btnELessLVL2);
+        final Button btnELessLVL3 = view.findViewById(R.id.btnELessLVL3);
+        final Button btnEMoreLVL1 = view.findViewById(R.id.btnEMoreLVL1);
+        final Button btnEMoreLVL2 = view.findViewById(R.id.btnEMoreLVL2);
+        final Button btnEMoreLVL3 = view.findViewById(R.id.btnEMoreLVL3);
+
+        final TextView txtScoredLVL1 = view.findViewById(R.id.txtEScoredLVL1);
+        final TextView txtScoredLVL2 = view.findViewById(R.id.txtEScoredLVL2);
+        final TextView txtScoredLVL3 = view.findViewById(R.id.txtEScoredLVL3);
+
+
+
         final MainActivity act = (MainActivity) getActivity();
         buttonSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,7 +96,6 @@ public class Endgame extends Fragment {
 
         return view;
     }
-
 
 
     @Override

@@ -5,20 +5,185 @@
     android:id="@+id/endgame"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="org.stormroboticsnj.stormuserradar2020.Endgame">
-
+    android:visibility="visible"
+    tools:context="org.stormroboticsnj.stormuserradar2020.Endgame"
+    tools:visibility="visible">
 
     <Button
-        android:id="@+id/buttonSubmit"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="400dp"
-        android:layout_marginEnd="100dp"
-        android:background="@drawable/mybuttonorange"
-        android:text="@string/submit"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/btnEMoreLVL1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="136dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/my_button_orange"
+        android:fontFamily="sans-serif"
+        android:text="@string/plus"
+        android:textSize="36sp"
+        android:typeface="serif"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnELessLVL1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/my_button_red"
+        android:fontFamily="sans-serif"
+        android:text="@string/minus"
+        android:textSize="36sp"
+        android:typeface="serif"
+        tools:layout_editor_absoluteX="75dp"
+        tools:layout_editor_absoluteY="136dp" />
+
+    <Button
+        android:id="@+id/btnEMoreLVL3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="396dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/my_button_orange"
+        android:fontFamily="sans-serif"
+        android:text="@string/plus"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtEScoredLVL3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="227dp"
+        tools:layout_editor_absoluteY="418dp" />
+
+    <TextView
+        android:id="@+id/txtEScoredLVL2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="227dp"
+        tools:layout_editor_absoluteY="310dp" />
+
+    <TextView
+        android:id="@+id/txtEScoredLVL1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="227dp"
+        tools:layout_editor_absoluteY="175dp" />
+
+    <Button
+        android:id="@+id/btnEMoreLVL2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/my_button_orange"
+        android:fontFamily="sans-serif"
+        android:text="@string/plus"
+        android:textSize="36sp"
+        android:typeface="serif"
+        tools:layout_editor_absoluteX="283dp"
+        tools:layout_editor_absoluteY="266dp" />
+
+    <Button
+        android:id="@+id/btnELessLVL2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/my_button_red"
+        android:fontFamily="sans-serif"
+        android:text="@string/minus"
+        android:textSize="36sp"
+        android:typeface="serif"
+        tools:layout_editor_absoluteX="75dp"
+        tools:layout_editor_absoluteY="266dp" />
+
+    <Button
+        android:id="@+id/btnELessLVL3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/my_button_red"
+        android:fontFamily="sans-serif"
+        android:text="@string/minus"
+        android:textSize="36sp"
+        android:typeface="serif"
+        tools:layout_editor_absoluteX="75dp"
+        tools:layout_editor_absoluteY="396dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Points Scored in Levels"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="66dp" />
+
+    <TextView
+        android:id="@+id/txtELVL1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="126dp" />
+
+    <TextView
+        android:id="@+id/txtELVL2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="274dp" />
+
+    <TextView
+        android:id="@+id/txtELVL3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="418dp" />
+
+    <CheckBox
+        android:id="@+id/cboHang"
+        android:layout_width="288dp"
+        android:layout_height="87dp"
+        android:text="Hang"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="508dp" />
+
+    <CheckBox
+        android:id="@+id/cboHangLevel"
+        android:layout_width="288dp"
+        android:layout_height="87dp"
+        android:text="Level Hang"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        tools:layout_editor_absoluteX="193dp"
+        tools:layout_editor_absoluteY="508dp" />
+
+    <CheckBox
+        android:id="@+id/cboPark"
+        android:layout_width="288dp"
+        android:layout_height="87dp"
+        android:text="Parked"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="561dp" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#12B815"
+        android:text="Submit"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="654dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
