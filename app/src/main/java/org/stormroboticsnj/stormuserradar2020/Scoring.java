@@ -67,6 +67,7 @@ public class Scoring extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        // View object that stores instance data, surrounds smaller elements
         View view = inflater.inflate(R.layout.fragment_scoring, container, false);
 
         /* Find layout elements */
