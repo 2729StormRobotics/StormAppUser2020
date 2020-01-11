@@ -107,11 +107,44 @@ public class Auto extends Fragment {
             @Override
             public void onClick(View v) {
                 act.incaPowerCell2();
-                bottomScoreTxt.setText(String.valueOf(act.getaPowerCell2()));
+                outerScoreTxt.setText(String.valueOf(act.getaPowerCell2()));
             }
         });
-
-
+        lessOuterBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                act.decaPowerCell2();
+                outerScoreTxt.setText(String.valueOf(act.getaPowerCell2()));
+            }
+        });
+        moreInnerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                act.incaPowerCell3();
+                innerScoreTxt.setText(String.valueOf(act.getaPowerCell3()));
+            }
+        });
+        lessInnerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                act.decaPowerCell3();
+                innerScoreTxt.setText(String.valueOf(act.getaPowerCell3()));
+            }
+        });
+        moreIntakeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                act.incaPowerCellPickup();
+                intakeScoreTxt.setText(String.valueOf(act.getaPowerCellPickup()));
+            }
+        });
+        lessIntakeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                act.decaPowerCellPickup();
+                intakeScoreTxt.setText(String.valueOf(act.getaPowerCellPickup()));
+            }
+        });
 
 
 
