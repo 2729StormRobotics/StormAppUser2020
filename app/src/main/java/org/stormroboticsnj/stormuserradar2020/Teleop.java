@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 
@@ -72,50 +73,84 @@ public class Teleop extends Fragment {
         View view = inflater.inflate(R.layout.fragment_scoring, container, false);
 
         /* Find layout elements */
-        final TextView numScoredLVL1 = view.findViewById(R.id.txtNumScoredLVL1);
-        final TextView numScoredLVL2 = view.findViewById(R.id.txtNumScoredLVL2);
-        final TextView numScoredLVL3 = view.findViewById(R.id.txtNumScoredLVL3);
-        final Button scoreMoreLVL1 = view.findViewById(R.id.btnMoreLVL1);
-        final Button scoreMoreLVL2 = view.findViewById(R.id.btnMoreLVL2);
-        final Button scoreMoreLVL3 = view.findViewById(R.id.btnMoreLVL3);
-        final Button scoreLessLVl1 = view.findViewById(R.id.btnLessLVL1);
-        final Button scoreLessLVL2 = view.findViewById(R.id.btnLessLVL2);
-        final Button scoreLessLVL3 = view.findViewById(R.id.btnLessLVL3);
+        final TextView numScoredLVL1 = view.findViewById(R.id.txtNumScoredLVL1); // Text View for number of power cells scored in bottom port
+        final TextView numScoredLVL2 = view.findViewById(R.id.txtNumScoredLVL2); // Text View for number of power cells scored in outer port
+        final TextView numScoredLVL3 = view.findViewById(R.id.txtNumScoredLVL3); // Text View for number of power cells scored in inner port
+        final Button scoreMoreLVL1 = view.findViewById(R.id.btnMoreLVL1); // Button for incrementing bottom port score
+        final Button scoreMoreLVL2 = view.findViewById(R.id.btnMoreLVL2); // Button for incrementing outer port score
+        final Button scoreMoreLVL3 = view.findViewById(R.id.btnMoreLVL3); // Button for incrementing inner port score
+        final Button scoreLessLVl1 = view.findViewById(R.id.btnLessLVL1); // Button for decrementing bottom port score
+        final Button scoreLessLVL2 = view.findViewById(R.id.btnLessLVL2); // Button for decrementing outer port score
+        final Button scoreLessLVL3 = view.findViewById(R.id.btnLessLVL3); // Button for decrementing inner port score
+        final CheckBox rotationControl = view.findViewById(R.id.cboRC); // Checkbox for rotating control panel wheel
+        final CheckBox positionControl = view.findViewById(R.id.cboPC); // Checkbox for wheel position
 
-        final MainActivity act = (MainActivity) getActivity();
-        // Button for adding
-        /*scoreMoreLVL1.setOnClickListener(new View.OnClickListener() {
+        final MainActivity act = (MainActivity) getActivity(); // Call MainActivity object so that you can call methods from that class
+
+        // Setting incrementing listeners for incrementing scores to their respective buttons
+        scoreMoreLVL1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                act.incScore();
-                numScoredLVL1.setText(String.valueOf(act.getScore()));
-            }
-        });
-
-        // Button for subtracting
-        scoreLess.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                act.decScore();
-                numScored.setText(String.valueOf(act.getScore()));
+                act.incScoreLVL1(); // Increment bottom port score
+                numScoredLVL1.setText(String.valueOf(act.getScoreLVL1())); // Display updated bottom port number output
             }
         });
 
         scoreMoreLVL2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                act.incScoreTwo();
-                numScored2.setText(String.valueOf(act.getScoreTwo()));
+                act.incScoreLVL2(); // Increment outer port score
+                numScoredLVL2.setText(String.valueOf(act.getScoreLVL2())); // Display updated outer port number output
             }
         });
 
-        scoreLess2.setOnClickListener(new View.OnClickListener() {
+        scoreMoreLVL3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                act.decScoreTwo();
-                numScored2.setText(String.valueOf(act.getScoreTwo()));
+                act.incScoreLVL3(); // Increment inner port score
+                numScoredLVL3.setText(String.valueOf(act.getScoreLVL3())); // Display updated inner port number output
             }
-        });*/
+        });
+
+        // Setting decrementing listeners for decrementing scores to their respective buttons
+        scoreLessLVl1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                act.decScoreLVL1(); // Decrement bottom port score
+                numScoredLVL1.setText(String.valueOf(act.getScoreLVL1())); // Display updated inner port number output
+            }
+        });
+
+        // Button for decrementing LVL2 score
+        scoreLessLVL2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                act.decScoreLVL2(); // Decrement bottom port score
+                numScoredLVL2.setText(String.valueOf(act.getScoreLVL2())); // Display updated inner port number output
+            }
+        });
+
+        // Button for decrementing LVL3 score
+        scoreLessLVL3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                act.decScoreLVL3(); // Decrement bottom port score
+                numScoredLVL3.setText(String.valueOf(act.getScoreLVL3())); // Display updated inner port number output
+            }
+        });
+
+        boolean checked = ((CheckBox) view).isChecked();
+
+        switch(view.getId()) {
+            case R.id.cboRC:
+            case R.id.cboPC:
+                if (checked){
+                    // Rotation/Position control stage is complete
+                } else {
+                    // Rotation/Position control stage is not complete
+                }
+                break;
+        }
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_teleop, container, false);
