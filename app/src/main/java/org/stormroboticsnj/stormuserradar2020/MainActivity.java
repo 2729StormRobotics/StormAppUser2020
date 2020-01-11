@@ -90,8 +90,8 @@ public class MainActivity extends AppCompatActivity implements Scoring.OnFragmen
 
         whoosh.setAlliance(alliance);
 
-        whoosh.setScore(score);
-        whoosh.setScoreTwo(scoreTwo);
+        //whoosh.setScore(score);
+        //whoosh.setScoreTwo(scoreTwo);
 
         stormDao.insertWhooshes(whoosh);
 
