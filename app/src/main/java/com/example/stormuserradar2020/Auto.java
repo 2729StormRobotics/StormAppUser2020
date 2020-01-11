@@ -73,6 +73,7 @@ public class Auto extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_auto, container, false);
 
+        //Create buttons
         final Button lessBottomBtn = view.findViewById(R.id.abtnLessBottom);
         final Button moreBottomBtn = view.findViewById(R.id.abtnMoreBottom);
         final Button lessOuterBtn = view.findViewById(R.id.abtnLessOuter);
@@ -82,13 +83,17 @@ public class Auto extends Fragment {
         final Button lessIntakeBtn = view.findViewById(R.id.abtnLessIntake);
         final Button moreIntakeBtn = view.findViewById(R.id.abtnMoreIntake);
 
+        //Create textviews
         final TextView bottomScoreTxt = view.findViewById(R.id.atxtNumScoredBottom);
         final TextView outerScoreTxt = view.findViewById(R.id.atxtNumScoredOuter);
         final TextView innerScoreTxt = view.findViewById(R.id.atxtNumScoredInner);
         final TextView intakeScoreTxt = view.findViewById(R.id.atxtNumScoredIntake);
 
+        // Create Main Activity
         final MainActivity act = (MainActivity) getActivity();
 
+        //Create the listeners, which make the buttons functional. That is, they increment/decrement
+        //the score in the appropriate textview.
         moreBottomBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
