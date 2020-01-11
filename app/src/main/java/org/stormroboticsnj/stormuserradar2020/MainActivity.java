@@ -27,12 +27,87 @@ public class MainActivity extends AppCompatActivity implements Scoring.OnFragmen
     private boolean alliance; //true = red
 
     /* recorded in this activity */
+
     private int scoreLVL1 = 0;
     private int scoreLVL2 = 0;
     private int scoreLVL3 = 0;
 
     public void incScoreLVL1 () {
         scoreLVL1++;
+
+    private int score = 0;
+    private int scoreTwo = 0;
+    private int ePowerCell1 = 0;
+    private int ePowerCell2 = 0;
+    private int ePowerCell3 = 0;
+    private int aPowerCell1 = 0;
+    private int aPowerCell2;
+    private int aPowerCell3;
+    private int aPowerCellPickup;
+
+    public void incaPowerCell1 () {
+        aPowerCell1++;
+    }
+    public void decaPowerCell1 () {
+        aPowerCell1--;
+    }
+    public int getaPowerCell1 () {
+        return aPowerCell1;
+    }
+    public void incaPowerCell2 () {
+        aPowerCell2++;
+    }
+    public void decaPowerCell2 () {
+        aPowerCell2--;
+    }
+    public int getaPowerCell2 () {
+        return aPowerCell2;
+    }
+    public void incaPowerCell3 () {
+        aPowerCell3++;
+    }
+    public void decaPowerCell3 () {
+        aPowerCell3--;
+    }
+    public int getaPowerCell3 () {
+        return aPowerCell3;
+    }
+    public void incaPowerCellPickup () {
+        aPowerCellPickup++;
+    }
+    public void decaPowerCellPickup () {
+        aPowerCellPickup--;
+    }
+    public int getaPowerCellPickup () {
+        return aPowerCellPickup;
+    }
+
+    public void incePowerCell1(){
+        ePowerCell1++;
+
+    }
+
+    public void decePowerCell1()  {
+        ePowerCell1--;
+    }
+    public void incePowerCell2() {
+        ePowerCell2++;
+    }
+    public void decePowerCell2() {
+        ePowerCell2--;
+    }
+    public void incePowerCell3() {
+        ePowerCell3++;
+    }
+    public void decePowerCell3() {
+        ePowerCell3--;
+    }
+    public int getePowerCell1() {return ePowerCell1;}
+    public int getePowerCell2() {return ePowerCell2;}
+    public int getePowerCell3() {return ePowerCell3;}
+    public void incScore () {
+        score++;
+
     }
     public void decScoreLVL1 () {scoreLVL1--; }
     public int getScoreLVL1 () {
@@ -100,8 +175,12 @@ public class MainActivity extends AppCompatActivity implements Scoring.OnFragmen
 
         whoosh.setAlliance(alliance);
 
+
         whoosh.setScore(scoreLVL1);
         whoosh.setScoreTwo(scoreLVL2);
+
+        //whoosh.setScore(score);
+        //whoosh.setScoreTwo(scoreTwo);
 
         stormDao.insertWhooshes(whoosh);
 

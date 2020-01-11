@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 
 /**
@@ -68,11 +69,72 @@ public class Endgame extends Fragment {
                              Bundle savedInstanceState) {
 
         // Inflate the layout for this fragment
-        View view =  inflater.inflate(R.layout.fragment_endgame, container, false);
+        View view = inflater.inflate(R.layout.fragment_endgame, container, false);
 
         /* find elements */
-        final Button buttonSubmit = view.findViewById(R.id.buttonSubmit);
+        final Button buttonSubmit = view.findViewById(R.id.btnSubmit);
+        final Button btnELessLVL1 = view.findViewById(R.id.btnELessLVL1);
+        final Button btnELessLVL2 = view.findViewById(R.id.btnELessLVL2);
+        final Button btnELessLVL3 = view.findViewById(R.id.btnELessLVL3);
+        final Button btnEMoreLVL1 = view.findViewById(R.id.btnEMoreLVL1);
+        final Button btnEMoreLVL2 = view.findViewById(R.id.btnEMoreLVL2);
+        final Button btnEMoreLVL3 = view.findViewById(R.id.btnEMoreLVL3);
+//finding the text view
+        final TextView txtScoredLVL1 = view.findViewById(R.id.txtEScoredLVL1);
+        final TextView txtScoredLVL2 = view.findViewById(R.id.txtEScoredLVL2);
+        final TextView txtScoredLVL3 = view.findViewById(R.id.txtEScoredLVL3);
+//getting main actvity
+
         final MainActivity act = (MainActivity) getActivity();
+//making lvl one numbers go down
+        btnELessLVL1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                act.decePowerCell1();
+                txtScoredLVL1.setText(String.valueOf(act.getePowerCell1()));
+            }
+        });
+        //making lvl2 go down
+        btnELessLVL2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                act.decePowerCell2();
+                txtScoredLVL2.setText(String.valueOf(act.getePowerCell2()));
+            }
+        });
+        //maing lvl3 go down
+        btnELessLVL3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                act.decePowerCell3();
+                txtScoredLVL3.setText(String.valueOf(act.getePowerCell3()));
+            }
+        });
+        //making lvl1 go up
+        btnEMoreLVL1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                act.incePowerCell1();
+                txtScoredLVL1.setText(String.valueOf(act.getePowerCell1()));
+            }
+        });
+        //making lvl2 go up
+        btnEMoreLVL2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                act.incePowerCell2();
+                txtScoredLVL2.setText(String.valueOf(act.getePowerCell2()));
+            }
+        });
+        //making lvl3 go up
+        btnEMoreLVL3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                act.incePowerCell3();
+                txtScoredLVL3.setText(String.valueOf(act.getePowerCell3()));
+            }
+        });
+        //having the submit button work
         buttonSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,8 +144,6 @@ public class Endgame extends Fragment {
 
         return view;
     }
-
-
 
     @Override
     public void onAttach(Context context) {
