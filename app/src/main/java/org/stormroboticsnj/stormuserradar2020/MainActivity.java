@@ -29,6 +29,9 @@ public class MainActivity extends AppCompatActivity implements Scoring.OnFragmen
     /* recorded in this activity */
     private int score = 0;
     private int scoreTwo = 0;
+    private int ePowerCell1 = 0;
+    private int ePowerCell2 = 0;
+    private int ePowerCell3 = 0;
     private int aPowerCell1 = 0;
     private int aPowerCell2;
     private int aPowerCell3;
@@ -71,7 +74,29 @@ public class MainActivity extends AppCompatActivity implements Scoring.OnFragmen
         return aPowerCellPickup;
     }
 
+    public void incePowerCell1(){
+        ePowerCell1++;
 
+    }
+
+    public void decePowerCell1()  {
+        ePowerCell1--;
+    }
+    public void incePowerCell2() {
+        ePowerCell2++;
+    }
+    public void decePowerCell2() {
+        ePowerCell2--;
+    }
+    public void incePowerCell3() {
+        ePowerCell3++;
+    }
+    public void decePowerCell3() {
+        ePowerCell3--;
+    }
+    public int getePowerCell1() {return ePowerCell1;}
+    public int getePowerCell2() {return ePowerCell2;}
+    public int getePowerCell3() {return ePowerCell3;}
     public void incScore () {
         score++;
     }
