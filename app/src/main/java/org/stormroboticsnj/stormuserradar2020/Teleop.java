@@ -139,6 +139,7 @@ public class Teleop extends Fragment {
             }
         });
 
+
        // boolean checked = ((CheckBox) view).isChecked();
 
 //        switch(view.getId()) {
@@ -151,6 +152,7 @@ public class Teleop extends Fragment {
 //                }
 //                break;
 //        }
+
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_teleop, container, false);
