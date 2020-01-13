@@ -139,18 +139,20 @@ public class Teleop extends Fragment {
             }
         });
 
-        boolean checked = ((CheckBox) view).isChecked();
 
-        switch(view.getId()) {
-            case R.id.cboRC: // Rotation control
-            case R.id.cboPC: // Position control
-                if (checked){
-                    // Rotation/Position control stage is complete
-                } else {
-                    // Rotation/Position control stage is not complete
-                }
-                break;
-        }
+       // boolean checked = ((CheckBox) view).isChecked();
+
+//        switch(view.getId()) {
+//            case R.id.cboRC:
+//            case R.id.cboPC:
+//                if (checked){
+//                    // Rotation/Position control stage is complete
+//                } else {
+//                    // Rotation/Position control stage is not complete
+//                }
+//                break;
+//        }
+
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_teleop, container, false);
