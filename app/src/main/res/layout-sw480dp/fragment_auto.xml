@@ -11,8 +11,8 @@
 
     <Button
         android:id="@+id/abtnLessIntake"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:background="@drawable/my_button_red"
         android:fontFamily="sans-serif"
         android:text="@string/minus"
@@ -25,7 +25,7 @@
         android:id="@+id/atextView5"
         android:layout_width="275dp"
         android:layout_height="40dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="160dp"
         android:fontFamily="@font/lato"
         android:text="@string/power_cells_intaken"
         android:textAlignment="center"
@@ -35,8 +35,8 @@
 
     <Button
         android:id="@+id/abtnMoreIntake"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:background="@drawable/my_button_orange"
         android:fontFamily="sans-serif"
         android:text="@string/plus"
@@ -49,7 +49,7 @@
         android:id="@+id/atxtNumScoredIntake"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="155dp"
         android:text="@string/_0"
         android:textAlignment="center"
         android:textSize="30sp"
@@ -58,8 +58,8 @@
 
     <Button
         android:id="@+id/abtnLessInner"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:background="@drawable/my_button_red"
         android:fontFamily="sans-serif"
         android:text="@string/minus"
@@ -70,8 +70,8 @@
 
     <Button
         android:id="@+id/abtnMoreInner"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:background="@drawable/my_button_orange"
         android:fontFamily="sans-serif"
         android:text="@string/plus"
@@ -84,7 +84,7 @@
         android:id="@+id/atextView4"
         android:layout_width="275dp"
         android:layout_height="40dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="135dp"
         android:fontFamily="@font/lato"
         android:text="@string/inner_port"
         android:textAlignment="center"
@@ -96,7 +96,7 @@
         android:id="@+id/atxtNumScoredInner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="135dp"
         android:fontFamily="@font/lato"
         android:text="@string/_0"
         android:textAlignment="center"
@@ -106,8 +106,8 @@
 
     <Button
         android:id="@+id/abtnLessBottom"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:background="@drawable/my_button_red"
         android:fontFamily="sans-serif"
         android:text="@string/minus"
@@ -121,7 +121,7 @@
         android:layout_width="275dp"
         android:layout_height="40dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginEnd="18dp"
         android:fontFamily="@font/lato"
         android:text="@string/bottom_port"
         android:textAlignment="center"
@@ -131,8 +131,8 @@
 
     <Button
         android:id="@+id/abtnMoreBottom"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:background="@drawable/my_button_orange"
         android:fontFamily="sans-serif"
         android:text="@string/plus"
@@ -146,7 +146,7 @@
         android:layout_width="20dp"
         android:layout_height="40dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="132dp"
+        android:layout_marginEnd="142dp"
         android:fontFamily="@font/lato"
         android:text="@string/_0"
         android:textAlignment="center"
@@ -156,8 +156,8 @@
 
     <Button
         android:id="@+id/abtnLessOuter"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:background="@drawable/my_button_red"
         android:fontFamily="sans-serif"
         android:text="@string/minus"
@@ -170,7 +170,7 @@
         android:id="@+id/atextView2"
         android:layout_width="275dp"
         android:layout_height="40dp"
-        android:layout_marginTop="132dp"
+        android:layout_marginTop="135dp"
         android:fontFamily="@font/lato"
         android:text="@string/outer_port"
         android:textAlignment="center"
@@ -182,7 +182,7 @@
         android:id="@+id/atxtNumScoredOuter"
         android:layout_width="20dp"
         android:layout_height="40dp"
-        android:layout_marginTop="132dp"
+        android:layout_marginTop="135dp"
         android:fontFamily="@font/lato"
         android:text="@string/_0"
         android:textAlignment="center"
@@ -192,8 +192,8 @@
 
     <Button
         android:id="@+id/abtnMoreOuter"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:background="@drawable/my_button_orange"
         android:fontFamily="sans-serif"
         android:text="@string/plus"
@@ -214,13 +214,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.15" />
+        app:layout_constraintGuide_percent="0.18" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.85" />
+        app:layout_constraintGuide_percent="0.82" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
