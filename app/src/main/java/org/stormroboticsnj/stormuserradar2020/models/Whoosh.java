@@ -69,31 +69,31 @@ public class Whoosh {
         return alliance;
     }
 
-    public int getaPowerCell1() {
+    public int getAPowerCell1() {
         return aPowerCell1;
     }
 
-    public int getaPOwerCell2() {
+    public int getAPowerCell2() {
         return aPowerCell2;
     }
 
-    public int getaPowerCell3() {
+    public int getAPowerCell3() {
         return aPowerCell3;
     }
 
-    public int getaPowerCellPickup() {
+    public int getAPowerCellPickup() {
         return aPowerCellPickup;
     }
 
-    public int gettPowerCell1() {
+    public int getTPowerCell1() {
         return tPowerCell1;
     }
 
-    public int gettPowerCell2() {
+    public int getTPowerCell2() {
         return tPowerCell2;
     }
 
-    public int gettPowerCell3() {
+    public int getTPowerCell3() {
         return tPowerCell3;
     }
 
@@ -105,15 +105,15 @@ public class Whoosh {
         return rotationControl;
     }
 
-    public int getePowerCell1() {
+    public int getEPowerCell1() {
         return ePowerCell1;
     }
 
-    public int getePowerCell2() {
+    public int getEPowerCell2() {
         return ePowerCell2;
     }
 
-    public int getePowerCell3() {
+    public int getEPowerCell3() {
         return ePowerCell3;
     }
 
@@ -133,20 +133,20 @@ public class Whoosh {
         this.alliance = alliance;
     }
 
-    public void setaPowerCell1(int aPowerCell1) {this.aPowerCell1 = aPowerCell1; }
+    public void setAPowerCell1(int aPowerCell1) {this.aPowerCell1 = aPowerCell1; }
 
-    public void setaPOwerCell2(int aPOwerCell2) {this.aPowerCell2 = aPOwerCell2; }
+    public void setAPowerCell2(int aPOwerCell2) {this.aPowerCell2 = aPOwerCell2; }
 
-    public void setaPowerCell3(int aPowerCell3) {this.aPowerCell3 = aPowerCell3; }
+    public void setAPowerCell3(int aPowerCell3) {this.aPowerCell3 = aPowerCell3; }
 
-    public void setaPowerCellPickup(int aPowerCellPickup) {this.aPowerCellPickup = aPowerCellPickup;
+    public void setAPowerCellPickup(int aPowerCellPickup) {this.aPowerCellPickup = aPowerCellPickup;
     }
 
-    public void settPowerCell1(int tPowerCell1) { this.tPowerCell1 = tPowerCell1; }
+    public void setTPowerCell1(int tPowerCell1) { this.tPowerCell1 = tPowerCell1; }
 
-    public void settPowerCell3(int tPowerCell3) { this.tPowerCell3 = tPowerCell3; }
+    public void setTPowerCell3(int tPowerCell3) { this.tPowerCell3 = tPowerCell3; }
 
-    public void settPowerCell2(int tPowerCell2) {this.tPowerCell2 = tPowerCell2; }
+    public void setTPowerCell2(int tPowerCell2) {this.tPowerCell2 = tPowerCell2; }
 
     public void setPositionControl(boolean positionControl) {this.positionControl = positionControl;
     }
@@ -154,11 +154,11 @@ public class Whoosh {
     public void setRotationControl(boolean rotationControl) {this.rotationControl = rotationControl;
     }
 
-    public void setePowerCell1(int ePowerCell1) { this.ePowerCell1 = ePowerCell1; }
+    public void setEPowerCell1(int ePowerCell1) { this.ePowerCell1 = ePowerCell1; }
 
-    public void setePowerCell2(int ePowerCell2) { this.ePowerCell2 = ePowerCell2; }
+    public void setEPowerCell2(int ePowerCell2) { this.ePowerCell2 = ePowerCell2; }
 
-    public void setePowerCell3(int ePowerCell3) { this.ePowerCell3 = ePowerCell3; }
+    public void setEPowerCell3(int ePowerCell3) { this.ePowerCell3 = ePowerCell3; }
 
     public void setHang(int hang) { this.hang = hang; }
 
