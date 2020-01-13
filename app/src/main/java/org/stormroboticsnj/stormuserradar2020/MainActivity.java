@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.Chronometer;
 import android.widget.CompoundButton;
 import android.widget.ToggleButton;
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements Scoring.OnFragmen
     private int tPowerCell3 = 0;
 
     public void incScoreLVL1 () {
-        scoreLVL1++;
+        tPowerCell1++;
     }
     private int score = 0;
     private int scoreTwo = 0;
@@ -209,17 +210,17 @@ public class MainActivity extends AppCompatActivity implements Scoring.OnFragmen
         Whoosh whoosh = new Whoosh(team, match);
 
         whoosh.setAlliance(alliance);
-        whoosh.setaPowerCell1(aPowerCell1);
-        whoosh.setaPOwerCell2(aPowerCell2);
-        whoosh.setaPowerCell3(aPowerCell3);
-        whoosh.setaPowerCellPickup(aPowerCellPickup);
-        whoosh.settPowerCell1(tPowerCell1);
-        whoosh.settPowerCell2(tPowerCell2);
-        whoosh.settPowerCell3(tPowerCell3);
-        whoosh.setePowerCell1(ePowerCell1);
-        whoosh.setePowerCell2(ePowerCell2);
-        whoosh.setePowerCell3(ePowerCell3);
-        whoosh.setHang(hang);
+        whoosh.setAPowerCell1(aPowerCell1);
+        whoosh.setAPowerCell2(aPowerCell2);
+        whoosh.setAPowerCell3(aPowerCell3);
+        whoosh.setAPowerCellPickup(aPowerCellPickup);
+        whoosh.setTPowerCell1(tPowerCell1);
+        whoosh.setTPowerCell2(tPowerCell2);
+        whoosh.setTPowerCell3(tPowerCell3);
+        whoosh.setEPowerCell1(ePowerCell1);
+        whoosh.setEPowerCell2(ePowerCell2);
+        whoosh.setEPowerCell3(ePowerCell3);
+        //whoosh.setHang(hang);
 
         stormDao.insertWhooshes(whoosh);
 

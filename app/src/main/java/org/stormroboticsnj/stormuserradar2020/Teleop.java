@@ -91,7 +91,7 @@ public class Teleop extends Fragment {
         scoreMoreLVL1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                act.inctPowerCell1(); // Increment bottom port score
+                act.incScoreLVL1(); // Increment bottom port score
                 numScoredLVL1.setText(String.valueOf(act.getScoreLVL1())); // Display updated bottom port number output
             }
         });
