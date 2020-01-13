@@ -3,7 +3,11 @@ package org.stormroboticsnj.stormuserradar2020;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.widget.CheckBox;
+import android.os.SystemClock;
+import android.view.View;
+import android.widget.Chronometer;
+import android.widget.CompoundButton;
+import android.widget.ToggleButton;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -33,10 +37,11 @@ public class MainActivity extends AppCompatActivity implements Scoring.OnFragmen
     private int tPowerCell2 = 0;
     private int tPowerCell3 = 0;
 
-    public void inctPowerCell1 () {
-        tPowerCell1++;
+    public void incScoreLVL1 () {
+        scoreLVL1++;
     }
-
+    private int score = 0;
+    private int scoreTwo = 0;
     private int ePowerCell1 = 0;
     private int ePowerCell2 = 0;
     private int ePowerCell3 = 0;
@@ -130,7 +135,7 @@ public class MainActivity extends AppCompatActivity implements Scoring.OnFragmen
     public int getScoreLVL3 () {
         return tPowerCell3;
     }
-
+    private long lastPauseTime;
     private AppDatabase db; //built on creation of Activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -145,6 +150,36 @@ public class MainActivity extends AppCompatActivity implements Scoring.OnFragmen
         viewPager.setAdapter(sectionsPagerAdapter); //tell it to be controlled by the instance
         TabLayout tabs = findViewById(R.id.tabs); //this is the physical tabs
         tabs.setupWithViewPager(viewPager); //sync the two together
+
+        final Chronometer cm = findViewById(R.id.defenseTime);
+        final ToggleButton tb = findViewById(R.id.defenseButton);
+
+        cm.setBase(SystemClock.elapsedRealtime());
+
+        tb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+
+                    int stoppedMilliseconds = 0;
+                    String chronoText = cm.getText().toString();
+                    String array[] = chronoText.split(":");
+                    if (array.length == 2) {
+                        stoppedMilliseconds = Integer.parseInt(array[0]) * 60 * 1000
+                                + Integer.parseInt(array[1]) * 1000;
+                    } else if (array.length == 3) {
+                        stoppedMilliseconds = Integer.parseInt(array[0]) * 60 * 60 * 1000
+                                + Integer.parseInt(array[1]) * 60 * 1000
+                                + Integer.parseInt(array[2]) * 1000;
+                    }
+                    cm.setBase(SystemClock.elapsedRealtime() - stoppedMilliseconds);
+                    cm.start();
+                } else {
+                    lastPauseTime = SystemClock.elapsedRealtime();
+                    cm.stop();
+                }
+            }
+        });
 
 
         /* get data from Intent (passed from StartActivity) */
