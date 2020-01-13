@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 
 
 /**
@@ -65,8 +66,39 @@ public class PathTeleop extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        // Declare view object for the layout
+        View view = inflater.inflate(R.layout.fragment_path_teleop, container, false);
+
+        // Declare Checkbox objects for different robot scoring zones
+        CheckBox safePortZone = view.findViewById(R.id.cboPortSafeZone);
+        CheckBox frontInitLine = view.findViewById(R.id.cboFrontLine);
+        CheckBox behindInitLine = view.findViewById(R.id.cboBehindLine);
+        CheckBox frontControlPanel = view.findViewById(R.id.cboFrontControlPanel);
+        CheckBox behindControlPanel = view.findViewById(R.id.cboBehindControlPanel);
+        CheckBox frontShield = view.findViewById(R.id.cboFrontShield);
+        CheckBox behindShield = view.findViewById(R.id.cboBehindShield);
+
+        boolean checked = ((CheckBox) view).isChecked();
+
+        switch(view.getId()) {
+            case R.id.cboPortSafeZone:
+            case R.id.cboFrontLine:
+            case R.id.cboBehindLine:
+            case R.id.cboFrontControlPanel:
+            case R.id.cboBehindControlPanel:
+            case R.id.cboFrontShield:
+            case R.id.cboBehindShield:
+                if (checked){
+                    // Rotation/Position control stage is complete
+                } else {
+                    // Rotation/Position control stage is not complete
+                }
+                break;
+        }
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_path_teleop, container, false);
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
