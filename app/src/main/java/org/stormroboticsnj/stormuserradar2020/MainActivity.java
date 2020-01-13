@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity implements Scoring.OnFragmen
         tPowerCell2--;
     }
     public int getScoreLVL2 () {
-        return tPowerCell2
+        return tPowerCell2;
     }
 
     public void incScoreLVL3 () {
