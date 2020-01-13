@@ -142,8 +142,8 @@ public class Teleop extends Fragment {
         boolean checked = ((CheckBox) view).isChecked();
 
         switch(view.getId()) {
-            case R.id.cboRC:
-            case R.id.cboPC:
+            case R.id.cboRC: // Rotation control
+            case R.id.cboPC: // Position control
                 if (checked){
                     // Rotation/Position control stage is complete
                 } else {
