@@ -21,7 +21,7 @@ import org.stormroboticsnj.stormuserradar2020.StartActivity;
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @StringRes
-    private static final String[] = new String[] {"auto", "teleop" , "map" , "endgame"};
+    private static final String[]TAB_TITLES = new String[]{"auto", "teleop" , "map" , "endgame"};
         private final Context mContext;
 
     public SectionsPagerAdapter(Context context, FragmentManager fm) {
