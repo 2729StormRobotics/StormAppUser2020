@@ -87,6 +87,7 @@ public class Endgame extends Fragment {
 
         final MainActivity act = (MainActivity) getActivity();
 //making lvl one numbers go down
+
         btnELessLVL1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
