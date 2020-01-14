@@ -70,7 +70,7 @@ public class Teleop extends Fragment {
                              Bundle savedInstanceState) {
 
 
-        View view = inflater.inflate(R.layout.fragment_scoring, container, false);
+        View view = inflater.inflate(R.layout.fragment_teleop, container, false);
 
         /* Find layout elements */
         final TextView numScoredLVL1 = view.findViewById(R.id.txtNumScoredLVL1); // Text View for number of power cells scored in bottom port
