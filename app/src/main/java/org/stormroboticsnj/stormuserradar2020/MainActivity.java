@@ -145,28 +145,31 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
 
         /* this handles the switching between fragments. see ui.main.SectionsPagerAdapter */
         SectionsPagerAdapter sectionsPagerAdapter =
-                new SectionsPagerAdapter(this, getSupportFragmentManager()); //\\
+                new SectionsPagerAdapter(this, getSupportFragmentManager());
 
         ViewPager viewPager = findViewById(R.id.view_pager); //this is the area that changes to each fragment
         viewPager.setAdapter(sectionsPagerAdapter); //tell it to be controlled by the instance
         TabLayout tabs = findViewById(R.id.tabs); //this is the physical tabs
         tabs.setupWithViewPager(viewPager); //sync the two together
 
-        final Chronometer cm = findViewById(R.id.defenseTime);
-        final ToggleButton tb = findViewById(R.id.defenseButton);
+        /* Chronometer (Stopwatch) */
+        final Chronometer cm = findViewById(R.id.defenseTime); //get stopwatch
+        final ToggleButton tb = findViewById(R.id.defenseButton); //get on/off button
 
-        cm.setBase(SystemClock.elapsedRealtime());
+        cm.setBase(SystemClock.elapsedRealtime()); //setup stopwatch
 
         tb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-
+                    /*  when the stopwatch is started, parse the current text to see what the last
+                        paused time was, and start counting from there
+                     */
                     int stoppedMilliseconds = 0;
                     String chronoText = cm.getText().toString();
-                    String array[] = chronoText.split(":");
+                    String array[] = chronoText.split(":"); //split at colons
                     if (array.length == 2) {
-                        stoppedMilliseconds = Integer.parseInt(array[0]) * 60 * 1000
+                        stoppedMilliseconds = Integer.parseInt(array[0]) * 60 * 1000 //convert to milliseconds
                                 + Integer.parseInt(array[1]) * 1000;
                     } else if (array.length == 3) {
                         stoppedMilliseconds = Integer.parseInt(array[0]) * 60 * 60 * 1000
@@ -176,6 +179,7 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
                     cm.setBase(SystemClock.elapsedRealtime() - stoppedMilliseconds);
                     cm.start();
                 } else {
+                    /* save and stop the stopwatch */
                     lastPauseTime = SystemClock.elapsedRealtime();
                     cm.stop();
                 }
