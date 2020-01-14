@@ -30,42 +30,42 @@ public class MainActivity extends AppCompatActivity implements Scoring.OnFragmen
     private int score = 0;
     private int scoreTwo = 0;
     private int aPowerCell1 = 0;
-    private int aPowerCell2;
-    private int aPowerCell3;
-    private int aPowerCellPickup;
+    private int aPowerCell2 = 0;
+    private int aPowerCell3 = 0;
+    private int aPowerCellPickup = 0;
 
     public void incaPowerCell1 () {
-        aPowerCell1++;
+       if (aPowerCell1 < 99) aPowerCell1++;
     }
     public void decaPowerCell1 () {
-        aPowerCell1--;
+       if (aPowerCell1 > 0) aPowerCell1--;
     }
     public int getaPowerCell1 () {
         return aPowerCell1;
     }
     public void incaPowerCell2 () {
-        aPowerCell2++;
+       if (aPowerCell2 < 99) aPowerCell2++;
     }
     public void decaPowerCell2 () {
-        aPowerCell2--;
+       if (aPowerCell2 > 0) aPowerCell2--;
     }
     public int getaPowerCell2 () {
         return aPowerCell2;
     }
     public void incaPowerCell3 () {
-        aPowerCell3++;
+       if (aPowerCell3 < 99) aPowerCell3++;
     }
     public void decaPowerCell3 () {
-        aPowerCell3--;
+       if (aPowerCell3 > 0) aPowerCell3--;
     }
     public int getaPowerCell3 () {
         return aPowerCell3;
     }
     public void incaPowerCellPickup () {
-        aPowerCellPickup++;
+       if (aPowerCellPickup < 99) aPowerCellPickup++;
     }
     public void decaPowerCellPickup () {
-        aPowerCellPickup--;
+       if (aPowerCellPickup > 0) aPowerCellPickup--;
     }
     public int getaPowerCellPickup () {
         return aPowerCellPickup;
