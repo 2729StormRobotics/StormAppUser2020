@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Auto">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <Button
+        android:id="@+id/abtnLessIntake"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/my_button_red"
+        android:fontFamily="sans-serif"
+        android:text="@string/minus"
+        android:textSize="36sp"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/atextView5" />
+
+    <TextView
+        android:id="@+id/atextView5"
+        android:layout_width="275dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="140dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/power_cells_intaken"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/atextView4"
+        app:layout_constraintTop_toBottomOf="@+id/atextView4" />
+
+    <Button
+        android:id="@+id/abtnMoreIntake"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/my_button_orange"
+        android:fontFamily="sans-serif"
+        android:text="@string/plus"
+        android:textSize="36sp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/atextView5" />
+
+    <TextView
+        android:id="@+id/atxtNumScoredIntake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="136dp"
+        android:text="@string/_0"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/atxtNumScoredInner"
+        app:layout_constraintTop_toBottomOf="@+id/atxtNumScoredInner" />
+
+    <Button
+        android:id="@+id/abtnLessInner"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/my_button_red"
+        android:fontFamily="sans-serif"
+        android:text="@string/minus"
+        android:textSize="36sp"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/atextView4" />
+
+    <Button
+        android:id="@+id/abtnMoreInner"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/my_button_orange"
+        android:fontFamily="sans-serif"
+        android:text="@string/plus"
+        android:textSize="36sp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/atextView4" />
+
+    <TextView
+        android:id="@+id/atextView4"
+        android:layout_width="275dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="128dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/inner_port"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/atextView2"
+        app:layout_constraintTop_toBottomOf="@+id/atextView2" />
+
+    <TextView
+        android:id="@+id/atxtNumScoredInner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/_0"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/atxtNumScoredOuter"
+        app:layout_constraintTop_toBottomOf="@+id/atxtNumScoredOuter" />
+
+    <Button
+        android:id="@+id/abtnLessBottom"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/my_button_red"
+        android:fontFamily="sans-serif"
+        android:text="@string/minus"
+        android:textSize="36sp"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/atextView1" />
+
+    <TextView
+        android:id="@+id/atextView1"
+        android:layout_width="275dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/bottom_port"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/abtnMoreBottom"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/my_button_orange"
+        android:fontFamily="sans-serif"
+        android:text="@string/plus"
+        android:textSize="36sp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/atextView1" />
+
+    <TextView
+        android:id="@+id/atxtNumScoredBottom"
+        android:layout_width="20dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="132dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/_0"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/abtnMoreBottom"
+        app:layout_constraintTop_toBottomOf="@+id/atextView1" />
+
+    <Button
+        android:id="@+id/abtnLessOuter"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/my_button_red"
+        android:fontFamily="sans-serif"
+        android:text="@string/minus"
+        android:textSize="36sp"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/atextView2" />
+
+    <TextView
+        android:id="@+id/atextView2"
+        android:layout_width="275dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="132dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/outer_port"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/atextView1"
+        app:layout_constraintTop_toBottomOf="@+id/atextView1" />
+
+    <TextView
+        android:id="@+id/atxtNumScoredOuter"
+        android:layout_width="20dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="132dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/_0"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/atxtNumScoredBottom"
+        app:layout_constraintTop_toBottomOf="@+id/atxtNumScoredBottom" />
+
+    <Button
+        android:id="@+id/abtnMoreOuter"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/my_button_orange"
+        android:fontFamily="sans-serif"
+        android:text="@string/plus"
+        android:textSize="36sp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/atextView2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

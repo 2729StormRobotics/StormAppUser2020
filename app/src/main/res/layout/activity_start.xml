@@ -29,6 +29,7 @@
         android:layout_marginBottom="350dp"
         android:background="@drawable/mybuttonorange"
         android:text="@string/start"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -58,7 +59,8 @@
             android:ellipsize="none"
             android:text="@string/red"
             android:textAlignment="center"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            android:textSize="20sp" />
 
         <RadioButton
             android:id="@+id/blue"
@@ -74,7 +76,8 @@
             android:ellipsize="none"
             android:text="@string/blue"
             android:textAlignment="center"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            android:textSize="20sp" />
 
     </RadioGroup>
 
@@ -83,8 +86,9 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
-        android:background="@drawable/mybuttonred"
+        android:background="@drawable/my_button_red"
         android:text="@string/delete"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/buttonQR"
         app:layout_constraintEnd_toEndOf="@+id/buttonStart"
         app:layout_constraintStart_toEndOf="@+id/buttonQR"
@@ -96,8 +100,9 @@
         android:layout_height="125dp"
         android:layout_marginTop="75dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/mybuttonred"
+        android:background="@drawable/my_button_red"
         android:text="@string/generate_qr"
+        android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/buttonStart"
         app:layout_constraintTop_toBottomOf="@+id/buttonStart" />

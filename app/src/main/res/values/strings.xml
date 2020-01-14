@@ -18,4 +18,14 @@
     <string name="minus">-</string>
     <string name="back">BACK</string>
     <string name="storm_scouting_radar_user">STORM Scouting Radar User</string>
+    <string name="power_cells_intaken">Power Cells Intaken</string>
+    <string name="_0">0</string>
+    <string name="inner_port">Inner Port</string>
+    <string name="bottom_port">Bottom Port</string>
+    <string name="outer_port">Outer Port</string>
+    <string name="auto">auto</string>
+    <string name="teleop">teleop</string>
+    <string name="endgame">endgame</string>
+    <string name="map">map</string>
+
 </resources>

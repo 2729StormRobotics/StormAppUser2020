@@ -71,7 +71,7 @@ public class Scoring extends Fragment {
         View view = inflater.inflate(R.layout.fragment_scoring, container, false);
 
         /* Find layout elements */
-        final TextView numScored = view.findViewById(R.id.txtNumScored);
+       /* final TextView numScored = view.findViewById(R.id.txtNumScored);
         final TextView numScored2 = view.findViewById(R.id.txtNumScored2);
         final Button scoreMore = view.findViewById(R.id.btnMore);
         final Button scoreLess = view.findViewById(R.id.btnLess);
@@ -111,7 +111,7 @@ public class Scoring extends Fragment {
                 numScored2.setText(String.valueOf(act.getScoreTwo()));
             }
         });
-        // Inflate the layout for this fragment
+        // Inflate the layout for this fragment */
         return view;
     }
 
