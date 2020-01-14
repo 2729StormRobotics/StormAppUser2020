@@ -79,6 +79,7 @@ public class PathTeleopRed extends Fragment {
         CheckBox frontShield = view.findViewById(R.id.cboFrontShieldR);
         CheckBox behindShield = view.findViewById(R.id.cboBehindShieldR);
 
+
         boolean checked = ((CheckBox) view).isChecked();
 
         switch(view.getId()) {
@@ -95,6 +96,7 @@ public class PathTeleopRed extends Fragment {
                     // Rotation/Position control stage is not complete
                 }
                 break;
+
         }
 
         // Inflate the layout for this fragment
