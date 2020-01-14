@@ -23,4 +23,9 @@
     <string name="inner_port">Inner Port</string>
     <string name="bottom_port">Bottom Port</string>
     <string name="outer_port">Outer Port</string>
+    <string name="auto">auto</string>
+    <string name="teleop">teleop</string>
+    <string name="endgame">endgame</string>
+    <string name="map">map</string>
+
 </resources>
