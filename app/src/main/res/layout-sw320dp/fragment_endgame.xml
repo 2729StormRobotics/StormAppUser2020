@@ -13,7 +13,7 @@
         android:id="@+id/btnEMoreLVL1"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="84dp"
         android:background="@drawable/my_button_orange"
         android:fontFamily="sans-serif"
         android:text="@string/plus"
@@ -38,7 +38,7 @@
         android:id="@+id/btnEMoreLVL3"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="460dp"
+        android:layout_marginTop="432dp"
         android:background="@drawable/my_button_orange"
         android:fontFamily="sans-serif"
         android:text="@string/plus"
@@ -92,7 +92,7 @@
         android:id="@+id/btnEMoreLVL2"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/my_button_orange"
         android:fontFamily="sans-serif"
         android:text="@string/plus"
@@ -129,17 +129,18 @@
 
     <Button
         android:id="@+id/btnSubmit"
-        android:layout_width="186dp"
-        android:layout_height="87dp"
+        android:layout_width="166dp"
+        android:layout_height="75dp"
         android:layout_marginStart="230dp"
         android:layout_marginEnd="230dp"
-        android:layout_marginBottom="33dp"
+        android:layout_marginBottom="56dp"
         android:background="#12B815"
         android:fontFamily="@font/lato"
         android:text="Submit"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -148,7 +149,7 @@
         android:layout_height="66dp"
         android:layout_marginStart="99dp"
         android:layout_marginEnd="73dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="104dp"
         android:fontFamily="@font/lato"
         android:text="Bottom Port"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
@@ -170,14 +171,14 @@
         app:layout_constraintBottom_toTopOf="@+id/btnEMoreLVL2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnEMoreLVL1"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="8dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
         app:layout_constraintEnd_toEndOf="parent"
@@ -186,15 +187,15 @@
         <RadioButton
             android:id="@+id/radioButton3"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="71dp"
 
             android:text="Hang"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
         <RadioButton
             android:id="@+id/radioButton2"
-            android:layout_width="229dp"
-            android:layout_height="58dp"
+            android:layout_width="wrap_content"
+            android:layout_height="71dp"
 
             android:text="Level Hang"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
@@ -204,7 +205,7 @@
         <RadioButton
             android:id="@+id/radioButton"
             android:layout_width="122dp"
-            android:layout_height="71dp"
+            android:layout_height="match_parent"
 
             android:fontFamily="@font/lato"
             android:text="Park"
@@ -250,6 +251,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.479"
         app:layout_constraintStart_toEndOf="@+id/btnELessLVL2"
-        tools:layout_editor_absoluteY="383dp" />
+        tools:layout_editor_absoluteY="345dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
