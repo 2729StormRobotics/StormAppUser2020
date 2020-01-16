@@ -47,14 +47,15 @@
 
     <TextView
         android:id="@+id/atxtNumScoredIntake"
-        android:layout_width="30dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="44dp"
         android:fontFamily="@font/lato"
         android:text="@string/_0"
         android:textAlignment="center"
-        android:textSize="40sp"
+        android:textSize="46sp"
         app:layout_constraintEnd_toEndOf="@+id/abtnMoreIntake"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="@+id/abtnLessIntake"
         app:layout_constraintTop_toBottomOf="@+id/atextView5" />
 
@@ -97,13 +98,13 @@
 
     <TextView
         android:id="@+id/atxtNumScoredInner"
-        android:layout_width="30dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/lato"
         android:text="@string/_0"
         android:textAlignment="center"
-        android:textSize="40sp"
+        android:textSize="46sp"
         app:layout_constraintEnd_toEndOf="@+id/abtnMoreInner"
         app:layout_constraintStart_toStartOf="@+id/abtnLessInner"
         app:layout_constraintTop_toBottomOf="@+id/atextView4" />
@@ -124,7 +125,6 @@
         android:id="@+id/atextView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="40dp"
         android:fontFamily="@font/lato"
         android:text="@string/bottom_port"
         android:textAlignment="center"
@@ -147,16 +147,16 @@
 
     <TextView
         android:id="@+id/atxtNumScoredBottom"
-        android:layout_width="30dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="44dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="195dp"
         android:fontFamily="@font/lato"
         android:text="@string/_0"
         android:textAlignment="center"
-        android:textSize="40sp"
+        android:textSize="46sp"
         app:layout_constraintEnd_toEndOf="@+id/abtnMoreBottom"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.994"
         app:layout_constraintStart_toStartOf="@+id/abtnLessBottom"
         app:layout_constraintTop_toBottomOf="@+id/atextView1" />
 
@@ -187,14 +187,15 @@
 
     <TextView
         android:id="@+id/atxtNumScoredOuter"
-        android:layout_width="30dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="44dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/lato"
         android:text="@string/_0"
         android:textAlignment="center"
-        android:textSize="40sp"
+        android:textSize="46sp"
         app:layout_constraintEnd_toEndOf="@+id/abtnMoreOuter"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="@+id/abtnLessOuter"
         app:layout_constraintTop_toBottomOf="@+id/atextView2" />
 
@@ -243,6 +244,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.9003906" />
+        app:layout_constraintGuide_percent="0.88964844" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
