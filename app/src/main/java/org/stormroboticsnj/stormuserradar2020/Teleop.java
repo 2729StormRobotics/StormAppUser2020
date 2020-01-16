@@ -86,7 +86,9 @@ public class Teleop extends Fragment {
         final CheckBox positionControl = view.findViewById(R.id.cboPC); // Checkbox for wheel position
 
         final MainActivity act = (MainActivity) getActivity(); // Call MainActivity object so that you can call methods from that class
-
+        numScoredLVL1.setText(String.valueOf(act.getScoreLVL1()));
+        numScoredLVL2.setText(String.valueOf(act.getScoreLVL2()));
+        numScoredLVL3.setText(String.valueOf(act.getScoreLVL3()));
         // Setting incrementing listeners for incrementing scores to their respective buttons
         scoreMoreLVL1.setOnClickListener(new View.OnClickListener() {
             @Override

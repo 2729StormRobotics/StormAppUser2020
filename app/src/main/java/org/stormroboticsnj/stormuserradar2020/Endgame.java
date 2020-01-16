@@ -87,6 +87,10 @@ public class Endgame extends Fragment {
 
         final MainActivity act = (MainActivity) getActivity();
 //making lvl one numbers go down
+        txtScoredLVL1.setText(String.valueOf(act.getePowerCell1()));
+        txtScoredLVL2.setText(String.valueOf(act.getePowerCell2()));
+        txtScoredLVL3.setText(String.valueOf(act.getePowerCell3()));
+
         btnELessLVL1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
