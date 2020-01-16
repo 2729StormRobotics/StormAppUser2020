@@ -72,6 +72,7 @@ public class Endgame extends Fragment {
         View view = inflater.inflate(R.layout.fragment_endgame, container, false);
 
         /* find elements */
+
         final Button buttonSubmit = view.findViewById(R.id.btnSubmit);
         final Button btnELessLVL1 = view.findViewById(R.id.btnELessLVL1);
         final Button btnELessLVL2 = view.findViewById(R.id.btnELessLVL2);

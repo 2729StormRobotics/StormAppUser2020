@@ -54,6 +54,32 @@ public class MainActivityNew extends AppCompatActivity implements Auto.OnFragmen
     // ***Autonomous*** //
 
     public void incaPowerCell1 () { // Increment power cell score in bottom port
+        if (aPowerCell1 < 99) aPowerCell1++;
+    }
+    public void decaPowerCell1 () { // Decrement power cell score in bottom port
+        if (aPowerCell1 > 0) aPowerCell1--;
+    }
+
+    public void incaPowerCell2 () { // Increment power cell score in outer port
+        if (aPowerCell2 < 99) aPowerCell2++;
+    }
+    public void decaPowerCell2 () { // Decrement power cell score in outer port
+        if (aPowerCell2 > 0) aPowerCell2--;
+    }
+
+    public void incaPowerCell3 () { // Increment power cell score in inner port
+        if (aPowerCell3 < 99) aPowerCell3++;
+    }
+    public void decaPowerCell3 () { // Decrement power cell score in inner port
+        if (aPowerCell3 > 0) aPowerCell3--;
+    }
+
+    public void incaPowerCellPickup () { // Increment number of power cells picked up during Auto
+        if (aPowerCellPickup < 99) aPowerCellPickup++;
+    }
+    public void decaPowerCellPickup () { // Decrement number of power cells picked up during Auto
+        if (aPowerCell3 > 0) aPowerCellPickup--;
+
         aPowerCell1++;
     }
     public void decaPowerCell1 () { // Decrement power cell score in bottom port
@@ -116,6 +142,24 @@ public class MainActivityNew extends AppCompatActivity implements Auto.OnFragmen
     // ***Teleop*** //
 
     public void inctPowerCell1 () { // Increment power cell score in bottom port
+        if (tPowerCell1 < 99) tPowerCell1++;
+    }
+    public void dectPowerCell1 () { // Decrement power cell score in bottom port
+        if (tPowerCell1 > 0) tPowerCell1--;
+    }
+
+    public void inctPowerCell2 () { // Increment power cell score in outer port
+        if (tPowerCell2 < 99) tPowerCell2++;
+    }
+    public void dectPowerCell2 () { // Decrement power cell score in outer port
+        if (tPowerCell2 > 0) tPowerCell2--;
+    }
+
+    public void inctPowerCell3 () { // Increment power cell score in inner port
+        if (tPowerCell3 < 99) tPowerCell3++;
+    }
+    public void dectPowerCell3 () { // Decrement power cell score in inner port
+        if (tPowerCell1 > 0) tPowerCell1--;
         tPowerCell1++;
     }
     public void dectPowerCell1 () { // Decrement power cell score in bottom port
@@ -163,6 +207,25 @@ public class MainActivityNew extends AppCompatActivity implements Auto.OnFragmen
     // ***Endgame*** //
 
     public void incePowerCell1() { // Increment power cell score in bottom port
+        if (ePowerCell1 < 99) ePowerCell1++;
+    }
+    public void decePowerCell1() { // Decrement power cell score in bottom port
+        if (ePowerCell1 > 0) ePowerCell1--;
+    }
+
+    public void incePowerCell2() { // Increment power cell score in outer port
+        if (ePowerCell2 < 99) ePowerCell2++;
+    }
+    public void decePowerCell2() { // Decrement power cell score in outer port
+        if (ePowerCell2 > 0) ePowerCell2--;
+    }
+
+    public void incePowerCell3() { // Increment power cell score in inner port
+        if (ePowerCell3 < 99) ePowerCell3++;
+    }
+    public void decePowerCell3() { // Decrement power cell score in inner port
+        if (ePowerCell3 > 0) ePowerCell3--;
+
         ePowerCell1++;
     }
     public void decePowerCell1() { // Decrement power cell score in bottom port
@@ -208,6 +271,7 @@ public class MainActivityNew extends AppCompatActivity implements Auto.OnFragmen
 
         /* this handles the switching between fragments. see ui.main.SectionsPagerAdapter */
         SectionsPagerAdapter sectionsPagerAdapter =
+                new SectionsPagerAdapter(this, getSupportFragmentManager());
                 new SectionsPagerAdapter(this, getSupportFragmentManager()); //\\
 
         ViewPager viewPager = findViewById(R.id.view_pager); //this is the area that changes to each fragment
