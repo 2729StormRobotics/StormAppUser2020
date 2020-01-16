@@ -79,6 +79,32 @@ public class MainActivityNew extends AppCompatActivity implements Auto.OnFragmen
     }
     public void decaPowerCellPickup () { // Decrement number of power cells picked up during Auto
         if (aPowerCell3 > 0) aPowerCellPickup--;
+
+        aPowerCell1++;
+    }
+    public void decaPowerCell1 () { // Decrement power cell score in bottom port
+        aPowerCell1--;
+    }
+
+    public void incaPowerCell2 () { // Increment power cell score in outer port
+        aPowerCell2++;
+    }
+    public void decaPowerCell2 () { // Decrement power cell score in outer port
+        aPowerCell2--;
+    }
+
+    public void incaPowerCell3 () { // Increment power cell score in inner port
+        aPowerCell3++;
+    }
+    public void decaPowerCell3 () { // Decrement power cell score in inner port
+        aPowerCell3--;
+    }
+
+    public void incaPowerCellPickup () { // Increment number of power cells picked up during Auto
+        aPowerCellPickup++;
+    }
+    public void decaPowerCellPickup () { // Decrement number of power cells picked up during Auto
+        aPowerCellPickup--;
     }
 
     /**
@@ -134,6 +160,24 @@ public class MainActivityNew extends AppCompatActivity implements Auto.OnFragmen
     }
     public void dectPowerCell3 () { // Decrement power cell score in inner port
         if (tPowerCell1 > 0) tPowerCell1--;
+        tPowerCell1++;
+    }
+    public void dectPowerCell1 () { // Decrement power cell score in bottom port
+        tPowerCell1--;
+    }
+
+    public void inctPowerCell2 () { // Increment power cell score in outer port
+        tPowerCell2++;
+    }
+    public void dectPowerCell2 () { // Decrement power cell score in outer port
+        tPowerCell2--;
+    }
+
+    public void inctPowerCell3 () { // Increment power cell score in inner port
+        tPowerCell3++;
+    }
+    public void dectPowerCell3 () { // Decrement power cell score in inner port
+        tPowerCell3--;
     }
 
     /**
@@ -181,6 +225,23 @@ public class MainActivityNew extends AppCompatActivity implements Auto.OnFragmen
     }
     public void decePowerCell3() { // Decrement power cell score in inner port
         if (ePowerCell3 > 0) ePowerCell3--;
+
+        ePowerCell1++;
+    }
+    public void decePowerCell1() { // Decrement power cell score in bottom port
+        ePowerCell1--;
+    }
+    public void incePowerCell2() { // Increment power cell score in outer port
+        ePowerCell2++;
+    }
+    public void decePowerCell2() { // Decrement power cell score in outer port
+        ePowerCell2--;
+    }
+    public void incePowerCell3() { // Increment power cell score in inner port
+        ePowerCell3++;
+    }
+    public void decePowerCell3() { // Decrement power cell score in inner port
+        ePowerCell3--;
     }
 
     /**
@@ -211,6 +272,7 @@ public class MainActivityNew extends AppCompatActivity implements Auto.OnFragmen
         /* this handles the switching between fragments. see ui.main.SectionsPagerAdapter */
         SectionsPagerAdapter sectionsPagerAdapter =
                 new SectionsPagerAdapter(this, getSupportFragmentManager());
+                new SectionsPagerAdapter(this, getSupportFragmentManager()); //\\
 
         ViewPager viewPager = findViewById(R.id.view_pager); //this is the area that changes to each fragment
         viewPager.setAdapter(sectionsPagerAdapter); //tell it to be controlled by the instance

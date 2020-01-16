@@ -52,37 +52,37 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
     private int aPowerCellPickup = 0;
 
     public void incaPowerCell1 () {
-        aPowerCell1++;
+       if (aPowerCell1 < 99) aPowerCell1++;
     }
     public void decaPowerCell1 () {
-        aPowerCell1--;
+       if (aPowerCell1 > 0) aPowerCell1--;
     }
     public int getaPowerCell1 () {
         return aPowerCell1;
     }
     public void incaPowerCell2 () {
-        aPowerCell2++;
+       if (aPowerCell2 < 99) aPowerCell2++;
     }
     public void decaPowerCell2 () {
-        aPowerCell2--;
+       if (aPowerCell2 > 0) aPowerCell2--;
     }
     public int getaPowerCell2 () {
         return aPowerCell2;
     }
     public void incaPowerCell3 () {
-        aPowerCell3++;
+       if (aPowerCell3 < 99) aPowerCell3++;
     }
     public void decaPowerCell3 () {
-        aPowerCell3--;
+       if (aPowerCell3 > 0) aPowerCell3--;
     }
     public int getaPowerCell3 () {
         return aPowerCell3;
     }
     public void incaPowerCellPickup () {
-        aPowerCellPickup++;
+       if (aPowerCellPickup < 99) aPowerCellPickup++;
     }
     public void decaPowerCellPickup () {
-        aPowerCellPickup--;
+       if (aPowerCellPickup > 0) aPowerCellPickup--;
     }
     public int getaPowerCellPickup () {
         return aPowerCellPickup;
@@ -145,28 +145,31 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
 
         /* this handles the switching between fragments. see ui.main.SectionsPagerAdapter */
         SectionsPagerAdapter sectionsPagerAdapter =
-                new SectionsPagerAdapter(this, getSupportFragmentManager()); //\\
+                new SectionsPagerAdapter(this, getSupportFragmentManager());
 
         ViewPager viewPager = findViewById(R.id.view_pager); //this is the area that changes to each fragment
         viewPager.setAdapter(sectionsPagerAdapter); //tell it to be controlled by the instance
         TabLayout tabs = findViewById(R.id.tabs); //this is the physical tabs
         tabs.setupWithViewPager(viewPager); //sync the two together
 
-        final Chronometer cm = findViewById(R.id.defenseTime);
-        final ToggleButton tb = findViewById(R.id.defenseButton);
+        /* Chronometer (Stopwatch) */
+        final Chronometer cm = findViewById(R.id.defenseTime); //get stopwatch
+        final ToggleButton tb = findViewById(R.id.defenseButton); //get on/off button
 
-        cm.setBase(SystemClock.elapsedRealtime());
+        cm.setBase(SystemClock.elapsedRealtime()); //setup stopwatch
 
         tb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-
+                    /*  when the stopwatch is started, parse the current text to see what the last
+                        paused time was, and start counting from there
+                     */
                     int stoppedMilliseconds = 0;
                     String chronoText = cm.getText().toString();
-                    String array[] = chronoText.split(":");
+                    String array[] = chronoText.split(":"); //split at colons
                     if (array.length == 2) {
-                        stoppedMilliseconds = Integer.parseInt(array[0]) * 60 * 1000
+                        stoppedMilliseconds = Integer.parseInt(array[0]) * 60 * 1000 //convert to milliseconds
                                 + Integer.parseInt(array[1]) * 1000;
                     } else if (array.length == 3) {
                         stoppedMilliseconds = Integer.parseInt(array[0]) * 60 * 60 * 1000
@@ -176,6 +179,7 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
                     cm.setBase(SystemClock.elapsedRealtime() - stoppedMilliseconds);
                     cm.start();
                 } else {
+                    /* save and stop the stopwatch */
                     lastPauseTime = SystemClock.elapsedRealtime();
                     cm.stop();
                 }
