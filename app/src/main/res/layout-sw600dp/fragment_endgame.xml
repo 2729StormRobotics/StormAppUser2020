@@ -11,9 +11,10 @@
 
     <Button
         android:id="@+id/btnEMoreLVL1"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="192dp"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="40dp"
         android:background="@drawable/my_button_orange"
         android:fontFamily="sans-serif"
         android:text="@string/plus"
@@ -24,9 +25,10 @@
 
     <Button
         android:id="@+id/btnELessLVL1"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="212dp"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="124dp"
         android:background="@drawable/my_button_red"
         android:fontFamily="sans-serif"
         android:text="@string/minus"
@@ -37,9 +39,10 @@
 
     <Button
         android:id="@+id/btnEMoreLVL3"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="524dp"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="544dp"
+        android:layout_marginEnd="40dp"
         android:background="@drawable/my_button_orange"
         android:fontFamily="sans-serif"
         android:text="@string/plus"
@@ -82,14 +85,17 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/textView10"
         app:layout_constraintEnd_toStartOf="@+id/btnEMoreLVL1"
+        app:layout_constraintHorizontal_bias="0.403"
         app:layout_constraintStart_toEndOf="@+id/btnELessLVL1"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.62" />
 
     <Button
         android:id="@+id/btnEMoreLVL2"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
         android:layout_marginTop="76dp"
+        android:layout_marginEnd="40dp"
         android:background="@drawable/my_button_orange"
         android:fontFamily="sans-serif"
         android:text="@string/plus"
@@ -100,8 +106,9 @@
 
     <Button
         android:id="@+id/btnELessLVL2"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:layout_marginStart="48dp"
         android:background="@drawable/my_button_red"
         android:fontFamily="sans-serif"
         android:text="@string/minus"
@@ -112,8 +119,9 @@
 
     <Button
         android:id="@+id/btnELessLVL3"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:layout_marginStart="48dp"
         android:background="@drawable/my_button_red"
         android:fontFamily="sans-serif"
         android:text="@string/minus"
@@ -124,22 +132,10 @@
         app:layout_constraintTop_toTopOf="@+id/btnEMoreLVL3"
         app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="595dp"
-        android:layout_height="91dp"
-        android:layout_marginTop="28dp"
-        android:text="Points Scored in Levels"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/btnSubmit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="186dp"
+        android:layout_height="87dp"
         android:layout_marginStart="230dp"
         android:layout_marginEnd="230dp"
         android:layout_marginBottom="33dp"
@@ -157,14 +153,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
         android:layout_marginEnd="73dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="144dp"
         android:fontFamily="@font/lato"
         android:text="Bottom Port"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
         android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/textView10"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -178,7 +174,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/btnELessLVL2"
         app:layout_constraintTop_toBottomOf="@+id/btnEMoreLVL2" />
 
@@ -186,7 +182,7 @@
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="136dp"
+        android:layout_marginEnd="156dp"
         android:fontFamily="@font/lato"
         android:text="Outer Port"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
@@ -194,7 +190,7 @@
         app:layout_constraintBottom_toTopOf="@+id/btnEMoreLVL2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnEMoreLVL1"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -219,8 +215,8 @@
 
         <RadioButton
             android:id="@+id/radioButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="229dp"
+            android:layout_height="58dp"
 
             android:text="Level Hang"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
@@ -229,8 +225,8 @@
 
         <RadioButton
             android:id="@+id/radioButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="122dp"
+            android:layout_height="71dp"
 
             android:fontFamily="@font/lato"
             android:text="Park"
