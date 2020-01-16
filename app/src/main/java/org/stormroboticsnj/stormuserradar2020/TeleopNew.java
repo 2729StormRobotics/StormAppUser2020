@@ -3,9 +3,6 @@ package org.stormroboticsnj.stormuserradar2020;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,16 +10,18 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
+import androidx.fragment.app.Fragment;
+
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link Teleop.OnFragmentInteractionListener} interface
+ * {@link TeleopNew.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link Teleop#newInstance} factory method to
+ * Use the {@link TeleopNew#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Teleop extends Fragment {
+public class TeleopNew extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -34,7 +33,7 @@ public class Teleop extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public Teleop() {
+    public TeleopNew() {
         // Required empty public constructor
     }
 
@@ -47,8 +46,8 @@ public class Teleop extends Fragment {
      * @return A new instance of fragment teleop.
      */
     // TODO: Rename and change types and number of parameters
-    public static Teleop newInstance(String param1, String param2) {
-        Teleop fragment = new Teleop();
+    public static TeleopNew newInstance(String param1, String param2) {
+        TeleopNew fragment = new TeleopNew();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -86,9 +85,7 @@ public class Teleop extends Fragment {
         final CheckBox positionControl = view.findViewById(R.id.cboPC); // Checkbox for wheel position
 
         final MainActivityNew act = (MainActivityNew) getActivity(); // Call MainActivity object so that you can call methods from that class
-        numScoredLVL1.setText(String.valueOf(act.getaPowerCell1()));
-        numScoredLVL2.setText(String.valueOf(act.getaPowerCell2()));
-        numScoredLVL3.setText(String.valueOf(act.getaPowerCell3()));
+
         // Setting incrementing listeners for incrementing scores to their respective buttons
         scoreMoreLVL1.setOnClickListener(new View.OnClickListener() {
             @Override
