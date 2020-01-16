@@ -15,12 +15,12 @@ import android.widget.CheckBox;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link PathTeleop.OnFragmentInteractionListener} interface
+ * {@link PathTeleopRed.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link PathTeleop#newInstance} factory method to
+ * Use the {@link PathTeleopRed#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class PathTeleop extends Fragment {
+public class PathTeleopRed extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -32,7 +32,7 @@ public class PathTeleop extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public PathTeleop() {
+    public PathTeleopRed() {
         // Required empty public constructor
     }
 
@@ -42,11 +42,11 @@ public class PathTeleop extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment PathTeleop.
+     * @return A new instance of fragment PathTeleopRed.
      */
     // TODO: Rename and change types and number of parameters
-    public static PathTeleop newInstance(String param1, String param2) {
-        PathTeleop fragment = new PathTeleop();
+    public static PathTeleopRed newInstance(String param1, String param2) {
+        PathTeleopRed fragment = new PathTeleopRed();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -68,33 +68,35 @@ public class PathTeleop extends Fragment {
                              Bundle savedInstanceState) {
 
         // Declare view object for the layout
-        View view = inflater.inflate(R.layout.fragment_path_teleop, container, false);
+        View view = inflater.inflate(R.layout.fragment_path_teleop_red, container, false);
 
         // Declare Checkbox objects for different robot scoring zones
-        CheckBox safePortZone = view.findViewById(R.id.cboPortSafeZone);
-        CheckBox frontInitLine = view.findViewById(R.id.cboFrontLine);
-        CheckBox behindInitLine = view.findViewById(R.id.cboBehindLine);
-        CheckBox frontControlPanel = view.findViewById(R.id.cboFrontControlPanel);
-        CheckBox behindControlPanel = view.findViewById(R.id.cboBehindControlPanel);
-        CheckBox frontShield = view.findViewById(R.id.cboFrontShield);
-        CheckBox behindShield = view.findViewById(R.id.cboBehindShield);
+        CheckBox safePortZone = view.findViewById(R.id.cboPortSafeZoneR);
+        CheckBox frontInitLine = view.findViewById(R.id.cboFrontLineR);
+        CheckBox behindInitLine = view.findViewById(R.id.cboBehindLineR);
+        CheckBox frontControlPanel = view.findViewById(R.id.cboFrontControlPanelR);
+        CheckBox behindControlPanel = view.findViewById(R.id.cboBehindControlPanelR);
+        CheckBox frontShield = view.findViewById(R.id.cboFrontShieldR);
+        CheckBox behindShield = view.findViewById(R.id.cboBehindShieldR);
+
 
         boolean checked = ((CheckBox) view).isChecked();
 
         switch(view.getId()) {
-            case R.id.cboPortSafeZone:
-            case R.id.cboFrontLine:
-            case R.id.cboBehindLine:
-            case R.id.cboFrontControlPanel:
-            case R.id.cboBehindControlPanel:
-            case R.id.cboFrontShield:
-            case R.id.cboBehindShield:
+            case R.id.cboPortSafeZoneR:
+            case R.id.cboFrontLineR:
+            case R.id.cboBehindLineR:
+            case R.id.cboFrontControlPanelR:
+            case R.id.cboBehindControlPanelR:
+            case R.id.cboFrontShieldR:
+            case R.id.cboBehindShieldR:
                 if (checked){
                     // Rotation/Position control stage is complete
                 } else {
                     // Rotation/Position control stage is not complete
                 }
                 break;
+
         }
 
         // Inflate the layout for this fragment
