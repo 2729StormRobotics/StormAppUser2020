@@ -86,6 +86,10 @@ public class TeleopNew extends Fragment {
 
         final MainActivityNew act = (MainActivityNew) getActivity(); // Call MainActivity object so that you can call methods from that class
 
+
+        final MainActivity act = (MainActivity) getActivity(); // Call MainActivity object so that you can call methods from that class
+
+
         // Setting incrementing listeners for incrementing scores to their respective buttons
         scoreMoreLVL1.setOnClickListener(new View.OnClickListener() {
             @Override
