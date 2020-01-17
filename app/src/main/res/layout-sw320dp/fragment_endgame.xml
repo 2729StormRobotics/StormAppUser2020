@@ -20,10 +20,11 @@
         android:textSize="36sp"
         android:typeface="serif"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <Button
-        android:id="@+id/btnELessLVL1"
+    android:id="@+id/btnELessLVL1"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:background="@drawable/my_button_red"
@@ -129,11 +130,11 @@
 
     <Button
         android:id="@+id/btnSubmit"
-        android:layout_width="166dp"
-        android:layout_height="75dp"
+        android:layout_width="141dp"
+        android:layout_height="55dp"
         android:layout_marginStart="230dp"
         android:layout_marginEnd="230dp"
-        android:layout_marginBottom="56dp"
+        android:layout_marginBottom="36dp"
         android:background="#12B815"
         android:fontFamily="@font/lato"
         android:text="Submit"
