@@ -11,21 +11,21 @@
         android:id="@+id/cboPC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/lato"
         android:text="Position Control"
-        android:textSize="36"
+        android:textSize="25"
         app:layout_constraintEnd_toEndOf="@+id/btnMoreLVL3"
-        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="@+id/btnLessLVL3"
         app:layout_constraintTop_toBottomOf="@+id/cboRC" />
 
     <Button
         android:id="@+id/btnMoreLVL1"
-        android:layout_width="160"
-        android:layout_height="160"
-        android:layout_marginTop="156dp"
-        android:layout_marginEnd="110dp"
+        android:layout_width="100"
+        android:layout_height="100"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="50dp"
         android:background="@drawable/my_button_orange"
         android:fontFamily="@font/lato"
         android:text="@string/plus"
@@ -36,9 +36,9 @@
 
     <Button
         android:id="@+id/btnLessLVL1"
-        android:layout_width="160"
-        android:layout_height="160"
-        android:layout_marginEnd="244dp"
+        android:layout_width="100"
+        android:layout_height="100"
+        android:layout_marginEnd="108dp"
         android:background="@drawable/my_button_red"
         android:fontFamily="@font/lato"
         android:text="@string/minus"
@@ -53,14 +53,14 @@
         android:id="@+id/txtLabelLVL1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="92dp"
+        android:layout_marginBottom="40dp"
         android:fontFamily="@font/lato"
         android:text="Bottom Port"
         android:textColor="#000000"
-        android:textSize="36"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/txtNumScoredLVL1"
         app:layout_constraintEnd_toEndOf="@+id/btnMoreLVL1"
-        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintHorizontal_bias="0.527"
         app:layout_constraintStart_toStartOf="@+id/btnLessLVL1" />
 
     <TextView
@@ -70,7 +70,7 @@
         android:fontFamily="@font/lato"
         android:text="0"
         android:textColor="#000000"
-        android:textSize="36sp"
+        android:textSize="30"
         app:layout_constraintBottom_toBottomOf="@+id/btnMoreLVL1"
         app:layout_constraintEnd_toStartOf="@+id/btnMoreLVL1"
         app:layout_constraintHorizontal_bias="0.539"
@@ -79,10 +79,10 @@
 
     <Button
         android:id="@+id/btnMoreLVL2"
-        android:layout_width="160"
-        android:layout_height="160"
-        android:layout_marginTop="92dp"
-        android:layout_marginEnd="110dp"
+        android:layout_width="100"
+        android:layout_height="100"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="50dp"
         android:background="@drawable/my_button_orange"
         android:fontFamily="@font/lato"
         android:text="@string/plus"
@@ -93,9 +93,9 @@
 
     <Button
         android:id="@+id/btnLessLVL2"
-        android:layout_width="160"
-        android:layout_height="160"
-        android:layout_marginEnd="244dp"
+        android:layout_width="100"
+        android:layout_height="100"
+        android:layout_marginEnd="108dp"
         android:background="@drawable/my_button_red"
         android:fontFamily="@font/lato"
         android:text="@string/minus"
@@ -110,14 +110,14 @@
         android:id="@+id/txtLabelLVL2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="112dp"
+        android:layout_marginBottom="40dp"
         android:fontFamily="@font/lato"
         android:text="Outer Port"
         android:textColor="#000000"
-        android:textSize="36"
+        android:textSize="30"
         app:layout_constraintBottom_toTopOf="@+id/txtNumScoredLVL2"
         app:layout_constraintEnd_toEndOf="@+id/btnMoreLVL2"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toStartOf="@+id/btnLessLVL2" />
 
     <TextView
@@ -127,7 +127,7 @@
         android:fontFamily="@font/lato"
         android:text="0"
         android:textColor="#000000"
-        android:textSize="36sp"
+        android:textSize="30"
         app:layout_constraintBottom_toBottomOf="@+id/btnMoreLVL2"
         app:layout_constraintEnd_toStartOf="@+id/btnMoreLVL2"
         app:layout_constraintStart_toEndOf="@+id/btnLessLVL2"
@@ -135,10 +135,10 @@
 
     <Button
         android:id="@+id/btnMoreLVL3"
-        android:layout_width="160"
-        android:layout_height="160"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="110dp"
+        android:layout_width="100"
+        android:layout_height="100"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="50dp"
         android:background="@drawable/my_button_orange"
         android:fontFamily="@font/lato"
         android:text="@string/plus"
@@ -149,9 +149,9 @@
 
     <Button
         android:id="@+id/btnLessLVL3"
-        android:layout_width="160"
-        android:layout_height="160"
-        android:layout_marginEnd="244dp"
+        android:layout_width="100"
+        android:layout_height="100"
+        android:layout_marginEnd="108dp"
         android:background="@drawable/my_button_red"
         android:fontFamily="@font/lato"
         android:text="@string/minus"
@@ -160,20 +160,20 @@
         app:layout_constraintBottom_toBottomOf="@+id/btnMoreLVL3"
         app:layout_constraintEnd_toStartOf="@+id/btnMoreLVL3"
         app:layout_constraintTop_toTopOf="@+id/btnMoreLVL3"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/txtLabelLVL3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="84dp"
+        android:layout_marginBottom="36dp"
         android:fontFamily="@font/lato"
         android:text="Inner Port"
         android:textColor="#000000"
-        android:textSize="36"
+        android:textSize="30"
         app:layout_constraintBottom_toTopOf="@+id/txtNumScoredLVL3"
         app:layout_constraintEnd_toEndOf="@+id/btnMoreLVL3"
-        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintHorizontal_bias="0.522"
         app:layout_constraintStart_toStartOf="@+id/btnLessLVL3" />
 
     <TextView
@@ -183,7 +183,7 @@
         android:fontFamily="@font/lato"
         android:text="0"
         android:textColor="#000000"
-        android:textSize="36"
+        android:textSize="30"
         app:layout_constraintBottom_toBottomOf="@+id/btnMoreLVL3"
         app:layout_constraintEnd_toStartOf="@+id/btnMoreLVL3"
         app:layout_constraintStart_toEndOf="@+id/btnLessLVL3"
@@ -193,12 +193,12 @@
         android:id="@+id/cboRC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="@font/lato"
         android:text="Rotation Control"
-        android:textSize="36"
+        android:textSize="25"
         app:layout_constraintEnd_toEndOf="@+id/btnMoreLVL3"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.55"
         app:layout_constraintStart_toStartOf="@+id/btnLessLVL3"
         app:layout_constraintTop_toBottomOf="@+id/btnMoreLVL3" />
 
