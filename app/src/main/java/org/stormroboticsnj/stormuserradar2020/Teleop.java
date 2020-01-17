@@ -94,24 +94,24 @@ public class Teleop extends Fragment {
         scoreMoreLVL1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                act.incScoreLVL1(); // Increment bottom port score
-                numScoredLVL1.setText(String.valueOf(act.getScoreLVL1())); // Display updated bottom port number output
+                act.inctPowerCell1(); // Increment bottom port score
+                numScoredLVL1.setText(String.valueOf(act.gettPowerCell1())); // Display updated bottom port number output
             }
         });
 
         scoreMoreLVL2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                act.incScoreLVL2(); // Increment outer port score
-                numScoredLVL2.setText(String.valueOf(act.getScoreLVL2())); // Display updated outer port number output
+                act.inctPowerCell2(); // Increment outer port score
+                numScoredLVL2.setText(String.valueOf(act.gettPowerCell2())); // Display updated outer port number output
             }
         });
 
         scoreMoreLVL3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                act.incScoreLVL3(); // Increment inner port score
-                numScoredLVL3.setText(String.valueOf(act.getScoreLVL3())); // Display updated inner port number output
+                act.inctPowerCell3(); // Increment inner port score
+                numScoredLVL3.setText(String.valueOf(act.gettPowerCell3())); // Display updated inner port number output
             }
         });
 
@@ -119,8 +119,8 @@ public class Teleop extends Fragment {
         scoreLessLVl1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                act.decScoreLVL1(); // Decrement bottom port score
-                numScoredLVL1.setText(String.valueOf(act.getScoreLVL1())); // Display updated inner port number output
+                act.dectPowerCell1(); // Decrement bottom port score
+                numScoredLVL1.setText(String.valueOf(act.gettPowerCell1())); // Display updated inner port number output
             }
         });
 
@@ -128,8 +128,8 @@ public class Teleop extends Fragment {
         scoreLessLVL2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                act.decScoreLVL2(); // Decrement bottom port score
-                numScoredLVL2.setText(String.valueOf(act.getScoreLVL2())); // Display updated inner port number output
+                act.dectPowerCell2(); // Decrement bottom port score
+                numScoredLVL2.setText(String.valueOf(act.gettPowerCell2())); // Display updated inner port number output
             }
         });
 
@@ -137,8 +137,8 @@ public class Teleop extends Fragment {
         scoreLessLVL3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                act.decScoreLVL3(); // Decrement bottom port score
-                numScoredLVL3.setText(String.valueOf(act.getScoreLVL3())); // Display updated inner port number output
+                act.dectPowerCell3(); // Decrement bottom port score
+                numScoredLVL3.setText(String.valueOf(act.gettPowerCell3())); // Display updated inner port number output
             }
         });
 
