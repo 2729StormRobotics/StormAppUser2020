@@ -9,7 +9,7 @@ import org.stormroboticsnj.stormuserradar2020.models.Whoosh;
 /**
  * Abstract class that is used to get to the StormDao interface
  */
-@Database(entities = {Whoosh.class}, version = 1)
+@Database(entities = {Whoosh.class}, version = 1, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
     public abstract StormDao stormDao();
 }

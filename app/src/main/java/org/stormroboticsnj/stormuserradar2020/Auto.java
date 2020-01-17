@@ -88,10 +88,14 @@ public class Auto extends Fragment {
 
         // Create Main Activity
         final MainActivity act = (MainActivity) getActivity();
+        bottomScoreTxt.setText(String.valueOf(act.getaPowerCell1()));
+        outerScoreTxt.setText(String.valueOf(act.getaPowerCell2()));
+        innerScoreTxt.setText(String.valueOf(act.getaPowerCell3()));
+        intakeScoreTxt.setText(String.valueOf(act.getaPowerCellPickup()));
 
         //Create the listeners, which make the buttons functional. That is, they increment/decrement
         //the score in the appropriate textview.
-        moreBottomBtn.setOnClickListener(new View.OnClickListener() {
+        moreBottomBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 act.incaPowerCell1();

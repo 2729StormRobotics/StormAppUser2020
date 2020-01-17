@@ -72,6 +72,7 @@ public class Endgame extends Fragment {
         View view = inflater.inflate(R.layout.fragment_endgame, container, false);
 
         /* find elements */
+
         final Button buttonSubmit = view.findViewById(R.id.btnSubmit);
         final Button btnELessLVL1 = view.findViewById(R.id.btnELessLVL1);
         final Button btnELessLVL2 = view.findViewById(R.id.btnELessLVL2);
@@ -87,6 +88,10 @@ public class Endgame extends Fragment {
 
         final MainActivity act = (MainActivity) getActivity();
 //making lvl one numbers go down
+        txtScoredLVL1.setText(String.valueOf(act.getePowerCell1()));
+        txtScoredLVL2.setText(String.valueOf(act.getePowerCell2()));
+        txtScoredLVL3.setText(String.valueOf(act.getePowerCell3()));
+
         btnELessLVL1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
