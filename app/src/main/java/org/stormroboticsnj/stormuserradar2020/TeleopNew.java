@@ -84,7 +84,7 @@ public class TeleopNew extends Fragment {
         final CheckBox rotationControl = view.findViewById(R.id.cboRC); // Checkbox for rotating control panel wheel
         final CheckBox positionControl = view.findViewById(R.id.cboPC); // Checkbox for wheel position
 
-        final MainActivity act = (MainActivity) getActivity(); // Call MainActivity object so that you can call methods from that class
+        final MainActivityNew act = (MainActivityNew) getActivity(); // Call MainActivity object so that you can call methods from that class
 
         // Setting incrementing listeners for incrementing scores to their respective buttons
         scoreMoreLVL1.setOnClickListener(new View.OnClickListener() {
