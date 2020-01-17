@@ -158,7 +158,7 @@ public class Teleop extends Fragment {
 
 
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_teleop, container, false);
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
