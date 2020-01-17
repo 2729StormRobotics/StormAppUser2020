@@ -28,115 +28,179 @@ import org.stormroboticsnj.stormuserradar2020.ui.main.SectionsPagerAdapter;
  */
 public class MainActivity extends AppCompatActivity implements Auto.OnFragmentInteractionListener, PathAuto.OnFragmentInteractionListener, Endgame.OnFragmentInteractionListener, Teleop.OnFragmentInteractionListener{
     /* brought from StartActivity */
-    private int team;
-    private int match;
-    private boolean alliance; //true = red
+    private int team; // Team number
+    private int match; // Match number
+    private boolean alliance; //true = red, false = blue
 
-    /* recorded in this activity */
+    //** recorded in this activity **//
 
-    private int tPowerCell1 = 0;
-    private int tPowerCell2 = 0;
-    private int tPowerCell3 = 0;
+    /* Declare variables*/
+    // Autonomous
+    private int aPowerCell1 = 0; // Power cell score in bottom port
+    private int aPowerCell2 = 0; // Power cell score in outer port
+    private int aPowerCell3 = 0; // Power cell score in inner port
+    private int aPowerCellPickup = 0; // Power cells picked up during Auto
 
-    public void incScoreLVL1 () {
-        tPowerCell1++;
-    }
-    private int score = 0;
-    private int scoreTwo = 0;
-    private int ePowerCell1 = 0;
-    private int ePowerCell2 = 0;
-    private int ePowerCell3 = 0;
-    private int aPowerCell1 = 0;
-    private int aPowerCell2 = 0;
-    private int aPowerCell3 = 0;
-    private int aPowerCellPickup = 0;
+    // Teleop
+    private int tPowerCell1 = 0; // Power cell score in bottom port
+    private int tPowerCell2 = 0; // Power cell score in outer port
+    private int tPowerCell3 = 0; // Power cell score in inner port
 
-    public void incaPowerCell1 () {
+    // Endgame
+    private int ePowerCell1 = 0; // Power cell score in bottom port
+    private int ePowerCell2 = 0; // Power cell score in outer port
+    private int ePowerCell3 = 0; // Power cell score in inner port
+
+    /*** Increment/Decrement, return, and set methods***/
+    // ***Autonomous*** //
+
+    public void incaPowerCell1 () { // Increment power cell score in bottom port
         aPowerCell1++;
     }
-    public void decaPowerCell1 () {
+    public void decaPowerCell1 () { // Decrement power cell score in bottom port
         aPowerCell1--;
     }
+
+    public void incaPowerCell2 () { // Increment power cell score in outer port
+        aPowerCell2++;
+    }
+    public void decaPowerCell2 () { // Decrement power cell score in outer port
+        aPowerCell2--;
+    }
+
+    public void incaPowerCell3 () { // Increment power cell score in inner port
+        aPowerCell3++;
+    }
+    public void decaPowerCell3 () { // Decrement power cell score in inner port
+        aPowerCell3--;
+    }
+
+    public void incaPowerCellPickup () { // Increment number of power cells picked up during Auto
+        aPowerCellPickup++;
+    }
+    public void decaPowerCellPickup () { // Decrement number of power cells picked up during Auto
+        aPowerCellPickup--;
+    }
+
+    /**
+     * Get the power cell score on bottom port
+     * @return aPowerCell1
+     */
     public int getaPowerCell1 () {
         return aPowerCell1;
     }
-    public void incaPowerCell2 () {
-        aPowerCell2++;
-    }
-    public void decaPowerCell2 () {
-        aPowerCell2--;
-    }
+
+    /**
+     * Get the power cell score on outer port
+     * @return aPowerCell2
+     */
     public int getaPowerCell2 () {
         return aPowerCell2;
     }
-    public void incaPowerCell3 () {
-        aPowerCell3++;
-    }
-    public void decaPowerCell3 () {
-        aPowerCell3--;
-    }
+
+    /**
+     * Get the power cell score on inner port
+     * @return aPowerCell3
+     */
     public int getaPowerCell3 () {
         return aPowerCell3;
     }
-    public void incaPowerCellPickup () {
-        aPowerCellPickup++;
-    }
-    public void decaPowerCellPickup () {
-        aPowerCellPickup--;
-    }
+
+    /**
+     * Get number of power cells picked up during Auto
+     * @return aPowerCellPickup
+     */
     public int getaPowerCellPickup () {
         return aPowerCellPickup;
     }
 
-    public void incePowerCell1(){
-        ePowerCell1++;
+    // ***Teleop*** //
 
+    public void inctPowerCell1 () { // Increment power cell score in bottom port
+        tPowerCell1++;
+    }
+    public void dectPowerCell1 () { // Decrement power cell score in bottom port
+        tPowerCell1--;
     }
 
-    public void decePowerCell1()  {
-        ePowerCell1--;
+    public void inctPowerCell2 () { // Increment power cell score in outer port
+        tPowerCell2++;
     }
-    public void incePowerCell2() {
-        ePowerCell2++;
+    public void dectPowerCell2 () { // Decrement power cell score in outer port
+        tPowerCell2--;
     }
-    public void decePowerCell2() {
-        ePowerCell2--;
-    }
-    public void incePowerCell3() {
-        ePowerCell3++;
-    }
-    public void decePowerCell3() {
-        ePowerCell3--;
-    }
-    public int getePowerCell1() {return ePowerCell1;}
-    public int getePowerCell2() {return ePowerCell2;}
-    public int getePowerCell3() {return ePowerCell3;}
 
-    public void decScoreLVL1 () {tPowerCell1--; }
-    public int getScoreLVL1 () {
+    public void inctPowerCell3 () { // Increment power cell score in inner port
+        tPowerCell3++;
+    }
+    public void dectPowerCell3 () { // Decrement power cell score in inner port
+        tPowerCell3--;
+    }
+
+    /**
+     * Get the power cell score on bottom port
+     * @return tPowerCell1
+     */
+    public int gettPowerCell1() {
         return tPowerCell1;
     }
 
-    public void incScoreLVL2 () {
-        tPowerCell2++;
-    }
-    public void decScoreLVL2 () {
-        tPowerCell2--;
-    }
-    public int getScoreLVL2 () {
+    /**
+     * Get the power cell score on outer port
+     * @return tPowerCell2
+     */
+    public int gettPowerCell2() {
         return tPowerCell2;
     }
 
-    public void incScoreLVL3 () {
-        tPowerCell3++;
-    }
-    public void decScoreLVL3 () {
-        tPowerCell3--;
-    }
-    public int getScoreLVL3 () {
+    /**
+     * Get the power cell score on inner port
+     * @return tPowerCell3
+     */
+    public int gettPowerCell3 () {
         return tPowerCell3;
     }
-    private long lastPauseTime;
+
+    // ***Endgame*** //
+
+    public void incePowerCell1() { // Increment power cell score in bottom port
+        ePowerCell1++;
+    }
+    public void decePowerCell1() { // Decrement power cell score in bottom port
+        ePowerCell1--;
+    }
+    public void incePowerCell2() { // Increment power cell score in outer port
+        ePowerCell2++;
+    }
+    public void decePowerCell2() { // Decrement power cell score in outer port
+        ePowerCell2--;
+    }
+    public void incePowerCell3() { // Increment power cell score in inner port
+        ePowerCell3++;
+    }
+    public void decePowerCell3() { // Decrement power cell score in inner port
+        ePowerCell3--;
+    }
+
+    /**
+     * Get the power cell score on bottom port
+     * @return ePowerCell1
+     */
+    public int getePowerCell1() {return ePowerCell1;}
+
+    /**
+     * Get the power cell score on outer port
+     * @return ePowerCell2
+     */
+    public int getePowerCell2() {return ePowerCell2;}
+
+    /**
+     * Get the power cell score on inner port
+     * @return ePowerCell3
+     */
+    public int getePowerCell3() {return ePowerCell3;}
+
+    private long lastPauseTime; // Defense timer
     private AppDatabase db; //built on creation of Activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -152,8 +216,8 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
         TabLayout tabs = findViewById(R.id.tabs); //this is the physical tabs
         tabs.setupWithViewPager(viewPager); //sync the two together
 
-        final Chronometer cm = findViewById(R.id.defenseTime);
-        final ToggleButton tb = findViewById(R.id.defenseButton);
+        final Chronometer cm = findViewById(R.id.defenseTime); // Defense chonometer object
+        final ToggleButton tb = findViewById(R.id.defenseButton); // Toggle Button for starting and stopping defense timer
 
         cm.setBase(SystemClock.elapsedRealtime());
 
@@ -203,29 +267,30 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
 
         StormDao stormDao = db.stormDao(); //get interface object
 
-        final CheckBox pc = findViewById(R.id.cboPC);
-        final CheckBox rc = findViewById(R.id.cboRC);
+        final CheckBox rc = findViewById(R.id.cboRC); // Checkbox for rotation control
+        final CheckBox pc = findViewById(R.id.cboPC); // Checkbox for position control
 
-        /* create Whoosh */
+        /* create new Whoosh object */
         Whoosh whoosh = new Whoosh(team, match);
+        whoosh.setAlliance(alliance); // Set Whoosh alliance instance data to "alliance"
 
-        whoosh.setAlliance(alliance);
-        whoosh.setAPowerCell1(aPowerCell1);
-        whoosh.setAPowerCell2(aPowerCell2);
-        whoosh.setAPowerCell3(aPowerCell3);
-        whoosh.setAPowerCellPickup(aPowerCellPickup);
-        whoosh.setTPowerCell1(tPowerCell1);
-        whoosh.setTPowerCell2(tPowerCell2);
-        whoosh.setTPowerCell3(tPowerCell3);
-        whoosh.setEPowerCell1(ePowerCell1);
-        whoosh.setEPowerCell2(ePowerCell2);
-        whoosh.setEPowerCell3(ePowerCell3);
+        whoosh.setAPowerCell1(aPowerCell1); // Set auto bottom power cell to "aPowerCell1"
+        whoosh.setAPowerCell2(aPowerCell2); // Set auto outer power cell to "aPowerCell2"
+        whoosh.setAPowerCell3(aPowerCell3); // Set auto inner power cell to "aPowerCell3"
+        whoosh.setAPowerCellPickup(aPowerCellPickup); // Set auto power cell pickup to "aPowerCellPickup"
+
+        whoosh.setTPowerCell1(tPowerCell1); // Set teleop bottom power cell to "tPowerCell1"
+        whoosh.setTPowerCell2(tPowerCell2); // Set teleop outer power cell to "tPowerCell2"
+        whoosh.setTPowerCell3(tPowerCell3); // Set teleop inner power cell to "tPowerCell3"
+        whoosh.setEPowerCell1(ePowerCell1); // Set endgame bottom power cell to "ePowerCell1"
+        whoosh.setEPowerCell2(ePowerCell2); // Set endgame outer power cell to "ePowerCell2"
+        whoosh.setEPowerCell3(ePowerCell3); // Set endgame inner power cell to "ePowerCell3"
         //whoosh.setHang(hang);
 
-        stormDao.insertWhooshes(whoosh);
+        stormDao.insertWhooshes(whoosh); // Insert data onto database
 
-        Intent intent = new Intent(MainActivity.this, StartActivity.class);
-        startActivity(intent);
+        Intent intent = new Intent(MainActivity.this, StartActivity.class); // New intent activity - Main Activity
+        startActivity(intent); // Start Main Activity page
 
     }
 
