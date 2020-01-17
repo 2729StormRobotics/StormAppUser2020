@@ -271,24 +271,25 @@ public class MainActivityNew extends AppCompatActivity implements Auto.OnFragmen
 
         /* create new Whoosh object */
         Whoosh whoosh = new Whoosh(team, match);
+        whoosh.setAlliance(alliance); // Set Whoosh alliance instance data to "alliance"
 
-        whoosh.setAlliance(alliance); // Set Whoose alliance instance data to "alliance
-        whoosh.setAPowerCell1(aPowerCell1);
-        whoosh.setAPowerCell2(aPowerCell2);
-        whoosh.setAPowerCell3(aPowerCell3);
-        whoosh.setAPowerCellPickup(aPowerCellPickup);
-        whoosh.setTPowerCell1(tPowerCell1);
-        whoosh.setTPowerCell2(tPowerCell2);
-        whoosh.setTPowerCell3(tPowerCell3);
-        whoosh.setEPowerCell1(ePowerCell1);
-        whoosh.setEPowerCell2(ePowerCell2);
-        whoosh.setEPowerCell3(ePowerCell3);
+        whoosh.setAPowerCell1(aPowerCell1); // Set auto bottom power cell to "aPowerCell1"
+        whoosh.setAPowerCell2(aPowerCell2); // Set auto outer power cell to "aPowerCell2"
+        whoosh.setAPowerCell3(aPowerCell3); // Set auto inner power cell to "aPowerCell3"
+        whoosh.setAPowerCellPickup(aPowerCellPickup); // Set auto power cell pickup to "aPowerCellPickup"
+
+        whoosh.setTPowerCell1(tPowerCell1); // Set teleop bottom power cell to "tPowerCell1"
+        whoosh.setTPowerCell2(tPowerCell2); // Set teleop outer power cell to "tPowerCell2"
+        whoosh.setTPowerCell3(tPowerCell3); // Set teleop inner power cell to "tPowerCell3"
+        whoosh.setEPowerCell1(ePowerCell1); // Set endgame bottom power cell to "ePowerCell1"
+        whoosh.setEPowerCell2(ePowerCell2); // Set endgame outer power cell to "ePowerCell2"
+        whoosh.setEPowerCell3(ePowerCell3); // Set endgame inner power cell to "ePowerCell3"
         //whoosh.setHang(hang);
 
-        stormDao.insertWhooshes(whoosh);
+        stormDao.insertWhooshes(whoosh); // Insert data onto database
 
-        Intent intent = new Intent(MainActivityNew.this, StartActivity.class);
-        startActivity(intent);
+        Intent intent = new Intent(MainActivityNew.this, StartActivity.class); // New intent activity - Main Activity
+        startActivity(intent); // Start Main Activity page
 
     }
 
