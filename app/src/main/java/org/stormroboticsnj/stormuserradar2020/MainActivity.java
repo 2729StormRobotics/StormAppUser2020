@@ -26,7 +26,7 @@ import org.stormroboticsnj.stormuserradar2020.ui.main.SectionsPagerAdapter;
  * each field of data collected and increment/decrement or setter as well as getter methods for
  * each.
  */
-public class MainActivity extends AppCompatActivity implements Auto.OnFragmentInteractionListener, PathAuto.OnFragmentInteractionListener, Endgame.OnFragmentInteractionListener, Teleop.OnFragmentInteractionListener{
+public class MainActivity extends AppCompatActivity implements Auto.OnFragmentInteractionListener, Teleop.OnFragmentInteractionListener, PathTeleopRed.OnFragmentInteractionListener, PathTeleopBlue.OnFragmentInteractionListener, Endgame.OnFragmentInteractionListener{
     /* brought from StartActivity */
     private int team; // Team number
     private int match; // Match number
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
         if (aPowerCellPickup < 99) aPowerCellPickup++;
     }
     public void decaPowerCellPickup () { // Decrement number of power cells picked up during Auto
-        if (aPowerCell3 > 0) aPowerCellPickup--;
+        if (aPowerCellPickup > 0) aPowerCellPickup--;
 
         aPowerCell1++;
     }
@@ -136,8 +136,7 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
         if (tPowerCell3 < 99) tPowerCell3++;
     }
     public void dectPowerCell3 () { // Decrement power cell score in inner port
-        if (tPowerCell1 > 0) tPowerCell1--;
-        tPowerCell1++;
+        if (tPowerCell3 > 0) tPowerCell3--;
     }
 
 

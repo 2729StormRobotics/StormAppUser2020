@@ -8,89 +8,103 @@
     android:background="@drawable/frc_field_2020_blue"
     tools:context=".PathTeleopBlue">
 
-    <CheckBox
-        android:id="@+id/cboBehindShieldB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="200dp"
-        android:fontFamily="@font/lato"
-        android:text="Behind Shield"
-        android:textColor="@android:color/background_dark"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/cboFrontShieldB"
-        app:layout_constraintEnd_toEndOf="@+id/cboFrontShieldB"
-        app:layout_constraintStart_toStartOf="@+id/cboFrontShieldB" />
-
-    <CheckBox
-        android:id="@+id/cboFrontShieldB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
-        android:fontFamily="@font/lato"
-        android:text="Front Shield"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/cboBehindLineB"
-        app:layout_constraintEnd_toEndOf="@+id/cboBehindLineB"
-        app:layout_constraintStart_toStartOf="@+id/cboBehindLineB" />
-
-    <CheckBox
-        android:id="@+id/cboBehindControlPanelB"
-        android:layout_width="141dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="110dp"
-        android:fontFamily="@font/lato"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:text="Behind Wheel"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/cboFrontControlPanelB"
-        app:layout_constraintStart_toStartOf="@+id/cboFrontControlPanelB" />
-
-    <CheckBox
-        android:id="@+id/cboFrontControlPanelB"
-        android:layout_width="129dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="85dp"
-        android:layout_marginBottom="100dp"
-        android:fontFamily="@font/lato"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:text="Front Wheel"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/cboBehindLineB"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <CheckBox
-        android:id="@+id/cboPortSafeZoneB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="175dp"
-        android:layout_marginBottom="15dp"
-        android:fontFamily="@font/lato"
-        android:text="Port Safe Zone"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
         android:id="@+id/cboBehindLineB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
         android:fontFamily="@font/lato"
         android:text="Behind Line"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/cboFrontLineB"
-        app:layout_constraintStart_toStartOf="@+id/cboFrontLineB" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".73" />
+
+    <CheckBox
+        android:id="@+id/cboBehindShieldB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:text="Behind Shield"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".3" />
 
     <CheckBox
         android:id="@+id/cboFrontLineB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="250dp"
-        android:layout_marginBottom="125dp"
         android:fontFamily="@font/lato"
         android:text="Front Line"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.86" />
+
+    <CheckBox
+        android:id="@+id/cboFrontShieldB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:text="Front Shield"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <CheckBox
+        android:id="@+id/cboPortSafeZoneB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:text="Port Safe Zone"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".42"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".96" />
+
+    <CheckBox
+        android:id="@+id/cboFrontControlPanelB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:text="Front Wheel"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".55" />
+
+    <CheckBox
+        android:id="@+id/cboBehindControlPanelB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:text="Behind Wheel"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".37" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
