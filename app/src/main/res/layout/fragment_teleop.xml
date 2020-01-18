@@ -5,7 +5,7 @@
     android:id="@+id/teleop"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".teleop" >
+    tools:context=".Teleop">
 
     <CheckBox
         android:id="@+id/cboPC"
@@ -33,6 +33,7 @@
         android:text="@string/plus"
         android:textSize="36sp"
         android:typeface="serif"
+        android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txtNumScoredLVL1"
         app:layout_constraintTop_toBottomOf="@+id/txtLabelLVL1" />
@@ -71,14 +72,14 @@
     <TextView
         android:id="@+id/txtNumScoredLVL1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:fontFamily="@font/lato"
+        android:gravity="center_horizontal"
         android:text="0"
         android:textColor="#000000"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="@+id/btnMoreLVL1"
         app:layout_constraintEnd_toStartOf="@+id/btnMoreLVL1"
-        app:layout_constraintHorizontal_bias="0.539"
         app:layout_constraintStart_toEndOf="@+id/btnLessLVL1"
         app:layout_constraintTop_toTopOf="@+id/btnMoreLVL1" />
 
@@ -134,8 +135,9 @@
     <TextView
         android:id="@+id/txtNumScoredLVL2"
         android:layout_width="wrap_content"
-        android:layout_height="41dp"
+        android:layout_height="40dp"
         android:fontFamily="@font/lato"
+        android:gravity="center_horizontal"
         android:text="0"
         android:textColor="#000000"
         android:textSize="30sp"
@@ -197,10 +199,11 @@
     <TextView
         android:id="@+id/txtNumScoredLVL3"
         android:layout_width="wrap_content"
-        android:layout_height="41dp"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/lato"
+        android:gravity="center_horizontal"
         android:text="0"
         android:textColor="#000000"
         android:textSize="30sp"
