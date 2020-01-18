@@ -157,7 +157,7 @@
         android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/textView10"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.633"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -250,9 +250,8 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.479"
         app:layout_constraintStart_toEndOf="@+id/btnELessLVL2"
-        app:layout_constraintTop_toBottomOf="@+id/btnEMoreLVL2"
         tools:layout_editor_absoluteY="345dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
