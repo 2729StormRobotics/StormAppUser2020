@@ -25,7 +25,7 @@ import org.stormroboticsnj.stormuserradar2020.ui.main.SectionsPagerAdapter;
  * each field of data collected and increment/decrement or setter as well as getter methods for
  * each.
  */
-public class MainActivityNew extends AppCompatActivity implements Auto.OnFragmentInteractionListener, PathAuto.OnFragmentInteractionListener, Endgame.OnFragmentInteractionListener, Teleop.OnFragmentInteractionListener{
+public class MainActivityNew extends AppCompatActivity implements Auto.OnFragmentInteractionListener, Teleop.OnFragmentInteractionListener, PathTeleopRed.OnFragmentInteractionListener, PathTeleopBlue.OnFragmentInteractionListener, Endgame.OnFragmentInteractionListener{
     /* brought from StartActivity */
     private int team; // Team number
     private int match; // Match number
@@ -81,30 +81,6 @@ public class MainActivityNew extends AppCompatActivity implements Auto.OnFragmen
         if (aPowerCell3 > 0) aPowerCellPickup--;
 
         aPowerCell1++;
-    }
-    public void decaPowerCell1 () { // Decrement power cell score in bottom port
-        aPowerCell1--;
-    }
-
-    public void incaPowerCell2 () { // Increment power cell score in outer port
-        aPowerCell2++;
-    }
-    public void decaPowerCell2 () { // Decrement power cell score in outer port
-        aPowerCell2--;
-    }
-
-    public void incaPowerCell3 () { // Increment power cell score in inner port
-        aPowerCell3++;
-    }
-    public void decaPowerCell3 () { // Decrement power cell score in inner port
-        aPowerCell3--;
-    }
-
-    public void incaPowerCellPickup () { // Increment number of power cells picked up during Auto
-        aPowerCellPickup++;
-    }
-    public void decaPowerCellPickup () { // Decrement number of power cells picked up during Auto
-        aPowerCellPickup--;
     }
 
     /**
@@ -162,23 +138,7 @@ public class MainActivityNew extends AppCompatActivity implements Auto.OnFragmen
         if (tPowerCell1 > 0) tPowerCell1--;
         tPowerCell1++;
     }
-    public void dectPowerCell1 () { // Decrement power cell score in bottom port
-        tPowerCell1--;
-    }
 
-    public void inctPowerCell2 () { // Increment power cell score in outer port
-        tPowerCell2++;
-    }
-    public void dectPowerCell2 () { // Decrement power cell score in outer port
-        tPowerCell2--;
-    }
-
-    public void inctPowerCell3 () { // Increment power cell score in inner port
-        tPowerCell3++;
-    }
-    public void dectPowerCell3 () { // Decrement power cell score in inner port
-        tPowerCell3--;
-    }
 
     /**
      * Get the power cell score on bottom port
@@ -225,24 +185,8 @@ public class MainActivityNew extends AppCompatActivity implements Auto.OnFragmen
     }
     public void decePowerCell3() { // Decrement power cell score in inner port
         if (ePowerCell3 > 0) ePowerCell3--;
+    }
 
-        ePowerCell1++;
-    }
-    public void decePowerCell1() { // Decrement power cell score in bottom port
-        ePowerCell1--;
-    }
-    public void incePowerCell2() { // Increment power cell score in outer port
-        ePowerCell2++;
-    }
-    public void decePowerCell2() { // Decrement power cell score in outer port
-        ePowerCell2--;
-    }
-    public void incePowerCell3() { // Increment power cell score in inner port
-        ePowerCell3++;
-    }
-    public void decePowerCell3() { // Decrement power cell score in inner port
-        ePowerCell3--;
-    }
 
     /**
      * Get the power cell score on bottom port
@@ -289,10 +233,10 @@ public class MainActivityNew extends AppCompatActivity implements Auto.OnFragmen
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
 
-                    int stoppedMilliseconds = 0;
-                    String chronoText = cm.getText().toString();
-                    String array[] = chronoText.split(":");
-                    if (array.length == 2) {
+                    int stoppedMilliseconds = 0; // Number of milliseconds at stopped timer
+                    String chronoText = cm.getText().toString(); // Text time output
+                    String array[] = chronoText.split(":"); // Array of time values stored
+                    if (array.length == 2) { /* TODO Documentation and commenting needed */
                         stoppedMilliseconds = Integer.parseInt(array[0]) * 60 * 1000
                                 + Integer.parseInt(array[1]) * 1000;
                     } else if (array.length == 3) {
@@ -335,24 +279,25 @@ public class MainActivityNew extends AppCompatActivity implements Auto.OnFragmen
 
         /* create new Whoosh object */
         Whoosh whoosh = new Whoosh(team, match);
+        whoosh.setAlliance(alliance); // Set Whoosh alliance instance data to "alliance"
 
-        whoosh.setAlliance(alliance); // Set Whoose alliance instance data to "alliance
-        whoosh.setAPowerCell1(aPowerCell1);
-        whoosh.setAPowerCell2(aPowerCell2);
-        whoosh.setAPowerCell3(aPowerCell3);
-        whoosh.setAPowerCellPickup(aPowerCellPickup);
-        whoosh.setTPowerCell1(tPowerCell1);
-        whoosh.setTPowerCell2(tPowerCell2);
-        whoosh.setTPowerCell3(tPowerCell3);
-        whoosh.setEPowerCell1(ePowerCell1);
-        whoosh.setEPowerCell2(ePowerCell2);
-        whoosh.setEPowerCell3(ePowerCell3);
+        whoosh.setAPowerCell1(aPowerCell1); // Set auto bottom power cell to "aPowerCell1"
+        whoosh.setAPowerCell2(aPowerCell2); // Set auto outer power cell to "aPowerCell2"
+        whoosh.setAPowerCell3(aPowerCell3); // Set auto inner power cell to "aPowerCell3"
+        whoosh.setAPowerCellPickup(aPowerCellPickup); // Set auto power cell pickup to "aPowerCellPickup"
+
+        whoosh.setTPowerCell1(tPowerCell1); // Set teleop bottom power cell to "tPowerCell1"
+        whoosh.setTPowerCell2(tPowerCell2); // Set teleop outer power cell to "tPowerCell2"
+        whoosh.setTPowerCell3(tPowerCell3); // Set teleop inner power cell to "tPowerCell3"
+        whoosh.setEPowerCell1(ePowerCell1); // Set endgame bottom power cell to "ePowerCell1"
+        whoosh.setEPowerCell2(ePowerCell2); // Set endgame outer power cell to "ePowerCell2"
+        whoosh.setEPowerCell3(ePowerCell3); // Set endgame inner power cell to "ePowerCell3"
         //whoosh.setHang(hang);
 
-        stormDao.insertWhooshes(whoosh);
+        stormDao.insertWhooshes(whoosh); // Insert data onto database
 
-        Intent intent = new Intent(MainActivityNew.this, StartActivity.class);
-        startActivity(intent);
+        Intent intent = new Intent(MainActivityNew.this, StartActivity.class); // New intent activity - Main Activity
+        startActivity(intent); // Start Main Activity page
 
     }
 

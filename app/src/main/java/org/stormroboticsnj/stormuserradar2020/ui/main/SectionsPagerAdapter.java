@@ -10,11 +10,11 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import org.stormroboticsnj.stormuserradar2020.Auto;
 import org.stormroboticsnj.stormuserradar2020.Endgame;
-import org.stormroboticsnj.stormuserradar2020.PathAuto;
+import org.stormroboticsnj.stormuserradar2020.PathTeleopBlue;
+import org.stormroboticsnj.stormuserradar2020.PathTeleopRed;
 import org.stormroboticsnj.stormuserradar2020.R;
-import org.stormroboticsnj.stormuserradar2020.Scoring;
-import org.stormroboticsnj.stormuserradar2020.StartActivity;
 import org.stormroboticsnj.stormuserradar2020.Teleop;
+import org.stormroboticsnj.stormuserradar2020.models.Whoosh;
 
 
 /**
@@ -24,8 +24,8 @@ import org.stormroboticsnj.stormuserradar2020.Teleop;
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @StringRes
-    private static final int[]TAB_TITLES = new int[]{R.string.auto, R.string.teleop, R.string.endgame, R.string.map};
-        private final Context mContext;
+    private static final int[]TAB_TITLES = new int[]{R.string.auto, R.string.teleop, R.string.map, R.string.endgame};
+    private final Context mContext;
 
     public SectionsPagerAdapter(Context context, FragmentManager fm) {
         super(fm);
@@ -47,10 +47,14 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
                 return Teleop.newInstance("","" );
 
             case 2:
-                return Endgame.newInstance("","");
+                if(new Whoosh().isAlliance()) {
+                    return PathTeleopRed.newInstance("","");
+                } else{
+                    return PathTeleopBlue.newInstance("","");
+                }
 
             default:
-                return PathAuto.newInstance("","");
+                return Endgame.newInstance("","");
         }
     }
 

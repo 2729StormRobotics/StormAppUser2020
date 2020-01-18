@@ -79,7 +79,7 @@ public class PathTeleopBlue extends Fragment {
         CheckBox frontShield = view.findViewById(R.id.cboFrontShieldB);
         CheckBox behindShield = view.findViewById(R.id.cboBehindShieldB);
 
-        boolean checked = ((CheckBox) view).isChecked();
+        /*boolean checked = ((CheckBox) view).isChecked();
 
         switch(view.getId()) {
             case R.id.cboPortSafeZoneB:
@@ -95,7 +95,7 @@ public class PathTeleopBlue extends Fragment {
                     // Rotation/Position control stage is not complete
                 }
                 break;
-        }
+        }*/
 
         // Inflate the layout for this fragment
         return view;
