@@ -71,13 +71,13 @@ public class PathTeleopBlue extends Fragment {
         View view = inflater.inflate(R.layout.fragment_path_teleop_red, container, false);
 
         // Declare Checkbox objects for different robot scoring zones
-        CheckBox safePortZone = view.findViewById(R.id.cboPortSafeZoneB);
-        CheckBox frontInitLine = view.findViewById(R.id.cboFrontLineB);
-        CheckBox behindInitLine = view.findViewById(R.id.cboBehindLineB);
-        CheckBox frontControlPanel = view.findViewById(R.id.cboFrontControlPanelB);
-        CheckBox behindControlPanel = view.findViewById(R.id.cboBehindControlPanelB);
-        CheckBox frontShield = view.findViewById(R.id.cboFrontShieldB);
-        CheckBox behindShield = view.findViewById(R.id.cboBehindShieldB);
+        CheckBox safePortZoneB = view.findViewById(R.id.cboPortSafeZoneB);
+        CheckBox frontInitLineB = view.findViewById(R.id.cboFrontLineB);
+        CheckBox behindInitLineB = view.findViewById(R.id.cboBehindLineB);
+        CheckBox frontControlPanelB = view.findViewById(R.id.cboFrontControlPanelB);
+        CheckBox behindControlPanelB = view.findViewById(R.id.cboBehindControlPanelB);
+        CheckBox frontShieldB = view.findViewById(R.id.cboFrontShieldB);
+        CheckBox behindShieldB = view.findViewById(R.id.cboBehindShieldB);
 
         /*boolean checked = ((CheckBox) view).isChecked();
 

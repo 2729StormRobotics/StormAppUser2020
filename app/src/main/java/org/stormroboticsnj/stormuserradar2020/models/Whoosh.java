@@ -45,8 +45,9 @@ public class Whoosh {
     private int ePowerCell2;
     @ColumnInfo(name ="inner_port_endgame")
     private int ePowerCell3;
-    @ColumnInfo(name ="hang")
-    private int hang;
+    @ColumnInfo(name ="endgame_outcome")
+    private String endgameOutcome;
+
 
 
 
@@ -116,10 +117,11 @@ public class Whoosh {
     public int getEPowerCell3() {
         return ePowerCell3;
     }
-
-    public int getHang() {
-        return hang;
+    public String getEndgameOutcome(){
+        return endgameOutcome;
     }
+
+
 
     public void setTeam(int team) {
         this.team = team;
@@ -160,7 +162,9 @@ public class Whoosh {
 
     public void setEPowerCell3(int ePowerCell3) { this.ePowerCell3 = ePowerCell3; }
 
-    public void setHang(int hang) { this.hang = hang; }
+    public void setEOutcome(String endgameOutcome) {this.endgameOutcome = endgameOutcome; }
+
+
 
     @NonNull
     @Override
@@ -180,7 +184,9 @@ public class Whoosh {
                 + "," + ePowerCell1
                 + "," + ePowerCell2
                 + "," + ePowerCell3
-                + "," + hang
                 + "|";
     }
+
+    /*public void setEOutcome(String endgameOutcome) {
+    }*/
 }

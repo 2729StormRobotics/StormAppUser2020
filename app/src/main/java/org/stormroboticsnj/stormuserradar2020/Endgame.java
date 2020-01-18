@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 
@@ -84,6 +86,10 @@ public class Endgame extends Fragment {
         final TextView txtScoredLVL1 = view.findViewById(R.id.txtEScoredLVL1);
         final TextView txtScoredLVL2 = view.findViewById(R.id.txtEScoredLVL2);
         final TextView txtScoredLVL3 = view.findViewById(R.id.txtEScoredLVL3);
+
+        final RadioButton park = view.findViewById(R.id.rdoPark);
+        final RadioButton hang  = view.findViewById(R.id.rdoHang);
+        final RadioButton levelHang = view.findViewById(R.id.rdoLevelHang);
 //getting main actvity
 
         final MainActivity act = (MainActivity) getActivity();
@@ -139,6 +145,9 @@ public class Endgame extends Fragment {
                 txtScoredLVL3.setText(String.valueOf(act.getePowerCell3()));
             }
         });
+
+        onRadioButtonClicked(view, act);
+
         //having the submit button work
         buttonSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -148,6 +157,28 @@ public class Endgame extends Fragment {
         });
 
         return view;
+    }
+
+    private void onRadioButtonClicked(View view, MainActivity a) {
+        boolean checked = ((RadioButton) view).isChecked();
+
+        switch(view.getId()) {
+            case R.id.rdoPark:
+                if (checked) {
+                    a.setEndgameOutcome("Park");
+                    break;
+                }
+            case R.id.rdoHang:
+                if (checked) {
+                    a.setEndgameOutcome("Hang");
+                    break;
+                }
+            case R.id.rdoLevelHang:
+                if (checked) {
+                    a.setEndgameOutcome("Level Hang");
+                    break;
+                }
+                }
     }
 
     @Override

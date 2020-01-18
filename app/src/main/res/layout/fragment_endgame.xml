@@ -197,10 +197,11 @@
         app:layout_constraintVertical_bias=".85">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/rdoPark"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/lato"
+            android:onClick="onRadioButtonClicked"
             android:text="Park"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -209,10 +210,11 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/rdoHang"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="90dp"
+            android:onClick="onRadioButtonClicked"
             android:text="Hang"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -221,9 +223,10 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/rdoLevelHang"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
             android:text="Level Hang"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             app:layout_constraintBottom_toBottomOf="parent"
