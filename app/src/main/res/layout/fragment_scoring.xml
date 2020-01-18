@@ -45,8 +45,8 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="@+id/btnMore"
         app:layout_constraintEnd_toStartOf="@+id/btnMore"
-        app:layout_constraintStart_toEndOf="@+id/btnLess"
-        app:layout_constraintTop_toTopOf="@+id/btnLess" />
+        app:layout_constraintStart_toEndOf="@+id/abtnLessBottom"
+        app:layout_constraintTop_toTopOf="@+id/abtnLessBottom" />
 
     <TextView
         android:id="@+id/atxtNumScoredOuter"
@@ -54,10 +54,10 @@
         android:layout_height="wrap_content"
         android:text="0"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="@+id/btnMore2"
-        app:layout_constraintEnd_toStartOf="@+id/btnMore"
-        app:layout_constraintStart_toEndOf="@+id/btnLess"
-        app:layout_constraintTop_toTopOf="@+id/btnLess2" />
+        app:layout_constraintBottom_toBottomOf="@+id/abtnMoreOuter"
+        app:layout_constraintEnd_toStartOf="@+id/abtnMoreOuter"
+        app:layout_constraintStart_toEndOf="@+id/abtnLessOuter"
+        app:layout_constraintTop_toTopOf="@+id/abtnLessOuter" />
 
     <Button
         android:id="@+id/abtnMoreOuter"
