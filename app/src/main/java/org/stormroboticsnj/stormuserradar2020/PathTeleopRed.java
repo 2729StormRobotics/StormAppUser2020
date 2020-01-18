@@ -79,11 +79,15 @@ public class PathTeleopRed extends Fragment {
         CheckBox frontShield = view.findViewById(R.id.cboFrontShieldR);
         CheckBox behindShield = view.findViewById(R.id.cboBehindShieldR);
 
+        MainActivity act = new MainActivity();
 
         boolean checked = ((CheckBox) view).isChecked();
 
         switch(view.getId()) {
             case R.id.cboPortSafeZoneR:
+                if(checked) {
+                    act.setShootSafePortZoneR(true);
+                }
             case R.id.cboFrontLineR:
             case R.id.cboBehindLineR:
             case R.id.cboFrontControlPanelR:

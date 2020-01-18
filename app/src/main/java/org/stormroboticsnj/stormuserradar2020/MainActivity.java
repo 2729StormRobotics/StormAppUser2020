@@ -46,6 +46,23 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
     private int tPowerCell2 = 0; // Power cell score in outer port
     private int tPowerCell3 = 0; // Power cell score in inner port
 
+    // Robot Map
+    private boolean shootSafePortZoneR = false; // Can robot shoot power cell in red safe port zone
+    private boolean shootFrontInitLineR = false; // Can robot shoot power cell in front of red initiation line
+    private boolean shootBehindInitLineR = false; // Can robot shoot power cell behind red initiation line
+    private boolean shootFrontControlPanelR = false; // Can robot shoot power cell in front of red control panel
+    private boolean shootBehindControlPanelR = false; // Can robot shoot power cell behind red control panel
+    private boolean shootFrontShieldR = false; // Can robot shoot power cell in front of red shield
+    private boolean shootBehindShieldR = false; // Can robot shoot power cell behind red shield
+
+    private boolean shootSafePortZoneB = false; // Can robot shoot power cell in blue safe port zone
+    private boolean shootFrontInitLineB = false; // Can robot shoot power cell in front of blue initiation line
+    private boolean shootBehindInitLineB = false; // Can robot shoot power cell behind blue initiation line
+    private boolean shootFrontControlPanelB = false; // Can robot shoot power cell in front of blue control panel
+    private boolean shootBehindControlPanelB = false; // Can robot shoot power cell behind blue control panel
+    private boolean shootFrontShieldB = false; // Can robot shoot power cell in front of blue shield
+    private boolean shootBehindShieldB = false; // Can robot shoot power cell behind blue shield
+
     // Endgame
     private int ePowerCell1 = 0; // Power cell score in bottom port
     private int ePowerCell2 = 0; // Power cell score in outer port
@@ -163,6 +180,99 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
     public int gettPowerCell3 () {
         return tPowerCell3;
     }
+
+    // ***Robot Map*** //
+        // **Red** //
+            public boolean isShootSafePortZoneR() {
+                return shootSafePortZoneR;
+            }
+
+            public boolean isShootFrontInitLineR() {
+                return shootFrontInitLineR;
+            }
+
+            public boolean isShootBehindInitLineR() {
+                return shootBehindInitLineR;
+            }
+
+            public boolean isShootFrontControlPanelR() {
+                return shootFrontControlPanelR;
+            }
+
+            public boolean isShootBehindControlPanelR() {
+                return shootBehindControlPanelR;
+            }
+
+            public boolean isShootFrontShieldR() {
+                return shootFrontShieldR;
+            }
+
+            public boolean isShootBehindShieldR() {
+                return shootBehindShieldR;
+            }
+
+            public void setShootSafePortZoneR (boolean portZoneR) {
+                shootSafePortZoneR = portZoneR;
+            }
+
+            public void setShootFrontInitLineR(boolean frontInitLineR) {
+                shootFrontInitLineR = frontInitLineR;
+            }
+
+            public void setShootBehindInitLineR(boolean behindInitLineR) {
+                shootBehindInitLineR = behindInitLineR;
+            }
+
+            public void setShootFrontControlPanelR(boolean frontControlPanelR) {
+                shootFrontControlPanelR = frontControlPanelR;
+            }
+
+            public void setShootBehindControlPanelR(boolean behindControlPanelR) {
+                shootBehindControlPanelR = behindControlPanelR;
+            }
+
+            public void setShootFrontShieldR(boolean frontShieldR) {
+                shootFrontShieldR = frontShieldR;
+            }
+
+            public void setShootBehindShieldR(boolean behindShieldR) {
+                shootBehindShieldR = behindShieldR;
+            }
+
+        // Blue
+            public void setShootSafePortZoneB (boolean portZoneB) {
+                shootSafePortZoneB = portZoneB;
+            }
+
+            public boolean isShootSafePortZoneB() {
+                return shootSafePortZoneB;
+            }
+
+            public boolean isShootFrontInitLineB() {
+                return shootFrontInitLineB;
+            }
+
+            public boolean isShootBehindInitLineB() {
+                return shootBehindInitLineB;
+            }
+
+            public boolean isShootFrontControlPanelB() {
+                return shootFrontControlPanelB;
+            }
+
+            public boolean isShootBehindControlPanelB() {
+                return shootBehindControlPanelB;
+            }
+
+            public boolean isShootFrontShieldB() {
+                return shootFrontShieldB;
+            }
+
+            public boolean isShootBehindShieldB() {
+                return shootBehindShieldB;
+            }
+
+
 
     // ***Endgame*** //
 
