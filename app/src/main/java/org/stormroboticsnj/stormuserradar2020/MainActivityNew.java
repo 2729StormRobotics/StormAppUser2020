@@ -25,7 +25,7 @@ import org.stormroboticsnj.stormuserradar2020.ui.main.SectionsPagerAdapter;
  * each field of data collected and increment/decrement or setter as well as getter methods for
  * each.
  */
-public class MainActivityNew extends AppCompatActivity implements Auto.OnFragmentInteractionListener, PathAuto.OnFragmentInteractionListener, Endgame.OnFragmentInteractionListener, Teleop.OnFragmentInteractionListener{
+public class MainActivityNew extends AppCompatActivity implements Auto.OnFragmentInteractionListener, Teleop.OnFragmentInteractionListener, PathTeleopRed.OnFragmentInteractionListener, PathTeleopBlue.OnFragmentInteractionListener, Endgame.OnFragmentInteractionListener{
     /* brought from StartActivity */
     private int team; // Team number
     private int match; // Match number

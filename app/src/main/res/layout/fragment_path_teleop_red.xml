@@ -9,7 +9,7 @@
     tools:context=".PathTeleopRed">
 
     <CheckBox
-        android:id="@+id/cboBehindLineB"
+        android:id="@+id/cboBehindLineR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/lato"
@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias=".73" />
 
     <CheckBox
-        android:id="@+id/cboBehindShieldB"
+        android:id="@+id/cboBehindShieldR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/lato"
@@ -36,7 +36,7 @@
         app:layout_constraintVertical_bias=".3" />
 
     <CheckBox
-        android:id="@+id/cboFrontLineB"
+        android:id="@+id/cboFrontLineR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/lato"
@@ -49,7 +49,7 @@
         app:layout_constraintVertical_bias="0.86" />
 
     <CheckBox
-        android:id="@+id/cboFrontShieldB"
+        android:id="@+id/cboFrontShieldR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/lato"
@@ -62,7 +62,7 @@
         app:layout_constraintVertical_bias="0.6" />
 
     <CheckBox
-        android:id="@+id/cboPortSafeZoneB"
+        android:id="@+id/cboPortSafeZoneR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/lato"
@@ -76,7 +76,7 @@
         app:layout_constraintVertical_bias=".96" />
 
     <CheckBox
-        android:id="@+id/cboFrontControlPanelB"
+        android:id="@+id/cboFrontControlPanelR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/lato"
@@ -91,7 +91,7 @@
         app:layout_constraintVertical_bias=".55" />
 
     <CheckBox
-        android:id="@+id/cboBehindControlPanelB"
+        android:id="@+id/cboBehindControlPanelR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/lato"

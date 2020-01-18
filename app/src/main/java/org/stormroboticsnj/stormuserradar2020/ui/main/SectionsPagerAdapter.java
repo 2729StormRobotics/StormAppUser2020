@@ -10,13 +10,9 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import org.stormroboticsnj.stormuserradar2020.Auto;
 import org.stormroboticsnj.stormuserradar2020.Endgame;
-import org.stormroboticsnj.stormuserradar2020.MainActivity;
-import org.stormroboticsnj.stormuserradar2020.PathAuto;
 import org.stormroboticsnj.stormuserradar2020.PathTeleopBlue;
 import org.stormroboticsnj.stormuserradar2020.PathTeleopRed;
 import org.stormroboticsnj.stormuserradar2020.R;
-import org.stormroboticsnj.stormuserradar2020.Scoring;
-import org.stormroboticsnj.stormuserradar2020.StartActivity;
 import org.stormroboticsnj.stormuserradar2020.Teleop;
 import org.stormroboticsnj.stormuserradar2020.models.Whoosh;
 
