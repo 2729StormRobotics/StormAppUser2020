@@ -4,17 +4,16 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.SystemClock;
-import android.view.View;
 import android.widget.CheckBox;
 import android.widget.Chronometer;
 import android.widget.CompoundButton;
 import android.widget.ToggleButton;
 
-import com.google.android.material.tabs.TabLayout;
-
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 import androidx.viewpager.widget.ViewPager;
-import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.tabs.TabLayout;
 
 import org.stormroboticsnj.stormuserradar2020.dao.StormDao;
 import org.stormroboticsnj.stormuserradar2020.models.Whoosh;
@@ -26,7 +25,7 @@ import org.stormroboticsnj.stormuserradar2020.ui.main.SectionsPagerAdapter;
  * each field of data collected and increment/decrement or setter as well as getter methods for
  * each.
  */
-public class MainActivity extends AppCompatActivity implements Auto.OnFragmentInteractionListener, Teleop.OnFragmentInteractionListener, PathTeleopRed.OnFragmentInteractionListener, PathTeleopBlue.OnFragmentInteractionListener, Endgame.OnFragmentInteractionListener{
+public class MainActivityNew extends AppCompatActivity implements Auto.OnFragmentInteractionListener, Teleop.OnFragmentInteractionListener, PathTeleopRed.OnFragmentInteractionListener, PathTeleopBlue.OnFragmentInteractionListener, Endgame.OnFragmentInteractionListener{
     /* brought from StartActivity */
     private int team; // Team number
     private int match; // Match number
@@ -79,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
         if (aPowerCellPickup < 99) aPowerCellPickup++;
     }
     public void decaPowerCellPickup () { // Decrement number of power cells picked up during Auto
-        if (aPowerCellPickup > 0) aPowerCellPickup--;
+        if (aPowerCell3 > 0) aPowerCellPickup--;
 
         aPowerCell1++;
     }
@@ -136,7 +135,8 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
         if (tPowerCell3 < 99) tPowerCell3++;
     }
     public void dectPowerCell3 () { // Decrement power cell score in inner port
-        if (tPowerCell3 > 0) tPowerCell3--;
+        if (tPowerCell1 > 0) tPowerCell1--;
+        tPowerCell1++;
     }
 
 
@@ -216,35 +216,28 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
         /* this handles the switching between fragments. see ui.main.SectionsPagerAdapter */
         SectionsPagerAdapter sectionsPagerAdapter =
                 new SectionsPagerAdapter(this, getSupportFragmentManager());
+                new SectionsPagerAdapter(this, getSupportFragmentManager()); //\\
 
         ViewPager viewPager = findViewById(R.id.view_pager); //this is the area that changes to each fragment
         viewPager.setAdapter(sectionsPagerAdapter); //tell it to be controlled by the instance
         TabLayout tabs = findViewById(R.id.tabs); //this is the physical tabs
         tabs.setupWithViewPager(viewPager); //sync the two together
 
+        final Chronometer cm = findViewById(R.id.defenseTime); // Defense chonometer object
+        final ToggleButton tb = findViewById(R.id.defenseButton); // Toggle Button for starting and stopping defense timer
 
-        /*final Chronometer cm = findViewById(R.id.defenseTime); // Defense chonometer object
-        final ToggleButton tb = findViewById(R.id.defenseButton); // Toggle Button for starting and stopping defense timer*/
-
-        /* Chronometer (Stopwatch) */
-        final Chronometer cm = findViewById(R.id.defenseTime); //get stopwatch
-        final ToggleButton tb = findViewById(R.id.defenseButton); //get on/off button
-
-
-        cm.setBase(SystemClock.elapsedRealtime()); //setup stopwatch
+        cm.setBase(SystemClock.elapsedRealtime());
 
         tb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    /*  when the stopwatch is started, parse the current text to see what the last
-                        paused time was, and start counting from there
-                     */
-                    int stoppedMilliseconds = 0;
-                    String chronoText = cm.getText().toString();
-                    String array[] = chronoText.split(":"); //split at colons
-                    if (array.length == 2) {
-                        stoppedMilliseconds = Integer.parseInt(array[0]) * 60 * 1000 //convert to milliseconds
+
+                    int stoppedMilliseconds = 0; // Number of milliseconds at stopped timer
+                    String chronoText = cm.getText().toString(); // Text time output
+                    String array[] = chronoText.split(":"); // Array of time values stored
+                    if (array.length == 2) { /* TODO Documentation and commenting needed */
+                        stoppedMilliseconds = Integer.parseInt(array[0]) * 60 * 1000
                                 + Integer.parseInt(array[1]) * 1000;
                     } else if (array.length == 3) {
                         stoppedMilliseconds = Integer.parseInt(array[0]) * 60 * 60 * 1000
@@ -254,7 +247,6 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
                     cm.setBase(SystemClock.elapsedRealtime() - stoppedMilliseconds);
                     cm.start();
                 } else {
-                    /* save and stop the stopwatch */
                     lastPauseTime = SystemClock.elapsedRealtime();
                     cm.stop();
                 }
@@ -304,7 +296,7 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
 
         stormDao.insertWhooshes(whoosh); // Insert data onto database
 
-        Intent intent = new Intent(MainActivity.this, StartActivity.class); // New intent activity - Main Activity
+        Intent intent = new Intent(MainActivityNew.this, StartActivity.class); // New intent activity - Main Activity
         startActivity(intent); // Start Main Activity page
 
     }

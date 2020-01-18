@@ -9,19 +9,18 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.TextView;
+import android.widget.CheckBox;
 
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link Scoring.OnFragmentInteractionListener} interface
+ * {@link PathTeleopRed.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link Scoring#newInstance} factory method to
+ * Use the {@link PathTeleopRed#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Scoring extends Fragment {
+public class PathTeleopRed extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -33,7 +32,7 @@ public class Scoring extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public Scoring() {
+    public PathTeleopRed() {
         // Required empty public constructor
     }
 
@@ -43,11 +42,11 @@ public class Scoring extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment scoring.
+     * @return A new instance of fragment PathTeleopRed.
      */
     // TODO: Rename and change types and number of parameters
-    public static Scoring newInstance(String param1, String param2) {
-        Scoring fragment = new Scoring();
+    public static PathTeleopRed newInstance(String param1, String param2) {
+        PathTeleopRed fragment = new PathTeleopRed();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -67,51 +66,48 @@ public class Scoring extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_scoring, container, false);
 
-        /* Find layout elements */
-        final TextView numScored = view.findViewById(R.id.txtNumScored);
-        final TextView numScored2 = view.findViewById(R.id.txtNumScored2);
-        final Button scoreMore = view.findViewById(R.id.btnMore);
-        final Button scoreLess = view.findViewById(R.id.btnLess);
-        final Button scoreMore2 = view.findViewById(R.id.btnMore2);
-        final Button scoreLess2 = view.findViewById(R.id.btnLess2);
-        final MainActivity act = (MainActivity) getActivity();
-        // Button for adding
-        scoreMore.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                act.incScore();
-                numScored.setText(String.valueOf(act.getScore()));
-            }
-        });
+        // Declare view object for the layout
+        View view = inflater.inflate(R.layout.fragment_path_teleop_red, container, false);
 
-        // Button for subtracting
-        scoreLess.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                act.decScore();
-                numScored.setText(String.valueOf(act.getScore()));
-            }
-        });
+        // Declare Checkbox objects for different robot scoring zones
+        CheckBox safePortZone = view.findViewById(R.id.cboPortSafeZoneR);
+        CheckBox frontInitLine = view.findViewById(R.id.cboFrontLineR);
+        CheckBox behindInitLine = view.findViewById(R.id.cboBehindLineR);
+        CheckBox frontControlPanel = view.findViewById(R.id.cboFrontControlPanelR);
+        CheckBox behindControlPanel = view.findViewById(R.id.cboBehindControlPanelR);
+        CheckBox frontShield = view.findViewById(R.id.cboFrontShieldR);
+        CheckBox behindShield = view.findViewById(R.id.cboBehindShieldR);
 
-        scoreMore2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                act.incScoreTwo();
-                numScored2.setText(String.valueOf(act.getScoreTwo()));
-            }
-        });
 
-        scoreLess2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                act.decScoreTwo();
-                numScored2.setText(String.valueOf(act.getScoreTwo()));
-            }
-        });
+        boolean checked = ((CheckBox) view).isChecked();
+
+        switch(view.getId()) {
+            case R.id.cboPortSafeZoneR:
+            case R.id.cboFrontLineR:
+            case R.id.cboBehindLineR:
+            case R.id.cboFrontControlPanelR:
+            case R.id.cboBehindControlPanelR:
+            case R.id.cboFrontShieldR:
+            case R.id.cboBehindShieldR:
+                if (checked){
+                    // Rotation/Position control stage is complete
+                } else {
+                    // Rotation/Position control stage is not complete
+                }
+                break;
+
+        }
+
         // Inflate the layout for this fragment
         return view;
+    }
+
+    // TODO: Rename method, update argument and hook method into UI event
+    public void onButtonPressed(Uri uri) {
+        if (mListener != null) {
+            mListener.onFragmentInteraction(uri);
+        }
     }
 
     @Override
@@ -131,6 +127,16 @@ public class Scoring extends Fragment {
         mListener = null;
     }
 
+    /**
+     * This interface must be implemented by activities that contain this
+     * fragment to allow an interaction in this fragment to be communicated
+     * to the activity and potentially other fragments contained in that
+     * activity.
+     * <p>
+     * See the Android Training lesson <a href=
+     * "http://developer.android.com/training/basics/fragments/communicating.html"
+     * >Communicating with Other Fragments</a> for more information.
+     */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);

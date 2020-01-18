@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/teleop"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Teleop">
+
+    <CheckBox
+        android:id="@+id/cboPC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/lato"
+        android:text="Position Control"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnMoreLVL3"
+        app:layout_constraintStart_toStartOf="@+id/btnLessLVL3"
+        app:layout_constraintTop_toBottomOf="@+id/cboRC" />
+
+    <Button
+        android:id="@+id/btnMoreLVL1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="150dp"
+        android:background="@drawable/my_button_orange"
+        android:clickable="true"
+        android:fontFamily="@font/lato"
+        android:text="@string/plus"
+        android:textSize="36sp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnLessLVL1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/my_button_red"
+        android:fontFamily="@font/lato"
+        android:text="@string/minus"
+        android:textSize="36sp"
+        android:typeface="serif"
+        app:layout_constraintBottom_toBottomOf="@+id/btnMoreLVL1"
+        app:layout_constraintEnd_toStartOf="@+id/btnMoreLVL1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnMoreLVL1" />
+
+    <TextView
+        android:id="@+id/txtLabelLVL1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="@font/lato"
+        android:text="Bottom Port"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtNumScoredLVL1"
+        app:layout_constraintEnd_toEndOf="@+id/btnMoreLVL1"
+        app:layout_constraintStart_toStartOf="@+id/btnLessLVL1" />
+
+    <TextView
+        android:id="@+id/txtNumScoredLVL1"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center_horizontal"
+        android:text="0"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnMoreLVL1"
+        app:layout_constraintEnd_toStartOf="@+id/btnMoreLVL1"
+        app:layout_constraintStart_toEndOf="@+id/btnLessLVL1"
+        app:layout_constraintTop_toTopOf="@+id/btnMoreLVL1" />
+
+    <Button
+        android:id="@+id/btnMoreLVL2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="150dp"
+        android:background="@drawable/my_button_orange"
+        android:fontFamily="@font/lato"
+        android:text="@string/plus"
+        android:textSize="36sp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMoreLVL1" />
+
+    <Button
+        android:id="@+id/btnLessLVL2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/my_button_red"
+        android:fontFamily="@font/lato"
+        android:text="@string/minus"
+        android:textSize="36sp"
+        android:typeface="serif"
+        app:layout_constraintBottom_toBottomOf="@+id/btnMoreLVL2"
+        app:layout_constraintEnd_toStartOf="@+id/btnMoreLVL2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnMoreLVL2" />
+
+    <TextView
+        android:id="@+id/txtLabelLVL2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="@font/lato"
+        android:text="Outer Port"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtNumScoredLVL2"
+        app:layout_constraintEnd_toEndOf="@+id/btnMoreLVL2"
+        app:layout_constraintStart_toStartOf="@+id/btnLessLVL2" />
+
+    <TextView
+        android:id="@+id/txtNumScoredLVL2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center_horizontal"
+        android:text="0"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnMoreLVL2"
+        app:layout_constraintEnd_toStartOf="@+id/btnMoreLVL2"
+        app:layout_constraintStart_toEndOf="@+id/btnLessLVL2"
+        app:layout_constraintTop_toTopOf="@+id/btnMoreLVL2" />
+
+    <Button
+        android:id="@+id/btnMoreLVL3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="150dp"
+        android:background="@drawable/my_button_orange"
+        android:fontFamily="@font/lato"
+        android:text="@string/plus"
+        android:textSize="36sp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMoreLVL2" />
+
+    <Button
+        android:id="@+id/btnLessLVL3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/my_button_red"
+        android:fontFamily="@font/lato"
+        android:text="@string/minus"
+        android:textSize="36sp"
+        android:typeface="serif"
+        app:layout_constraintBottom_toBottomOf="@+id/btnMoreLVL3"
+        app:layout_constraintEnd_toStartOf="@+id/btnMoreLVL3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnMoreLVL3" />
+
+    <TextView
+        android:id="@+id/txtLabelLVL3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="@font/lato"
+        android:text="Inner Port"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtNumScoredLVL3"
+        app:layout_constraintEnd_toEndOf="@+id/btnMoreLVL3"
+        app:layout_constraintStart_toStartOf="@+id/btnLessLVL3" />
+
+    <TextView
+        android:id="@+id/txtNumScoredLVL3"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center_horizontal"
+        android:text="0"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnMoreLVL3"
+        app:layout_constraintEnd_toStartOf="@+id/btnMoreLVL3"
+        app:layout_constraintStart_toEndOf="@+id/btnLessLVL3"
+        app:layout_constraintTop_toTopOf="@+id/btnMoreLVL3" />
+
+    <CheckBox
+        android:id="@+id/cboRC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/lato"
+        android:text="Rotation Control"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnMoreLVL3"
+        app:layout_constraintStart_toStartOf="@+id/btnLessLVL3"
+        app:layout_constraintTop_toBottomOf="@+id/btnMoreLVL3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
