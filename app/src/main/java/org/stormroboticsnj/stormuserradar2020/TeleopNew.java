@@ -85,7 +85,10 @@ public class TeleopNew extends Fragment {
         final CheckBox positionControl = view.findViewById(R.id.cboPC); // Checkbox for wheel position
 
         final MainActivityNew act = (MainActivityNew) getActivity(); // Call MainActivity object so that you can call methods from that class
-        final MainActivity act = (MainActivity) getActivity(); // Call MainActivity object so that you can call methods from that class
+
+
+//        final MainActivity act = (MainActivity) getActivity(); // Call MainActivity object so that you can call methods from that class
+
 
         // Setting incrementing listeners for incrementing scores to their respective buttons
         scoreMoreLVL1.setOnClickListener(new View.OnClickListener() {
@@ -155,7 +158,7 @@ public class TeleopNew extends Fragment {
 
 
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_teleop, container, false);
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
