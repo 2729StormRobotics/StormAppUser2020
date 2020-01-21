@@ -49,13 +49,6 @@ public class Whoosh {
     @ColumnInfo(name ="endgame_outcome")
     private String endgameOutcome;
 
-
-
-
-
-
-    @ColumnInfo(name ="hang")
-    private int hang;
     @ColumnInfo(name="locations")
     private String locations;
     @ColumnInfo(name="defenseSecs")
@@ -207,7 +200,6 @@ public class Whoosh {
                 + "," + ePowerCell1
                 + "," + ePowerCell2
                 + "," + ePowerCell3
-                + "," + hang
                 + "," + locations
                 + "|";
     }
