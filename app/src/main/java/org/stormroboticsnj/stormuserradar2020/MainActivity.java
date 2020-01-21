@@ -315,7 +315,7 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
         whoosh.setEPowerCell1(ePowerCell1); // Set endgame bottom power cell to "ePowerCell1"
         whoosh.setEPowerCell2(ePowerCell2); // Set endgame outer power cell to "ePowerCell2"
         whoosh.setEPowerCell3(ePowerCell3); // Set endgame inner power cell to "ePowerCell3"
-        whoosh.setEOutcome(endgameOutcome);
+        whoosh.setEndgameOutcome(endgameOutcome);
         //whoosh.setHang(hang);
 
         stormDao.insertWhooshes(whoosh); // Insert data onto database
