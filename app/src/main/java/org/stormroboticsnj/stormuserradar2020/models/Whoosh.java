@@ -140,7 +140,7 @@ public class Whoosh {
 
     public void setAPowerCell1(int aPowerCell1) {this.aPowerCell1 = aPowerCell1; }
 
-    public void setAPowerCell2(int aPOwerCell2) {this.aPowerCell2 = aPOwerCell2; }
+    public void setAPowerCell2(int aPowerCell2) {this.aPowerCell2 = aPowerCell2; }
 
     public void setAPowerCell3(int aPowerCell3) {this.aPowerCell3 = aPowerCell3; }
 
