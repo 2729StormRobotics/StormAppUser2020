@@ -51,6 +51,9 @@ public class Whoosh {
 
 
 
+
+
+
     public Whoosh(int t, int m) {
         team = t;
         match = m;
@@ -106,9 +109,7 @@ public class Whoosh {
         return rotationControl;
     }
 
-    public int getEPowerCell1() {
-        return ePowerCell1;
-    }
+    public int getEPowerCell1() { return ePowerCell1; }
 
     public int getEPowerCell2() {
         return ePowerCell2;
@@ -117,6 +118,8 @@ public class Whoosh {
     public int getEPowerCell3() {
         return ePowerCell3;
     }
+
+    // return: "H" for hang, "P" for park, "L" for level hang
     public String getEndgameOutcome(){
         return endgameOutcome;
     }
@@ -162,7 +165,7 @@ public class Whoosh {
 
     public void setEPowerCell3(int ePowerCell3) { this.ePowerCell3 = ePowerCell3; }
 
-    public void setEOutcome(String endgameOutcome) {this.endgameOutcome = endgameOutcome; }
+    public void setEndgameOutcome(String endgameOutcome) {this.endgameOutcome = endgameOutcome; }
 
 
 

@@ -165,17 +165,17 @@ public class Endgame extends Fragment {
         switch(view.getId()) {
             case R.id.rdoPark:
                 if (checked) {
-                    a.setEndgameOutcome("Park");
+                    a.setEndgameOutcome("P");
                     break;
                 }
             case R.id.rdoHang:
                 if (checked) {
-                    a.setEndgameOutcome("Hang");
+                    a.setEndgameOutcome("H");
                     break;
                 }
             case R.id.rdoLevelHang:
                 if (checked) {
-                    a.setEndgameOutcome("Level Hang");
+                    a.setEndgameOutcome("L");
                     break;
                 }
                 }
