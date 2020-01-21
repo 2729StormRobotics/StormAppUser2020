@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.SystemClock;
-import android.view.View;
 import android.widget.CheckBox;
 import android.widget.Chronometer;
 import android.widget.CompoundButton;
@@ -26,7 +25,7 @@ import org.stormroboticsnj.stormuserradar2020.ui.main.SectionsPagerAdapter;
  * each field of data collected and increment/decrement or setter as well as getter methods for
  * each.
  */
-public class MainActivity extends AppCompatActivity implements Auto.OnFragmentInteractionListener, Teleop.OnFragmentInteractionListener, PathTeleopRed.OnFragmentInteractionListener, PathTeleopBlue.OnFragmentInteractionListener, Endgame.OnFragmentInteractionListener{
+public class MainActivity extends AppCompatActivity implements Auto.OnFragmentInteractionListener, Teleop.OnFragmentInteractionListener, PathTeleop.OnFragmentInteractionListener, Endgame.OnFragmentInteractionListener{
     /* brought from StartActivity */
     private int team; // Team number
     private int match; // Match number
@@ -69,6 +68,16 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
     private int ePowerCell3 = 0; // Power cell score in inner port
 
     /*** Increment/Decrement, return, and set methods***/
+
+    // *** Team number, match number, alliance color get methods *** //
+    public boolean getAlliance() {
+        return alliance;
+    }
+
+    public void setAlliance(boolean alliance) {
+        this.alliance = alliance;
+    }
+
     // ***Autonomous*** //
 
     public void incaPowerCell1 () { // Increment power cell score in bottom port

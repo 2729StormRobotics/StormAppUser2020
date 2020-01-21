@@ -148,7 +148,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnMoreLVL2" />
 
-<<<<<<< Updated upstream
     <Button
         android:id="@+id/btnLessLVL3"
         android:layout_width="100dp"
@@ -164,22 +163,7 @@
         app:layout_constraintEnd_toStartOf="@+id/btnMoreLVL3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btnMoreLVL3" />
-=======
-        <Button
-            android:id="@+id/btnLessLVL3"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/my_button_red"
-            android:fontFamily="@font/lato"
-            android:text="@string/minus"
-            android:textSize="36sp"
-            android:typeface="serif"
-            app:layout_constraintBottom_toBottomOf="@+id/btnMoreLVL3"
-            app:layout_constraintEnd_toStartOf="@+id/txtNumScoredLVL3"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/btnMoreLVL3" />
->>>>>>> Stashed changes
+
 
     <TextView
         android:id="@+id/txtLabelLVL3"
