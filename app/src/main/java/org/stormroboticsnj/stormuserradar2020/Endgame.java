@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 
 
@@ -146,7 +145,28 @@ public class Endgame extends Fragment {
             }
         });
 
-        onRadioButtonClicked(view, act);
+        park.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                act.setEndgameOutcome("P");
+            }
+        });
+        hang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                act.setEndgameOutcome("h");
+            }
+        });
+
+        levelHang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                act.setEndgameOutcome("l");
+            }
+        });
+
+
+
 
         //having the submit button work
         buttonSubmit.setOnClickListener(new View.OnClickListener() {
@@ -159,27 +179,7 @@ public class Endgame extends Fragment {
         return view;
     }
 
-    private void onRadioButtonClicked(View view, MainActivity a) {
-        boolean checked = ((RadioButton) view).isChecked();
 
-        switch(view.getId()) {
-            case R.id.rdoPark:
-                if (checked) {
-                    a.setEndgameOutcome("P");
-                    break;
-                }
-            case R.id.rdoHang:
-                if (checked) {
-                    a.setEndgameOutcome("H");
-                    break;
-                }
-            case R.id.rdoLevelHang:
-                if (checked) {
-                    a.setEndgameOutcome("L");
-                    break;
-                }
-                }
-    }
 
     @Override
     public void onAttach(Context context) {

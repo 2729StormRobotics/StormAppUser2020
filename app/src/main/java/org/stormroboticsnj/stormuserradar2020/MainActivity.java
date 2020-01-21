@@ -287,7 +287,7 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
         method of every Activity that uses the database. db can be a class-wide variable or local
         within onCreate. */
         db = Room.databaseBuilder(getApplicationContext(),
-                AppDatabase.class, "stormdb").allowMainThreadQueries().build(); //build database
+                AppDatabase.class, "storm").allowMainThreadQueries().build(); //build database
     }
 
     /* submit button pressed */
