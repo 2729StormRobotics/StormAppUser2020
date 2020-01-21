@@ -47,11 +47,15 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
     private int tPowerCell1 = 0; // Power cell score in bottom port
     private int tPowerCell2 = 0; // Power cell score in outer port
     private int tPowerCell3 = 0; // Power cell score in inner port
+    private boolean positionControl;
+    private boolean rotationControl;
+
 
     // Endgame
     private int ePowerCell1 = 0; // Power cell score in bottom port
     private int ePowerCell2 = 0; // Power cell score in outer port
     private int ePowerCell3 = 0; // Power cell score in inner port
+    private String endgameOutcome = "";
 
     private String locations;
 
@@ -208,6 +212,13 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
         if (ePowerCell3 > 0) ePowerCell3--;
     }
 
+    public String getEndgameOutcome(){
+        return endgameOutcome;
+    }
+
+    public void setEndgameOutcome(String incomingEndgameString){
+        endgameOutcome = incomingEndgameString;
+    }
 
     /**
      * Get the power cell score on bottom port
@@ -235,6 +246,8 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
     public int getePowerCell3() {
         return ePowerCell3;
     }
+
+
 
     private long lastPauseTime; // Defense timer
     private AppDatabase db; //built on creation of Activity
@@ -309,7 +322,7 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
         method of every Activity that uses the database. db can be a class-wide variable or local
         within onCreate. */
         db = Room.databaseBuilder(getApplicationContext(),
-                AppDatabase.class, "stormdb").allowMainThreadQueries().build(); //build database
+                AppDatabase.class, "storm").allowMainThreadQueries().build(); //build database
     }
 
     /* submit button pressed */
@@ -376,14 +389,20 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
 
         whoosh.setTPowerCell1(tPowerCell1); // Set teleop bottom power cell to "tPowerCell1"
         whoosh.setTPowerCell2(tPowerCell2); // Set teleop outer power cell to "tPowerCell2"
+        whoosh.setRotationControl(rotationControl);
+        whoosh.setPositionControl(positionControl);
         whoosh.setTPowerCell3(tPowerCell3); // Set teleop inner power cell to "tPowerCell3"
         whoosh.setEPowerCell1(ePowerCell1); // Set endgame bottom power cell to "ePowerCell1"
         whoosh.setEPowerCell2(ePowerCell2); // Set endgame outer power cell to "ePowerCell2"
         whoosh.setEPowerCell3(ePowerCell3); // Set endgame inner power cell to "ePowerCell3"
 
+        whoosh.setEndgameOutcome(endgameOutcome);
+
+
         whoosh.setLocations(locations); //set locations
 
         whoosh.setDefenseSecs(stoppedSeconds);
+
 
         //whoosh.setHang(hang);
 

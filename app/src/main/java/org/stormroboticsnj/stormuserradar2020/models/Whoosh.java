@@ -45,8 +45,10 @@ public class Whoosh {
     private int ePowerCell2;
     @ColumnInfo(name ="inner_port_endgame")
     private int ePowerCell3;
-    @ColumnInfo(name ="hang")
-    private int hang;
+
+    @ColumnInfo(name ="endgame_outcome")
+    private String endgameOutcome;
+
     @ColumnInfo(name="locations")
     private String locations;
     @ColumnInfo(name="defenseSecs")
@@ -107,9 +109,7 @@ public class Whoosh {
         return rotationControl;
     }
 
-    public int getEPowerCell1() {
-        return ePowerCell1;
-    }
+    public int getEPowerCell1() { return ePowerCell1; }
 
     public int getEPowerCell2() {
         return ePowerCell2;
@@ -119,9 +119,13 @@ public class Whoosh {
         return ePowerCell3;
     }
 
-    public int getHang() {
-        return hang;
+    // return: "H" for hang, "P" for park, "L" for level hang
+    public String getEndgameOutcome(){
+        return endgameOutcome;
     }
+
+
+
 
     public String getLocations(){
         return locations;
@@ -145,7 +149,7 @@ public class Whoosh {
 
     public void setAPowerCell1(int aPowerCell1) {this.aPowerCell1 = aPowerCell1; }
 
-    public void setAPowerCell2(int aPOwerCell2) {this.aPowerCell2 = aPOwerCell2; }
+    public void setAPowerCell2(int aPowerCell2) {this.aPowerCell2 = aPowerCell2; }
 
     public void setAPowerCell3(int aPowerCell3) {this.aPowerCell3 = aPowerCell3; }
 
@@ -170,7 +174,9 @@ public class Whoosh {
 
     public void setEPowerCell3(int ePowerCell3) { this.ePowerCell3 = ePowerCell3; }
 
-    public void setHang(int hang) { this.hang = hang; }
+    public void setEndgameOutcome(String endgameOutcome) {this.endgameOutcome = endgameOutcome; }
+
+
 
     public void setLocations(String locations) {this.locations = locations;}
 
@@ -194,8 +200,10 @@ public class Whoosh {
                 + "," + ePowerCell1
                 + "," + ePowerCell2
                 + "," + ePowerCell3
-                + "," + hang
                 + "," + locations
                 + "|";
     }
+
+    /*public void setEOutcome(String endgameOutcome) {
+    }*/
 }
