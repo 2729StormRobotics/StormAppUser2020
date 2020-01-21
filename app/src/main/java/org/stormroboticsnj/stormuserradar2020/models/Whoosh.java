@@ -47,8 +47,10 @@ public class Whoosh {
     private int ePowerCell3;
     @ColumnInfo(name ="hang")
     private int hang;
-
-
+    @ColumnInfo(name="locations")
+    private String locations;
+    @ColumnInfo(name="defenseSecs")
+    private int defenseSecs;
 
     public Whoosh(int t, int m) {
         team = t;
@@ -121,6 +123,14 @@ public class Whoosh {
         return hang;
     }
 
+    public String getLocations(){
+        return locations;
+    }
+
+    public int getDefenseSecs() {
+        return defenseSecs;
+    }
+
     public void setTeam(int team) {
         this.team = team;
     }
@@ -162,6 +172,10 @@ public class Whoosh {
 
     public void setHang(int hang) { this.hang = hang; }
 
+    public void setLocations(String locations) {this.locations = locations;}
+
+    public void setDefenseSecs(int defenseSecs) {this.defenseSecs = defenseSecs;}
+
     @NonNull
     @Override
     public String toString() {
@@ -181,6 +195,7 @@ public class Whoosh {
                 + "," + ePowerCell2
                 + "," + ePowerCell3
                 + "," + hang
+                + "," + locations
                 + "|";
     }
 }
