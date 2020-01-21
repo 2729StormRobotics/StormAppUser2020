@@ -1,8 +1,11 @@
 package org.stormroboticsnj.stormuserradar2020;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
@@ -13,6 +16,7 @@ import android.view.Display;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import org.stormroboticsnj.stormuserradar2020.dao.StormDao;
 import org.stormroboticsnj.stormuserradar2020.models.Whoosh;
@@ -54,6 +58,19 @@ public class QrActivity extends AppCompatActivity {
             output.append(whooshList.get(i).toString());
         }
 
+    if (output.toString().equals("")) {
+        new AlertDialog.Builder(this) //confirm with user
+                .setTitle("QR Generation")
+                .setMessage("No teams have been scouted. At least one team must be scouted before a QR may be generated")
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //do nothing
+                    }
+                })
+                .setIcon(R.mipmap.ic_launcher)
+                .show();
+}   else {
         /* make and display QR code */
         /* this is the code that should never change */
 
@@ -65,12 +82,13 @@ public class QrActivity extends AppCompatActivity {
         Bitmap bmp = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
         ImageView myImage = (ImageView) findViewById(R.id.imgQr);
 
-        myImage.setMinimumHeight(size.y-10);
-        myImage.setMinimumWidth(size.x-10);
-        myImage.setMaxHeight(size.y-10);
-        myImage.setMaxWidth(size.x-10);
+        myImage.setMinimumHeight(size.y - 10);
+        myImage.setMinimumWidth(size.x - 10);
+        myImage.setMaxHeight(size.y - 10);
+        myImage.setMaxWidth(size.x - 10);
         myImage.setImageBitmap(bmp);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+}
 
     }
 }
