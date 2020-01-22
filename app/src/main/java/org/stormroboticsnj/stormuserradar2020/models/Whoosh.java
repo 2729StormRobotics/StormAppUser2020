@@ -15,23 +15,23 @@ import androidx.room.PrimaryKey;
  */
 @Entity(tableName = "whooshes", primaryKeys = {"team_num", "match_num"})
 public class Whoosh {
-    @ColumnInfo(name = "team_num")
-    private int team;
-    @ColumnInfo(name = "match_num")
-    private int match;
-    @ColumnInfo(name = "alliance")
-    private boolean alliance;
-    @ColumnInfo(name ="level_one_auto")
-    private int aPowerCell1;
-    @ColumnInfo(name ="outer_port_auto")
-    private int aPowerCell2;
-    @ColumnInfo(name ="inner_port_auto")
-    private int aPowerCell3;
-    @ColumnInfo(name = "power_cells_picked_up_auto")
-    private int aPowerCellPickup;
-    @ColumnInfo(name ="level_one_teleop")
-    private int tPowerCell1;
-    @ColumnInfo(name ="outer_port_teleop")
+    @ColumnInfo(name = "team_num") // Column for team number
+    private int team; // Private integer variable for team number
+    @ColumnInfo(name = "match_num") // Column for match number
+    private int match; // Private integer variable for match number
+    @ColumnInfo(name = "alliance") // Column for alliance color ("red" or "blue"
+    private boolean alliance; // Private boolean variable for alliance color
+    @ColumnInfo(name ="bottom_port_auto") // Column for bottom port score auto
+    private int aPowerCell1; // Private integer variable for bottom port score auto
+    @ColumnInfo(name ="outer_port_auto") // Column for outer port score auto
+    private int aPowerCell2; // Private integer variable for outer port score
+    @ColumnInfo(name ="inner_port_auto") // Column for inner port score
+    private int aPowerCell3; // Private integer variable for inner port score
+    @ColumnInfo(name = "power_cells_picked_up_auto") // Column for power cell pickup auto
+    private int aPowerCellPickup; // Private integer variable for power cell pickup auto
+    @ColumnInfo(name ="bottom_port_teleop") // Column for bottom port score teleop
+    private int tPowerCell1; // Private integer variable for bottom port score teleop
+    @ColumnInfo(name ="outer_port_teleop") //
     private int tPowerCell2;
     @ColumnInfo(name ="inner_port_teleop")
     private int tPowerCell3;
@@ -39,7 +39,7 @@ public class Whoosh {
     private boolean rotationControl;
     @ColumnInfo(name ="position_control")
     private boolean positionControl;
-    @ColumnInfo(name ="level_ones_endgame")
+    @ColumnInfo(name ="bottom_port_endgame")
     private int ePowerCell1;
     @ColumnInfo(name ="outer_port_endgame")
     private int ePowerCell2;
