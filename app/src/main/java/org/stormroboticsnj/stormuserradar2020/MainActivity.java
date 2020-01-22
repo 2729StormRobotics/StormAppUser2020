@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.view.View;
 import android.widget.CheckBox;
 import android.widget.Chronometer;
 import android.widget.CompoundButton;
@@ -91,7 +92,7 @@ import org.stormroboticsnj.stormuserradar2020.ui.main.SectionsPagerAdapter;
     private int ePowerCell3 = 0; // Power cell score in inner port
     private String endgameOutcome = "";
 
-    private String locations;
+    private String locations = "";
 
     /*** Increment/Decrement, return, and set methods***/
 
@@ -106,15 +107,6 @@ import org.stormroboticsnj.stormuserradar2020.ui.main.SectionsPagerAdapter;
 
     // ***Autonomous*** //
 
-
-    // *** Team number, match number, alliance color get methods *** //
-    public boolean getAlliance() {
-        return alliance;
-    }
-
-    public void setAlliance(boolean alliance) {
-        this.alliance = alliance;
-    }
 
     // ***Autonomous*** //
     public void incaPowerCell1() { // Increment power cell score in bottom port
@@ -523,7 +515,9 @@ import org.stormroboticsnj.stormuserradar2020.ui.main.SectionsPagerAdapter;
         if (fl.isChecked()) locations += "FL.";
         if (sz.isChecked()) locations += "SZ.";
 
-        if (locations.endsWith(".")) locations = locations.substring(0, locations.length() - 1);
+        if (locations.endsWith(".")) {
+            locations = locations.substring(0, locations.length() - 1);
+        }
 
         /* create new Whoosh object */
         Whoosh whoosh = new Whoosh(team, match);

@@ -169,10 +169,7 @@ public class Endgame extends Fragment {
             }
         });
 
-
-
-
-        //having the submit button work
+        //having the submit button
         buttonSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
