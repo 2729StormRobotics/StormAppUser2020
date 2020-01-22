@@ -79,28 +79,6 @@ public class PathTeleop extends Fragment {
             view = inflater.inflate(R.layout.fragment_path_teleop_blue, container, false);
         }
 
-/*
-        boolean checked = ((CheckBox) view).isChecked();
-
-        switch(view.getId()) {
-            case R.id.cboPortSafeZoneR:
-                if(checked) {
-                    act.setShootSafePortZoneR(true);
-                }
-            case R.id.cboFrontLineR:
-            case R.id.cboBehindLineR:
-            case R.id.cboFrontControlPanelR:
-            case R.id.cboBehindControlPanelR:
-            case R.id.cboFrontShieldR:
-            case R.id.cboBehindShieldR:
-                if (checked){
-
-                } else {
-
-                }
-                break;
-
-        }*/
 
         // Inflate the layout for this fragment
         return view;

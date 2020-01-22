@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
     private int tPowerCell2 = 0; // Power cell score in outer port
     private int tPowerCell3 = 0; // Power cell score in inner port
 
-    // Robot Map
+    /*// Robot Map
     private boolean shootSafePortZoneR = false; // Can robot shoot power cell in red safe port zone
     private boolean shootFrontInitLineR = false; // Can robot shoot power cell in front of red initiation line
     private boolean shootBehindInitLineR = false; // Can robot shoot power cell behind red initiation line
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
     private boolean shootFrontControlPanelB = false; // Can robot shoot power cell in front of blue control panel
     private boolean shootBehindControlPanelB = false; // Can robot shoot power cell behind blue control panel
     private boolean shootFrontShieldB = false; // Can robot shoot power cell in front of blue shield
-    private boolean shootBehindShieldB = false; // Can robot shoot power cell behind blue shield
+    private boolean shootBehindShieldB = false; // Can robot shoot power cell behind blue shield*/
 
     // Endgame
     private int ePowerCell1 = 0; // Power cell score in bottom port
@@ -191,7 +191,7 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
     }
 
     // ***Robot Map*** //
-        // **Red** //
+        /*// **Red** //
             public boolean isShootSafePortZoneR() {
                 return shootSafePortZoneR;
             }
@@ -279,9 +279,7 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
 
             public boolean isShootBehindShieldB() {
                 return shootBehindShieldB;
-            }
-
-
+            }*/
 
     // ***Endgame*** //
 
