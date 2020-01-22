@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -86,7 +87,10 @@ public class Endgame extends Fragment {
         final TextView txtScoredLVL1 = view.findViewById(R.id.txtEScoredLVL1);
         final TextView txtScoredLVL2 = view.findViewById(R.id.txtEScoredLVL2);
         final TextView txtScoredLVL3 = view.findViewById(R.id.txtEScoredLVL3);
- 
+
+        final RadioButton park = view.findViewById(R.id.rdoPark);
+        final RadioButton hang = view.findViewById(R.id.rdoHang);
+        final RadioButton levelHang = view.findViewById(R.id.rdoLevelHang);
 
         //getting main actvity
         final MainActivity act = (MainActivity) getActivity();
