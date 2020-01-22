@@ -71,17 +71,17 @@ public class Auto extends Fragment {
         View view = inflater.inflate(R.layout.fragment_auto, container, false);
 
         //Create buttons
-        final Button lessBottomBtn = view.findViewById(R.id.abtnLessBottom);
-        final Button moreBottomBtn = view.findViewById(R.id.abtnMoreBottom);
-        final Button lessOuterBtn = view.findViewById(R.id.abtnLessOuter);
-        final Button moreOuterBtn = view.findViewById(R.id.abtnMoreOuter);
-        final Button lessInnerBtn = view.findViewById(R.id.abtnLessInner);
-        final Button moreInnerBtn = view.findViewById(R.id.abtnMoreInner);
-        final Button lessIntakeBtn = view.findViewById(R.id.abtnLessIntake);
-        final Button moreIntakeBtn = view.findViewById(R.id.abtnMoreIntake);
+        final Button lessBottomBtn = view.findViewById(R.id.abtnLessBottom); // Button to decrement power cell score bottom port for auto
+        final Button moreBottomBtn = view.findViewById(R.id.abtnMoreBottom); // Button to increment power cell score bottom port for auto
+        final Button lessOuterBtn = view.findViewById(R.id.abtnLessOuter); // Button to decrement power cell score outer port for auto
+        final Button moreOuterBtn = view.findViewById(R.id.abtnMoreOuter); // Button to increment power cell score outer port for auto
+        final Button lessInnerBtn = view.findViewById(R.id.abtnLessInner); // Button to decrement power cell score inner port for auto
+        final Button moreInnerBtn = view.findViewById(R.id.abtnMoreInner); // Button to increment power cell score inner port for auto
+        final Button lessIntakeBtn = view.findViewById(R.id.abtnLessIntake); // Button to decrement power cell intake for auto
+        final Button moreIntakeBtn = view.findViewById(R.id.abtnMoreIntake); // Button to increment power cell intake for auto
 
-        //Create textviews
-        final TextView bottomScoreTxt = view.findViewById(R.id.atxtNumScoredBottom);
+        //Create TextViews
+        final TextView bottomScoreTxt = view.findViewById(R.id.atxtNumScoredBottom); // TextView bottom port score 
         final TextView outerScoreTxt = view.findViewById(R.id.atxtNumScoredOuter);
         final TextView innerScoreTxt = view.findViewById(R.id.atxtNumScoredInner);
         final TextView intakeScoreTxt = view.findViewById(R.id.atxtNumScoredIntake);

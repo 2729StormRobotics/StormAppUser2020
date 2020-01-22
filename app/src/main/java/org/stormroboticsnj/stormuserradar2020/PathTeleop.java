@@ -15,12 +15,12 @@ import android.widget.CheckBox;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link PathTeleopRed.OnFragmentInteractionListener} interface
+ * {@link PathTeleop.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link PathTeleopRed#newInstance} factory method to
+ * Use the {@link PathTeleop#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class PathTeleopRed extends Fragment {
+public class PathTeleop extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -32,7 +32,7 @@ public class PathTeleopRed extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public PathTeleopRed() {
+    public PathTeleop() {
         // Required empty public constructor
     }
 
@@ -42,11 +42,11 @@ public class PathTeleopRed extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment PathTeleopRed.
+     * @return A new instance of fragment PathTeleop.
      */
     // TODO: Rename and change types and number of parameters
-    public static PathTeleopRed newInstance(String param1, String param2) {
-        PathTeleopRed fragment = new PathTeleopRed();
+    public static PathTeleop newInstance(String param1, String param2) {
+        PathTeleop fragment = new PathTeleop();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -67,37 +67,20 @@ public class PathTeleopRed extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        MainActivity act = (MainActivity) getActivity();
+
         // Declare view object for the layout
-        View view = inflater.inflate(R.layout.fragment_path_teleop_red, container, false);
+        View view;
 
         // Declare Checkbox objects for different robot scoring zones
-        CheckBox safePortZoneR = view.findViewById(R.id.cboPortSafeZoneR);
-        CheckBox frontInitLineR = view.findViewById(R.id.cboFrontLineR);
-        CheckBox behindInitLineR = view.findViewById(R.id.cboBehindLineR);
-        CheckBox frontControlPanelR = view.findViewById(R.id.cboFrontControlPanelR);
-        CheckBox behindControlPanelR = view.findViewById(R.id.cboBehindControlPanelR);
-        CheckBox frontShieldR = view.findViewById(R.id.cboFrontShieldR);
-        CheckBox behindShieldR = view.findViewById(R.id.cboBehindShieldR);
-
-
-        boolean checked = ((CheckBox) view).isChecked();
-
-        switch(view.getId()) {
-            case R.id.cboPortSafeZoneR:
-            case R.id.cboFrontLineR:
-            case R.id.cboBehindLineR:
-            case R.id.cboFrontControlPanelR:
-            case R.id.cboBehindControlPanelR:
-            case R.id.cboFrontShieldR:
-            case R.id.cboBehindShieldR:
-                if (checked){
-                    // Rotation/Position control stage is complete
-                } else {
-                    // Rotation/Position control stage is not complete
-                }
-                break;
+ 
+        if (act.getAlliance()) {
+            view = inflater.inflate(R.layout.fragment_path_teleop_red, container, false);
+        } else {
+            view = inflater.inflate(R.layout.fragment_path_teleop_blue, container, false);
 
         }
+
 
         // Inflate the layout for this fragment
         return view;
