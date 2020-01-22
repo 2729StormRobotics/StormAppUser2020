@@ -65,7 +65,8 @@ public class QrActivity extends AppCompatActivity {
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //do nothing
+                        Intent intent = new Intent(QrActivity.this, StartActivity.class);
+                        startActivity(intent);
                     }
                 })
                 .setIcon(R.mipmap.ic_launcher)
