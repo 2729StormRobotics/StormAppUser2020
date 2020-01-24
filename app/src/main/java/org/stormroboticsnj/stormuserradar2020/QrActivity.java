@@ -46,8 +46,7 @@ public class QrActivity extends AppCompatActivity {
         });
 
         AppDatabase db = Room.databaseBuilder(getApplicationContext(),
-                AppDatabase.class, "stormdb").allowMainThreadQueries().build(); //build/import database
-
+                AppDatabase.class, AppDatabase.DB_NAME).allowMainThreadQueries().build(); //build/import database
         StormDao stormDao = db.stormDao(); //get interface object
 
         List<Whoosh> whooshList = stormDao.getAllWhooshes(); //get database
@@ -65,7 +64,8 @@ public class QrActivity extends AppCompatActivity {
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //do nothing
+                        Intent intent = new Intent(QrActivity.this, StartActivity.class);
+                        startActivity(intent);
                     }
                 })
                 .setIcon(R.mipmap.ic_launcher)

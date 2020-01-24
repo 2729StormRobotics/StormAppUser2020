@@ -26,6 +26,8 @@ import org.stormroboticsnj.stormuserradar2020.dao.StormDao;
 import org.stormroboticsnj.stormuserradar2020.models.Whoosh;
 import org.stormroboticsnj.stormuserradar2020.ui.main.SectionsPagerAdapter;
 
+import java.util.List;
+
 /**
  * This Activity is the main data collection activity. It has a tabbed layout; each tab corresponds
  * to a different fragment, as defined in SectionsPagerAdapter. It contains private variables for
@@ -81,7 +83,7 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
     private int ePowerCell3 = 0; // Power cell score in inner port
     private String endgameOutcome = "";
 
-    private String locations;
+    private String locations = "";
 
     /*** Increment/Decrement, return, and set methods***/
 
@@ -375,7 +377,7 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
 
 
     private long lastPauseTime; // Defense timer
-    private AppDatabase db; //built on creation of Activity
+    public static AppDatabase db; //built on creation of Activity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -454,7 +456,7 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
         method of every Activity that uses the database. db can be a class-wide variable or local
         within onCreate. */
         db = Room.databaseBuilder(getApplicationContext(),
-                AppDatabase.class, "storm").allowMainThreadQueries().build(); //build database
+                AppDatabase.class, AppDatabase.DB_NAME).allowMainThreadQueries().build(); //build database
     }
 
     /* submit button pressed */
@@ -539,7 +541,7 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
         //whoosh.setHang(hang);
 
         stormDao.insertWhooshes(whoosh); // Insert data into database
-
+        List<Whoosh> l = stormDao.getAllWhooshes();
         Intent intent = new Intent(MainActivity.this, StartActivity.class); // New intent activity - Main Activity
         startActivity(intent); // Start Main Activity page
 
