@@ -2,10 +2,14 @@ package org.stormroboticsnj.stormuserradar2020;
 
 import android.animation.Animator;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.BounceInterpolator;
+import android.view.animation.ScaleAnimation;
 import android.widget.CheckBox;
 import android.widget.Chronometer;
 import android.widget.CompoundButton;
@@ -398,13 +402,18 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
         final ToggleButton tb = findViewById(R.id.defenseButton); //get on/off button
         final ViewPager vp = findViewById(R.id.view_pager);
 
-        final View faderDude = findViewById(R.id.fadeBackground);
+        final ScaleAnimation scaleAnimation = new ScaleAnimation(0.7f, 1.0f, 0.7f, 1.0f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.7f);
+        scaleAnimation.setDuration(500);
+        BounceInterpolator bounceInterpolator = new BounceInterpolator();
+        scaleAnimation.setInterpolator(bounceInterpolator);
+        tb.setAnimation(scaleAnimation);
 
         cm.setBase(SystemClock.elapsedRealtime()); //setup stopwatch
 
         tb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                buttonView.startAnimation(scaleAnimation);
                 if (isChecked) {
                     /*  when the stopwatch is started, parse the current text to see what the last
                         paused time was, and start counting from there
@@ -420,12 +429,14 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
                                 + Integer.parseInt(array[1]) * 60 * 1000
                                 + Integer.parseInt(array[2]) * 1000;
                     }
+                    tb.setTextColor(Color.rgb(204,0,0));
                     cm.setBase(SystemClock.elapsedRealtime() - stoppedMilliseconds);
                     cm.start();
                     viewPager.setVisibility(View.INVISIBLE);
                 } else {
                     /* save and stop the stopwatch */
                     lastPauseTime = SystemClock.elapsedRealtime();
+                    tb.setTextColor(Color.rgb(34,34,34));
                     cm.stop();
                     viewPager.setVisibility(View.VISIBLE);
                 }
