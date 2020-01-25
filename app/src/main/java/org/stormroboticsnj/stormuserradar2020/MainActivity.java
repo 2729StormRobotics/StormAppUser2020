@@ -51,41 +51,6 @@ import org.stormroboticsnj.stormuserradar2020.ui.main.SectionsPagerAdapter;
     private boolean positionControl;
     private boolean rotationControl;
 
-
-    /*// Robot Map
-    private boolean shootSafePortZoneR = false; // Can robot shoot power cell in red safe port zone
-    private boolean shootFrontInitLineR = false; // Can robot shoot power cell in front of red initiation line
-    private boolean shootBehindInitLineR = false; // Can robot shoot power cell behind red initiation line
-    private boolean shootFrontControlPanelR = false; // Can robot shoot power cell in front of red control panel
-    private boolean shootBehindControlPanelR = false; // Can robot shoot power cell behind red control panel
-    private boolean shootFrontShieldR = false; // Can robot shoot power cell in front of red shield
-    private boolean shootBehindShieldR = false; // Can robot shoot power cell behind red shield
-
-    private boolean shootSafePortZoneB = false; // Can robot shoot power cell in blue safe port zone
-    private boolean shootFrontInitLineB = false; // Can robot shoot power cell in front of blue initiation line
-    private boolean shootBehindInitLineB = false; // Can robot shoot power cell behind blue initiation line
-    private boolean shootFrontControlPanelB = false; // Can robot shoot power cell in front of blue control panel
-    private boolean shootBehindControlPanelB = false; // Can robot shoot power cell behind blue control panel
-    private boolean shootFrontShieldB = false; // Can robot shoot power cell in front of blue shield
-    private boolean shootBehindShieldB = false; // Can robot shoot power cell behind blue shield*/
-
-    /*// Robot Map
-    private boolean shootSafePortZoneR = false; // Can robot shoot power cell in red safe port zone
-    private boolean shootFrontInitLineR = false; // Can robot shoot power cell in front of red initiation line
-    private boolean shootBehindInitLineR = false; // Can robot shoot power cell behind red initiation line
-    private boolean shootFrontControlPanelR = false; // Can robot shoot power cell in front of red control panel
-    private boolean shootBehindControlPanelR = false; // Can robot shoot power cell behind red control panel
-    private boolean shootFrontShieldR = false; // Can robot shoot power cell in front of red shield
-    private boolean shootBehindShieldR = false; // Can robot shoot power cell behind red shield
-
-    private boolean shootSafePortZoneB = false; // Can robot shoot power cell in blue safe port zone
-    private boolean shootFrontInitLineB = false; // Can robot shoot power cell in front of blue initiation line
-    private boolean shootBehindInitLineB = false; // Can robot shoot power cell behind blue initiation line
-    private boolean shootFrontControlPanelB = false; // Can robot shoot power cell in front of blue control panel
-    private boolean shootBehindControlPanelB = false; // Can robot shoot power cell behind blue control panel
-    private boolean shootFrontShieldB = false; // Can robot shoot power cell in front of blue shield
-    private boolean shootBehindShieldB = false; // Can robot shoot power cell behind blue shield*/
-
     // Endgame
     private int ePowerCell1 = 0; // Power cell score in bottom port
     private int ePowerCell2 = 0; // Power cell score in outer port
@@ -104,9 +69,6 @@ import org.stormroboticsnj.stormuserradar2020.ui.main.SectionsPagerAdapter;
     public void setAlliance(boolean alliance) {
         this.alliance = alliance;
     }
-
-    // ***Autonomous*** //
-
 
     // ***Autonomous*** //
     public void incaPowerCell1() { // Increment power cell score in bottom port
@@ -139,8 +101,6 @@ import org.stormroboticsnj.stormuserradar2020.ui.main.SectionsPagerAdapter;
 
     public void decaPowerCellPickup() { // Decrement number of power cells picked up during Auto
         if (aPowerCellPickup > 0) aPowerCellPickup--;
-
-        aPowerCell1++;
     }
 
 
@@ -233,97 +193,6 @@ import org.stormroboticsnj.stormuserradar2020.ui.main.SectionsPagerAdapter;
     public int gettPowerCell3() {
         return tPowerCell3;
     }
-
-    // ***Robot Map*** //
-        /*// **Red** //
-            public boolean isShootSafePortZoneR() {
-                return shootSafePortZoneR;
-            }
-
-            public boolean isShootFrontInitLineR() {
-                return shootFrontInitLineR;
-            }
-
-            public boolean isShootBehindInitLineR() {
-                return shootBehindInitLineR;
-            }
-
-            public boolean isShootFrontControlPanelR() {
-                return shootFrontControlPanelR;
-            }
-
-            public boolean isShootBehindControlPanelR() {
-                return shootBehindControlPanelR;
-            }
-
-            public boolean isShootFrontShieldR() {
-                return shootFrontShieldR;
-            }
-
-            public boolean isShootBehindShieldR() {
-                return shootBehindShieldR;
-            }
-
-            public void setShootSafePortZoneR (boolean portZoneR) {
-                shootSafePortZoneR = portZoneR;
-            }
-
-            public void setShootFrontInitLineR(boolean frontInitLineR) {
-                shootFrontInitLineR = frontInitLineR;
-            }
-
-            public void setShootBehindInitLineR(boolean behindInitLineR) {
-                shootBehindInitLineR = behindInitLineR;
-            }
-
-            public void setShootFrontControlPanelR(boolean frontControlPanelR) {
-                shootFrontControlPanelR = frontControlPanelR;
-            }
-
-            public void setShootBehindControlPanelR(boolean behindControlPanelR) {
-                shootBehindControlPanelR = behindControlPanelR;
-            }
-
-            public void setShootFrontShieldR(boolean frontShieldR) {
-                shootFrontShieldR = frontShieldR;
-            }
-
-            public void setShootBehindShieldR(boolean behindShieldR) {
-                shootBehindShieldR = behindShieldR;
-            }
-
-        // Blue
-            public void setShootSafePortZoneB (boolean portZoneB) {
-                shootSafePortZoneB = portZoneB;
-            }
-
-            public boolean isShootSafePortZoneB() {
-                return shootSafePortZoneB;
-            }
-
-            public boolean isShootFrontInitLineB() {
-                return shootFrontInitLineB;
-            }
-
-            public boolean isShootBehindInitLineB() {
-                return shootBehindInitLineB;
-            }
-
-            public boolean isShootFrontControlPanelB() {
-                return shootFrontControlPanelB;
-            }
-
-            public boolean isShootBehindControlPanelB() {
-                return shootBehindControlPanelB;
-            }
-
-            public boolean isShootFrontShieldB() {
-                return shootFrontShieldB;
-            }
-
-            public boolean isShootBehindShieldB() {
-                return shootBehindShieldB;
-            }*/
 
     // ***Endgame*** //
 
@@ -507,13 +376,13 @@ import org.stormroboticsnj.stormuserradar2020.ui.main.SectionsPagerAdapter;
             sz = findViewById(R.id.cboPortSafeZoneB);
         }
 
-        if (bs.isChecked()) locations += "BS.";
-        if (bw.isChecked()) locations += "BW.";
-        if (fw.isChecked()) locations += "FW.";
-        if (fs.isChecked()) locations += "FS.";
-        if (bl.isChecked()) locations += "BL.";
-        if (fl.isChecked()) locations += "FL.";
-        if (sz.isChecked()) locations += "SZ.";
+        if (bs.isChecked()) locations += "BS."; // BS - Behind Shield
+        if (fs.isChecked()) locations += "FS."; // FS - Front Shield
+        if (bw.isChecked()) locations += "BW."; // BW - Behind Wheel
+        if (fw.isChecked()) locations += "FW."; // FW - Front Wheel
+        if (bl.isChecked()) locations += "BL."; // BL - Behind Initiation Line
+        if (fl.isChecked()) locations += "FL."; // FL - Front Initiation Line
+        if (sz.isChecked()) locations += "SZ."; // SZ - Safe Zone
 
         if (locations.endsWith(".")) {
             locations = locations.substring(0, locations.length() - 1);
@@ -537,12 +406,12 @@ import org.stormroboticsnj.stormuserradar2020.ui.main.SectionsPagerAdapter;
         whoosh.setEPowerCell2(ePowerCell2); // Set endgame outer power cell to "ePowerCell2"
         whoosh.setEPowerCell3(ePowerCell3); // Set endgame inner power cell to "ePowerCell3"
 
-        whoosh.setEndgameOutcome(endgameOutcome);
+        whoosh.setEndgameOutcome(endgameOutcome); // Set endgame outcome: "P" for Park, "H" for Hang, "L" for Level Hang for whoosh entity
 
 
         whoosh.setLocations(locations); //set locations
 
-        whoosh.setDefenseSecs(stoppedSeconds);
+        whoosh.setDefenseSecs(stoppedSeconds); // Set
 
 
         //whoosh.setHang(hang);
