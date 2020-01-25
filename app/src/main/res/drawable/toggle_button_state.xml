@@ -6,21 +6,29 @@
         <shape android:shape="rectangle">
             <corners android:radius="16dp" />
             <solid android:color="@color/darkRed" /> <!-- dark red -->
-            <stroke android:color="@color/stormRed" /> <!-- storm red -->
+            <stroke android:color="@color/stormRed"
+                android:width="4dp"
+                android:radius="16dp"/> <!-- storm red -->
         </shape>
     </item>
     <item android:state_checkable="true">
-        <shape android:shape="rectangle">
+        <shape android:shape="rectangle"/>
             <corners android:radius="16dp" />
             <solid android:color="@color/stormRed" /> <!-- storm red -->
-            <stroke android:color="@color/lightRed" /> <!-- light red -->
-        </shape>
+            <stroke
+                android:color="@color/lightRed"
+                android:width="4dp"/>
+
+            <stroke/>
+        <shape/>
     </item>
 
     <item>
         <shape android:shape="rectangle">
             <solid android:color="@android:color/transparent" /> <!-- transparent -->
-            <stroke android:color="@color/stormRed" /> <!-- storm red -->
+            <stroke android:color="@color/stormRed"
+                android:width="4dp"/> <!-- storm red -->
+            <corners android:radius="16dp" />
         </shape>
     </item>
 </selector>
