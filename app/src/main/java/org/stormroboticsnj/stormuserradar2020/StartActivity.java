@@ -34,7 +34,7 @@ public class StartActivity extends AppCompatActivity {
         setContentView(R.layout.activity_start);
 
         db = Room.databaseBuilder(getApplicationContext(),
-                AppDatabase.class, "stormdb").allowMainThreadQueries().build(); //build database
+                AppDatabase.class, AppDatabase.DB_NAME).allowMainThreadQueries().build(); //build database
 
         /* get data from Intent, from QR */
         Bundle extras = getIntent().getExtras();
@@ -68,6 +68,10 @@ public class StartActivity extends AppCompatActivity {
                     matchText.setError("Enter a Match Number");
                     error = true;
                     matchText.requestFocus();
+                } else if (matchText.length() > 3) {
+                    matchText.setError("Match Number Too Large");
+                    error = true;
+                    matchText.requestFocus();
                 } else {
                     team = Integer.parseInt(strMatchNum);
                 }
@@ -76,7 +80,11 @@ public class StartActivity extends AppCompatActivity {
                     teamText.setError("Enter a Team Number");
                     error = true;
                     teamText.requestFocus();
-                } else {
+                } else if (teamText.length() > 5){
+                    teamText.setError("Team Number Too Large");
+                    error = true;
+                    teamText.requestFocus();
+                }else {
                     match = Integer.parseInt(strTeamNum);
                 }
 
