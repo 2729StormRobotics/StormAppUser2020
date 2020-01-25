@@ -88,6 +88,7 @@ public class Endgame extends Fragment {
         final TextView txtScoredLVL2 = view.findViewById(R.id.txtEScoredLVL2);
         final TextView txtScoredLVL3 = view.findViewById(R.id.txtEScoredLVL3);
 
+
         final RadioButton park = view.findViewById(R.id.rdoPark);
         final RadioButton hang = view.findViewById(R.id.rdoHang);
         final RadioButton levelHang = view.findViewById(R.id.rdoLevelHang);
@@ -168,10 +169,7 @@ public class Endgame extends Fragment {
             }
         });
 
-
-
-
-        //having the submit button work
+        //having the submit button
         buttonSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

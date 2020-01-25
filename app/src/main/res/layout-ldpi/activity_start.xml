@@ -49,12 +49,15 @@
 
         <RadioButton
             android:id="@+id/red"
+
             style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
             android:background="@drawable/custom_radio_red"
+
             android:button="@null"
             android:checked="false"
             android:ellipsize="none"
@@ -66,12 +69,24 @@
         <RadioButton
             android:id="@+id/blue"
             style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+
+            android:button="@android:color/transparent"
+            android:checked="false"
+            android:text="@string/red"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/blue"
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="0dp"
             android:layout_weight="1"
             android:background="@drawable/custom_radio_blue"
+
             android:button="@null"
             android:checked="false"
             android:ellipsize="none"
@@ -84,6 +99,7 @@
 
     <Button
         android:id="@+id/buttonDelete"
+
         android:layout_width="110dp"
         android:layout_height="0dp"
         app:layout_constraintDimensionRatio="28:25"
@@ -114,6 +130,7 @@
         android:id="@+id/teamNum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:autofillHints=""
         android:cursorVisible="true"
         android:ems="10"
@@ -160,6 +177,7 @@
         app:layout_constraintHorizontal_bias=".5"
         app:layout_constraintVertical_bias=".975"
         app:srcCompat="@drawable/test" />
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"

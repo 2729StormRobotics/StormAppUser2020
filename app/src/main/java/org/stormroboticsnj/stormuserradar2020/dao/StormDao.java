@@ -16,16 +16,16 @@ import java.util.List;
  * https://developer.android.com/training/data-storage/room/ for more information
  */
 @Dao
-public interface StormDao {
+public abstract class StormDao {
     @Insert
-    public void insertWhooshes(Whoosh whoosh);
+    public abstract void insertWhooshes(Whoosh whoosh);
 
     @Update
-    public void updateWhooshes(Whoosh whoosh);
+    public abstract void updateWhooshes(Whoosh whoosh);
 
     @Delete
-    public void deleteWhooshes(Whoosh whoosh);
+    public abstract void deleteWhooshes(Whoosh whoosh);
 
     @Query("SELECT * FROM whooshes")
-    public List<Whoosh> getAllWhooshes();
+    public abstract List<Whoosh> getAllWhooshes();
 }
