@@ -2,10 +2,14 @@ package org.stormroboticsnj.stormuserradar2020;
 
 import android.animation.Animator;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.BounceInterpolator;
+import android.view.animation.ScaleAnimation;
 import android.widget.CheckBox;
 import android.widget.Chronometer;
 import android.widget.CompoundButton;
@@ -21,6 +25,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import org.stormroboticsnj.stormuserradar2020.dao.StormDao;
 import org.stormroboticsnj.stormuserradar2020.models.Whoosh;
 import org.stormroboticsnj.stormuserradar2020.ui.main.SectionsPagerAdapter;
+
+import java.util.List;
 
 /**
  * This Activity is the main data collection activity. It has a tabbed layout; each tab corresponds
@@ -258,7 +264,7 @@ import org.stormroboticsnj.stormuserradar2020.ui.main.SectionsPagerAdapter;
 
 
     private long lastPauseTime; // Defense timer
-    private AppDatabase db; //built on creation of Activity
+    public static AppDatabase db; //built on creation of Activity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -283,13 +289,18 @@ import org.stormroboticsnj.stormuserradar2020.ui.main.SectionsPagerAdapter;
         final ToggleButton tb = findViewById(R.id.defenseButton); //get on/off button
         final ViewPager vp = findViewById(R.id.view_pager);
 
-        final View faderDude = findViewById(R.id.fadeBackground);
+        final ScaleAnimation scaleAnimation = new ScaleAnimation(0.7f, 1.0f, 0.7f, 1.0f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.7f);
+        scaleAnimation.setDuration(500);
+        BounceInterpolator bounceInterpolator = new BounceInterpolator();
+        scaleAnimation.setInterpolator(bounceInterpolator);
+        tb.setAnimation(scaleAnimation);
 
         cm.setBase(SystemClock.elapsedRealtime()); //setup stopwatch
 
         tb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                buttonView.startAnimation(scaleAnimation);
                 if (isChecked) {
                     /*  when the stopwatch is started, parse the current text to see what the last
                         paused time was, and start counting from there
@@ -305,12 +316,14 @@ import org.stormroboticsnj.stormuserradar2020.ui.main.SectionsPagerAdapter;
                                 + Integer.parseInt(array[1]) * 60 * 1000
                                 + Integer.parseInt(array[2]) * 1000;
                     }
+                    tb.setTextColor(Color.rgb(204,0,0));
                     cm.setBase(SystemClock.elapsedRealtime() - stoppedMilliseconds);
                     cm.start();
                     viewPager.setVisibility(View.INVISIBLE);
                 } else {
                     /* save and stop the stopwatch */
                     lastPauseTime = SystemClock.elapsedRealtime();
+                    tb.setTextColor(Color.rgb(34,34,34));
                     cm.stop();
                     viewPager.setVisibility(View.VISIBLE);
                 }
@@ -330,7 +343,7 @@ import org.stormroboticsnj.stormuserradar2020.ui.main.SectionsPagerAdapter;
         method of every Activity that uses the database. db can be a class-wide variable or local
         within onCreate. */
         db = Room.databaseBuilder(getApplicationContext(),
-                AppDatabase.class, "storm").allowMainThreadQueries().build(); //build database
+                AppDatabase.class, AppDatabase.DB_NAME).allowMainThreadQueries().build(); //build database
     }
 
     /* submit button pressed */
@@ -417,7 +430,7 @@ import org.stormroboticsnj.stormuserradar2020.ui.main.SectionsPagerAdapter;
         //whoosh.setHang(hang);
 
         stormDao.insertWhooshes(whoosh); // Insert data into database
-
+        List<Whoosh> l = stormDao.getAllWhooshes();
         Intent intent = new Intent(MainActivity.this, StartActivity.class); // New intent activity - Main Activity
         startActivity(intent); // Start Main Activity page
 
