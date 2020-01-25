@@ -167,7 +167,7 @@
     <Button
         android:id="@+id/btnMoreLVL3"
         android:layout_width="50dp"
-        android:layout_height="0"
+        android:layout_height="0dp"
         android:background="@drawable/my_button_orange"
         android:fontFamily="@font/lato"
         android:text="@string/plus"
