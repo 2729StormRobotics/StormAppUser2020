@@ -5,7 +5,7 @@
     <item android:state_pressed="true" >
         <shape android:shape="rectangle">
             <corners android:radius="16dp" />
-            <solid android:color="@color/stormRed" /> <!-- dark red -->
+            <solid android:color="@color/darkRed" /> <!-- dark red -->
             <stroke android:color="@color/stormRed" /> <!-- storm red -->
         </shape>
     </item>
@@ -13,7 +13,7 @@
         <shape android:shape="rectangle">
             <corners android:radius="16dp" />
             <solid android:color="@color/stormRed" /> <!-- storm red -->
-            <stroke android:color="@color/stormRed" /> <!-- light red -->
+            <stroke android:color="@color/lightRed" /> <!-- light red -->
         </shape>
     </item>
 
