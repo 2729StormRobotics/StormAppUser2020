@@ -158,14 +158,13 @@ public class Endgame extends Fragment {
         hang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                act.setEndgameOutcome("h");
+                act.setEndgameOutcome("H");
             }
         });
-
         levelHang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                act.setEndgameOutcome("l");
+                act.setEndgameOutcome("L");
             }
         });
 

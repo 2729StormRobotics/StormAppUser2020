@@ -50,6 +50,7 @@ import org.stormroboticsnj.stormuserradar2020.ui.main.SectionsPagerAdapter;
     private int tPowerCell3 = 0; // Power cell score in inner port
     private boolean positionControl;
     private boolean rotationControl;
+    private String locations = "";
 
     // Endgame
     private int ePowerCell1 = 0; // Power cell score in bottom port
@@ -57,7 +58,6 @@ import org.stormroboticsnj.stormuserradar2020.ui.main.SectionsPagerAdapter;
     private int ePowerCell3 = 0; // Power cell score in inner port
     private String endgameOutcome = "";
 
-    private String locations = "";
 
     /*** Increment/Decrement, return, and set methods***/
 
@@ -407,7 +407,6 @@ import org.stormroboticsnj.stormuserradar2020.ui.main.SectionsPagerAdapter;
         whoosh.setEPowerCell3(ePowerCell3); // Set endgame inner power cell to "ePowerCell3"
 
         whoosh.setEndgameOutcome(endgameOutcome); // Set endgame outcome: "P" for Park, "H" for Hang, "L" for Level Hang for whoosh entity
-
 
         whoosh.setLocations(locations); //set locations
 
