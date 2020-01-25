@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.ToggleButton;
 
 
 /**
@@ -75,6 +76,7 @@ public class PathTeleop extends Fragment {
         // If true, display the red map, if false display blue map
         if (act.getAlliance()) {
             view = inflater.inflate(R.layout.fragment_path_teleop_red, container, false);
+
         } else {
             view = inflater.inflate(R.layout.fragment_path_teleop_blue, container, false);
 

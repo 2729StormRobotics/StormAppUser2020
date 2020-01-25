@@ -5,8 +5,8 @@
     android:id="@+id/teleop"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Teleop"
-    android:background="#FFFFFF">
+    android:background="#FFF"
+    tools:context=".Teleop">
 
     <TextView
         android:id="@+id/txtLabelLVL1"
@@ -43,6 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:background="@drawable/my_button_orange"
+        android:clickable="true"
         android:fontFamily="@font/lato"
         android:text="@string/plus"
         android:textSize="36sp"
