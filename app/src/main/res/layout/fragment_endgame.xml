@@ -8,7 +8,7 @@
     android:visibility="visible"
     tools:context="org.stormroboticsnj.stormuserradar2020.Endgame"
     tools:visibility="visible"
-    android:background="#FFF">
+    android:background = "#ffffff">
 
     <TextView
         android:id="@+id/textView7"
