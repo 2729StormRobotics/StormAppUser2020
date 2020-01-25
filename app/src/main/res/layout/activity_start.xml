@@ -22,18 +22,17 @@
 
     <Button
         android:id="@+id/buttonStart"
-        android:layout_width="0dp"
+        android:layout_width="300dp"
         android:layout_height="125dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginEnd="55dp"
-        android:layout_marginBottom="350dp"
         android:background="@drawable/mybuttonorange"
         android:text="@string/start"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4675" />
 
     <RadioGroup
         android:id="@+id/allianceGroup"
@@ -81,35 +80,34 @@
 
     <Button
         android:id="@+id/buttonDelete"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="140dp"
+        android:layout_height="125dp"
         android:background="@drawable/my_button_red"
         android:text="@string/delete"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/buttonQR"
-        app:layout_constraintEnd_toEndOf="@+id/buttonStart"
-        app:layout_constraintStart_toEndOf="@+id/buttonQR"
-        app:layout_constraintTop_toTopOf="@+id/buttonQR" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.737" />
 
     <Button
         android:id="@+id/buttonQR"
-        android:layout_width="0dp"
+        android:layout_width="140dp"
         android:layout_height="125dp"
-        android:layout_marginTop="75dp"
-        android:layout_marginEnd="8dp"
         android:background="@drawable/my_button_red"
         android:text="@string/generate_qr"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/buttonStart"
-        app:layout_constraintTop_toBottomOf="@+id/buttonStart" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDelete"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.737" />
 
     <EditText
         android:id="@+id/teamNum"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
         android:autofillHints=""
         android:cursorVisible="true"
         android:ems="10"
@@ -117,32 +115,33 @@
         android:inputType="number"
         android:textAlignment="center"
         android:textColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/matchNum"
-        app:layout_constraintEnd_toEndOf="@+id/buttonStart"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/buttonStart" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintVertical_bias=".05" />
 
     <EditText
         android:id="@+id/matchNum"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="75dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/match_number"
         android:inputType="number"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/allianceGroup"
-        app:layout_constraintEnd_toEndOf="@+id/teamNum"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/teamNum" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintVertical_bias=".125"/>
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="125dp"
         android:layout_height="125dp"
-        android:layout_marginStart="248dp"
-        android:layout_marginTop="16dp"
         android:contentDescription="@string/storm_logo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonQR"
