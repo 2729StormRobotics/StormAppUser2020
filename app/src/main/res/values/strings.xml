@@ -29,12 +29,13 @@
     <string name="map">map</string>
 
     <string name="power_cells_collected">Power Cells Collected</string>
-    <string name="power_cells_collected">Power Cells Collected</string>
+
 
     <string name="defense">DEFENSE</string>
     <string name="infinite_recharge_logo">Infinite Recharge Logo</string>
     <string name="storm_message">Scouting Radar by STORM Robotics Team.</string>
     <string name="defense_message">DEFENSE MODE: The robot cannot score while playing defense. Press the defense button again to deactivate this.</string>
+
 
 
 </resources>

@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/lato"
-        android:text="@string/power_cells_collected"
+        android:text="Power Cells Collected"
         android:textAlignment="center"
         android:textColor="#222222"
         android:textSize="20sp"
