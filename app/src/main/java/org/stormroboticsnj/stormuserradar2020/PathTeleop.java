@@ -72,8 +72,7 @@ public class PathTeleop extends Fragment {
         // Declare view object for the layout
         View view;
 
-        // Declare Checkbox objects for different robot scoring zones
- 
+        // If true, display the red map, if false display blue map
         if (act.getAlliance()) {
             view = inflater.inflate(R.layout.fragment_path_teleop_red, container, false);
         } else {
