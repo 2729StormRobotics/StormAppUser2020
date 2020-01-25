@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/irLogo"
-        android:layout_width="488dp"
-        android:layout_height="600dp"
+        android:layout_width="183dp"
+        android:layout_height="225dp"
         android:background="@drawable/ir_storm"
         android:contentDescription="@string/infinite_recharge_logo"
         android:scaleType="fitStart"
@@ -31,7 +31,7 @@
         android:text="@string/defense_message"
         android:textAlignment="center"
         android:textColor="#222222"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
