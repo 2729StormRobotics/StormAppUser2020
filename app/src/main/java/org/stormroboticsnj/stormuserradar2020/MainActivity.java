@@ -2,10 +2,14 @@ package org.stormroboticsnj.stormuserradar2020;
 
 import android.animation.Animator;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.BounceInterpolator;
+import android.view.animation.ScaleAnimation;
 import android.widget.CheckBox;
 import android.widget.Chronometer;
 import android.widget.CompoundButton;
@@ -22,16 +26,16 @@ import org.stormroboticsnj.stormuserradar2020.dao.StormDao;
 import org.stormroboticsnj.stormuserradar2020.models.Whoosh;
 import org.stormroboticsnj.stormuserradar2020.ui.main.SectionsPagerAdapter;
 
+import java.util.List;
+
 /**
  * This Activity is the main data collection activity. It has a tabbed layout; each tab corresponds
  * to a different fragment, as defined in SectionsPagerAdapter. It contains private variables for
  * each field of data collected and increment/decrement or setter as well as getter methods for
  * each.
  */
+ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentInteractionListener, Teleop.OnFragmentInteractionListener, PathTeleop.OnFragmentInteractionListener, Endgame.OnFragmentInteractionListener{
  
-
-public class MainActivity extends AppCompatActivity implements Auto.OnFragmentInteractionListener, Teleop.OnFragmentInteractionListener, PathTeleop.OnFragmentInteractionListener, Endgame.OnFragmentInteractionListener{
-
     /* brought from StartActivity */
     private int team; // Team number
     private int match; // Match number
@@ -53,31 +57,13 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
     private boolean positionControl;
     private boolean rotationControl;
 
-
-    /*// Robot Map
-    private boolean shootSafePortZoneR = false; // Can robot shoot power cell in red safe port zone
-    private boolean shootFrontInitLineR = false; // Can robot shoot power cell in front of red initiation line
-    private boolean shootBehindInitLineR = false; // Can robot shoot power cell behind red initiation line
-    private boolean shootFrontControlPanelR = false; // Can robot shoot power cell in front of red control panel
-    private boolean shootBehindControlPanelR = false; // Can robot shoot power cell behind red control panel
-    private boolean shootFrontShieldR = false; // Can robot shoot power cell in front of red shield
-    private boolean shootBehindShieldR = false; // Can robot shoot power cell behind red shield
-
-    private boolean shootSafePortZoneB = false; // Can robot shoot power cell in blue safe port zone
-    private boolean shootFrontInitLineB = false; // Can robot shoot power cell in front of blue initiation line
-    private boolean shootBehindInitLineB = false; // Can robot shoot power cell behind blue initiation line
-    private boolean shootFrontControlPanelB = false; // Can robot shoot power cell in front of blue control panel
-    private boolean shootBehindControlPanelB = false; // Can robot shoot power cell behind blue control panel
-    private boolean shootFrontShieldB = false; // Can robot shoot power cell in front of blue shield
-    private boolean shootBehindShieldB = false; // Can robot shoot power cell behind blue shield*/
-
     // Endgame
     private int ePowerCell1 = 0; // Power cell score in bottom port
     private int ePowerCell2 = 0; // Power cell score in outer port
     private int ePowerCell3 = 0; // Power cell score in inner port
     private String endgameOutcome = "";
 
-    private String locations;
+    private String locations = "";
 
     /*** Increment/Decrement, return, and set methods***/
 
@@ -121,8 +107,6 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
 
     public void decaPowerCellPickup() { // Decrement number of power cells picked up during Auto
         if (aPowerCellPickup > 0) aPowerCellPickup--;
-
-        aPowerCell1++;
     }
 
 
@@ -216,97 +200,6 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
         return tPowerCell3;
     }
 
-    // ***Robot Map*** //
-        /*// **Red** //
-            public boolean isShootSafePortZoneR() {
-                return shootSafePortZoneR;
-            }
-
-            public boolean isShootFrontInitLineR() {
-                return shootFrontInitLineR;
-            }
-
-            public boolean isShootBehindInitLineR() {
-                return shootBehindInitLineR;
-            }
-
-            public boolean isShootFrontControlPanelR() {
-                return shootFrontControlPanelR;
-            }
-
-            public boolean isShootBehindControlPanelR() {
-                return shootBehindControlPanelR;
-            }
-
-            public boolean isShootFrontShieldR() {
-                return shootFrontShieldR;
-            }
-
-            public boolean isShootBehindShieldR() {
-                return shootBehindShieldR;
-            }
-
-            public void setShootSafePortZoneR (boolean portZoneR) {
-                shootSafePortZoneR = portZoneR;
-            }
-
-            public void setShootFrontInitLineR(boolean frontInitLineR) {
-                shootFrontInitLineR = frontInitLineR;
-            }
-
-            public void setShootBehindInitLineR(boolean behindInitLineR) {
-                shootBehindInitLineR = behindInitLineR;
-            }
-
-            public void setShootFrontControlPanelR(boolean frontControlPanelR) {
-                shootFrontControlPanelR = frontControlPanelR;
-            }
-
-            public void setShootBehindControlPanelR(boolean behindControlPanelR) {
-                shootBehindControlPanelR = behindControlPanelR;
-            }
-
-            public void setShootFrontShieldR(boolean frontShieldR) {
-                shootFrontShieldR = frontShieldR;
-            }
-
-            public void setShootBehindShieldR(boolean behindShieldR) {
-                shootBehindShieldR = behindShieldR;
-            }
-
-        // Blue
-            public void setShootSafePortZoneB (boolean portZoneB) {
-                shootSafePortZoneB = portZoneB;
-            }
-
-            public boolean isShootSafePortZoneB() {
-                return shootSafePortZoneB;
-            }
-
-            public boolean isShootFrontInitLineB() {
-                return shootFrontInitLineB;
-            }
-
-            public boolean isShootBehindInitLineB() {
-                return shootBehindInitLineB;
-            }
-
-            public boolean isShootFrontControlPanelB() {
-                return shootFrontControlPanelB;
-            }
-
-            public boolean isShootBehindControlPanelB() {
-                return shootBehindControlPanelB;
-            }
-
-            public boolean isShootFrontShieldB() {
-                return shootFrontShieldB;
-            }
-
-            public boolean isShootBehindShieldB() {
-                return shootBehindShieldB;
-            }*/
-
     // ***Endgame*** //
 
     public void incePowerCell1() { // Increment power cell score in bottom port
@@ -371,7 +264,7 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
 
 
     private long lastPauseTime; // Defense timer
-    private AppDatabase db; //built on creation of Activity
+    public static AppDatabase db; //built on creation of Activity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -396,13 +289,18 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
         final ToggleButton tb = findViewById(R.id.defenseButton); //get on/off button
         final ViewPager vp = findViewById(R.id.view_pager);
 
-        final View faderDude = findViewById(R.id.fadeBackground);
+        final ScaleAnimation scaleAnimation = new ScaleAnimation(0.7f, 1.0f, 0.7f, 1.0f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.7f);
+        scaleAnimation.setDuration(500);
+        BounceInterpolator bounceInterpolator = new BounceInterpolator();
+        scaleAnimation.setInterpolator(bounceInterpolator);
+        tb.setAnimation(scaleAnimation);
 
         cm.setBase(SystemClock.elapsedRealtime()); //setup stopwatch
 
         tb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                buttonView.startAnimation(scaleAnimation);
                 if (isChecked) {
                     /*  when the stopwatch is started, parse the current text to see what the last
                         paused time was, and start counting from there
@@ -418,12 +316,14 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
                                 + Integer.parseInt(array[1]) * 60 * 1000
                                 + Integer.parseInt(array[2]) * 1000;
                     }
+                    tb.setTextColor(Color.rgb(204,0,0));
                     cm.setBase(SystemClock.elapsedRealtime() - stoppedMilliseconds);
                     cm.start();
                     viewPager.setVisibility(View.INVISIBLE);
                 } else {
                     /* save and stop the stopwatch */
                     lastPauseTime = SystemClock.elapsedRealtime();
+                    tb.setTextColor(Color.rgb(34,34,34));
                     cm.stop();
                     viewPager.setVisibility(View.VISIBLE);
                 }
@@ -443,7 +343,7 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
         method of every Activity that uses the database. db can be a class-wide variable or local
         within onCreate. */
         db = Room.databaseBuilder(getApplicationContext(),
-                AppDatabase.class, "storm").allowMainThreadQueries().build(); //build database
+                AppDatabase.class, AppDatabase.DB_NAME).allowMainThreadQueries().build(); //build database
     }
 
     /* submit button pressed */
@@ -489,15 +389,17 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
             sz = findViewById(R.id.cboPortSafeZoneB);
         }
 
-        if (bs.isChecked()) locations += "BS.";
-        if (bw.isChecked()) locations += "BW.";
-        if (fw.isChecked()) locations += "FW.";
-        if (fs.isChecked()) locations += "FS.";
-        if (bl.isChecked()) locations += "BL.";
-        if (fl.isChecked()) locations += "FL.";
-        if (sz.isChecked()) locations += "SZ.";
+        if (bs.isChecked()) locations += "BS."; // BS - Behind Shield
+        if (fs.isChecked()) locations += "FS."; // FS - Front Shield
+        if (bw.isChecked()) locations += "BW."; // BW - Behind Wheel
+        if (fw.isChecked()) locations += "FW."; // FW - Front Wheel
+        if (bl.isChecked()) locations += "BL."; // BL - Behind Initiation Line
+        if (fl.isChecked()) locations += "FL."; // FL - Front Initiation Line
+        if (sz.isChecked()) locations += "SZ."; // SZ - Safe Zone
 
-        if (locations.endsWith(".")) locations = locations.substring(0, locations.length() - 1);
+        if (locations.endsWith(".")) {
+            locations = locations.substring(0, locations.length() - 1);
+        }
 
         /* create new Whoosh object */
         Whoosh whoosh = new Whoosh(team, match);
@@ -517,18 +419,18 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
         whoosh.setEPowerCell2(ePowerCell2); // Set endgame outer power cell to "ePowerCell2"
         whoosh.setEPowerCell3(ePowerCell3); // Set endgame inner power cell to "ePowerCell3"
 
-        whoosh.setEndgameOutcome(endgameOutcome);
+        whoosh.setEndgameOutcome(endgameOutcome); // Set endgame outcome: "P" for Park, "H" for Hang, "L" for Level Hang for whoosh entity
 
 
         whoosh.setLocations(locations); //set locations
 
-        whoosh.setDefenseSecs(stoppedSeconds);
+        whoosh.setDefenseSecs(stoppedSeconds); // Set
 
 
         //whoosh.setHang(hang);
 
         stormDao.insertWhooshes(whoosh); // Insert data into database
-
+        List<Whoosh> l = stormDao.getAllWhooshes();
         Intent intent = new Intent(MainActivity.this, StartActivity.class); // New intent activity - Main Activity
         startActivity(intent); // Start Main Activity page
 

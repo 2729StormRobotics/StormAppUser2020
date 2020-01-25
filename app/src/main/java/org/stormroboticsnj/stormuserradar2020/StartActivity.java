@@ -34,7 +34,7 @@ public class StartActivity extends AppCompatActivity {
         setContentView(R.layout.activity_start);
 
         db = Room.databaseBuilder(getApplicationContext(),
-                AppDatabase.class, "stormdb").allowMainThreadQueries().build(); //build database
+                AppDatabase.class, AppDatabase.DB_NAME).allowMainThreadQueries().build(); //build database
 
         /* get data from Intent, from QR */
         Bundle extras = getIntent().getExtras();
