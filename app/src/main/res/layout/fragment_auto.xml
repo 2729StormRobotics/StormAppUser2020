@@ -32,16 +32,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/lato"
-        android:text="@string/power_cells_intaken"
+        android:text="@string/power_cells_collected"
         android:textAlignment="center"
         android:textColor="#222222"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias=".5"
-        app:layout_constraintVertical_bias=".7375"/>
+        app:layout_constraintVertical_bias=".7375" />
 
     <Button
         android:id="@+id/abtnMoreIntake"

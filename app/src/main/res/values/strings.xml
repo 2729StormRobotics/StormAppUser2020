@@ -27,5 +27,7 @@
     <string name="teleop">teleop</string>
     <string name="endgame">endgame</string>
     <string name="map">map</string>
+    <string name="power_cells_collected">Power Cells Collected</string>
+    <string name="power_cells_collected">Power Cells Collected</string>
 
 </resources>
