@@ -70,10 +70,10 @@
         android:typeface="serif"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintHorizontal_bias="0.148"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.384" />
+        app:layout_constraintVertical_bias="0.139" />
 
     <TextView
         android:id="@+id/textView10"
@@ -118,10 +118,10 @@
         android:typeface="serif"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.894"
+        app:layout_constraintHorizontal_bias="0.923"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.786" />
+        app:layout_constraintVertical_bias="0.494" />
 
     <Button
         android:id="@+id/btnELessLVL2"
@@ -141,7 +141,7 @@
         app:layout_constraintHorizontal_bias="0.133"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.204" />
+        app:layout_constraintVertical_bias="0.601" />
 
     <TextView
         android:id="@+id/textView11"
@@ -245,7 +245,7 @@
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="420dp"
+        android:layout_marginTop="696dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/my_button_orange"
         android:fontFamily="sans-serif"
@@ -254,7 +254,7 @@
         android:textSize="60sp"
         android:typeface="serif"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.637"
+        app:layout_constraintHorizontal_bias="0.736"
         app:layout_constraintStart_toEndOf="@+id/txtEScoredLVL3"
         app:layout_constraintTop_toTopOf="parent" />
 

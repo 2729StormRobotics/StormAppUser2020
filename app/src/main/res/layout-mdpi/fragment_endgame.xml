@@ -73,7 +73,7 @@
         app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.371" />
+        app:layout_constraintVertical_bias="0.108" />
 
     <TextView
         android:id="@+id/textView10"
@@ -110,7 +110,7 @@
         android:id="@+id/btnEMoreLVL2"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="456dp"
+        android:layout_marginTop="260dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/my_button_orange"
         android:fontFamily="sans-serif"
@@ -118,7 +118,7 @@
         android:textSize="24sp"
         android:typeface="serif"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.901"
+        app:layout_constraintHorizontal_bias="0.939"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -137,10 +137,10 @@
         android:typeface="serif"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintHorizontal_bias="0.086"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.223" />
+        app:layout_constraintVertical_bias="0.91" />
 
     <TextView
         android:id="@+id/textView11"
@@ -244,7 +244,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="456dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/my_button_orange"
         android:fontFamily="sans-serif"
@@ -253,7 +253,7 @@
         android:textSize="24sp"
         android:typeface="serif"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.604"
+        app:layout_constraintHorizontal_bias="0.758"
         app:layout_constraintStart_toEndOf="@+id/txtEScoredLVL3"
         app:layout_constraintTop_toTopOf="parent" />
 
