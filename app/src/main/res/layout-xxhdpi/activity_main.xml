@@ -9,9 +9,9 @@
 
     <ImageView
         android:id="@+id/irLogo"
-        android:layout_width="340dp"
-        android:layout_height="464dp"
-        android:layout_marginTop="225dp"
+        android:layout_width="604dp"
+        android:layout_height="716dp"
+        android:layout_marginTop="250dp"
         android:layout_marginBottom="100dp"
         android:contentDescription="@string/infinite_recharge_logo"
         android:scaleType="fitStart"
@@ -23,8 +23,8 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="281dp"
-        android:layout_height="165dp"
+        android:layout_width="592dp"
+        android:layout_height="340dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
@@ -32,23 +32,23 @@
         android:text="@string/defense_message"
         android:textAlignment="center"
         android:textColor="#222222"
-        android:textSize="25sp"
+        android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="281dp"
-        android:layout_height="wrap_content"
+        android:layout_width="466dp"
+        android:layout_height="36dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="150dp"
         android:fontFamily="@font/lato"
         android:text="@string/storm_message"
         android:textAlignment="center"
         android:textColor="#222"
-        android:textSize="15sp"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -57,8 +57,8 @@
         android:id="@+id/view_pager"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginBottom="100dp"
-        android:visibility="invisible"
+        android:layout_marginBottom="150dp"
+        android:visibility="visible"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -95,15 +95,14 @@
         android:textColor="#222"
         android:textOff="@string/defense"
         android:textOn="@string/defense"
-        android:textSize="30sp"
+        android:textSize="60sp"
         app:layout_anchor="@+id/view_pager"
         app:layout_anchorGravity="start|bottom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/defenseTime"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view_pager"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/view_pager" />
 
     <Chronometer
         android:id="@+id/defenseTime"

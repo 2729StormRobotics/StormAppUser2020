@@ -9,16 +9,17 @@
 
     <ImageView
         android:id="@+id/irLogo"
-        android:layout_width="183dp"
-        android:layout_height="225dp"
-        android:background="@drawable/ir_storm"
+        android:layout_width="260dp"
+        android:layout_height="322dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="120dp"
         android:contentDescription="@string/infinite_recharge_logo"
         android:scaleType="fitStart"
-
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        android:src="@drawable/applogosunfinal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
