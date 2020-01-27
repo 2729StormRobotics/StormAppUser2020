@@ -18,7 +18,6 @@
     <string name="minus">-</string>
     <string name="back">BACK</string>
     <string name="storm_scouting_radar_user">STORM Scouting Radar User</string>
-    <string name="power_cells_intaken">Power Cells Intaken</string>
     <string name="_0">0</string>
     <string name="inner_port">Inner Port</string>
     <string name="bottom_port">Bottom Port</string>
@@ -35,7 +34,6 @@
     <string name="infinite_recharge_logo">Infinite Recharge Logo</string>
     <string name="storm_message">Scouting Radar by STORM Robotics Team.</string>
     <string name="defense_message">DEFENSE MODE: The robot cannot score while playing defense. Press the defense button again to deactivate this.</string>
-
 
 
 </resources>

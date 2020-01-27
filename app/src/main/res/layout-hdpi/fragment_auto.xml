@@ -12,8 +12,8 @@
 
     <Button
         android:id="@+id/abtnLessIntake"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
         android:background="@drawable/my_button_red"
         android:fontFamily="@font/lato"
         android:text="@string/minus"
@@ -24,8 +24,7 @@
         app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias=".875
-" />
+        app:layout_constraintVertical_bias=".9" />
 
     <TextView
         android:id="@+id/atextView5"
@@ -41,12 +40,12 @@
         app:layout_constraintHorizontal_bias=".5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias=".7375" />
+        app:layout_constraintVertical_bias=".755" />
 
     <Button
         android:id="@+id/abtnMoreIntake"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
         android:background="@drawable/my_button_orange"
         android:fontFamily="@font/lato"
         android:text="@string/plus"
@@ -57,7 +56,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintHorizontal_bias=".8"
-        app:layout_constraintVertical_bias=".875"/>
+        app:layout_constraintVertical_bias=".9"/>
 
     <TextView
         android:id="@+id/atxtNumScoredIntake"
@@ -73,12 +72,12 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias=".85" />
+        app:layout_constraintVertical_bias=".87" />
 
     <Button
         android:id="@+id/abtnLessInner"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
         android:background="@drawable/my_button_red"
         android:fontFamily="@font/lato"
         android:text="@string/minus"
@@ -93,8 +92,8 @@
 
     <Button
         android:id="@+id/abtnMoreInner"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
         android:background="@drawable/my_button_orange"
         android:fontFamily="@font/lato"
         android:text="@string/plus"
@@ -141,8 +140,8 @@
 
     <Button
         android:id="@+id/abtnLessBottom"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
         android:background="@drawable/my_button_red"
         android:fontFamily="@font/lato"
         android:text="@string/minus"
@@ -173,8 +172,8 @@
 
     <Button
         android:id="@+id/abtnMoreBottom"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
         android:background="@drawable/my_button_orange"
         android:fontFamily="@font/lato"
         android:text="@string/plus"
@@ -204,8 +203,8 @@
 
     <Button
         android:id="@+id/abtnLessOuter"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
         android:background="@drawable/my_button_red"
         android:fontFamily="@font/lato"
         android:text="@string/minus"
@@ -252,8 +251,8 @@
 
     <Button
         android:id="@+id/abtnMoreOuter"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
         android:background="@drawable/my_button_orange"
         android:fontFamily="@font/lato"
         android:text="@string/plus"

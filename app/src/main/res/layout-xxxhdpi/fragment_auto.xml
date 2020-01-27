@@ -12,8 +12,8 @@
 
     <Button
         android:id="@+id/abtnLessIntake"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
         android:background="@drawable/my_button_red"
         android:fontFamily="@font/lato"
         android:text="@string/minus"
@@ -45,8 +45,8 @@
 
     <Button
         android:id="@+id/abtnMoreIntake"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
         android:background="@drawable/my_button_orange"
         android:fontFamily="@font/lato"
         android:text="@string/plus"
@@ -77,8 +77,8 @@
 
     <Button
         android:id="@+id/abtnLessInner"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
         android:background="@drawable/my_button_red"
         android:fontFamily="@font/lato"
         android:text="@string/minus"
@@ -93,8 +93,8 @@
 
     <Button
         android:id="@+id/abtnMoreInner"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
         android:background="@drawable/my_button_orange"
         android:fontFamily="@font/lato"
         android:text="@string/plus"
@@ -141,8 +141,8 @@
 
     <Button
         android:id="@+id/abtnLessBottom"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
         android:background="@drawable/my_button_red"
         android:fontFamily="@font/lato"
         android:text="@string/minus"
@@ -173,8 +173,8 @@
 
     <Button
         android:id="@+id/abtnMoreBottom"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
         android:background="@drawable/my_button_orange"
         android:fontFamily="@font/lato"
         android:text="@string/plus"
@@ -204,8 +204,8 @@
 
     <Button
         android:id="@+id/abtnLessOuter"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
         android:background="@drawable/my_button_red"
         android:fontFamily="@font/lato"
         android:text="@string/minus"
@@ -252,8 +252,8 @@
 
     <Button
         android:id="@+id/abtnMoreOuter"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
         android:background="@drawable/my_button_orange"
         android:fontFamily="@font/lato"
         android:text="@string/plus"
