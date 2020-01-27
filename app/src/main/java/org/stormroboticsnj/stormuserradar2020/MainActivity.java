@@ -34,8 +34,8 @@ import java.util.List;
  * each field of data collected and increment/decrement or setter as well as getter methods for
  * each.
  */
- public class MainActivity extends AppCompatActivity implements Auto.OnFragmentInteractionListener, Teleop.OnFragmentInteractionListener, PathTeleop.OnFragmentInteractionListener, Endgame.OnFragmentInteractionListener{
- 
+public class MainActivity extends AppCompatActivity implements Auto.OnFragmentInteractionListener, Teleop.OnFragmentInteractionListener, PathTeleop.OnFragmentInteractionListener, Endgame.OnFragmentInteractionListener {
+
     /* brought from StartActivity */
     private int team; // Team number
     private int match; // Match number
@@ -226,11 +226,11 @@ import java.util.List;
         if (ePowerCell3 > 0) ePowerCell3--;
     }
 
-    public String getEndgameOutcome(){
+    public String getEndgameOutcome() {
         return endgameOutcome;
     }
 
-    public void setEndgameOutcome(String incomingEndgameString){
+    public void setEndgameOutcome(String incomingEndgameString) {
         endgameOutcome = incomingEndgameString;
     }
 
@@ -260,7 +260,6 @@ import java.util.List;
     public int getePowerCell3() {
         return ePowerCell3;
     }
-
 
 
     private long lastPauseTime; // Defense timer
@@ -316,14 +315,14 @@ import java.util.List;
                                 + Integer.parseInt(array[1]) * 60 * 1000
                                 + Integer.parseInt(array[2]) * 1000;
                     }
-                    tb.setTextColor(Color.rgb(204,0,0));
+                    tb.setTextColor(Color.rgb(204, 0, 0));
                     cm.setBase(SystemClock.elapsedRealtime() - stoppedMilliseconds);
                     cm.start();
                     viewPager.setVisibility(View.INVISIBLE);
                 } else {
                     /* save and stop the stopwatch */
                     lastPauseTime = SystemClock.elapsedRealtime();
-                    tb.setTextColor(Color.rgb(34,34,34));
+                    tb.setTextColor(Color.rgb(34, 34, 34));
                     cm.stop();
                     viewPager.setVisibility(View.VISIBLE);
                 }
@@ -420,8 +419,6 @@ import java.util.List;
         whoosh.setEPowerCell3(ePowerCell3); // Set endgame inner power cell to "ePowerCell3"
 
         whoosh.setEndgameOutcome(endgameOutcome); // Set endgame outcome: "P" for Park, "H" for Hang, "L" for Level Hang for whoosh entity
-
-
         whoosh.setLocations(locations); //set locations
 
         whoosh.setDefenseSecs(stoppedSeconds); // Set
