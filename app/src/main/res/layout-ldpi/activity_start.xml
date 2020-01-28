@@ -22,23 +22,24 @@
 
     <Button
         android:id="@+id/buttonStart"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginEnd="55dp"
-        android:layout_marginBottom="176dp"
+        android:layout_width="230dp"
+        android:layout_height="0dp"
         android:background="@drawable/mybuttonorange"
         android:text="@string/start"
-        android:textSize="20sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="12:5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4675" />
 
     <RadioGroup
         android:id="@+id/allianceGroup"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_width="230dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="3:1"
         android:layout_marginBottom="16dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/buttonStart"
@@ -46,70 +47,80 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/buttonStart">
 
+
         <RadioButton
             android:id="@+id/red"
-            style="?buttonBarButtonStyle"
+
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
             android:background="@drawable/custom_radio_red"
-            android:button="@android:color/transparent"
+
+            android:button="@null"
             android:checked="false"
+            android:ellipsize="none"
             android:text="@string/red"
             android:textAlignment="center"
             android:textAllCaps="false"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <RadioButton
             android:id="@+id/blue"
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="0dp"
             android:layout_weight="1"
             android:background="@drawable/custom_radio_blue"
-            android:button="@drawable/transparent"
+
+            android:button="@null"
             android:checked="false"
+            android:ellipsize="none"
             android:text="@string/blue"
-            android:fontFamily="@font/lato"
             android:textAlignment="center"
             android:textAllCaps="false"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
     </RadioGroup>
 
     <Button
         android:id="@+id/buttonDelete"
-        android:layout_width="0dp"
+
+        android:layout_width="110dp"
         android:layout_height="0dp"
-        android:layout_marginStart="16dp"
         android:background="@drawable/my_button_red"
         android:text="@string/delete"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/buttonQR"
-        app:layout_constraintEnd_toEndOf="@+id/buttonStart"
-        app:layout_constraintStart_toEndOf="@+id/buttonQR"
-        app:layout_constraintTop_toTopOf="@+id/buttonQR" />
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="28:25"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.737" />
 
     <Button
         android:id="@+id/buttonQR"
-        android:layout_width="0dp"
-        android:layout_height="85dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="110dp"
+        android:layout_height="0dp"
         android:background="@drawable/my_button_red"
         android:text="@string/generate_qr"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/buttonStart"
-        app:layout_constraintTop_toBottomOf="@+id/buttonStart" />
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="28:25"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDelete"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.737" />
 
     <EditText
         android:id="@+id/teamNum"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+
         android:autofillHints=""
         android:cursorVisible="true"
         android:ems="10"
@@ -117,42 +128,51 @@
         android:inputType="number"
         android:textAlignment="center"
         android:textColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/matchNum"
-        app:layout_constraintEnd_toEndOf="@+id/buttonStart"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/buttonStart" />
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".05" />
 
     <EditText
         android:id="@+id/matchNum"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/match_number"
         android:inputType="number"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/allianceGroup"
-        app:layout_constraintEnd_toEndOf="@+id/teamNum"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/teamNum" />
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".125" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
         android:contentDescription="@string/storm_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonQR"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintVertical_bias=".975"
         app:srcCompat="@drawable/ic_stormlogov" />
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.49916804" />
+        app:layout_constraintGuide_percent="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

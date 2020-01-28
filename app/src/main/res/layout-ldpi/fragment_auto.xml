@@ -5,25 +5,27 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Auto">
+    tools:context=".Auto"
+    android:background="#ffffff">
 
     <!-- TODO: Update blank fragment layout -->
 
     <Button
         android:id="@+id/abtnLessIntake"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="70dp"
+        android:layout_height="0dp"
         android:background="@drawable/my_button_red"
         android:fontFamily="@font/lato"
         android:text="@string/minus"
-        android:textSize="36sp"
         android:textColor="#000000"
+        android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias=".875
+        app:layout_constraintVertical_bias=".870
 " />
 
     <TextView
@@ -31,32 +33,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/lato"
-        android:text="@string/power_cells_intaken"
+        android:text="@string/power_cells_collected"
         android:textAlignment="center"
         android:textColor="#222222"
-        android:textSize="30sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias=".5"
-        app:layout_constraintVertical_bias=".7375"/>
+        app:layout_constraintVertical_bias=".7370" />
 
     <Button
         android:id="@+id/abtnMoreIntake"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="70dp"
+        android:layout_height="0dp"
         android:background="@drawable/my_button_orange"
         android:fontFamily="@font/lato"
         android:text="@string/plus"
-        android:textSize="36sp"
         android:textColor="#000000"
+        android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias=".8"
-        app:layout_constraintVertical_bias=".875"/>
+        app:layout_constraintVertical_bias=".870" />
 
     <TextView
         android:id="@+id/atxtNumScoredIntake"
@@ -66,7 +69,7 @@
         android:text="@string/_0"
         android:textAlignment="center"
         android:textColor="#222222"
-        android:textSize="30sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -76,35 +79,37 @@
 
     <Button
         android:id="@+id/abtnLessInner"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="70dp"
+        android:layout_height="0dp"
         android:background="@drawable/my_button_red"
         android:fontFamily="@font/lato"
         android:text="@string/minus"
-        android:textSize="36sp"
         android:textColor="#000000"
+        android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias=".2"
         app:layout_constraintVertical_bias=".625" />
 
     <Button
         android:id="@+id/abtnMoreInner"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="70dp"
+        android:layout_height="0dp"
         android:background="@drawable/my_button_orange"
         android:fontFamily="@font/lato"
         android:text="@string/plus"
-        android:textSize="36sp"
         android:textColor="#000000"
+        android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias=".8"
-        app:layout_constraintVertical_bias=".625"/>
+        app:layout_constraintVertical_bias=".625" />
 
     <TextView
         android:id="@+id/atextView4"
@@ -114,7 +119,7 @@
         android:text="@string/inner_port"
         android:textAlignment="center"
         android:textColor="#222222"
-        android:textSize="30sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -130,7 +135,7 @@
         android:text="@string/_0"
         android:textAlignment="center"
         android:textColor="#222222"
-        android:textSize="30sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias=".5"
@@ -140,13 +145,14 @@
 
     <Button
         android:id="@+id/abtnLessBottom"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="70dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
         android:background="@drawable/my_button_red"
         android:fontFamily="@font/lato"
         android:text="@string/minus"
         android:textColor="#000000"
-        android:textSize="36sp"
+        android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias=".2"
@@ -162,7 +168,7 @@
         android:text="@string/bottom_port"
         android:textAlignment="center"
         android:textColor="#222222"
-        android:textSize="30sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias=".5"
@@ -172,17 +178,18 @@
 
     <Button
         android:id="@+id/abtnMoreBottom"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="70dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
         android:background="@drawable/my_button_orange"
         android:fontFamily="@font/lato"
         android:text="@string/plus"
-        android:textSize="36sp"
+        android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias=".8"
         app:layout_constraintVertical_bias=".125" />
 
     <TextView
@@ -193,7 +200,7 @@
         android:text="@string/_0"
         android:textAlignment="center"
         android:textColor="#222222"
-        android:textSize="30sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias=".5"
@@ -203,19 +210,20 @@
 
     <Button
         android:id="@+id/abtnLessOuter"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="70dp"
+        android:layout_height="0dp"
         android:background="@drawable/my_button_red"
         android:fontFamily="@font/lato"
         android:text="@string/minus"
-        android:textSize="36sp"
         android:textColor="#000000"
+        android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias=".2"
-        app:layout_constraintVertical_bias=".375"/>
+        app:layout_constraintVertical_bias=".370" />
 
     <TextView
         android:id="@+id/atextView2"
@@ -225,13 +233,13 @@
         android:text="@string/outer_port"
         android:textAlignment="center"
         android:textColor="#222222"
-        android:textSize="30sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintHorizontal_bias=".5"
-        app:layout_constraintVertical_bias=".2775"/>
+        app:layout_constraintVertical_bias=".2770"/>
 
     <TextView
         android:id="@+id/atxtNumScoredOuter"
@@ -241,7 +249,7 @@
         android:text="@string/_0"
         android:textAlignment="center"
         android:textColor="#222222"
-        android:textSize="30sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias=".5"
@@ -251,19 +259,20 @@
 
     <Button
         android:id="@+id/abtnMoreOuter"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="70dp"
+        android:layout_height="0dp"
         android:background="@drawable/my_button_orange"
         android:fontFamily="@font/lato"
         android:text="@string/plus"
-        android:textSize="36sp"
         android:textColor="#000000"
+        android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias=".8"
-        app:layout_constraintVertical_bias=".375"/>
+        app:layout_constraintVertical_bias=".370" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
