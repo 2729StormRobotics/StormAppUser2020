@@ -5,7 +5,8 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Auto">
+    tools:context=".Auto"
+    android:background="#ffffff">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -31,16 +32,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/lato"
-        android:text="@string/power_cells_intaken"
+        android:text="@string/power_cells_collected"
         android:textAlignment="center"
         android:textColor="#222222"
         android:textSize="27sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias=".5"
-        app:layout_constraintVertical_bias=".7375"/>
+        app:layout_constraintVertical_bias=".7375" />
 
     <Button
         android:id="@+id/abtnMoreIntake"

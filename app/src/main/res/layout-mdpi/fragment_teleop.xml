@@ -5,8 +5,8 @@
     android:id="@+id/teleop"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Teleop"
-    android:background="#FFFFFF">
+    android:background="#FFF"
+    tools:context=".Teleop">
 
     <TextView
         android:id="@+id/txtLabelLVL1"
@@ -21,12 +21,12 @@
         app:layout_constraintHorizontal_bias=".5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias=".05" />
+        app:layout_constraintVertical_bias=".07" />
 
     <TextView
         android:id="@+id/txtNumScoredLVL1"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/lato"
         android:gravity="center_horizontal|center_vertical"
         android:text="0"
@@ -36,13 +36,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias=".17" />
+        app:layout_constraintVertical_bias=".18" />
 
     <Button
         android:id="@+id/btnMoreLVL1"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="0dp"
         android:background="@drawable/my_button_orange"
+        android:clickable="true"
         android:fontFamily="@font/lato"
         android:text="@string/plus"
         android:textSize="36sp"
@@ -50,14 +51,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias=".75"
+        app:layout_constraintHorizontal_bias=".8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.15" />
 
     <Button
         android:id="@+id/btnLessLVL1"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="0dp"
         android:background="@drawable/my_button_red"
         android:fontFamily="@font/lato"
@@ -67,7 +68,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias=".25"
+        app:layout_constraintHorizontal_bias=".2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias=".15" />
@@ -89,7 +90,7 @@
     <TextView
         android:id="@+id/txtNumScoredLVL2"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/lato"
         android:gravity="center_horizontal"
         android:text="0"
@@ -103,7 +104,7 @@
 
     <Button
         android:id="@+id/btnMoreLVL2"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="0dp"
         android:background="@drawable/my_button_orange"
         android:fontFamily="@font/lato"
@@ -113,14 +114,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias=".75"
+        app:layout_constraintHorizontal_bias=".8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias=".4" />
 
     <Button
         android:id="@+id/btnLessLVL2"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="0dp"
         android:background="@drawable/my_button_red"
         android:fontFamily="@font/lato"
@@ -130,7 +131,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias=".25"
+        app:layout_constraintHorizontal_bias=".2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias=".4" />
@@ -152,7 +153,7 @@
     <TextView
         android:id="@+id/txtNumScoredLVL3"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/lato"
         android:gravity="center_horizontal"
         android:text="0"
@@ -162,11 +163,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias=".64" />
+        app:layout_constraintVertical_bias=".65" />
 
     <Button
         android:id="@+id/btnMoreLVL3"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="0dp"
         android:background="@drawable/my_button_orange"
         android:fontFamily="@font/lato"
@@ -176,14 +177,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias=".75"
+        app:layout_constraintHorizontal_bias=".8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias=".65" />
 
     <Button
         android:id="@+id/btnLessLVL3"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="0dp"
         android:background="@drawable/my_button_red"
         android:fontFamily="@font/lato"
@@ -193,7 +194,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias=".25"
+        app:layout_constraintHorizontal_bias=".2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias=".65" />
@@ -210,14 +211,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.75" />
+        app:layout_constraintVertical_bias=".78" />
 
     <CheckBox
         android:id="@+id/cboPC"
-        android:layout_width="247dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="16dp"
         android:fontFamily="@font/lato"
         android:text="Position Control"
         android:textSize="30sp"
