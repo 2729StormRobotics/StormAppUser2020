@@ -9,9 +9,9 @@
 
     <ImageView
         android:id="@+id/irLogo"
-        android:layout_width="340dp"
-        android:layout_height="464dp"
-        android:layout_marginTop="225dp"
+        android:layout_width="388dp"
+        android:layout_height="460dp"
+        android:layout_marginTop="200dp"
         android:layout_marginBottom="100dp"
         android:contentDescription="@string/infinite_recharge_logo"
         android:scaleType="fitStart"
@@ -23,8 +23,8 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="281dp"
-        android:layout_height="165dp"
+        android:layout_width="345dp"
+        android:layout_height="191dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
@@ -32,7 +32,7 @@
         android:text="@string/defense_message"
         android:textAlignment="center"
         android:textColor="#222222"
-        android:textSize="25sp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -95,15 +95,14 @@
         android:textColor="#222"
         android:textOff="@string/defense"
         android:textOn="@string/defense"
-        android:textSize="30sp"
+        android:textSize="36sp"
         app:layout_anchor="@+id/view_pager"
         app:layout_anchorGravity="start|bottom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/defenseTime"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view_pager"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/view_pager" />
 
     <Chronometer
         android:id="@+id/defenseTime"

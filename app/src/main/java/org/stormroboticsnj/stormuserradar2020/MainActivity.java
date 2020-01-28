@@ -13,6 +13,7 @@ import android.view.animation.ScaleAnimation;
 import android.widget.CheckBox;
 import android.widget.Chronometer;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.ToggleButton;
 
 import com.google.android.material.tabs.TabLayout;
@@ -328,6 +329,9 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
                 }
             }
         });
+
+//        final ImageView logo = findViewById(R.id.irLogo);
+//        logo.setMaxWidth(logo.getHeight() * 616/709);
 
 
         /* get data from Intent (passed from StartActivity) */
