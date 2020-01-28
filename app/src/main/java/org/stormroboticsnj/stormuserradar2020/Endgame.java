@@ -92,6 +92,7 @@ public class Endgame extends Fragment {
         final RadioButton park = view.findViewById(R.id.rdoPark);
         final RadioButton hang = view.findViewById(R.id.rdoHang);
         final RadioButton levelHang = view.findViewById(R.id.rdoLevelHang);
+        final RadioButton none = view.findViewById(R.id.rdoNone);
 
         //getting main actvity
         final MainActivity act = (MainActivity) getActivity();
@@ -167,6 +168,12 @@ public class Endgame extends Fragment {
                 act.setEndgameOutcome("L");
             }
         });
+        none.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                act.setEndgameOutcome("");
+            }
+        });
 
         //having the submit button
         buttonSubmit.setOnClickListener(new View.OnClickListener() {
@@ -178,7 +185,6 @@ public class Endgame extends Fragment {
 
         return view;
     }
-
 
 
     @Override
