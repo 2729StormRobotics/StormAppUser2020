@@ -87,6 +87,7 @@ public class QrActivity extends AppCompatActivity {
         myImage.setMaxHeight(size.y - 10);
         myImage.setMaxWidth(size.x - 10);
         myImage.setImageBitmap(bmp);
+
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 }
 

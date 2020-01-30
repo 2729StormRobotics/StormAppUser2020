@@ -73,7 +73,7 @@ public class StartActivity extends AppCompatActivity {
                     error = true;
                     matchText.requestFocus();
                 } else {
-                    team = Integer.parseInt(strMatchNum);
+                    match = Integer.parseInt(strMatchNum);
                 }
 
                 if (strTeamNum.equals("")) { //no team number entered
@@ -85,7 +85,7 @@ public class StartActivity extends AppCompatActivity {
                     error = true;
                     teamText.requestFocus();
                 }else {
-                    match = Integer.parseInt(strTeamNum);
+                    team = Integer.parseInt(strTeamNum);
                 }
 
                 if (checkedButton == -1) { //no alliance selected
@@ -134,7 +134,7 @@ public class StartActivity extends AppCompatActivity {
      * This method creates a Yes/No Dialog Box and clears the database upon confirmation
      */
     private void deleteData() {
-        new AlertDialog.Builder(this) //confirm with user
+        new AlertDialog.Builder(this)
                 .setTitle("Clear Data")
                 .setMessage("If the data has been scanned, click yes to delete it. Otherwise, keep the data until it is scanned.")
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {

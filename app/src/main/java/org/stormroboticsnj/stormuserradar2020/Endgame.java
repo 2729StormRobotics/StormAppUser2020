@@ -171,7 +171,7 @@ public class Endgame extends Fragment {
         none.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                act.setEndgameOutcome("");
+                act.setEndgameOutcome("N");
             }
         });
 
