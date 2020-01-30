@@ -422,6 +422,7 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
         whoosh.setEPowerCell2(ePowerCell2); // Set endgame outer power cell to "ePowerCell2"
         whoosh.setEPowerCell3(ePowerCell3); // Set endgame inner power cell to "ePowerCell3"
 
+        if (endgameOutcome.equals("")) endgameOutcome = "N";
         whoosh.setEndgameOutcome(endgameOutcome); // Set endgame outcome: "P" for Park, "H" for Hang, "L" for Level Hang for whoosh entity
 
         whoosh.setLocations(locations); //set locations
