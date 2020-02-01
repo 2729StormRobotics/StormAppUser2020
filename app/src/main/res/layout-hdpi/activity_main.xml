@@ -15,7 +15,7 @@
         android:layout_marginBottom="100dp"
         android:contentDescription="@string/infinite_recharge_logo"
         android:scaleType="fitStart"
-        android:src="@drawable/applogosunfinal"
+        android:src="@drawable/logo_storm_ir"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
