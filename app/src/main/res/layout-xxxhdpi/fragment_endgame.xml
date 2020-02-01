@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:visibility="visible"
-    tools:context="org.stormroboticsnj.stormuserradar2020.Endgame"
+    tools:context="org.stormroboticsnj.stormuserradar2020.mainactivity_fragments.Endgame"
     tools:visibility="visible">
 
     <TextView

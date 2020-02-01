@@ -1,4 +1,4 @@
-package org.stormroboticsnj.stormuserradar2020.ui.main;
+package org.stormroboticsnj.stormuserradar2020.mainactivity_fragments;
 
 import android.content.Context;
 
@@ -8,11 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import org.stormroboticsnj.stormuserradar2020.Auto;
-import org.stormroboticsnj.stormuserradar2020.Endgame;
-import org.stormroboticsnj.stormuserradar2020.PathTeleop;
 import org.stormroboticsnj.stormuserradar2020.R;
-import org.stormroboticsnj.stormuserradar2020.Teleop;
 
 
 /**
@@ -45,7 +41,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
                 return Teleop.newInstance("","" );
 
             case 2:
-                return PathTeleop.newInstance("", "");
+                return Map.newInstance("", "");
 
             default:
                 return Endgame.newInstance("","");

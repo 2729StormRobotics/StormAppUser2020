@@ -1,4 +1,4 @@
-package org.stormroboticsnj.stormuserradar2020;
+package org.stormroboticsnj.stormuserradar2020.mainactivity_fragments;
 
 import android.content.Context;
 import android.net.Uri;
@@ -9,19 +9,20 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
-import android.widget.ToggleButton;
+
+import org.stormroboticsnj.stormuserradar2020.MainActivity;
+import org.stormroboticsnj.stormuserradar2020.R;
 
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link PathTeleop.OnFragmentInteractionListener} interface
+ * {@link Map.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link PathTeleop#newInstance} factory method to
+ * Use the {@link Map#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class PathTeleop extends Fragment {
+public class Map extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -33,7 +34,7 @@ public class PathTeleop extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public PathTeleop() {
+    public Map() {
         // Required empty public constructor
     }
 
@@ -43,11 +44,11 @@ public class PathTeleop extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment PathTeleop.
+     * @return A new instance of fragment Map.
      */
     // TODO: Rename and change types and number of parameters
-    public static PathTeleop newInstance(String param1, String param2) {
-        PathTeleop fragment = new PathTeleop();
+    public static Map newInstance(String param1, String param2) {
+        Map fragment = new Map();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -75,10 +76,10 @@ public class PathTeleop extends Fragment {
 
         // If true, display the red map, if false display blue map
         if (act.getAlliance()) {
-            view = inflater.inflate(R.layout.fragment_path_teleop_red, container, false);
+            view = inflater.inflate(R.layout.fragment_map_red, container, false);
 
         } else {
-            view = inflater.inflate(R.layout.fragment_path_teleop_blue, container, false);
+            view = inflater.inflate(R.layout.fragment_map_blue, container, false);
 
         }
 

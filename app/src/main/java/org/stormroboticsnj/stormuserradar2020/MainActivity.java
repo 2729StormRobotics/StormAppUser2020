@@ -1,6 +1,5 @@
 package org.stormroboticsnj.stormuserradar2020;
 
-import android.animation.Animator;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
@@ -13,19 +12,21 @@ import android.view.animation.ScaleAnimation;
 import android.widget.CheckBox;
 import android.widget.Chronometer;
 import android.widget.CompoundButton;
-import android.widget.ImageView;
 import android.widget.ToggleButton;
 
 import com.google.android.material.tabs.TabLayout;
 
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Room;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
 import org.stormroboticsnj.stormuserradar2020.dao.StormDao;
+import org.stormroboticsnj.stormuserradar2020.mainactivity_fragments.Teleop;
 import org.stormroboticsnj.stormuserradar2020.models.Whoosh;
-import org.stormroboticsnj.stormuserradar2020.ui.main.SectionsPagerAdapter;
+import org.stormroboticsnj.stormuserradar2020.mainactivity_fragments.Auto;
+import org.stormroboticsnj.stormuserradar2020.mainactivity_fragments.Endgame;
+import org.stormroboticsnj.stormuserradar2020.mainactivity_fragments.Map;
+import org.stormroboticsnj.stormuserradar2020.mainactivity_fragments.SectionsPagerAdapter;
 
 import java.util.List;
 
@@ -35,7 +36,7 @@ import java.util.List;
  * each field of data collected and increment/decrement or setter as well as getter methods for
  * each.
  */
-public class MainActivity extends AppCompatActivity implements Auto.OnFragmentInteractionListener, Teleop.OnFragmentInteractionListener, PathTeleop.OnFragmentInteractionListener, Endgame.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements Auto.OnFragmentInteractionListener, Teleop.OnFragmentInteractionListener, Map.OnFragmentInteractionListener, Endgame.OnFragmentInteractionListener {
 
     /* brought from StartActivity */
     private int team; // Team number
