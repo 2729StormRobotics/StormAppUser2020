@@ -84,7 +84,6 @@
         android:textColor="#222222"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias=".5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnEMoreLVL1"
         app:layout_constraintBottom_toTopOf="@+id/btnEMoreLVL2"/>
@@ -182,7 +181,6 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintDimensionRatio="1"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintHorizontal_bias=".8"
         app:layout_constraintStart_toEndOf="@+id/txtEScoredLVL3"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
@@ -199,18 +197,18 @@
         app:layout_constraintBottom_toBottomOf="@+id/btnEMoreLVL3"
         app:layout_constraintDimensionRatio="1"
         app:layout_constraintEnd_toStartOf="@+id/txtEScoredLVL3"
-        app:layout_constraintHorizontal_bias=".2"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toTopOf="@+id/btnEMoreLVL3" />
 
     <view
         android:id="@+id/radioGroupHang"
         class="org.stormroboticsnj.stormuserradar2020.mainactivity_fragments.MultiLineRadioGroup"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:gravity="center"
-        android:orientation="horizontal"
+        android:gravity="center|center_horizontal"
+        android:orientation="vertical"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
         app:layout_constraintEnd_toEndOf="parent"
@@ -222,7 +220,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/lato"
-            android:text="None" />
+            android:text="None"
+            android:textSize="30sp" />
 
 
         <RadioButton
@@ -230,14 +229,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/lato"
-            android:text="Park" />
+            android:text="Park"
+            android:textSize="30sp" />
 
         <RadioButton
             android:id="@+id/rdoHang"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/lato"
-            android:text="Hang" />
+            android:text="Hang"
+            android:textSize="30sp" />
 
 
         <RadioButton
@@ -245,7 +246,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/lato"
-            android:text="Level Hang" />
+            android:text="Level Hang"
+            android:textSize="30sp" />
     </view>
 
     <Button

@@ -3,6 +3,7 @@ package org.stormroboticsnj.stormuserradar2020.mainactivity_fragments;
 import android.content.Context;
 import android.graphics.Rect;
 import android.util.AttributeSet;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.RadioGroup;
 
@@ -12,13 +13,13 @@ import java.util.Map;
 public class MultiLineRadioGroup extends RadioGroup {
     private Map<View, Rect> viewRectMap;
 
-    public MultiLineRadioGroup(Context context) {
-        this(context, null);
-    }
+//    public MultiLineRadioGroup(Context context) {
+//        this(context, null);
+//    }
 
     public MultiLineRadioGroup(Context context, AttributeSet attrs) {
         super(context, attrs);
-
+        this.setGravity(Gravity.CENTER_HORIZONTAL);
         viewRectMap = new HashMap<View, Rect>();
     }
 
