@@ -252,6 +252,7 @@ public class Whoosh {
                 + "," + locations //15
                 + "," + endgameOutcome //16
                 + "," + defenseSecs //17
+
                 + "|";
     }
 }
