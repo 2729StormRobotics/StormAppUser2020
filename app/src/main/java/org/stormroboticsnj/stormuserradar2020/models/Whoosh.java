@@ -251,6 +251,7 @@ public class Whoosh {
                 + "," + ePowerCell3 //14
                 + "," + locations //15
                 + "," + endgameOutcome //16
+                + "," + defenseSecs //17
                 + "|";
     }
 }
