@@ -1,10 +1,13 @@
 package org.stormroboticsnj.stormuserradar2020;
 
+import android.app.Activity;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+
+import org.stormroboticsnj.stormuserradar2020.Auto;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +15,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
+
+import java.util.Objects;
 
 
 /**
@@ -32,6 +37,7 @@ public class Teleop extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    private int numPCsTotal = 0;
     private OnFragmentInteractionListener mListener;
 
     public Teleop() {
@@ -88,9 +94,8 @@ public class Teleop extends Fragment {
         final CheckBox rotationControl = view.findViewById(R.id.cboRC); // Checkbox for rotating control panel wheel
         final CheckBox positionControl = view.findViewById(R.id.cboPC); // Checkbox for wheel position
 
-
-
         final MainActivity act = (MainActivity) getActivity(); // Call MainActivity object so that you can call methods from that class
+        final Auto auto = (Auto) getChildFragmentManager().findFragmentById(R.id.auto);
         numScoredLVL1.setText(String.valueOf(act.getaPowerCell1()));
         numScoredLVL2.setText(String.valueOf(act.getaPowerCell2()));
         numScoredLVL3.setText(String.valueOf(act.getaPowerCell3()));
@@ -100,6 +105,13 @@ public class Teleop extends Fragment {
             public void onClick(View v) {
                 act.inctPowerCell1(); // Increment bottom port score
                 numScoredLVL1.setText(String.valueOf(act.gettPowerCell1())); // Display updated bottom port number output
+                numPCsTotal = act.getTotalPCsAutoAndTeleop();
+                if ((act.getTotalPCsAutoAndTeleop()) >= 29) {
+                    rotationControl.setVisibility(View.VISIBLE);
+                }
+                if ((act.getTotalPCsAutoAndTeleop()) >= 49) {
+                    positionControl.setVisibility(View.VISIBLE);
+                }
             }
         });
 
@@ -108,6 +120,12 @@ public class Teleop extends Fragment {
             public void onClick(View v) {
                 act.inctPowerCell2(); // Increment outer port score
                 numScoredLVL2.setText(String.valueOf(act.gettPowerCell2())); // Display updated outer port number output
+                numPCsTotal = act.getTotalPCsAutoAndTeleop();                if ((act.getTotalPCsAutoAndTeleop()) >= 29) {
+                    rotationControl.setVisibility(View.VISIBLE);
+                }
+                if ((act.getTotalPCsAutoAndTeleop()) >= 49) {
+                    positionControl.setVisibility(View.VISIBLE);
+                }
             }
         });
 
@@ -116,6 +134,12 @@ public class Teleop extends Fragment {
             public void onClick(View v) {
                 act.inctPowerCell3(); // Increment inner port score
                 numScoredLVL3.setText(String.valueOf(act.gettPowerCell3())); // Display updated inner port number output
+                numPCsTotal = act.getTotalPCsAutoAndTeleop();                if ((act.getTotalPCsAutoAndTeleop()) >= 29) {
+                    rotationControl.setVisibility(View.VISIBLE);
+                }
+                if ((act.getTotalPCsAutoAndTeleop()) >= 49) {
+                    positionControl.setVisibility(View.VISIBLE);
+                }
             }
         });
 
@@ -125,6 +149,12 @@ public class Teleop extends Fragment {
             public void onClick(View v) {
                 act.dectPowerCell1(); // Decrement bottom port score
                 numScoredLVL1.setText(String.valueOf(act.gettPowerCell1())); // Display updated inner port number output
+                numPCsTotal = act.getTotalPCsAutoAndTeleop();                if ((act.getTotalPCsAutoAndTeleop()) < 29) {
+                    rotationControl.setVisibility(View.GONE);
+                }
+                if ((act.getTotalPCsAutoAndTeleop()) < 49) {
+                    positionControl.setVisibility(View.GONE);
+                }
             }
         });
 
@@ -134,6 +164,12 @@ public class Teleop extends Fragment {
             public void onClick(View v) {
                 act.dectPowerCell2(); // Decrement bottom port score
                 numScoredLVL2.setText(String.valueOf(act.gettPowerCell2())); // Display updated inner port number output
+                numPCsTotal = act.getTotalPCsAutoAndTeleop();                if ((act.getTotalPCsAutoAndTeleop()) < 29) {
+                    rotationControl.setVisibility(View.GONE);
+                }
+                if ((act.getTotalPCsAutoAndTeleop()) < 49) {
+                    positionControl.setVisibility(View.GONE);
+                }
             }
         });
 
@@ -143,27 +179,29 @@ public class Teleop extends Fragment {
             public void onClick(View v) {
                 act.dectPowerCell3(); // Decrement bottom port score
                 numScoredLVL3.setText(String.valueOf(act.gettPowerCell3())); // Display updated inner port number output
+                numPCsTotal = act.getTotalPCsAutoAndTeleop();                if ((act.getTotalPCsAutoAndTeleop()) < 29) {
+                    rotationControl.setVisibility(View.GONE);
+                }
+                if ((act.getTotalPCsAutoAndTeleop()) < 49) {
+                    positionControl.setVisibility(View.GONE);
+                }
             }
         });
 
+/*
+        rotationControl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (rotationControl.isChecked()) {
 
-       // boolean checked = ((CheckBox) view).isChecked();
-
-//        switch(view.getId()) {
-//            case R.id.cboRC:
-//            case R.id.cboPC:
-//                if (checked){
-//                    // Rotation/Position control stage is complete
-//                } else {
-//                    // Rotation/Position control stage is not complete
-//                }
-//                break;
-//        }
-
+                }
+            }
+        });*/
 
         // Inflate the layout for this fragment
         return view;
     }
+
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {

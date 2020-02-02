@@ -200,6 +200,15 @@ import java.util.List;
         return tPowerCell3;
     }
 
+    public int getTotalPCsAutoAndTeleop() {
+        return (aPowerCell1 +
+                aPowerCell2 +
+                aPowerCell3 +
+                tPowerCell1 +
+                tPowerCell2 +
+                tPowerCell3);
+    }
+
     // ***Endgame*** //
 
     public void incePowerCell1() { // Increment power cell score in bottom port

@@ -31,6 +31,8 @@ public class Auto extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    private int numPCsTotal = 0;
+
     private OnFragmentInteractionListener mListener;
 
     public Auto() {
@@ -100,6 +102,8 @@ public class Auto extends Fragment {
             public void onClick(View view) {
                 act.incaPowerCell1();
                 bottomScoreTxt.setText(String.valueOf(act.getaPowerCell1()));
+                numPCsTotal = act.getTotalPCsAutoAndTeleop();
+
             }
         });
         lessBottomBtn.setOnClickListener(new View.OnClickListener() {
@@ -107,6 +111,8 @@ public class Auto extends Fragment {
             public void onClick(View v) {
                 act.decaPowerCell1();
                 bottomScoreTxt.setText(String.valueOf(act.getaPowerCell1()));
+                numPCsTotal = act.getTotalPCsAutoAndTeleop();
+
             }
         });
         moreOuterBtn.setOnClickListener(new View.OnClickListener() {
@@ -114,6 +120,8 @@ public class Auto extends Fragment {
             public void onClick(View v) {
                 act.incaPowerCell2();
                 outerScoreTxt.setText(String.valueOf(act.getaPowerCell2()));
+                numPCsTotal = act.getTotalPCsAutoAndTeleop();
+
             }
         });
         lessOuterBtn.setOnClickListener(new View.OnClickListener() {
@@ -121,6 +129,8 @@ public class Auto extends Fragment {
             public void onClick(View v) {
                 act.decaPowerCell2();
                 outerScoreTxt.setText(String.valueOf(act.getaPowerCell2()));
+                numPCsTotal = act.getTotalPCsAutoAndTeleop();
+
             }
         });
         moreInnerBtn.setOnClickListener(new View.OnClickListener() {
@@ -128,6 +138,8 @@ public class Auto extends Fragment {
             public void onClick(View v) {
                 act.incaPowerCell3();
                 innerScoreTxt.setText(String.valueOf(act.getaPowerCell3()));
+                numPCsTotal = act.getTotalPCsAutoAndTeleop();
+
             }
         });
         lessInnerBtn.setOnClickListener(new View.OnClickListener() {
@@ -135,6 +147,8 @@ public class Auto extends Fragment {
             public void onClick(View v) {
                 act.decaPowerCell3();
                 innerScoreTxt.setText(String.valueOf(act.getaPowerCell3()));
+                numPCsTotal = act.getTotalPCsAutoAndTeleop();
+
             }
         });
         moreIntakeBtn.setOnClickListener(new View.OnClickListener() {
@@ -152,11 +166,16 @@ public class Auto extends Fragment {
             }
         });
 
-
-
         return view;
     }
 
+//    public int getNumPCsAuto() {
+//        return numPCsAuto;
+//    }
+/*
+    public void sendPCToTeleop(int num) {
+        Bundle bud
+    }*/
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
