@@ -72,7 +72,7 @@
         app:layout_constraintTop_toTopOf="@+id/abtnMoreIntake" />
 
     <Button
-        android:id="@+id/abtnLessInner"
+        android:id="@+id/btnALess1"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="16dp"
@@ -81,14 +81,14 @@
         android:text="@string/minus"
         android:textColor="#000000"
         android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="@+id/abtnMoreInner"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAMore1"
         app:layout_constraintDimensionRatio="1"
         app:layout_constraintEnd_toStartOf="@+id/atxtNumScoredInner"
         app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
-        app:layout_constraintTop_toTopOf="@+id/abtnMoreInner" />
+        app:layout_constraintTop_toTopOf="@+id/btnAMore1" />
 
     <Button
-        android:id="@+id/abtnMoreInner"
+        android:id="@+id/btnAMore1"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -112,14 +112,14 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/lato"
-        android:text="@string/inner_port"
+        android:text="@string/bottom_port"
         android:textAlignment="center"
         android:textColor="#222222"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/abtnMoreInner"
+        app:layout_constraintBottom_toTopOf="@+id/btnAMore1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/abtnMoreOuter" />
+        app:layout_constraintTop_toBottomOf="@+id/btnAMore2" />
 
     <TextView
         android:id="@+id/atxtNumScoredInner"
@@ -130,13 +130,13 @@
         android:textAlignment="center"
         android:textColor="#222222"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="@+id/abtnMoreInner"
-        app:layout_constraintEnd_toStartOf="@+id/abtnMoreInner"
-        app:layout_constraintStart_toEndOf="@+id/abtnLessInner"
-        app:layout_constraintTop_toTopOf="@+id/abtnMoreInner" />
+        app:layout_constraintBottom_toBottomOf="@+id/btnALess1"
+        app:layout_constraintEnd_toStartOf="@+id/btnAMore1"
+        app:layout_constraintStart_toEndOf="@+id/btnALess1"
+        app:layout_constraintTop_toTopOf="@+id/btnALess1" />
 
     <Button
-        android:id="@+id/abtnLessBottom"
+        android:id="@+id/btnALess3"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="8dp"
@@ -145,11 +145,11 @@
         android:text="@string/minus"
         android:textColor="#000000"
         android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="@+id/abtnMoreBottom"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAMore3"
         app:layout_constraintDimensionRatio="1"
         app:layout_constraintEnd_toStartOf="@+id/atxtNumScoredBottom"
         app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
-        app:layout_constraintTop_toTopOf="@+id/abtnMoreBottom" />
+        app:layout_constraintTop_toTopOf="@+id/btnAMore3" />
 
     <TextView
         android:id="@+id/atextView1"
@@ -158,17 +158,17 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/lato"
-        android:text="@string/bottom_port"
+        android:text="@string/inner_port"
         android:textAlignment="center"
         android:textColor="#222222"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/abtnMoreBottom"
+        app:layout_constraintBottom_toTopOf="@+id/btnAMore3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/abtnMoreBottom"
+        android:id="@+id/btnAMore3"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -193,13 +193,13 @@
         android:textAlignment="center"
         android:textColor="#222222"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="@+id/abtnLessBottom"
-        app:layout_constraintEnd_toStartOf="@+id/abtnMoreBottom"
-        app:layout_constraintStart_toEndOf="@+id/abtnLessBottom"
-        app:layout_constraintTop_toTopOf="@+id/abtnLessBottom" />
+        app:layout_constraintBottom_toBottomOf="@+id/btnALess3"
+        app:layout_constraintEnd_toStartOf="@+id/btnAMore3"
+        app:layout_constraintStart_toEndOf="@+id/btnALess3"
+        app:layout_constraintTop_toTopOf="@+id/btnALess3" />
 
     <Button
-        android:id="@+id/abtnLessOuter"
+        android:id="@+id/btnALess2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="8dp"
@@ -208,11 +208,11 @@
         android:text="@string/minus"
         android:textColor="#000000"
         android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="@+id/abtnMoreOuter"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAMore2"
         app:layout_constraintDimensionRatio="1"
         app:layout_constraintEnd_toStartOf="@+id/atxtNumScoredOuter"
         app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
-        app:layout_constraintTop_toTopOf="@+id/abtnMoreOuter" />
+        app:layout_constraintTop_toTopOf="@+id/btnAMore2" />
 
     <TextView
         android:id="@+id/atextView2"
@@ -225,10 +225,10 @@
         android:textAlignment="center"
         android:textColor="#222222"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/abtnMoreOuter"
+        app:layout_constraintBottom_toTopOf="@+id/btnAMore2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/abtnMoreBottom" />
+        app:layout_constraintTop_toBottomOf="@+id/btnAMore3" />
 
     <TextView
         android:id="@+id/atxtNumScoredOuter"
@@ -239,13 +239,13 @@
         android:textAlignment="center"
         android:textColor="#222222"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="@+id/abtnMoreOuter"
-        app:layout_constraintEnd_toStartOf="@+id/abtnMoreOuter"
-        app:layout_constraintStart_toEndOf="@+id/abtnLessOuter"
-        app:layout_constraintTop_toTopOf="@+id/abtnMoreOuter" />
+        app:layout_constraintBottom_toBottomOf="@+id/btnALess2"
+        app:layout_constraintEnd_toStartOf="@+id/btnAMore2"
+        app:layout_constraintStart_toEndOf="@+id/btnALess2"
+        app:layout_constraintTop_toTopOf="@+id/btnALess2" />
 
     <Button
-        android:id="@+id/abtnMoreOuter"
+        android:id="@+id/btnAMore2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"

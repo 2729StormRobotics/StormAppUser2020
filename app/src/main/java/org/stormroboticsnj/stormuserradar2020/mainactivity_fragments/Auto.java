@@ -74,12 +74,12 @@ public class Auto extends Fragment {
         View view = inflater.inflate(R.layout.fragment_auto, container, false);
 
         //Create buttons
-        final Button lessBottomBtn = view.findViewById(R.id.abtnLessBottom); // Button to decrement power cell score bottom port for auto
-        final Button moreBottomBtn = view.findViewById(R.id.abtnMoreBottom); // Button to increment power cell score bottom port for auto
-        final Button lessOuterBtn = view.findViewById(R.id.abtnLessOuter); // Button to decrement power cell score outer port for auto
-        final Button moreOuterBtn = view.findViewById(R.id.abtnMoreOuter); // Button to increment power cell score outer port for auto
-        final Button lessInnerBtn = view.findViewById(R.id.abtnLessInner); // Button to decrement power cell score inner port for auto
-        final Button moreInnerBtn = view.findViewById(R.id.abtnMoreInner); // Button to increment power cell score inner port for auto
+        final Button lessBottomBtn = view.findViewById(R.id.btnALess1); // Button to decrement power cell score bottom port for auto
+        final Button moreBottomBtn = view.findViewById(R.id.btnAMore1); // Button to increment power cell score bottom port for auto
+        final Button lessOuterBtn = view.findViewById(R.id.btnALess2); // Button to decrement power cell score outer port for auto
+        final Button moreOuterBtn = view.findViewById(R.id.btnAMore2); // Button to increment power cell score outer port for auto
+        final Button lessInnerBtn = view.findViewById(R.id.btnALess3); // Button to decrement power cell score inner port for auto
+        final Button moreInnerBtn = view.findViewById(R.id.btnAMore3); // Button to increment power cell score inner port for auto
         final Button lessIntakeBtn = view.findViewById(R.id.abtnLessIntake); // Button to decrement power cell intake for auto
         final Button moreIntakeBtn = view.findViewById(R.id.abtnMoreIntake); // Button to increment power cell intake for auto
 

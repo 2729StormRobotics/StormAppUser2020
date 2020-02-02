@@ -80,13 +80,13 @@ public class Teleop extends Fragment {
         final TextView numScoredLVL2 = view.findViewById(R.id.txtNumScoredLVL2); // Text View for number of power cells scored in outer port
         final TextView numScoredLVL3 = view.findViewById(R.id.txtNumScoredLVL3); // Text View for number of power cells scored in inner port
 
-        final Button scoreMoreLVL1 = view.findViewById(R.id.btnMoreLVL1); // Button for incrementing bottom port score
-        final Button scoreMoreLVL2 = view.findViewById(R.id.btnMoreLVL2); // Button for incrementing outer port score
-        final Button scoreMoreLVL3 = view.findViewById(R.id.btnMoreLVL3); // Button for incrementing inner port score
+        final Button scoreMoreLVL1 = view.findViewById(R.id.btnTMore1); // Button for incrementing bottom port score
+        final Button scoreMoreLVL2 = view.findViewById(R.id.btnTMore2); // Button for incrementing outer port score
+        final Button scoreMoreLVL3 = view.findViewById(R.id.btnTMore3); // Button for incrementing inner port score
 
-        final Button scoreLessLVl1 = view.findViewById(R.id.btnLessLVL1); // Button for decrementing bottom port score
-        final Button scoreLessLVL2 = view.findViewById(R.id.btnLessLVL2); // Button for decrementing outer port score
-        final Button scoreLessLVL3 = view.findViewById(R.id.btnLessLVL3); // Button for decrementing inner port score
+        final Button scoreLessLVl1 = view.findViewById(R.id.btnTLess1); // Button for decrementing bottom port score
+        final Button scoreLessLVL2 = view.findViewById(R.id.btnTLess2); // Button for decrementing outer port score
+        final Button scoreLessLVL3 = view.findViewById(R.id.btnTLess3); // Button for decrementing inner port score
 
         final CheckBox rotationControl = view.findViewById(R.id.cboRC); // Checkbox for rotating control panel wheel
         final CheckBox positionControl = view.findViewById(R.id.cboPC); // Checkbox for wheel position

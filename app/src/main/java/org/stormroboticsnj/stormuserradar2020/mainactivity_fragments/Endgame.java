@@ -78,12 +78,12 @@ public class Endgame extends Fragment {
         /* find elements */
 
         final Button buttonSubmit = view.findViewById(R.id.btnSubmit);
-        final Button btnELessLVL1 = view.findViewById(R.id.btnELessLVL1);
-        final Button btnELessLVL2 = view.findViewById(R.id.btnELessLVL2);
-        final Button btnELessLVL3 = view.findViewById(R.id.btnELessLVL3);
-        final Button btnEMoreLVL1 = view.findViewById(R.id.btnEMoreLVL1);
-        final Button btnEMoreLVL2 = view.findViewById(R.id.btnEMoreLVL2);
-        final Button btnEMoreLVL3 = view.findViewById(R.id.btnEMoreLVL3);
+        final Button btnELessLVL1 = view.findViewById(R.id.btnELess1);
+        final Button btnELessLVL2 = view.findViewById(R.id.btnELess2);
+        final Button btnELessLVL3 = view.findViewById(R.id.btnELess3);
+        final Button btnEMoreLVL1 = view.findViewById(R.id.btnEMore1);
+        final Button btnEMoreLVL2 = view.findViewById(R.id.btnEMore2);
+        final Button btnEMoreLVL3 = view.findViewById(R.id.btnEMore3);
 
         //finding the text view
         final TextView txtScoredLVL1 = view.findViewById(R.id.txtEScoredLVL1);
