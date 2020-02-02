@@ -28,7 +28,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtEScoredLVL1"
+        android:id="@+id/txtPCE3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/lato"
@@ -55,7 +55,7 @@
         app:layout_constraintBottom_toTopOf="@+id/textView10"
         app:layout_constraintDimensionRatio="1"
         app:layout_constraintEnd_toEndOf="@+id/guideline9"
-        app:layout_constraintStart_toEndOf="@+id/txtEScoredLVL1"
+        app:layout_constraintStart_toEndOf="@+id/txtPCE3"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <Button
@@ -70,7 +70,7 @@
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="@+id/btnEMore3"
         app:layout_constraintDimensionRatio="1"
-        app:layout_constraintEnd_toStartOf="@+id/txtEScoredLVL1"
+        app:layout_constraintEnd_toStartOf="@+id/txtPCE3"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toTopOf="@+id/btnEMore3" />
 
@@ -91,7 +91,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnEMore3" />
 
     <TextView
-        android:id="@+id/txtEScoredLVL2"
+        android:id="@+id/txtPCE2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/lato"
@@ -119,7 +119,7 @@
         app:layout_constraintBottom_toTopOf="@+id/textView11"
         app:layout_constraintDimensionRatio="1"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintStart_toEndOf="@+id/txtEScoredLVL2"
+        app:layout_constraintStart_toEndOf="@+id/txtPCE2"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <Button
@@ -134,7 +134,7 @@
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="@+id/btnEMore2"
         app:layout_constraintDimensionRatio="1"
-        app:layout_constraintEnd_toStartOf="@+id/txtEScoredLVL2"
+        app:layout_constraintEnd_toStartOf="@+id/txtPCE2"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toTopOf="@+id/btnEMore2" />
 
@@ -156,11 +156,11 @@
 
 
     <TextView
-        android:id="@+id/txtEScoredLVL3"
+        android:id="@+id/txtPCE1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/lato"
-        android:text="0"
+        android:text="@string/_0"
         android:textAlignment="center"
         android:textColor="#222222"
         android:textSize="30sp"
@@ -184,7 +184,7 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintDimensionRatio="1"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintStart_toEndOf="@+id/txtEScoredLVL3"
+        app:layout_constraintStart_toEndOf="@+id/txtPCE1"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <Button
@@ -199,7 +199,7 @@
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="@+id/btnEMore1"
         app:layout_constraintDimensionRatio="1"
-        app:layout_constraintEnd_toStartOf="@+id/txtEScoredLVL3"
+        app:layout_constraintEnd_toStartOf="@+id/txtPCE1"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toTopOf="@+id/btnEMore1" />
 
@@ -223,7 +223,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/lato"
-            android:text="None"
+            android:text="@string/none"
             android:textSize="30sp" />
 
 
@@ -232,7 +232,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/lato"
-            android:text="Park"
+            android:text="@string/park"
             android:textSize="30sp" />
 
         <RadioButton
@@ -240,7 +240,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/lato"
-            android:text="Hang"
+            android:text="@string/hang"
             android:textSize="30sp" />
 
 
@@ -249,7 +249,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/lato"
-            android:text="Level Hang"
+            android:text="@string/level_hang"
             android:textSize="30sp" />
     </view>
 

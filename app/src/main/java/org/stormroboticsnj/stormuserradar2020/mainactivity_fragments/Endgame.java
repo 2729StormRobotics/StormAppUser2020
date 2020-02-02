@@ -1,9 +1,11 @@
 package org.stormroboticsnj.stormuserradar2020.mainactivity_fragments;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -86,9 +88,9 @@ public class Endgame extends Fragment {
         final Button btnEMoreLVL3 = view.findViewById(R.id.btnEMore3);
 
         //finding the text view
-        final TextView txtScoredLVL1 = view.findViewById(R.id.txtEScoredLVL1);
-        final TextView txtScoredLVL2 = view.findViewById(R.id.txtEScoredLVL2);
-        final TextView txtScoredLVL3 = view.findViewById(R.id.txtEScoredLVL3);
+        final TextView txtScoredLVL1 = view.findViewById(R.id.txtPCE1);
+        final TextView txtScoredLVL2 = view.findViewById(R.id.txtPCE2);
+        final TextView txtScoredLVL3 = view.findViewById(R.id.txtPCE3);
 
 
         final RadioButton park = view.findViewById(R.id.rdoPark);
@@ -181,7 +183,15 @@ public class Endgame extends Fragment {
         buttonSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                act.submit();
+                if(act.getBoth())new AlertDialog.Builder(getContext()).setMessage(R.string.other).setNeutralButton("cool",(new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        act.submit();
+                    }
+                })).show();
+                else act.submit();
+
+
             }
         });
 

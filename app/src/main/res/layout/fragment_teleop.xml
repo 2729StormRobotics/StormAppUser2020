@@ -24,12 +24,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtNumScoredLVL1"
+        android:id="@+id/txtPCT3"
         android:layout_width="15dp"
         android:layout_height="39dp"
         android:fontFamily="@font/lato"
         android:gravity="center_horizontal|center_vertical"
-        android:text="0"
+        android:text="@string/_0"
         android:textColor="#000000"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="@+id/btnTLess3"
@@ -52,7 +52,7 @@
         app:layout_constraintBottom_toTopOf="@+id/txtLabelLVL2"
         app:layout_constraintDimensionRatio="1"
         app:layout_constraintEnd_toStartOf="@+id/guideline16"
-        app:layout_constraintStart_toEndOf="@+id/txtNumScoredLVL1"
+        app:layout_constraintStart_toEndOf="@+id/txtPCT3"
         app:layout_constraintTop_toBottomOf="@+id/txtLabelLVL1" />
 
     <Button
@@ -67,7 +67,7 @@
         android:typeface="serif"
         app:layout_constraintBottom_toBottomOf="@+id/btnTMore3"
         app:layout_constraintDimensionRatio="1"
-        app:layout_constraintEnd_toStartOf="@+id/txtNumScoredLVL1"
+        app:layout_constraintEnd_toStartOf="@+id/txtPCT3"
         app:layout_constraintStart_toStartOf="@+id/guideline14"
         app:layout_constraintTop_toTopOf="@+id/btnTMore3" />
 
@@ -87,12 +87,12 @@
         app:layout_constraintTop_toBottomOf="@+id/btnTMore3" />
 
     <TextView
-        android:id="@+id/txtNumScoredLVL2"
+        android:id="@+id/txtPCT2"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:fontFamily="@font/lato"
         android:gravity="center_horizontal"
-        android:text="0"
+        android:text="@string/_0"
         android:textColor="#000000"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="@+id/btnTLess2"
@@ -115,7 +115,7 @@
         app:layout_constraintBottom_toTopOf="@+id/txtLabelLVL3"
         app:layout_constraintDimensionRatio="1"
         app:layout_constraintEnd_toStartOf="@+id/guideline16"
-        app:layout_constraintStart_toEndOf="@+id/txtNumScoredLVL2"
+        app:layout_constraintStart_toEndOf="@+id/txtPCT2"
         app:layout_constraintTop_toBottomOf="@+id/txtLabelLVL2" />
 
     <Button
@@ -130,7 +130,7 @@
         android:typeface="serif"
         app:layout_constraintBottom_toBottomOf="@+id/btnTMore2"
         app:layout_constraintDimensionRatio="1"
-        app:layout_constraintEnd_toStartOf="@+id/txtNumScoredLVL2"
+        app:layout_constraintEnd_toStartOf="@+id/txtPCT2"
         app:layout_constraintStart_toStartOf="@+id/guideline14"
         app:layout_constraintTop_toTopOf="@+id/btnTMore2" />
 
@@ -150,12 +150,12 @@
         app:layout_constraintTop_toBottomOf="@+id/btnTMore2" />
 
     <TextView
-        android:id="@+id/txtNumScoredLVL3"
+        android:id="@+id/txtPCT1"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:fontFamily="@font/lato"
         android:gravity="center_horizontal"
-        android:text="0"
+        android:text="@string/_0"
         android:textColor="#000000"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="@+id/btnTLess1"
@@ -178,7 +178,7 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline17"
         app:layout_constraintDimensionRatio="1"
         app:layout_constraintEnd_toStartOf="@+id/guideline16"
-        app:layout_constraintStart_toEndOf="@+id/txtNumScoredLVL3"
+        app:layout_constraintStart_toEndOf="@+id/txtPCT1"
         app:layout_constraintTop_toBottomOf="@+id/txtLabelLVL3" />
 
     <Button
@@ -193,7 +193,7 @@
         android:typeface="serif"
         app:layout_constraintBottom_toBottomOf="@+id/btnTMore1"
         app:layout_constraintDimensionRatio="1"
-        app:layout_constraintEnd_toStartOf="@+id/txtNumScoredLVL3"
+        app:layout_constraintEnd_toStartOf="@+id/txtPCT1"
         app:layout_constraintStart_toStartOf="@+id/guideline14"
         app:layout_constraintTop_toTopOf="@+id/btnTMore1" />
 
@@ -206,7 +206,7 @@
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/lato"
         android:gravity="center|center_horizontal|center_vertical"
-        android:text="Rotation Control"
+        android:text="@string/rotation_control"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/cboPC"
         app:layout_constraintEnd_toStartOf="@+id/guideline16"
@@ -220,7 +220,7 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/lato"
         android:gravity="center|center_horizontal|center_vertical"
-        android:text="Position Control"
+        android:text="@string/position_control"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="@+id/cboRC"
         app:layout_constraintStart_toStartOf="@+id/cboRC"

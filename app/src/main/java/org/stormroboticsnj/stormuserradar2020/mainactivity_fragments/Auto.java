@@ -84,9 +84,9 @@ public class Auto extends Fragment {
         final Button moreIntakeBtn = view.findViewById(R.id.abtnMoreIntake); // Button to increment power cell intake for auto
 
         //Create TextViews
-        final TextView bottomScoreTxt = view.findViewById(R.id.atxtNumScoredBottom); // TextView bottom port score 
-        final TextView outerScoreTxt = view.findViewById(R.id.atxtNumScoredOuter);
-        final TextView innerScoreTxt = view.findViewById(R.id.atxtNumScoredInner);
+        final TextView bottomScoreTxt = view.findViewById(R.id.txtPCA1); // TextView bottom port score
+        final TextView outerScoreTxt = view.findViewById(R.id.txtPCA2);
+        final TextView innerScoreTxt = view.findViewById(R.id.txtPCA3);
         final TextView intakeScoreTxt = view.findViewById(R.id.atxtNumScoredIntake);
 
         // Create Main Activity

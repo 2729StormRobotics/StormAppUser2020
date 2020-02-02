@@ -9,26 +9,32 @@
     tools:context=".mainactivity_fragments.Map">
 
 
-    <CheckBox
-        android:id="@+id/cboBehindLineB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ToggleButton
+        android:id="@+id/cboBehindLineBlue"
+        android:layout_width="272dp"
+        android:layout_height="51dp"
+        android:background="@drawable/togglebutton_transfill_blue"
         android:fontFamily="@font/lato"
-        android:text="Behind Line"
+        android:textColor="#222222"
+        android:textOff=""
+        android:textOn="@string/bl"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias=".73" />
+        app:layout_constraintVertical_bias="0.734" />
 
-    <CheckBox
-        android:id="@+id/cboBehindShieldB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ToggleButton
+        android:id="@+id/cboBehindShieldBlue"
+        android:layout_width="258dp"
+        android:layout_height="46dp"
+        android:background="@drawable/togglebutton_transfill_blue"
         android:fontFamily="@font/lato"
-        android:text="Behind Shield"
-        android:textColor="@android:color/background_dark"
+        android:textColor="#222222"
+        android:textOff=""
+        android:textOn="@string/bs"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,12 +42,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias=".3" />
 
-    <CheckBox
-        android:id="@+id/cboFrontLineB"
+    <ToggleButton
+        android:id="@+id/cboFrontLineBlue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/togglebutton_transfill_blue"
         android:fontFamily="@font/lato"
-        android:text="Front Line"
+        android:textColor="#222222"
+        android:textOff=""
+        android:textOn="@string/fl"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,12 +58,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.86" />
 
-    <CheckBox
-        android:id="@+id/cboFrontShieldB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ToggleButton
+        android:id="@+id/cboFrontShieldBlue"
+        android:layout_width="208dp"
+        android:layout_height="41dp"
+        android:background="@drawable/togglebutton_transfill_blue"
         android:fontFamily="@font/lato"
-        android:text="Front Shield"
+        android:textColor="#222222"
+        android:textOff=""
+        android:textOn="@string/fs"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,49 +74,56 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.6" />
 
-    <CheckBox
-        android:id="@+id/cboPortSafeZoneB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ToggleButton
+        android:id="@+id/cboPortSafeZoneBlue"
+        android:layout_width="181dp"
+        android:layout_height="50dp"
+        android:background="@drawable/togglebutton_transfill_blue"
         android:fontFamily="@font/lato"
-        android:text="Port Safe Zone"
+        android:textColor="#222222"
+        android:textOff=""
+        android:textOn="@string/sz"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias=".42"
+        app:layout_constraintHorizontal_bias="0.242"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias=".96" />
+        app:layout_constraintVertical_bias="0.982" />
 
-    <CheckBox
-        android:id="@+id/cboFrontControlPanelB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ToggleButton
+        android:id="@+id/cboFrontControlPanelBlue"
+        android:layout_width="55dp"
+        android:layout_height="100dp"
+        android:background="@drawable/togglebutton_transfill_blue"
         android:fontFamily="@font/lato"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:text="Front Wheel"
+        android:textColor="#222222"
+        android:textOff=""
+        android:textOn="@string/fw"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias=".2"
+        app:layout_constraintHorizontal_bias="0.087"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias=".55" />
+        app:layout_constraintVertical_bias="0.568" />
 
-    <CheckBox
-        android:id="@+id/cboBehindControlPanelB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ToggleButton
+        android:id="@+id/cboBehindControlPanelBlue"
+        android:layout_width="73dp"
+        android:layout_height="45dp"
+        android:background="@drawable/togglebutton_transfill_blue"
         android:fontFamily="@font/lato"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:text="Behind Wheel"
+        android:textColor="#222222"
+        android:textOff=""
+        android:textOn="@string/bw"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias=".2"
+        app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias=".37" />
+        app:layout_constraintVertical_bias="0.37" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -83,7 +83,7 @@
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="@+id/btnAMore1"
         app:layout_constraintDimensionRatio="1"
-        app:layout_constraintEnd_toStartOf="@+id/atxtNumScoredInner"
+        app:layout_constraintEnd_toStartOf="@+id/txtPCA1"
         app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
         app:layout_constraintTop_toTopOf="@+id/btnAMore1" />
 
@@ -102,7 +102,7 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline15"
         app:layout_constraintDimensionRatio="1"
         app:layout_constraintEnd_toEndOf="@+id/guidelineRight"
-        app:layout_constraintStart_toEndOf="@+id/atxtNumScoredInner"
+        app:layout_constraintStart_toEndOf="@+id/txtPCA1"
         app:layout_constraintTop_toBottomOf="@+id/atextView4" />
 
     <TextView
@@ -122,7 +122,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnAMore2" />
 
     <TextView
-        android:id="@+id/atxtNumScoredInner"
+        android:id="@+id/txtPCA1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/lato"
@@ -147,7 +147,7 @@
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="@+id/btnAMore3"
         app:layout_constraintDimensionRatio="1"
-        app:layout_constraintEnd_toStartOf="@+id/atxtNumScoredBottom"
+        app:layout_constraintEnd_toStartOf="@+id/txtPCA3"
         app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
         app:layout_constraintTop_toTopOf="@+id/btnAMore3" />
 
@@ -181,11 +181,11 @@
         app:layout_constraintBottom_toTopOf="@+id/atextView2"
         app:layout_constraintDimensionRatio="1"
         app:layout_constraintEnd_toEndOf="@+id/guidelineRight"
-        app:layout_constraintStart_toEndOf="@+id/atxtNumScoredBottom"
+        app:layout_constraintStart_toEndOf="@+id/txtPCA3"
         app:layout_constraintTop_toBottomOf="@+id/atextView1" />
 
     <TextView
-        android:id="@+id/atxtNumScoredBottom"
+        android:id="@+id/txtPCA3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/lato"
@@ -210,7 +210,7 @@
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="@+id/btnAMore2"
         app:layout_constraintDimensionRatio="1"
-        app:layout_constraintEnd_toStartOf="@+id/atxtNumScoredOuter"
+        app:layout_constraintEnd_toStartOf="@+id/txtPCA2"
         app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
         app:layout_constraintTop_toTopOf="@+id/btnAMore2" />
 
@@ -231,7 +231,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnAMore3" />
 
     <TextView
-        android:id="@+id/atxtNumScoredOuter"
+        android:id="@+id/txtPCA2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/lato"
@@ -259,7 +259,7 @@
         app:layout_constraintBottom_toTopOf="@+id/atextView4"
         app:layout_constraintDimensionRatio="1"
         app:layout_constraintEnd_toEndOf="@+id/guidelineRight"
-        app:layout_constraintStart_toEndOf="@+id/atxtNumScoredOuter"
+        app:layout_constraintStart_toEndOf="@+id/txtPCA2"
         app:layout_constraintTop_toBottomOf="@+id/atextView2" />
 
     <androidx.constraintlayout.widget.Guideline
