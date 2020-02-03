@@ -1,4 +1,4 @@
-package org.stormroboticsnj.stormuserradar2020.mainactivity_fragments;
+package org.stormroboticsnj.mainactivity_fragments;
 
 import android.content.Context;
 

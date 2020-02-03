@@ -1,9 +1,8 @@
-package org.stormroboticsnj.stormuserradar2020.models;
+package org.stormroboticsnj.models;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
-import androidx.room.PrimaryKey;
 
 /**
  * This class is a blueprint for a Whoosh object, which will be the future name of what was once

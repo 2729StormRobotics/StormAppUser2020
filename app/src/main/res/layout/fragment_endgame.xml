@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#ffffff"
     android:visibility="visible"
-    tools:context="org.stormroboticsnj.stormuserradar2020.mainactivity_fragments.Endgame"
+    tools:context="org.stormroboticsnj.mainactivity_fragments.Endgame"
     tools:visibility="visible">
 
     <TextView
@@ -205,7 +205,7 @@
 
     <view
         android:id="@+id/radioGroupHang"
-        class="org.stormroboticsnj.stormuserradar2020.mainactivity_fragments.MultiLineRadioGroup"
+        class="org.stormroboticsnj.mainactivity_fragments.MultiLineRadioGroup"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"

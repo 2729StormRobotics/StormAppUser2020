@@ -1,4 +1,4 @@
-package org.stormroboticsnj.stormuserradar2020.dao;
+package org.stormroboticsnj.dao;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
@@ -7,7 +7,7 @@ import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import org.stormroboticsnj.stormuserradar2020.models.Whoosh;
+import org.stormroboticsnj.models.Whoosh;
 
 import java.util.List;
 

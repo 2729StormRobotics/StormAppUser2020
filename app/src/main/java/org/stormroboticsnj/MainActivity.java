@@ -1,6 +1,5 @@
-package org.stormroboticsnj.stormuserradar2020;
+package org.stormroboticsnj;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
@@ -15,20 +14,20 @@ import android.widget.Chronometer;
 import android.widget.CompoundButton;
 import android.widget.ToggleButton;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 
-import org.stormroboticsnj.stormuserradar2020.dao.StormDao;
-import org.stormroboticsnj.stormuserradar2020.mainactivity_fragments.Auto;
-import org.stormroboticsnj.stormuserradar2020.mainactivity_fragments.Endgame;
-import org.stormroboticsnj.stormuserradar2020.mainactivity_fragments.Map;
-import org.stormroboticsnj.stormuserradar2020.mainactivity_fragments.SectionsPagerAdapter;
-import org.stormroboticsnj.stormuserradar2020.mainactivity_fragments.Teleop;
-import org.stormroboticsnj.stormuserradar2020.models.Whoosh;
+import org.stormroboticsnj.dao.StormDao;
+import org.stormroboticsnj.mainactivity_fragments.Auto;
+import org.stormroboticsnj.mainactivity_fragments.Endgame;
+import org.stormroboticsnj.mainactivity_fragments.Map;
+import org.stormroboticsnj.mainactivity_fragments.SectionsPagerAdapter;
+import org.stormroboticsnj.mainactivity_fragments.Teleop;
+import org.stormroboticsnj.models.Whoosh;
+import org.stormroboticsnj.stormuserradar2020.R;
 
 /**
  * This Activity is the main data collection activity. It has a tabbed layout; each tab corresponds
