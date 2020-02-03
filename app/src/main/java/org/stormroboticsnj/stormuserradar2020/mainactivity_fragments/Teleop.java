@@ -1,4 +1,4 @@
-package org.stormroboticsnj.stormuserradar2020;
+package org.stormroboticsnj.stormuserradar2020.mainactivity_fragments;
 
 import android.content.Context;
 import android.net.Uri;
@@ -12,6 +12,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
+
+import org.stormroboticsnj.stormuserradar2020.MainActivity;
+import org.stormroboticsnj.stormuserradar2020.R;
 
 
 /**
@@ -73,17 +76,17 @@ public class Teleop extends Fragment {
         View view = inflater.inflate(R.layout.fragment_teleop, container, false);
 
         /* Find layout elements */
-        final TextView numScoredLVL1 = view.findViewById(R.id.txtNumScoredLVL1); // Text View for number of power cells scored in bottom port
-        final TextView numScoredLVL2 = view.findViewById(R.id.txtNumScoredLVL2); // Text View for number of power cells scored in outer port
-        final TextView numScoredLVL3 = view.findViewById(R.id.txtNumScoredLVL3); // Text View for number of power cells scored in inner port
+        final TextView numScoredLVL1 = view.findViewById(R.id.txtPCT1); // Text View for number of power cells scored in bottom port
+        final TextView numScoredLVL2 = view.findViewById(R.id.txtPCT2); // Text View for number of power cells scored in outer port
+        final TextView numScoredLVL3 = view.findViewById(R.id.txtPCT3); // Text View for number of power cells scored in inner port
 
-        final Button scoreMoreLVL1 = view.findViewById(R.id.btnMoreLVL1); // Button for incrementing bottom port score
-        final Button scoreMoreLVL2 = view.findViewById(R.id.btnMoreLVL2); // Button for incrementing outer port score
-        final Button scoreMoreLVL3 = view.findViewById(R.id.btnMoreLVL3); // Button for incrementing inner port score
+        final Button scoreMoreLVL1 = view.findViewById(R.id.btnTMore1); // Button for incrementing bottom port score
+        final Button scoreMoreLVL2 = view.findViewById(R.id.btnTMore2); // Button for incrementing outer port score
+        final Button scoreMoreLVL3 = view.findViewById(R.id.btnTMore3); // Button for incrementing inner port score
 
-        final Button scoreLessLVl1 = view.findViewById(R.id.btnLessLVL1); // Button for decrementing bottom port score
-        final Button scoreLessLVL2 = view.findViewById(R.id.btnLessLVL2); // Button for decrementing outer port score
-        final Button scoreLessLVL3 = view.findViewById(R.id.btnLessLVL3); // Button for decrementing inner port score
+        final Button scoreLessLVl1 = view.findViewById(R.id.btnTLess1); // Button for decrementing bottom port score
+        final Button scoreLessLVL2 = view.findViewById(R.id.btnTLess2); // Button for decrementing outer port score
+        final Button scoreLessLVL3 = view.findViewById(R.id.btnTLess3); // Button for decrementing inner port score
 
         final CheckBox rotationControl = view.findViewById(R.id.cboRC); // Checkbox for rotating control panel wheel
         final CheckBox positionControl = view.findViewById(R.id.cboPC); // Checkbox for wheel position
@@ -91,9 +94,9 @@ public class Teleop extends Fragment {
 
 
         final MainActivity act = (MainActivity) getActivity(); // Call MainActivity object so that you can call methods from that class
-        numScoredLVL1.setText(String.valueOf(act.getaPowerCell1()));
-        numScoredLVL2.setText(String.valueOf(act.getaPowerCell2()));
-        numScoredLVL3.setText(String.valueOf(act.getaPowerCell3()));
+        numScoredLVL1.setText(String.valueOf(act.gettPowerCell1()));
+        numScoredLVL2.setText(String.valueOf(act.gettPowerCell2()));
+        numScoredLVL3.setText(String.valueOf(act.gettPowerCell3()));
         // Setting incrementing listeners for incrementing scores to their respective buttons
         scoreMoreLVL1.setOnClickListener(new View.OnClickListener() {
             @Override

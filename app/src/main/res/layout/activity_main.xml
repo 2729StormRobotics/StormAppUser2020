@@ -9,17 +9,18 @@
 
     <ImageView
         android:id="@+id/irLogo"
-        android:layout_width="340dp"
-        android:layout_height="464dp"
-        android:layout_marginTop="225dp"
-        android:layout_marginBottom="100dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:contentDescription="@string/infinite_recharge_logo"
         android:scaleType="fitStart"
-        android:src="@drawable/applogosunfinal"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/logo_storm_ir"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintDimensionRatio="0.869"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView"
@@ -35,7 +36,8 @@
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/irLogo"/>
 
     <TextView
         android:id="@+id/textView2"
@@ -58,7 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginBottom="100dp"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -91,7 +93,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/toggle_button"
+        android:background="@drawable/togglebutton_whitefill_blackred"
         android:textColor="#222"
         android:textOff="@string/defense"
         android:textOn="@string/defense"

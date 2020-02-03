@@ -1,6 +1,6 @@
 package org.stormroboticsnj.stormuserradar2020;
 
-import android.animation.Animator;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
@@ -13,21 +13,22 @@ import android.view.animation.ScaleAnimation;
 import android.widget.CheckBox;
 import android.widget.Chronometer;
 import android.widget.CompoundButton;
-import android.widget.ImageView;
 import android.widget.ToggleButton;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
+import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.room.Room;
-import androidx.viewpager.widget.ViewPager;
-import androidx.appcompat.app.AppCompatActivity;
-
 import org.stormroboticsnj.stormuserradar2020.dao.StormDao;
+import org.stormroboticsnj.stormuserradar2020.mainactivity_fragments.Auto;
+import org.stormroboticsnj.stormuserradar2020.mainactivity_fragments.Endgame;
+import org.stormroboticsnj.stormuserradar2020.mainactivity_fragments.Map;
+import org.stormroboticsnj.stormuserradar2020.mainactivity_fragments.SectionsPagerAdapter;
+import org.stormroboticsnj.stormuserradar2020.mainactivity_fragments.Teleop;
 import org.stormroboticsnj.stormuserradar2020.models.Whoosh;
-import org.stormroboticsnj.stormuserradar2020.ui.main.SectionsPagerAdapter;
-
-import java.util.List;
 
 /**
  * This Activity is the main data collection activity. It has a tabbed layout; each tab corresponds
@@ -35,36 +36,35 @@ import java.util.List;
  * each field of data collected and increment/decrement or setter as well as getter methods for
  * each.
  */
-public class MainActivity extends AppCompatActivity implements Auto.OnFragmentInteractionListener, Teleop.OnFragmentInteractionListener, PathTeleop.OnFragmentInteractionListener, Endgame.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements Auto.OnFragmentInteractionListener, Teleop.OnFragmentInteractionListener, Map.OnFragmentInteractionListener, Endgame.OnFragmentInteractionListener {
 
+    public static AppDatabase db; //built on creation of Activity
     /* brought from StartActivity */
     private int team; // Team number
     private int match; // Match number
-    private boolean alliance; //true = red, false = blue
 
     //** recorded in this activity **//
-
+    private boolean alliance; //true = red, false = blue
     /* Declare variables*/
     // Autonomous
     private int aPowerCell1 = 0; // Power cell score in bottom port
     private int aPowerCell2 = 0; // Power cell score in outer port
     private int aPowerCell3 = 0; // Power cell score in inner port
     private int aPowerCellPickup = 0; // Power cells picked up during Auto
-
     // Teleop
     private int tPowerCell1 = 0; // Power cell score in bottom port
     private int tPowerCell2 = 0; // Power cell score in outer port
     private int tPowerCell3 = 0; // Power cell score in inner port
-    private boolean positionControl;
-    private boolean rotationControl;
+    private boolean positionControl = false;
+    private boolean rotationControl = false;
     private String locations = "";
-
+    private boolean[] both = new boolean[4];
     // Endgame
     private int ePowerCell1 = 0; // Power cell score in bottom port
     private int ePowerCell2 = 0; // Power cell score in outer port
     private int ePowerCell3 = 0; // Power cell score in inner port
     private String endgameOutcome = "";
-
+    private long lastPauseTime; // Defense timer
 
     /*** Increment/Decrement, return, and set methods***/
 
@@ -110,13 +110,12 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
         if (aPowerCellPickup > 0) aPowerCellPickup--;
     }
 
-
     /**
      * Get the power cell score on bottom port
      *
      * @return aPowerCell1
      */
-    public int getaPowerCell1() {
+    public int getaPowerCell1() {if (aPowerCell1 == 2) both[0]=true;
         return aPowerCell1;
     }
 
@@ -125,16 +124,18 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
      *
      * @return aPowerCell2
      */
-    public int getaPowerCell2() {
+    public int getaPowerCell2() {if (aPowerCell2 == 7) both[1] = true;
         return aPowerCell2;
     }
+
+    // ***Teleop*** //
 
     /**
      * Get the power cell score on inner port
      *
      * @return aPowerCell3
      */
-    public int getaPowerCell3() {
+    public int getaPowerCell3() {if (aPowerCell3 == 2) both[2] = true;
         return aPowerCell3;
     }
 
@@ -143,11 +144,9 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
      *
      * @return aPowerCellPickup
      */
-    public int getaPowerCellPickup() {
+    public int getaPowerCellPickup() {if (aPowerCellPickup == 9) both[3] = true;
         return aPowerCellPickup;
     }
-
-    // ***Teleop*** //
 
     public void inctPowerCell1() { // Increment power cell score in bottom port
         if (tPowerCell1 < 99) tPowerCell1++;
@@ -173,7 +172,6 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
         if (tPowerCell3 > 0) tPowerCell3--;
     }
 
-
     /**
      * Get the power cell score on bottom port
      *
@@ -182,6 +180,8 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
     public int gettPowerCell1() {
         return tPowerCell1;
     }
+
+    // ***Endgame*** //
 
     /**
      * Get the power cell score on outer port
@@ -201,11 +201,10 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
         return tPowerCell3;
     }
 
-    // ***Endgame*** //
-
     public void incePowerCell1() { // Increment power cell score in bottom port
         if (ePowerCell1 < 99) ePowerCell1++;
     }
+
 
     public void decePowerCell1() { // Decrement power cell score in bottom port
         if (ePowerCell1 > 0) ePowerCell1--;
@@ -222,11 +221,10 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
     public void incePowerCell3() { // Increment power cell score in inner port
         if (ePowerCell3 < 99) ePowerCell3++;
     }
-
+    public boolean getBoth(){return both[0] && both[1] && both[2] && both[3];}
     public void decePowerCell3() { // Decrement power cell score in inner port
         if (ePowerCell3 > 0) ePowerCell3--;
     }
-
     public String getEndgameOutcome() {
         return endgameOutcome;
     }
@@ -261,10 +259,6 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
     public int getePowerCell3() {
         return ePowerCell3;
     }
-
-
-    private long lastPauseTime; // Defense timer
-    public static AppDatabase db; //built on creation of Activity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -367,29 +361,28 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
                     + Integer.parseInt(arr[2]);
         }
 
-        StormDao stormDao = db.stormDao(); //get interface object
-
+        final StormDao stormDao = db.stormDao(); //get interface object
         final CheckBox rc = findViewById(R.id.cboRC); // Checkbox for rotation control
         final CheckBox pc = findViewById(R.id.cboPC); // Checkbox for position control
 
         /*build locations string*/
-        CheckBox bs, bw, fw, fs, bl, fl, sz;
+        ToggleButton bs, bw, fw, fs, bl, fl, sz;
         if (alliance) {
-            bs = findViewById(R.id.cboBehindShieldR);
-            bw = findViewById(R.id.cboBehindControlPanelR);
-            fw = findViewById(R.id.cboFrontControlPanelR);
-            fs = findViewById(R.id.cboFrontShieldR);
-            bl = findViewById(R.id.cboBehindLineR);
-            fl = findViewById(R.id.cboFrontLineR);
-            sz = findViewById(R.id.cboPortSafeZoneR);
+            bs = findViewById(R.id.cboBehindShieldRed);
+            bw = findViewById(R.id.cboBehindControlPanelRed);
+            fw = findViewById(R.id.cboFrontControlPanelRed);
+            fs = findViewById(R.id.cboFrontShieldRed);
+            bl = findViewById(R.id.cboBehindLineRed);
+            fl = findViewById(R.id.cboFrontLineRed);
+            sz = findViewById(R.id.cboPortSafeZoneRed);
         } else {
-            bs = findViewById(R.id.cboBehindShieldB);
-            bw = findViewById(R.id.cboBehindControlPanelB);
-            fw = findViewById(R.id.cboFrontControlPanelB);
-            fs = findViewById(R.id.cboFrontShieldB);
-            bl = findViewById(R.id.cboBehindLineB);
-            fl = findViewById(R.id.cboFrontLineB);
-            sz = findViewById(R.id.cboPortSafeZoneB);
+            bs = findViewById(R.id.cboBehindShieldBlue);
+            bw = findViewById(R.id.cboBehindControlPanelBlue);
+            fw = findViewById(R.id.cboFrontControlPanelBlue);
+            fs = findViewById(R.id.cboFrontShieldBlue);
+            bl = findViewById(R.id.cboBehindLineBlue);
+            fl = findViewById(R.id.cboFrontLineBlue);
+            sz = findViewById(R.id.cboPortSafeZoneBlue);
         }
 
         if (bs.isChecked()) locations += "BS."; // BS - Behind Shield
@@ -405,36 +398,34 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
         }
 
         /* create new Whoosh object */
-        Whoosh whoosh = new Whoosh(team, match);
+        final Whoosh whoosh = new Whoosh(team, match);
         whoosh.setAlliance(alliance); // Set Whoosh alliance instance data to "alliance"
 
         whoosh.setAPowerCell1(aPowerCell1); // Set auto bottom power cell to "aPowerCell1"
         whoosh.setAPowerCell2(aPowerCell2); // Set auto outer power cell to "aPowerCell2"
         whoosh.setAPowerCell3(aPowerCell3); // Set auto inner power cell to "aPowerCell3"
         whoosh.setAPowerCellPickup(aPowerCellPickup); // Set auto power cell pickup to "aPowerCellPickup"
-
         whoosh.setTPowerCell1(tPowerCell1); // Set teleop bottom power cell to "tPowerCell1"
         whoosh.setTPowerCell2(tPowerCell2); // Set teleop outer power cell to "tPowerCell2"
+
         whoosh.setRotationControl(rotationControl);
         whoosh.setPositionControl(positionControl);
         whoosh.setTPowerCell3(tPowerCell3); // Set teleop inner power cell to "tPowerCell3"
         whoosh.setEPowerCell1(ePowerCell1); // Set endgame bottom power cell to "ePowerCell1"
         whoosh.setEPowerCell2(ePowerCell2); // Set endgame outer power cell to "ePowerCell2"
         whoosh.setEPowerCell3(ePowerCell3); // Set endgame inner power cell to "ePowerCell3"
-
-        if (endgameOutcome.equals("")) endgameOutcome = "N";
-        whoosh.setEndgameOutcome(endgameOutcome); // Set endgame outcome: "P" for Park, "H" for Hang, "L" for Level Hang for whoosh entity
+        if (endgameOutcome.equals("")) endgameOutcome = "N"; //"N" - None
+        whoosh.setEndgameOutcome(endgameOutcome); // Set endgame outcome: "P" for Park, "H" for Hang, "L" for Level Hang
 
         whoosh.setLocations(locations); //set locations
 
         whoosh.setDefenseSecs(stoppedSeconds); // Set
 
-
         //whoosh.setHang(hang);
 
         stormDao.insertWhooshes(whoosh); // Insert data into database
-        List<Whoosh> l = stormDao.getAllWhooshes();
-        Intent intent = new Intent(MainActivity.this, StartActivity.class); // New intent activity - Main Activity
+
+        Intent intent = new Intent(MainActivity.this, StartActivity.class);
         startActivity(intent); // Start Main Activity page
 
     }

@@ -1,18 +1,22 @@
-package org.stormroboticsnj.stormuserradar2020;
+package org.stormroboticsnj.stormuserradar2020.mainactivity_fragments;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
-import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TextView;
+
+import org.stormroboticsnj.stormuserradar2020.MainActivity;
+import org.stormroboticsnj.stormuserradar2020.R;
 
 
 /**
@@ -76,17 +80,17 @@ public class Endgame extends Fragment {
         /* find elements */
 
         final Button buttonSubmit = view.findViewById(R.id.btnSubmit);
-        final Button btnELessLVL1 = view.findViewById(R.id.btnELessLVL1);
-        final Button btnELessLVL2 = view.findViewById(R.id.btnELessLVL2);
-        final Button btnELessLVL3 = view.findViewById(R.id.btnELessLVL3);
-        final Button btnEMoreLVL1 = view.findViewById(R.id.btnEMoreLVL1);
-        final Button btnEMoreLVL2 = view.findViewById(R.id.btnEMoreLVL2);
-        final Button btnEMoreLVL3 = view.findViewById(R.id.btnEMoreLVL3);
+        final Button btnELessLVL1 = view.findViewById(R.id.btnELess1);
+        final Button btnELessLVL2 = view.findViewById(R.id.btnELess2);
+        final Button btnELessLVL3 = view.findViewById(R.id.btnELess3);
+        final Button btnEMoreLVL1 = view.findViewById(R.id.btnEMore1);
+        final Button btnEMoreLVL2 = view.findViewById(R.id.btnEMore2);
+        final Button btnEMoreLVL3 = view.findViewById(R.id.btnEMore3);
 
         //finding the text view
-        final TextView txtScoredLVL1 = view.findViewById(R.id.txtEScoredLVL1);
-        final TextView txtScoredLVL2 = view.findViewById(R.id.txtEScoredLVL2);
-        final TextView txtScoredLVL3 = view.findViewById(R.id.txtEScoredLVL3);
+        final TextView txtScoredLVL1 = view.findViewById(R.id.txtPCE1);
+        final TextView txtScoredLVL2 = view.findViewById(R.id.txtPCE2);
+        final TextView txtScoredLVL3 = view.findViewById(R.id.txtPCE3);
 
 
         final RadioButton park = view.findViewById(R.id.rdoPark);
@@ -179,7 +183,15 @@ public class Endgame extends Fragment {
         buttonSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                act.submit();
+                if(act.getBoth())new AlertDialog.Builder(getContext()).setMessage(R.string.other).setNeutralButton("cool",(new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        act.submit();
+                    }
+                })).show();
+                else act.submit();
+
+
             }
         });
 

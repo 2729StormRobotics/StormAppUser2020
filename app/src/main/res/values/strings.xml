@@ -34,6 +34,21 @@
     <string name="infinite_recharge_logo">Infinite Recharge Logo</string>
     <string name="storm_message">Scouting Radar by STORM Robotics Team.</string>
     <string name="defense_message">DEFENSE MODE: The robot cannot score while playing defense. Press the defense button again to deactivate this.</string>
+    <string name="none">None</string>
+    <string name="park">Park</string>
+    <string name="hang">Hang</string>
+    <string name="other">Congrats! you discovered our easter egg :) email a screenshot to scouting2729@gmail.com and we\'ll send you a button</string>
+    <string name="level_hang">Level Hang</string>
+    <string name="rotation_control">Rotation Control</string>
+    <string name="position_control">Position Control</string>
+    <string name="storm_ir_alttext">Storm Infinite Recharge Background Logo</string>
+    <string name="bl">BL</string>
+    <string name="bs">BS</string>
+    <string name="fl">FL</string>
+    <string name="fs">FS</string>
+    <string name="sz">SZ</string>
+    <string name="fw">FW</string>
+    <string name="bw">BW</string>
 
 
 </resources>

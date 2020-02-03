@@ -9,4 +9,8 @@
     <color name="darkOrange">#CC5200</color>
     <color name="lightRed">#FF4D4D</color>
     <color name="lightOrange">#FF944D</color>
+    <color name="ic_launcher_background">#FAFAFA</color>
+    <color name="normalBlue">#0000AC</color>
+    <color name="darkBlue">#0000A3</color>
+    <color name="lightBlue">#4D4DFF</color>
 </resources>
