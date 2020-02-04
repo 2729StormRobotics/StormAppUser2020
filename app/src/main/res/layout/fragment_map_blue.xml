@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/field_map_blue"
-    tools:context=".mainactivity_fragments.Map">
+    tools:context="org.stormroboticsnj.mainactivity_fragments.Map">
 
 
     <ToggleButton

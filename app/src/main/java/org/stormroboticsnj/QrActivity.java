@@ -1,4 +1,4 @@
-package org.stormroboticsnj.stormuserradar2020;
+package org.stormroboticsnj;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -18,8 +18,9 @@ import androidx.room.Room;
 
 import net.glxn.qrgen.android.QRCode;
 
-import org.stormroboticsnj.stormuserradar2020.dao.StormDao;
-import org.stormroboticsnj.stormuserradar2020.models.Whoosh;
+import org.stormroboticsnj.dao.StormDao;
+import org.stormroboticsnj.models.Whoosh;
+import org.stormroboticsnj.stormuserradar2020.R;
 
 import java.io.ByteArrayOutputStream;
 import java.util.List;

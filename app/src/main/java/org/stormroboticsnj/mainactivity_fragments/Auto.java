@@ -1,4 +1,4 @@
-package org.stormroboticsnj.stormuserradar2020.mainactivity_fragments;
+package org.stormroboticsnj.mainactivity_fragments;
 
 import android.content.Context;
 import android.net.Uri;
@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import org.stormroboticsnj.stormuserradar2020.MainActivity;
+import org.stormroboticsnj.MainActivity;
 import org.stormroboticsnj.stormuserradar2020.R;
 
 

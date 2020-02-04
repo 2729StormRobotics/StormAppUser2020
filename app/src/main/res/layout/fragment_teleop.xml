@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".mainactivity_fragments.Teleop">
+    tools:context="org.stormroboticsnj.mainactivity_fragments.Teleop">
 
     <TextView
         android:id="@+id/txtLabelLVL1"
@@ -25,8 +25,8 @@
 
     <TextView
         android:id="@+id/txtPCT3"
-        android:layout_width="15dp"
-        android:layout_height="39dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/lato"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/_0"
@@ -89,7 +89,7 @@
     <TextView
         android:id="@+id/txtPCT2"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/lato"
         android:gravity="center_horizontal"
         android:text="@string/_0"
@@ -152,7 +152,7 @@
     <TextView
         android:id="@+id/txtPCT1"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/lato"
         android:gravity="center_horizontal"
         android:text="@string/_0"

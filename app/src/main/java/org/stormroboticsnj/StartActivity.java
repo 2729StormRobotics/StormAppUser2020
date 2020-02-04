@@ -1,4 +1,4 @@
-package org.stormroboticsnj.stormuserradar2020;
+package org.stormroboticsnj;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import org.stormroboticsnj.stormuserradar2020.R;
 
 /**
  * This is the default activity for the User App. This Activity collects the Team Number, Match Number,

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
-    tools:context=".mainactivity_fragments.Auto">
+    tools:context="org.stormroboticsnj.mainactivity_fragments.Auto">
 
     <Button
         android:id="@+id/abtnLessIntake"
