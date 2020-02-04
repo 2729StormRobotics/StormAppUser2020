@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
      *
      * @return aPowerCell1
      */
-    public int getaPowerCell1() {if (aPowerCell1 == 2) both[0]=true;
+    public int getaPowerCell1() { if (aPowerCell1 == 2) both[0]=true;else both[0] = false;
         return aPowerCell1;
     }
 
@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
      *
      * @return aPowerCell2
      */
-    public int getaPowerCell2() {if (aPowerCell2 == 7) both[1] = true;
+    public int getaPowerCell2() {if (aPowerCell2 == 7) both[1] = true;else both[1] = false;
         return aPowerCell2;
     }
 
@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
      *
      * @return aPowerCell3
      */
-    public int getaPowerCell3() {if (aPowerCell3 == 2) both[2] = true;
+    public int getaPowerCell3() {if (aPowerCell3 == 2) both[2] = true;else both[2] = false;
         return aPowerCell3;
     }
 
@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
      *
      * @return aPowerCellPickup
      */
-    public int getaPowerCellPickup() {if (aPowerCellPickup == 9) both[3] = true;
+    public int getaPowerCellPickup() {if (aPowerCellPickup == 9) both[3] = true;else both[3] = false;
         return aPowerCellPickup;
     }
 
