@@ -36,7 +36,7 @@
     <string name="none">None</string>
     <string name="park">Park</string>
     <string name="hang">Hang</string>
-    <string name="other">Congrats! you discovered our easter egg :) email a screenshot to scouting2729@gmail.com and we\'ll send you a button</string>
+    <string name="other">congrats! you discovered our easter egg :) email a screenshot of this with your team number and an address to scouting2729@gmail.com and we\'ll send you a button</string>
     <string name="level_hang">Level Hang</string>
     <string name="rotation_control">Rotation Control</string>
     <string name="position_control">Position Control</string>
