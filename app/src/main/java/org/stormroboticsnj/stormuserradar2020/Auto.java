@@ -47,8 +47,8 @@ public class Auto extends Fragment {
      */
     // TODO: Rename and change types and number of parameters
     public static Auto newInstance(String param1, String param2) {
-        Auto fragment = new Auto();
-        Bundle args = new Bundle();
+        Auto fragment = new Auto(); // Construct new Auto fragment
+        Bundle args = new Bundle(); // New Bundle object for mapping instance data
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
@@ -82,20 +82,20 @@ public class Auto extends Fragment {
 
         //Create TextViews
         final TextView bottomScoreTxt = view.findViewById(R.id.atxtNumScoredBottom); // TextView bottom port score 
-        final TextView outerScoreTxt = view.findViewById(R.id.atxtNumScoredOuter);
-        final TextView innerScoreTxt = view.findViewById(R.id.atxtNumScoredInner);
-        final TextView intakeScoreTxt = view.findViewById(R.id.atxtNumScoredIntake);
+        final TextView outerScoreTxt = view.findViewById(R.id.atxtNumScoredOuter); // TextView outer port score
+        final TextView innerScoreTxt = view.findViewById(R.id.atxtNumScoredInner); // TextView inner port score
+        final TextView intakeScoreTxt = view.findViewById(R.id.atxtNumScoredIntake); // TextView auto power cell pickup
 
         // Create Main Activity
         final MainActivity act = (MainActivity) getActivity();
-        bottomScoreTxt.setText(String.valueOf(act.getaPowerCell1()));
-        outerScoreTxt.setText(String.valueOf(act.getaPowerCell2()));
-        innerScoreTxt.setText(String.valueOf(act.getaPowerCell3()));
-        intakeScoreTxt.setText(String.valueOf(act.getaPowerCellPickup()));
+        bottomScoreTxt.setText(String.valueOf(act.getaPowerCell1())); // Set text in bottom port score view to string
+        outerScoreTxt.setText(String.valueOf(act.getaPowerCell2())); // Set text in outer port score view to string
+        innerScoreTxt.setText(String.valueOf(act.getaPowerCell3())); // Set text in inner port score view to string
+        intakeScoreTxt.setText(String.valueOf(act.getaPowerCellPickup())); // Set text in power cell pickup view to string
 
         //Create the listeners, which make the buttons functional. That is, they increment/decrement
         //the score in the appropriate textview.
-        moreBottomBtn.setOnClickListener(new View.OnClickListener(){
+        moreBottomBtn.setOnClickListener(new View.OnClickListener(){ // Bottom port increment listener
             @Override
             public void onClick(View view) {
                 act.incaPowerCell1();
@@ -104,57 +104,54 @@ public class Auto extends Fragment {
         });
         lessBottomBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { // Bottom port decrement listener
                 act.decaPowerCell1();
                 bottomScoreTxt.setText(String.valueOf(act.getaPowerCell1()));
             }
         });
         moreOuterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { // Outer port increment listener
                 act.incaPowerCell2();
                 outerScoreTxt.setText(String.valueOf(act.getaPowerCell2()));
             }
         });
         lessOuterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { // Outer port decrement listener
                 act.decaPowerCell2();
                 outerScoreTxt.setText(String.valueOf(act.getaPowerCell2()));
             }
         });
         moreInnerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { // Inner port increment listener
                 act.incaPowerCell3();
                 innerScoreTxt.setText(String.valueOf(act.getaPowerCell3()));
             }
         });
         lessInnerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { // Inner port decrement listener
                 act.decaPowerCell3();
                 innerScoreTxt.setText(String.valueOf(act.getaPowerCell3()));
             }
         });
         moreIntakeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { // Power cell pickup increment listener
                 act.incaPowerCellPickup();
                 intakeScoreTxt.setText(String.valueOf(act.getaPowerCellPickup()));
             }
         });
         lessIntakeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { // Power cell pickup decrement listener
                 act.decaPowerCellPickup();
                 intakeScoreTxt.setText(String.valueOf(act.getaPowerCellPickup()));
             }
         });
-
-
-
-        return view;
+        return view; // Return inflated view
     }
 
     // TODO: Rename method, update argument and hook method into UI event

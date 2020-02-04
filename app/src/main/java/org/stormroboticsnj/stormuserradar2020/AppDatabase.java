@@ -11,6 +11,6 @@ import org.stormroboticsnj.stormuserradar2020.models.Whoosh;
  */
 @Database(entities = {Whoosh.class}, version = 1, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
-    public abstract StormDao stormDao();
-    public static final String DB_NAME = "storm";
+    public abstract StormDao stormDao(); // Declare StormDao abstract object
+    public static final String DB_NAME = "storm"; // Name the database "storm"
 }

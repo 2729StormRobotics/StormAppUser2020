@@ -48,7 +48,7 @@ public class Teleop extends Fragment {
      */
     // TODO: Rename and change types and number of parameters
     public static Teleop newInstance(String param1, String param2) {
-        Teleop fragment = new Teleop();
+        Teleop fragment = new Teleop(); // Instantiate new Teleop fragment object
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -69,31 +69,26 @@ public class Teleop extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-
+        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_teleop, container, false);
 
         /* Find layout elements */
         final TextView numScoredLVL1 = view.findViewById(R.id.txtNumScoredLVL1); // Text View for number of power cells scored in bottom port
         final TextView numScoredLVL2 = view.findViewById(R.id.txtNumScoredLVL2); // Text View for number of power cells scored in outer port
         final TextView numScoredLVL3 = view.findViewById(R.id.txtNumScoredLVL3); // Text View for number of power cells scored in inner port
-
         final Button scoreMoreLVL1 = view.findViewById(R.id.btnMoreLVL1); // Button for incrementing bottom port score
         final Button scoreMoreLVL2 = view.findViewById(R.id.btnMoreLVL2); // Button for incrementing outer port score
         final Button scoreMoreLVL3 = view.findViewById(R.id.btnMoreLVL3); // Button for incrementing inner port score
-
         final Button scoreLessLVl1 = view.findViewById(R.id.btnLessLVL1); // Button for decrementing bottom port score
         final Button scoreLessLVL2 = view.findViewById(R.id.btnLessLVL2); // Button for decrementing outer port score
         final Button scoreLessLVL3 = view.findViewById(R.id.btnLessLVL3); // Button for decrementing inner port score
-
         final CheckBox rotationControl = view.findViewById(R.id.cboRC); // Checkbox for rotating control panel wheel
         final CheckBox positionControl = view.findViewById(R.id.cboPC); // Checkbox for wheel position
-
-
-
         final MainActivity act = (MainActivity) getActivity(); // Call MainActivity object so that you can call methods from that class
-        numScoredLVL1.setText(String.valueOf(act.getaPowerCell1()));
-        numScoredLVL2.setText(String.valueOf(act.getaPowerCell2()));
-        numScoredLVL3.setText(String.valueOf(act.getaPowerCell3()));
+        numScoredLVL1.setText(String.valueOf(act.getaPowerCell1())); // Set text in bottom port score view to string
+        numScoredLVL2.setText(String.valueOf(act.getaPowerCell2())); // Set text in outer port score view to string
+        numScoredLVL3.setText(String.valueOf(act.getaPowerCell3())); // Set text in inner  port score view to string
+
         // Setting incrementing listeners for incrementing scores to their respective buttons
         scoreMoreLVL1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -160,9 +155,7 @@ public class Teleop extends Fragment {
 //                break;
 //        }
 
-
-        // Inflate the layout for this fragment
-        return view;
+        return view; // Return inflated view
     }
 
     // TODO: Rename method, update argument and hook method into UI event

@@ -74,22 +74,21 @@ public class Endgame extends Fragment {
         View view = inflater.inflate(R.layout.fragment_endgame, container, false);
 
         /* find elements */
+        final Button buttonSubmit = view.findViewById(R.id.btnSubmit);    // Button for submitting the data after recording
+        final Button btnELessLVL1 = view.findViewById(R.id.btnELessLVL1); // Button for decrementing bottom port score
+        final Button btnELessLVL2 = view.findViewById(R.id.btnELessLVL2); // Button for decrementing outer port score
+        final Button btnELessLVL3 = view.findViewById(R.id.btnELessLVL3); // Button for decrementing inner port score
+        final Button btnEMoreLVL1 = view.findViewById(R.id.btnEMoreLVL1); // Button for incrementing bottom port score
+        final Button btnEMoreLVL2 = view.findViewById(R.id.btnEMoreLVL2); // Button for incrementing outer port score
+        final Button btnEMoreLVL3 = view.findViewById(R.id.btnEMoreLVL3); // Button for incrementing bottom port score
 
-        final Button buttonSubmit = view.findViewById(R.id.btnSubmit);
-        final Button btnELessLVL1 = view.findViewById(R.id.btnELessLVL1);
-        final Button btnELessLVL2 = view.findViewById(R.id.btnELessLVL2);
-        final Button btnELessLVL3 = view.findViewById(R.id.btnELessLVL3);
-        final Button btnEMoreLVL1 = view.findViewById(R.id.btnEMoreLVL1);
-        final Button btnEMoreLVL2 = view.findViewById(R.id.btnEMoreLVL2);
-        final Button btnEMoreLVL3 = view.findViewById(R.id.btnEMoreLVL3);
+        // finding the text view
+        final TextView txtScoredLVL1 = view.findViewById(R.id.txtEScoredLVL1); // Text View for number of power cells scored in bottom port
+        final TextView txtScoredLVL2 = view.findViewById(R.id.txtEScoredLVL2); // Text View for number of power cells scored in outer port
+        final TextView txtScoredLVL3 = view.findViewById(R.id.txtEScoredLVL3); // Text View for number of power cells scored in inner port
 
-        //finding the text view
-        final TextView txtScoredLVL1 = view.findViewById(R.id.txtEScoredLVL1);
-        final TextView txtScoredLVL2 = view.findViewById(R.id.txtEScoredLVL2);
-        final TextView txtScoredLVL3 = view.findViewById(R.id.txtEScoredLVL3);
-
-
-        final RadioButton park = view.findViewById(R.id.rdoPark);
+        // Radio buttons in a radio group
+        final RadioButton park = view.findViewById(R.id.rdoPark); // Radio button for parking
         final RadioButton hang = view.findViewById(R.id.rdoHang);
         final RadioButton levelHang = view.findViewById(R.id.rdoLevelHang);
 
