@@ -48,6 +48,7 @@
     <string name="sz">SZ</string>
     <string name="fw">FW</string>
     <string name="bw">BW</string>
+    <string name="qr_code">QR code</string>
 
 
 </resources>
