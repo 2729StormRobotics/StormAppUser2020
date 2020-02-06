@@ -203,19 +203,18 @@
         app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toTopOf="@+id/btnEMore1" />
 
-    <view
+    <RadioGroup
         android:id="@+id/radioGroupHang"
-        class="org.stormroboticsnj.mainactivity_fragments.MultiLineRadioGroup"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:gravity="center|center_horizontal"
-        android:orientation="vertical"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:orientation="horizontal"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
-        app:layout_constraintEnd_toEndOf="@+id/guideline9"
-        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline7">
 
         <RadioButton
@@ -224,7 +223,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/lato"
             android:text="@string/none"
-            android:textSize="30sp" />
+            android:textSize="20sp" />
 
 
         <RadioButton
@@ -233,7 +232,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/lato"
             android:text="@string/park"
-            android:textSize="30sp" />
+            android:textSize="20sp" />
 
         <RadioButton
             android:id="@+id/rdoHang"
@@ -241,7 +240,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/lato"
             android:text="@string/hang"
-            android:textSize="30sp" />
+            android:textSize="20sp" />
 
 
         <RadioButton
@@ -250,8 +249,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/lato"
             android:text="@string/level_hang"
-            android:textSize="30sp" />
-    </view>
+            android:textSize="20sp" />
+    </RadioGroup>
 
     <Button
         android:id="@+id/btnSubmit"
