@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/teleop"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="org.stormroboticsnj.mainactivity_fragments.Teleop">
+
+    <TextView
+        android:id="@+id/txtLabelLVL1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/inner_port"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnTMore3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtPCT3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/_0"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnTLess3"
+        app:layout_constraintEnd_toStartOf="@+id/btnTMore3"
+        app:layout_constraintStart_toEndOf="@+id/btnTLess3"
+        app:layout_constraintTop_toTopOf="@+id/btnTLess3" />
+
+    <Button
+        android:id="@+id/btnTMore3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_normalfill_orange"
+        android:fontFamily="@font/lato"
+        android:text="@string/plus"
+        android:textSize="36sp"
+        android:typeface="serif"
+        app:layout_constraintBottom_toTopOf="@+id/txtLabelLVL2"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toEndOf="@+id/txtPCT3"
+        app:layout_constraintTop_toBottomOf="@+id/txtLabelLVL1" />
+
+    <Button
+        android:id="@+id/btnTLess3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/button_normalfill_red"
+        android:fontFamily="@font/lato"
+        android:text="@string/minus"
+        android:textSize="36sp"
+        android:typeface="serif"
+        app:layout_constraintBottom_toBottomOf="@+id/btnTMore3"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toStartOf="@+id/txtPCT3"
+        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintTop_toTopOf="@+id/btnTMore3" />
+
+    <TextView
+        android:id="@+id/txtLabelLVL2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/outer_port"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnTMore2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTMore3" />
+
+    <TextView
+        android:id="@+id/txtPCT2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:gravity="center_horizontal"
+        android:text="@string/_0"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnTLess2"
+        app:layout_constraintEnd_toStartOf="@+id/btnTMore2"
+        app:layout_constraintStart_toEndOf="@+id/btnTLess2"
+        app:layout_constraintTop_toTopOf="@+id/btnTLess2" />
+
+    <Button
+        android:id="@+id/btnTMore2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_normalfill_orange"
+        android:fontFamily="@font/lato"
+        android:text="@string/plus"
+        android:textSize="36sp"
+        android:typeface="serif"
+        app:layout_constraintBottom_toTopOf="@+id/txtLabelLVL3"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toEndOf="@+id/txtPCT2"
+        app:layout_constraintTop_toBottomOf="@+id/txtLabelLVL2" />
+
+    <Button
+        android:id="@+id/btnTLess2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/button_normalfill_red"
+        android:fontFamily="@font/lato"
+        android:text="@string/minus"
+        android:textSize="36sp"
+        android:typeface="serif"
+        app:layout_constraintBottom_toBottomOf="@+id/btnTMore2"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toStartOf="@+id/txtPCT2"
+        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintTop_toTopOf="@+id/btnTMore2" />
+
+    <TextView
+        android:id="@+id/txtLabelLVL3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/bottom_port"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnTMore1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTMore2" />
+
+    <TextView
+        android:id="@+id/txtPCT1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:gravity="center_horizontal"
+        android:text="@string/_0"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnTLess1"
+        app:layout_constraintEnd_toStartOf="@+id/btnTMore1"
+        app:layout_constraintStart_toEndOf="@+id/btnTLess1"
+        app:layout_constraintTop_toTopOf="@+id/btnTLess1" />
+
+    <Button
+        android:id="@+id/btnTMore1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_normalfill_orange"
+        android:fontFamily="@font/lato"
+        android:text="@string/plus"
+        android:textSize="36sp"
+        android:typeface="serif"
+        app:layout_constraintBottom_toTopOf="@+id/guideline17"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toEndOf="@+id/txtPCT1"
+        app:layout_constraintTop_toBottomOf="@+id/txtLabelLVL3" />
+
+    <Button
+        android:id="@+id/btnTLess1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/button_normalfill_red"
+        android:fontFamily="@font/lato"
+        android:text="@string/minus"
+        android:textSize="36sp"
+        android:typeface="serif"
+        app:layout_constraintBottom_toBottomOf="@+id/btnTMore1"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toStartOf="@+id/txtPCT1"
+        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintTop_toTopOf="@+id/btnTMore1" />
+
+
+    <CheckBox
+        android:id="@+id/cboRC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:text="@string/rotation_control"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/cboPC"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintTop_toTopOf="@+id/guideline17" />
+
+    <CheckBox
+        android:id="@+id/cboPC"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:text="@string/position_control"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/cboRC"
+        app:layout_constraintStart_toStartOf="@+id/cboRC"
+        app:layout_constraintTop_toBottomOf="@+id/cboRC" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

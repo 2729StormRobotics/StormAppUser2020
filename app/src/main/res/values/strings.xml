@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Storm Scouting Radar 2020: User</string>
+    <string name="tab_text_1">Scoring</string>
+    <string name="tab_text_2">Two</string>
+    <string name="start">START</string>
+    <string name="generate_qr">GENERATE QR</string>
+    <string name="red">RED</string>
+    <string name="blue">BLUE</string>
+    <string name="delete">DELETE</string>
+    <string name="team_number">Team Number</string>
+    <string name="match_number">Match Number</string>
+    <string name="storm_logo">Storm Logo</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="submit">Submit</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="back">BACK</string>
+    <string name="_0">0</string>
+    <string name="inner_port">Inner Port</string>
+    <string name="bottom_port">Bottom Port</string>
+    <string name="outer_port">Outer Port</string>
+    <string name="auto">auto</string>
+    <string name="teleop">teleop</string>
+    <string name="endgame">endgame</string>
+    <string name="map">map</string>
+
+    <string name="power_cells_collected">Power Cells Collected</string>
+
+
+    <string name="defense">DEFENSE</string>
+    <string name="infinite_recharge_logo">Infinite Recharge Logo</string>
+    <string name="storm_message">Scouting Radar by Storm Robotics Team.</string>
+    <string name="defense_message">DEFENSE MODE: The robot cannot score while playing defense. Press the defense button again to deactivate this.</string>
+    <string name="none">None</string>
+    <string name="park">Park</string>
+    <string name="hang">Hang</string>
+    <string name="other">congrats! you discovered our easter egg :) email a screenshot of this with your team number and an address to scouting2729@gmail.com and we\'ll send you a button</string>
+    <string name="level_hang">Level Hang</string>
+    <string name="rotation_control">Rotation Control</string>
+    <string name="position_control">Position Control</string>
+    <string name="storm_ir_alttext">Storm Infinite Recharge Background Logo</string>
+    <string name="bl">BL</string>
+    <string name="bs">BS</string>
+    <string name="fl">FL</string>
+    <string name="fs">FS</string>
+    <string name="sz">SZ</string>
+    <string name="fw">FW</string>
+    <string name="bw">BW</string>
+    <string name="qr_code">QR code</string>
+
+
+</resources>

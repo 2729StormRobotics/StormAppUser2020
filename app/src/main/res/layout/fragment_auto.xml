@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="org.stormroboticsnj.mainactivity_fragments.Auto">
+
+    <Button
+        android:id="@+id/abtnLessIntake"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/button_normalfill_red"
+        android:fontFamily="@font/lato"
+        android:text="@string/minus"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/abtnMoreIntake"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toStartOf="@+id/atxtNumScoredIntake"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toTopOf="@+id/abtnMoreIntake" />
+
+    <TextView
+        android:id="@+id/atextView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/power_cells_collected"
+        android:textAlignment="center"
+        android:textColor="#222222"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/abtnMoreIntake"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline15" />
+
+    <Button
+        android:id="@+id/abtnMoreIntake"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_normalfill_orange"
+        android:fontFamily="@font/lato"
+        android:text="@string/plus"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="@+id/guidelineRight"
+        app:layout_constraintStart_toEndOf="@+id/atxtNumScoredIntake"
+        app:layout_constraintTop_toBottomOf="@+id/atextView5" />
+
+    <TextView
+        android:id="@+id/atxtNumScoredIntake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:text="@string/_0"
+        android:textAlignment="center"
+        android:textColor="#222222"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/abtnMoreIntake"
+        app:layout_constraintEnd_toStartOf="@+id/abtnMoreIntake"
+        app:layout_constraintStart_toEndOf="@+id/abtnLessIntake"
+        app:layout_constraintTop_toTopOf="@+id/abtnMoreIntake" />
+
+    <Button
+        android:id="@+id/btnALess1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_normalfill_red"
+        android:fontFamily="@font/lato"
+        android:text="@string/minus"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAMore1"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toStartOf="@+id/txtPCA1"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toTopOf="@+id/btnAMore1" />
+
+    <Button
+        android:id="@+id/btnAMore1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_normalfill_orange"
+        android:fontFamily="@font/lato"
+        android:text="@string/plus"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline15"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="@+id/guidelineRight"
+        app:layout_constraintStart_toEndOf="@+id/txtPCA1"
+        app:layout_constraintTop_toBottomOf="@+id/atextView4" />
+
+    <TextView
+        android:id="@+id/atextView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/bottom_port"
+        android:textAlignment="center"
+        android:textColor="#222222"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnAMore1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAMore2" />
+
+    <TextView
+        android:id="@+id/txtPCA1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:text="@string/_0"
+        android:textAlignment="center"
+        android:textColor="#222222"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnALess1"
+        app:layout_constraintEnd_toStartOf="@+id/btnAMore1"
+        app:layout_constraintStart_toEndOf="@+id/btnALess1"
+        app:layout_constraintTop_toTopOf="@+id/btnALess1" />
+
+    <Button
+        android:id="@+id/btnALess3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/button_normalfill_red"
+        android:fontFamily="@font/lato"
+        android:text="@string/minus"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAMore3"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toStartOf="@+id/txtPCA3"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toTopOf="@+id/btnAMore3" />
+
+    <TextView
+        android:id="@+id/atextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/inner_port"
+        android:textAlignment="center"
+        android:textColor="#222222"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnAMore3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnAMore3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_normalfill_orange"
+        android:fontFamily="@font/lato"
+        android:text="@string/plus"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/atextView2"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="@+id/guidelineRight"
+        app:layout_constraintStart_toEndOf="@+id/txtPCA3"
+        app:layout_constraintTop_toBottomOf="@+id/atextView1" />
+
+    <TextView
+        android:id="@+id/txtPCA3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:text="@string/_0"
+        android:textAlignment="center"
+        android:textColor="#222222"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnALess3"
+        app:layout_constraintEnd_toStartOf="@+id/btnAMore3"
+        app:layout_constraintStart_toEndOf="@+id/btnALess3"
+        app:layout_constraintTop_toTopOf="@+id/btnALess3" />
+
+    <Button
+        android:id="@+id/btnALess2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/button_normalfill_red"
+        android:fontFamily="@font/lato"
+        android:text="@string/minus"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAMore2"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toStartOf="@+id/txtPCA2"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toTopOf="@+id/btnAMore2" />
+
+    <TextView
+        android:id="@+id/atextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/outer_port"
+        android:textAlignment="center"
+        android:textColor="#222222"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnAMore2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAMore3" />
+
+    <TextView
+        android:id="@+id/txtPCA2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:text="@string/_0"
+        android:textAlignment="center"
+        android:textColor="#222222"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnALess2"
+        app:layout_constraintEnd_toStartOf="@+id/btnAMore2"
+        app:layout_constraintStart_toEndOf="@+id/btnALess2"
+        app:layout_constraintTop_toTopOf="@+id/btnALess2" />
+
+    <Button
+        android:id="@+id/btnAMore2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_normalfill_orange"
+        android:fontFamily="@font/lato"
+        android:text="@string/plus"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/atextView4"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="@+id/guidelineRight"
+        app:layout_constraintStart_toEndOf="@+id/txtPCA2"
+        app:layout_constraintTop_toBottomOf="@+id/atextView2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
