@@ -3,7 +3,7 @@
 
 This is the project for __Storm Scouting Radar 2020: User__, a scouting app for FRC developed by Storm Robotics (FRC 2729).  
 ## Information
-Storm Scouting Radar 2020: Master can be downloaded from the Google Play store [here](https://play.google.com/store/apps/details?id=org.stormroboticsnj.stormuserradar2020).  
+Storm Scouting Radar 2020: User can be downloaded from the Google Play store [here](https://play.google.com/store/apps/details?id=org.stormroboticsnj.stormuserradar2020).  
 
 For a full guide on the features of this app and how to use it, along with our companion user app, please read [this document](https://drive.google.com/open?id=1DC6P04GL2XGpKgMuIIIKCxcjumR6969DBRzcdnnvy1M).  
 
