@@ -80,9 +80,7 @@ public class Map extends Fragment {
 
         } else {
             view = inflater.inflate(R.layout.fragment_map_blue, container, false);
-
         }
-
 
         // Inflate the layout for this fragment
         return view;

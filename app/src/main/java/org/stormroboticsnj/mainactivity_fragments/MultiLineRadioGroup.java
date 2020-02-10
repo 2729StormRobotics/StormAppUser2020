@@ -13,10 +13,6 @@ import java.util.Map;
 public class MultiLineRadioGroup extends RadioGroup {
     private Map<View, Rect> viewRectMap;
 
-//    public MultiLineRadioGroup(Context context) {
-//        this(context, null);
-//    }
-
     public MultiLineRadioGroup(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.setGravity(Gravity.CENTER_HORIZONTAL);
