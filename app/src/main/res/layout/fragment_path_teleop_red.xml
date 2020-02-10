@@ -5,8 +5,8 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/frc_field_2020_red"
-    tools:context=".PathTeleop">
+    android:background="@drawable/field_map_red"
+    tools:context="org.stormroboticsnj.mainactivity_fragments.Map">
 
     <CheckBox
         android:id="@+id/cboBehindLineR"
