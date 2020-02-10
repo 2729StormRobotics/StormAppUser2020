@@ -5,17 +5,19 @@
     android:id="@+id/coordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="org.stormroboticsnj.stormuserradar2020.MainActivity">
+    tools:context="org.stormroboticsnj.stormuserradar2020.org.stormroboticsnj.MainActivity">
 
     <ImageView
         android:id="@+id/irLogo"
-        android:layout_width="488dp"
-        android:layout_height="600dp"
-        android:background="@drawable/ir_storm"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:contentDescription="@string/infinite_recharge_logo"
         android:scaleType="fitStart"
-
+        android:src="@drawable/logo_storm_ir"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintDimensionRatio="0.869"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -34,7 +36,8 @@
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/irLogo"/>
 
     <TextView
         android:id="@+id/textView2"
@@ -90,7 +93,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/toggle_button"
+        android:background="@drawable/togglebutton_whitefill_blackred"
         android:textColor="#222"
         android:textOff="@string/defense"
         android:textOn="@string/defense"
