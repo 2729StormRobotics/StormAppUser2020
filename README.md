@@ -1,4 +1,4 @@
-# StormAppUser2020
+# Storm Scouting Radar 2020: User
 ![Scouting Radar Banner Logo](images/bannerlogo.jpg)
 
 [![GitHub](https://img.shields.io/github/license/2729StormRobotics/StormAppUser2020?color=orange)](https://opensource.org/licenses/Apache-2.0)
