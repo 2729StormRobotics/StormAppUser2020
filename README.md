@@ -1,7 +1,7 @@
 # StormAppUser2020
 ![Scouting Radar Banner Logo](images/bannerlogo.jpg)
 
-[![GitHub](https://img.shields.io/github/license/2729StormRobotics/StormAppUser2020)](https://opensource.org/licenses/Apache-2.0)
+[![GitHub](https://img.shields.io/github/license/2729StormRobotics/StormAppUser2020?color=orange)](https://opensource.org/licenses/Apache-2.0)
 
 ![Android CI](https://github.com/2729StormRobotics/StormAppUser2020/workflows/Android%20CI/badge.svg)
 
