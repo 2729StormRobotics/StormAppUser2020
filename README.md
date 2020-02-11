@@ -27,7 +27,13 @@ Our privacy policy for this app is available in [this document](https://drive.go
 ## Building this project
 If you would like to build this project yourself instead of downloading it from the play store, follow these instructions:  
 
-_Instructions_  
+_Instructions_
+
+```sh
+./gradlew assembleDebug
+```
+
+Alternatively, you can open the repository in [Android Studio](https://developer.android.com/studio/).
 
 ---
 
