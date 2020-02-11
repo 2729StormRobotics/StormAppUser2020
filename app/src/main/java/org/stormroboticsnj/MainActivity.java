@@ -180,8 +180,6 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
         return tPowerCell1;
     }
 
-    // ***Endgame*** //
-
     /**
      * Get the power cell score on outer port
      *
@@ -200,10 +198,11 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
         return tPowerCell3;
     }
 
+    // ***Endgame*** //
+
     public void incePowerCell1() { // Increment power cell score in bottom port
         if (ePowerCell1 < 99) ePowerCell1++;
     }
-
 
     public void decePowerCell1() { // Decrement power cell score in bottom port
         if (ePowerCell1 > 0) ePowerCell1--;
@@ -220,10 +219,13 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
     public void incePowerCell3() { // Increment power cell score in inner port
         if (ePowerCell3 < 99) ePowerCell3++;
     }
-    public boolean getBoth(){return both[0] && both[1] && both[2] && both[3];}
+
     public void decePowerCell3() { // Decrement power cell score in inner port
         if (ePowerCell3 > 0) ePowerCell3--;
     }
+
+    public boolean getBoth(){return both[0] && both[1] && both[2] && both[3];}
+
     public String getEndgameOutcome() {
         return endgameOutcome;
     }

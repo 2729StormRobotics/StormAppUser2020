@@ -79,12 +79,12 @@ public class Endgame extends Fragment {
 
         /* find elements */
         final Button buttonSubmit = view.findViewById(R.id.btnSubmit);    // Button for submitting the data after recording
-        final Button btnELessLVL1 = view.findViewById(R.id.btnELess1); // Button for decrementing bottom port score
-        final Button btnELessLVL2 = view.findViewById(R.id.btnELess2); // Button for decrementing outer port score
-        final Button btnELessLVL3 = view.findViewById(R.id.btnELess3); // Button for decrementing inner port score
-        final Button btnEMoreLVL1 = view.findViewById(R.id.btnEMore1); // Button for incrementing bottom port score
-        final Button btnEMoreLVL2 = view.findViewById(R.id.btnEMore2); // Button for incrementing outer port score
-        final Button btnEMoreLVL3 = view.findViewById(R.id.btnEMore3); // Button for incrementing bottom port score
+        final Button btnELessLVL1 = view.findViewById(R.id.btnELessLVL1); // Button for decrementing bottom port score
+        final Button btnELessLVL2 = view.findViewById(R.id.btnELessLVL2); // Button for decrementing outer port score
+        final Button btnELessLVL3 = view.findViewById(R.id.btnELessLVL3); // Button for decrementing inner port score
+        final Button btnEMoreLVL1 = view.findViewById(R.id.btnEMoreLVL1); // Button for incrementing bottom port score
+        final Button btnEMoreLVL2 = view.findViewById(R.id.btnEMoreLVL2); // Button for incrementing outer port score
+        final Button btnEMoreLVL3 = view.findViewById(R.id.btnEMoreLVL3); // Button for incrementing bottom port score
 
         // finding the text view
         final TextView txtScoredLVL1 = view.findViewById(R.id.txtPCE1); // Text View for number of power cells scored in bottom port
@@ -100,14 +100,17 @@ public class Endgame extends Fragment {
         //getting main actvity
         final MainActivity act = (MainActivity) getActivity();
 
-        //making lvl one numbers go down
+        assert act != null;
+
+        /*//making lvl one numbers go down
         txtScoredLVL1.setText(String.valueOf(act.getePowerCell1()));
         txtScoredLVL2.setText(String.valueOf(act.getePowerCell2()));
-        txtScoredLVL3.setText(String.valueOf(act.getePowerCell3()));
+        txtScoredLVL3.setText(String.valueOf(act.getePowerCell3()));*/
 
         btnELessLVL1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+//                assert act != null;
                 act.decePowerCell1();
                 txtScoredLVL1.setText(String.valueOf(act.getePowerCell1()));
             }
@@ -116,6 +119,7 @@ public class Endgame extends Fragment {
         btnELessLVL2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+//                assert act != null;
                 act.decePowerCell2();
                 txtScoredLVL2.setText(String.valueOf(act.getePowerCell2()));
             }
@@ -124,6 +128,7 @@ public class Endgame extends Fragment {
         btnELessLVL3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+//                assert act != null;
                 act.decePowerCell3();
                 txtScoredLVL3.setText(String.valueOf(act.getePowerCell3()));
             }
@@ -132,6 +137,7 @@ public class Endgame extends Fragment {
         btnEMoreLVL1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+//                assert act != null;
                 act.incePowerCell1();
                 txtScoredLVL1.setText(String.valueOf(act.getePowerCell1()));
             }
@@ -140,6 +146,7 @@ public class Endgame extends Fragment {
         btnEMoreLVL2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+//                assert act != null;
                 act.incePowerCell2();
                 txtScoredLVL2.setText(String.valueOf(act.getePowerCell2()));
             }
@@ -148,6 +155,7 @@ public class Endgame extends Fragment {
         btnEMoreLVL3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+//                assert act != null;
                 act.incePowerCell3();
                 txtScoredLVL3.setText(String.valueOf(act.getePowerCell3()));
             }

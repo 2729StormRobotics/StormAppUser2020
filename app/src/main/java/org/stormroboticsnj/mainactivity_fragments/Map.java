@@ -78,9 +78,11 @@ public class Map extends Fragment {
         if (act.getAlliance()) {
             view = inflater.inflate(R.layout.fragment_map_red, container, false);
 
-        } else {
-            view = inflater.inflate(R.layout.fragment_map_blue, container, false);
+            // Inflate the layout for this fragment
+            return view;
         }
+
+            view = inflater.inflate(R.layout.fragment_map_blue, container, false);
 
         // Inflate the layout for this fragment
         return view;
