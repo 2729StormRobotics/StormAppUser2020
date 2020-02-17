@@ -51,6 +51,17 @@ public class Whoosh {
     @ColumnInfo(name="defenseSecs") // Column for robot total defense time
     private int defenseSecs; // Private integer variable for robot total defense time
 
+    public int getClimbSecs() {
+        return climbSecs;
+    }
+
+    public void setClimbSecs(int climbSecs) {
+        this.climbSecs = climbSecs;
+    }
+
+    @ColumnInfo(name="climbSecs")
+    private int climbSecs;
+
     /**
      * Whoosh class constructor
      * @param t team number
@@ -251,7 +262,7 @@ public class Whoosh {
                 + "," + locations //15
                 + "," + endgameOutcome //16
                 + "," + defenseSecs //17
-
+                + "," + climbSecs //18
                 + "|";
     }
 }
