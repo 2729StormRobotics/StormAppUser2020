@@ -63,6 +63,12 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
     private int ePowerCell2 = 0; // Power cell score in outer port
     private int ePowerCell3 = 0; // Power cell score in inner port
     private String endgameOutcome = "";
+
+    public void setClimbSecs(int climbSecs) {
+        this.climbSecs = climbSecs;
+    }
+
+    private int climbSecs = 0;
     private long lastPauseTime; // Defense timer
 
     /*** Increment/Decrement, return, and set methods***/
@@ -419,6 +425,8 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
         whoosh.setLocations(locations); //set locations
 
         whoosh.setDefenseSecs(stoppedSeconds); // Set
+
+        whoosh.setClimbSecs(climbSecs);
 
         //whoosh.setHang(hang);
 
