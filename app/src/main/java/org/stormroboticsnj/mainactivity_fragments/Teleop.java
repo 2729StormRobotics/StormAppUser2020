@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import org.stormroboticsnj.MainActivity;
@@ -92,8 +93,21 @@ public class Teleop extends Fragment {
         final CheckBox positionControl = view.findViewById(R.id.cboPC); // Checkbox for wheel position
 
 
-
         final MainActivity act = (MainActivity) getActivity(); // Call MainActivity object so that you can call methods from that class
+
+        rotationControl.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                act.setRotationControl(isChecked);
+            }
+        });
+        positionControl.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                act.setPositionControl(isChecked);
+            }
+        });
+
         numScoredLVL1.setText(String.valueOf(act.gettPowerCell1()));
         numScoredLVL2.setText(String.valueOf(act.gettPowerCell2()));
         numScoredLVL3.setText(String.valueOf(act.gettPowerCell3()));

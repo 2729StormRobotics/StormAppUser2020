@@ -208,11 +208,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
         android:gravity="center|center_horizontal|center_vertical"
         android:orientation="horizontal"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline7">
@@ -263,12 +261,11 @@
         android:textAllCaps="true"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         android:textColor="#222222"
-        android:textSize="30sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="3"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroupHang" />
+        app:layout_constraintTop_toTopOf="@+id/guideline19" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline8"
@@ -290,4 +287,58 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.75" />
+
+    <ToggleButton
+        android:id="@+id/climbButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/togglebutton_whitefill_blackred"
+        android:lineSpacingExtra="0sp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:padding="5dp"
+        android:textOff="@string/start_climb"
+        android:textOn="@string/end_climb"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
+        app:layout_constraintEnd_toStartOf="@+id/climbTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupHang" />
+
+    <Chronometer
+        android:id="@+id/climbTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/climbButton"
+        app:layout_constraintEnd_toStartOf="@+id/climbReset"
+        app:layout_constraintStart_toEndOf="@+id/climbButton"
+        app:layout_constraintTop_toTopOf="@+id/climbButton" />
+
+    <Button
+        android:id="@+id/climbReset"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/button_normalfill_red"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:padding="5dp"
+        android:text="Reset"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/climbButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/climbTime"
+        app:layout_constraintTop_toTopOf="@+id/climbButton" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.925" />
 </androidx.constraintlayout.widget.ConstraintLayout>
