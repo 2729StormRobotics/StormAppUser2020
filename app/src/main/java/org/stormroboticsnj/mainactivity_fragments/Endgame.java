@@ -208,6 +208,7 @@ public class Endgame extends Fragment {
         //setup chronometer
         final ToggleButton tb = view.findViewById(R.id.climbButton);
         final Chronometer cm = view.findViewById(R.id.climbTime);
+        final Button resetButton = view.findViewById(R.id.climbReset);
 
         final ScaleAnimation scaleAnimation = new ScaleAnimation(0.7f, 1.0f, 0.7f, 1.0f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.7f);
         scaleAnimation.setDuration(500);
@@ -262,6 +263,15 @@ public class Endgame extends Fragment {
                 }
             }
         });
+        resetButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cm.stop();
+                cm.setBase(SystemClock.elapsedRealtime());
+                act.setClimbSecs(0);
+            }
+        });
+
 
 
         return view;
