@@ -12,6 +12,10 @@ android {
         vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
+        debug {
+            minifyEnabled true
+            testCoverageEnabled true
+        }
         release {
             minifyEnabled true
             shrinkResources true

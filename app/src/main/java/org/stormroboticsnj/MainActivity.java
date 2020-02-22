@@ -54,7 +54,25 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
     private int tPowerCell1 = 0; // Power cell score in bottom port
     private int tPowerCell2 = 0; // Power cell score in outer port
     private int tPowerCell3 = 0; // Power cell score in inner port
+
+    public boolean isPositionControl() {
+        return positionControl;
+    }
+
+    public void setPositionControl(boolean positionControl) {
+        this.positionControl = positionControl;
+    }
+
     private boolean positionControl = false;
+
+    public boolean isRotationControl() {
+        return rotationControl;
+    }
+
+    public void setRotationControl(boolean rotationControl) {
+        this.rotationControl = rotationControl;
+    }
+
     private boolean rotationControl = false;
     private String locations = "";
     private boolean[] both = new boolean[4];
