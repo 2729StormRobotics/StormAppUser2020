@@ -54,7 +54,25 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
     private int tPowerCell1 = 0; // Power cell score in bottom port
     private int tPowerCell2 = 0; // Power cell score in outer port
     private int tPowerCell3 = 0; // Power cell score in inner port
+
+    public boolean isPositionControl() {
+        return positionControl;
+    }
+
+    public void setPositionControl(boolean positionControl) {
+        this.positionControl = positionControl;
+    }
+
     private boolean positionControl = false;
+
+    public boolean isRotationControl() {
+        return rotationControl;
+    }
+
+    public void setRotationControl(boolean rotationControl) {
+        this.rotationControl = rotationControl;
+    }
+
     private boolean rotationControl = false;
     private String locations = "";
     private boolean[] both = new boolean[4];
@@ -63,6 +81,12 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
     private int ePowerCell2 = 0; // Power cell score in outer port
     private int ePowerCell3 = 0; // Power cell score in inner port
     private String endgameOutcome = "";
+
+    public void setClimbSecs(int climbSecs) {
+        this.climbSecs = climbSecs;
+    }
+
+    private int climbSecs = 0;
     private long lastPauseTime; // Defense timer
 
     /*** Increment/Decrement, return, and set methods***/
@@ -340,8 +364,7 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
         /* get database, or build if it doesn't exist. This exact line must be included in the onCreate
         method of every Activity that uses the database. db can be a class-wide variable or local
         within onCreate. */
-        db = Room.databaseBuilder(getApplicationContext(),
-                AppDatabase.class, AppDatabase.DB_NAME).allowMainThreadQueries().build(); //build database
+        db = AppDatabase.getDatabase(getApplicationContext());
     }
 
     /* submit button pressed */
@@ -421,6 +444,8 @@ public class MainActivity extends AppCompatActivity implements Auto.OnFragmentIn
         whoosh.setLocations(locations); //set locations
 
         whoosh.setDefenseSecs(stoppedSeconds); // Set
+
+        whoosh.setClimbSecs(climbSecs);
 
         //whoosh.setHang(hang);
 

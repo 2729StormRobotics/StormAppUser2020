@@ -2,7 +2,6 @@ package org.stormroboticsnj;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.room.Room;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -35,8 +34,7 @@ public class StartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
-        db = Room.databaseBuilder(getApplicationContext(),
-                AppDatabase.class, AppDatabase.DB_NAME).allowMainThreadQueries().build(); //build database
+        db = AppDatabase.getDatabase(getApplicationContext());
 
         /* get data from Intent, from QR */
         Bundle extras = getIntent().getExtras();

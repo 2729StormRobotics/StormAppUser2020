@@ -49,6 +49,8 @@
     <string name="fw">FW</string>
     <string name="bw">BW</string>
     <string name="qr_code">QR code</string>
+    <string name="end_climb">End Climb</string>
+    <string name="start_climb">Start Climb</string>
 
 
 </resources>

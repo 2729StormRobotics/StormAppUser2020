@@ -45,8 +45,7 @@ public class QrActivity extends AppCompatActivity {
             }
         });
 
-        AppDatabase db = Room.databaseBuilder(getApplicationContext(),
-                AppDatabase.class, AppDatabase.DB_NAME).allowMainThreadQueries().build(); //build/import database
+        AppDatabase db = AppDatabase.getDatabase(getApplicationContext());
         StormDao stormDao = db.stormDao(); //get interface object
 
         List<Whoosh> whooshList = stormDao.getAllWhooshes(); //get database

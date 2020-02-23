@@ -2,18 +2,26 @@ package org.stormroboticsnj.mainactivity_fragments;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
+import android.os.SystemClock;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.BounceInterpolator;
+import android.view.animation.ScaleAnimation;
 import android.widget.Button;
+import android.widget.Chronometer;
+import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 import org.stormroboticsnj.MainActivity;
 import org.stormroboticsnj.stormuserradar2020.R;
@@ -42,6 +50,8 @@ public class Endgame extends Fragment {
     public Endgame() {
         // Required empty public constructor
     }
+
+    private long lastPauseTime;
 
     /**
      * Use this factory method to create a new instance of
@@ -201,6 +211,75 @@ public class Endgame extends Fragment {
 
             }
         });
+
+        //setup chronometer
+        final ToggleButton tb = view.findViewById(R.id.climbButton);
+        final Chronometer cm = view.findViewById(R.id.climbTime);
+        final Button resetButton = view.findViewById(R.id.climbReset);
+
+        final ScaleAnimation scaleAnimation = new ScaleAnimation(0.7f, 1.0f, 0.7f, 1.0f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.7f);
+        scaleAnimation.setDuration(500);
+        BounceInterpolator bounceInterpolator = new BounceInterpolator();
+        scaleAnimation.setInterpolator(bounceInterpolator);
+        tb.setAnimation(scaleAnimation);
+
+        cm.setBase(SystemClock.elapsedRealtime()); //setup stopwatch
+
+        tb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                buttonView.startAnimation(scaleAnimation);
+                if (isChecked) {
+                    /*  when the stopwatch is started, parse the current text to see what the last
+                        paused time was, and start counting from there
+                     */
+                    int stoppedMilliseconds = 0;
+                    String chronoText = cm.getText().toString();
+                    String[] array = chronoText.split(":"); //split at colons
+                    if (array.length == 2) {
+                        stoppedMilliseconds = Integer.parseInt(array[0]) * 60 * 1000 //convert to milliseconds
+                                + Integer.parseInt(array[1]) * 1000;
+                    } else if (array.length == 3) {
+                        stoppedMilliseconds = Integer.parseInt(array[0]) * 60 * 60 * 1000
+                                + Integer.parseInt(array[1]) * 60 * 1000
+                                + Integer.parseInt(array[2]) * 1000;
+                    }
+                    tb.setTextColor(Color.rgb(204, 0, 0));
+                    cm.setBase(SystemClock.elapsedRealtime() - stoppedMilliseconds);
+                    cm.start();
+                } else {
+                    /* save and stop the stopwatch */
+                    lastPauseTime = SystemClock.elapsedRealtime();
+                    tb.setTextColor(Color.rgb(34, 34, 34));
+                    cm.stop();
+
+                    // update mainactivity
+                    String time = cm.getText().toString();
+                    String[] arr = time.split(":");
+                    int stoppedSeconds = 0;
+                    if (arr.length == 2) {
+                        stoppedSeconds = Integer.parseInt(arr[0]) * 60 //convert to milliseconds
+                                + Integer.parseInt(arr[1]);
+                    } else if (arr.length == 3) {
+                        stoppedSeconds = Integer.parseInt(arr[0]) * 60 * 60
+                                + Integer.parseInt(arr[1]) * 60
+                                + Integer.parseInt(arr[2]);
+                    }
+                    act.setClimbSecs(stoppedSeconds);
+
+                }
+            }
+        });
+        resetButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cm.stop();
+                cm.setBase(SystemClock.elapsedRealtime());
+                act.setClimbSecs(0);
+            }
+        });
+
+
 
         return view;
     }
