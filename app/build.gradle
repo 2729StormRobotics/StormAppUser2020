@@ -72,7 +72,7 @@ dependencies {
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
 
-    implementation 'com.github.kenglxn.QRGen:android:2.6.0'
+    implementation 'com.github.kenglxn.QRGen:android:3.0.0'
 
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
